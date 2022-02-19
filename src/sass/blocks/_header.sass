@@ -1,0 +1,105 @@
+.header
+    width: 100%
+    padding: 30px 50px
+    display: flex
+    align-items: center
+    border-bottom: 1px solid #D9DCEE
+
+    &__logo
+        margin-right: auto
+
+    &__status
+        position: relative
+        padding: 10px 10px 10px 45px
+        color: $green
+        background-color: rgba($green , 0.1 )
+        border-radius: 5px
+        max-width: 130px
+        width: 100%
+        font-family: Raleway
+        font-size: 12px
+        text-transform: uppercase
+        margin-right: 30px
+
+        &::before
+            content: ""
+            position: absolute
+            left: 16px
+            top: 50%
+            transform: translateY(-50%)
+            width: 10px
+            height: 8px
+            background-image: url(../img/svg/done.svg)
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+            filter: invert(58%) sepia(87%) saturate(1809%) hue-rotate(129deg) brightness(95%) contrast(98%)
+
+    &__info
+        margin-right: 30px
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        color: #47426A
+        font-size: 14px
+
+    &__balance
+        font-weight: 700
+        padding-right: 20px
+        position: relative
+        font-size: 24px
+        width: fit-content
+
+        &::after
+            content: ""
+            position: absolute
+            right: 0
+            top: 3px
+            width: 17px
+            height: 19px
+            background-image: url(../img/svg/ruble.svg)
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+            filter: invert(25%) sepia(10%) saturate(2662%) hue-rotate(208deg) brightness(85%) contrast(80%)
+
+
+    &__pay
+        background-color: $blue
+        border-radius: 3px
+        box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+        padding: 19px 25px 18px 50px
+        font-weight: 700
+        color: white
+        position: relative
+
+        &::before
+            content: ""
+            position: absolute
+            left: 16px
+            top: 50%
+            transform: translateY(-50%)
+            width: 17px
+            height: 19px
+            background-image: url(../img/svg/ruble.svg)
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+            filter: invert(14%) sepia(78%) saturate(3237%) hue-rotate(225deg) brightness(93%) contrast(101%)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+@import fonts
+@import vars
+@import reset
+@import mixins
+
+*, 
+*::before,
+*::after
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    min-height: 0.001vw // — Fixes Safari bug with viewport units in calc()
+
+body
+    font-family: "Arial", Helvetica, sans-serif
+    font-size: 16px
+    font-weight: 400
+    line-height: 1.2
+    color: #47426A
+
+.layout
+    display: flex
+    height: calc(100vh - 105px)
+
+.main
+    display: flex
+    flex-direction: column
+    width: 100%
+    background-color: #f5f6fa
+
+.content
+    padding: 20px 40px
+    margin: 10px
+    overflow-y: auto
+    overflow-x: hidden
+
+    /* This will work on Firefox */
+    scrollbar-width: thin
+    scrollbar-color: $blue
+
+
+    /* Targtes on Chrome, Edge, and Safari */
+    &::-webkit-scrollbar 
+        width: 10px
+
+
+    &::-webkit-scrollbar-track 
+        background: rgba(255, 255, 255, 0)
+
+
+    &::-webkit-scrollbar-thumb 
+        background-color: $blue
+        border-radius: 20px
+        border: none
+
+.logo
+    display: flex
+    width: 45px
+
+    img
+        width: 100%
+

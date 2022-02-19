@@ -1,0 +1,153 @@
+.sidebar
+    display: flex
+    flex-direction: column
+    min-width: 330px
+    width: 330px
+    background-color: #E8EAF4
+    padding: 20px 0
+
+    &__create
+        padding: 10px 15px
+        box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+        border-radius: 3px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        max-width: 230px
+        width: 100%
+        margin: 0 auto 10px
+        background-color: #fff
+
+        p
+            font-family: Raleway
+            max-width: 120px
+            width: 100%
+            color: $blue
+
+        .circle
+            min-width: 48px
+            width: 48px
+            height: 48px
+            border-radius: 100%
+            position: relative
+            background-color: $blue
+
+            &::before,
+            &::after
+                content: ""
+                position: absolute
+                left: 19px
+                top: 23px
+                width: 10px
+                height: 2px
+                background-color: #fff
+
+            &::after
+                transform: rotate(90deg)
+
+    &__menu
+        padding: 30px 0
+        position: relative
+        font-family: Raleway
+        font-size: 12px
+        text-transform: uppercase
+        color: #727BB0
+
+        &::after
+            content: ""
+            position: absolute
+            left: 16px
+            bottom: 0
+            width: calc(100% - 32px)
+            height: 1px
+            background-color: #D9DCEE
+
+        &:last-of-type
+            margin-bottom: 15px
+
+    &__item
+        position: relative
+        display: flex
+        align-items: center
+        padding-left: 110px
+
+        &::before
+            content: ""
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+            width: 6px
+            height: 30px
+            background-color: $blue
+            opacity: 0
+            transition: opacity 0.3s
+
+        &:not(:last-child)
+            margin-bottom: 30px
+
+        &:hover
+            color: $blue
+
+            .sidebar__icon
+                filter: invert(44%) sepia(85%) saturate(4032%) hue-rotate(216deg) brightness(103%) contrast(92%)
+
+        &.active
+            color: $blue 
+
+            &::before
+                opacity: 1
+
+            .sidebar__icon
+                filter: invert(44%) sepia(85%) saturate(4032%) hue-rotate(216deg) brightness(103%) contrast(92%)
+
+    &__icon
+        position: absolute
+        top: 50%
+        left: 70px
+        transform: translateY(-50%)
+        filter: invert(91%) sepia(9%) saturate(1126%) hue-rotate(192deg) brightness(88%) contrast(98%)
+        transition: filter 0.2s
+
+    &__link
+        transition: color 0.2s
+
+    &__profile
+        padding: 0 20px 0 70px
+        display: flex
+        align-items: center
+
+    &__image
+        width: 48px
+        height: 48px
+        border-radius: 100%
+        margin-right: 15px
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+
+    &__info
+        font-size: 12px
+        margin-right: auto
+
+    &__name
+        margin-bottom: 5px
+
+    &__status
+        color:#B0B5D1
+
+    &__settings,
+    &__logout
+        filter: invert(66%) sepia(19%) saturate(4227%) hue-rotate(199deg) brightness(77%) contrast(70%)
+        transition: filter 0.2s
+
+        &:hover
+            filter: invert(44%) sepia(85%) saturate(4032%) hue-rotate(216deg) brightness(103%) contrast(92%)
+
+    &__settings
+        margin-right: 15px
+
+
+
+
+

@@ -1,0 +1,56 @@
+.reg
+    .reg__process
+        .reg__steps
+            .reg__step.active 1 
+            .reg__step 2
+            .reg__step 3
+        .reg__content 
+            .reg__wrapper.active(data-step="1")
+                .reg__title Добро пожаловать в BULK!
+                p.reg__text Создайте свой первый виджет, #[br] а мы поможем его настроить и разместить.
+                .reg__subtitle Какой виджет нужен?
+                .reg__types 
+                    .reg__type
+                        input(type="radio", name="type" checked)
+                        .marker
+                        img(src="@img/svg/reg-type-1.svg", alt="chat icon")
+                        p Чат
+                    .reg__type 
+                        input(type="radio", name="type")
+                        .marker
+                        img(src="@img/svg/reg-type-2.svg", alt="comment icon")
+                        p Комментарии
+                    .reg__type 
+                        input(type="radio", name="type")
+                        .marker
+                        img(src="@img/svg/reg-type-3.svg", alt="review icon")
+                        p Отзывы
+
+                button.reg__btn.reg__btn--next Создать виджет
+            .mt40
+            .reg__wrapper.active(data-step="2")
+                .reg__title Отлично, куда размещаем?
+                p.reg__text Одна страница — один виджет. #[br] Каждый виджет привязан к своей странице, имеет свой уникальный ID и код вставки.
+                .reg__subtitle Адрес страницы, где будет размещаться
+                .reg__input.reg__input--prefix 
+                    .prefix http://
+                    input(type="text" placeholder="example.com")
+
+                p.reg__text Если на сайте будет несколько виджетов, то различать их вам поможет название. #[br] Оно будет видно только в личном кабинете администратора.
+                .reg__subtitle Назовите ваш виджет
+
+                .reg__input
+                    input(type="text" placeholder="Например, Отзывы_товары_шоколад")
+                
+                .reg__btns 
+                    button.reg__btn.reg__btn--prev Назад
+                    button.reg__btn.reg__btn--next Далее
+
+            .mt40
+            .reg__wrapper.active(data-step="3")
+                .reg__title Теперь настраиваем
+                p.reg__text Наполнение будет меняться от виджета
+
+                .reg__btns 
+                    button.reg__btn.reg__btn--prev Назад
+                    button.reg__btn.reg__btn--next Готово!

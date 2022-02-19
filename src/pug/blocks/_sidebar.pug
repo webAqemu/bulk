@@ -1,0 +1,46 @@
+.sidebar 
+    a.sidebar__create(href="#")
+        p Создать новый виджет
+        .circle 
+
+    ul.sidebar__menu 
+        li.sidebar__item.active
+            a.sidebar__link(href="#") 
+                img.sidebar__icon(src="@img/svg/sidebar-icon-1.svg" alt="icon")
+                | Статистика
+        li.sidebar__item
+            a.sidebar__link(href="#") 
+                img.sidebar__icon(src="@img/svg/sidebar-icon-2.svg" alt="icon")
+                | мои виджеты
+        li.sidebar__item
+            a.sidebar__link(href="#") 
+                img.sidebar__icon(src="@img/svg/sidebar-icon-3.svg" alt="icon")
+                | модерация
+
+    ul.sidebar__menu 
+        li.sidebar__item
+            a.sidebar__link(href="#") 
+                img.sidebar__icon(src="@img/svg/sidebar-icon-4.svg" alt="icon")
+                | оплата
+        li.sidebar__item
+            a.sidebar__link(href="#") 
+                img.sidebar__icon(src="@img/svg/sidebar-icon-5.svg" alt="icon")
+                | FAQ
+        li.sidebar__item
+            a.sidebar__link(href="#") 
+                img.sidebar__icon(src="@img/svg/sidebar-icon-6.svg" alt="icon")
+                | тех. поддержка
+        li.sidebar__item
+            a.sidebar__link(href="#") 
+                img.sidebar__icon(src="@img/svg/sidebar-icon-7.svg" alt="icon")
+                | уведомления
+
+    .sidebar__profile 
+        .sidebar__image(style="background-image:url(./img/profile-image.jpg);")
+        .sidebar__info 
+            .sidebar__name Галина
+            .sidebar__status Администратор
+        button.sidebar__settings
+            img(src="@img/svg/sidebar-settings.svg", alt="settings icon") 
+        button.sidebar__logout 
+            img(src="@img/svg/sidebar-logout.svg", alt="logout icon") 
