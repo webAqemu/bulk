@@ -1,8 +1,8 @@
 .reg
     .reg__process
         .reg__steps
-            .reg__step.active 1 
-            .reg__step 2
+            .reg__step.done 1 
+            .reg__step.active 2
             .reg__step 3
         .reg__content 
             .reg__wrapper.active(data-step="1")
@@ -20,6 +20,11 @@
                         .marker
                         img(src="@img/svg/reg-type-2.svg", alt="comment icon")
                         p Комментарии
+                    .reg__type 
+                        input(type="radio", name="type")
+                        .marker
+                        img(src="@img/svg/reg-type-3.svg", alt="review icon")
+                        p Отзывы
                     .reg__type 
                         input(type="radio", name="type")
                         .marker
@@ -54,3 +59,47 @@
                 .reg__btns 
                     button.reg__btn.reg__btn--prev Назад
                     button.reg__btn.reg__btn--next Готово!
+    .mt40
+    .reg__finish
+        .reg__title.reg__title--finish Готово! #[br] Осталось вставить код на сайт
+        .reg__text Вставьте код на сайт в то место, где хотите разместить виджет и сохраните изменения. #[br] Виджет сразу подключится.
+
+        .reg__blocks
+            .reg__block 
+                .reg__subtitle PHP
+                .reg__textarea
+                    textarea(name="code") script src="https://bulkfeedback.com/laod.php?format=json-34324dsbdyui37fd-39kd9-39ikdknsnkjss"></script 
+                .reg__bottom
+                    button.reg__btn.reg__btn--copy Скопировать код
+            
+            .reg__block 
+                .reg__subtitle JavaScript
+                .reg__textarea
+                    textarea(name="code") script src="https://bulkfeedback.com/laod.php?format=json-34324dsbdyui37fd-39kd9-39ikdknsnkjss"></script 
+                .reg__bottom
+                    button.reg__btn.reg__btn--copy Скопировать код
+                    .reg__note Примечание: заголовок Refer обязателен
+            
+            .reg__block 
+                .reg__subtitle HTML
+                p.reg__text Кнопка раскрытия чата без стилей
+                .reg__textarea
+                    textarea(name="code") script src="https://bulkfeedback.com/laod.php?format=json-34324dsbdyui37fd-39kd9-39ikdknsnkjss"></script 
+                    button.reg__btn.reg__btn--copy.reg__btn--sm
+                p.reg__text Кнопка раскрытия чата со стилями
+                .reg__textarea
+                    textarea(name="code") script src="https://bulkfeedback.com/laod.php?format=json-34324dsbdyui37fd-39kd9-39ikdknsnkjss"></script 
+                    button.reg__btn.reg__btn--copy.reg__btn--sm
+                .reg__text Примечание: для отображения чата необходимо #[br] установить хотя бы одну из кнопок
+
+        .reg__subtitle Что дальше?
+        p.reg__text После вставки кода на сайт виджет автоматически активируется. 
+        p.reg__text Теперь виджет можно найти во вкладке 
+            a(href="#") Мои виджеты. 
+            |  Там можно изменить настройки, назначить модератора, скопировать код для вставки или приостановить работу виджета.
+
+
+
+
+
+

@@ -18,6 +18,15 @@
         margin: 0 auto 10px
         background-color: #fff
 
+        &:hover
+            .circle
+                background-color: #fff
+                border-color: $blue
+
+                &::before,
+                &::after
+                    background-color: $blue
+
         p
             font-family: Raleway
             max-width: 120px
@@ -31,16 +40,19 @@
             border-radius: 100%
             position: relative
             background-color: $blue
+            border: 1px solid $blue
+            transition: background-color 0.3s, border-color 0.3s
 
             &::before,
             &::after
                 content: ""
                 position: absolute
                 left: 19px
-                top: 23px
+                top: 22px
                 width: 10px
                 height: 2px
                 background-color: #fff
+                transition: background-color 0.3s
 
             &::after
                 transform: rotate(90deg)

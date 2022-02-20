@@ -3,11 +3,13 @@
         display: flex
         align-items: center
         margin-bottom: 30px
+        overflow: hidden
+        width: fit-content
     
     &__step
         position: relative
-        width: 28px
-        height: 28px
+        width: 30px
+        height: 30px
         border-radius: 100%
         font-size: 12px
         font-weight: 700
@@ -17,41 +19,57 @@
         color: white
         background-color: #D9DCEE
         margin: 0 20px
+        z-index: 2
 
-        &::before,
-        &::after
+        &::before
             content: ""
             position: absolute
             top: 50%
-            transform: translateY(-50%)
-            width: 20px
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 70px
             height: 3px
             background-color: #D9DCEE
-
-        &::before
-            left: -20px
+            z-index: -1
 
         &::after
-            right: -20px
+            content: ""
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            width: 30px
+            height: 30px
+            background-image: url(../img/svg/done.svg)
+            background-size: 50%
+            background-position: center
+            background-repeat: no-repeat
+            filter: invert(100%)
+            opacity: 0
+
+
 
         &:first-child
             margin: 0 20px 0 0
 
-            &::before
-                display: none
-
         &:last-child
             margin: 0 0 0 20px
-
-            &::after
-                display: none
 
         &.active
             background-color: $blue
 
-            &::before,
-            &::after
+            &::before
                 background-color: $blue
+
+        &.done
+            background-color: $green
+            font-size: 0
+
+            &::before
+                background-color: $green
+                
+            &::after
+                opacity: 1
                 
     &__title
         font-family: Raleway
@@ -59,10 +77,49 @@
         color: #47426A
         margin-bottom: 20px
 
+        &--finish
+            position: relative
+            padding-left: 90px
+
+            &::before
+                content: ""
+                position: absolute
+                left: 0
+                top: 50%
+                transform: translateY(-50%)
+                width: 60px
+                height: 60px
+                border-radius: 100% 
+                background-color: #16D7E3
+
+            &::after
+                content: ""
+                position: absolute
+                left: 0
+                top: 50%
+                transform: translateY(-50%)
+                width: 60px
+                height: 60px
+                border-radius: 100% 
+                background-image: url(../img/svg/done.svg)
+                background-size: 40%
+                background-position: center
+                background-repeat: no-repeat
+                filter: invert(100%)
+
     &__text
         color: #727BB0
         line-height: 1.5
         margin-bottom: 20px
+        
+        a
+            font-size: 12px
+            font-weight: 700
+            text-transform: uppercase
+            color: $blue
+
+            &:hover
+                text-decoration: underline
 
     &__subtitle
         font-family: Raleway
@@ -76,12 +133,11 @@
         background-color: #E8EAF4
         border-radius: 20px
         padding: 20px
-        max-width: 500px
-        width: 100%
         margin-bottom: 40px
+        width: fit-content
 
     &__type
-        width: calc((100% - 30px) / 3)
+        width: 145px
         border-radius: 15px
         background-color: #fff
         box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
@@ -91,9 +147,19 @@
         align-items: center
         justify-content: flex-end
         padding: 30px 20px 20px
+        border: 3px solid rgba(0, 0, 0, 0)
+        transition: border-color 0.3s
+
+        &:hover img
+            transform: scale(1.2)
+            
+
+        &:not(:last-child)
+            margin-right: 15px
 
         img
             margin-bottom: 10px
+            transition: transform 0.3s
 
         p
             font-weight: 700
@@ -110,7 +176,7 @@
             border-radius: 100%
             background-color: #fff
             pointer-events: none
-            transition: background-color 0.3s
+            transition: background-color 0.3s, border-color 0.3s
 
             &::after
                 content: ""
@@ -142,20 +208,66 @@
         margin-top: 25px
         display: flex
 
-
     &__btn
         padding: 18px 25px 16px
         color: white
         font-weight: 700
         border-radius: 3px
+        transition: background-color 0.3s, transform 0.3s
 
         &:not(:last-child)
             margin-right: 10px
 
+        &:active
+            transform: scale(0.9)
+            
+
         &--next
             background-color: $blue
+            box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+
+            &:hover
+                background-color: #2B52D6
+
         &--prev
             background-color: #D9DCEE
+            box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+
+            &:hover
+                background-color: #c1c2cb
+
+        &--copy
+            background-color: $blue
+            padding-left: 50px
+            position: relative
+            box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+
+            &::before
+                content: ""
+                position: absolute
+                left: 22px
+                top: 20px
+                width: 13px
+                height: 15px
+                background-image: url(../img/svg/copy.svg)
+                background-size: cover
+                background-repeat: no-repeat
+                background-position: center
+                filter: invert(26%) sepia(11%) saturate(2013%) hue-rotate(208deg) brightness(92%) contrast(89%)
+
+            &:hover
+                background-color: #2B52D6
+
+        &--sm
+            font-size: 0
+            border-radius: 100%
+            padding: 0
+            min-width: 55px
+            width: 55px
+            height: 55px
+
+            &::before
+                filter: invert(100%)
 
     &__input
         position: relative
@@ -172,9 +284,13 @@
             font-size: 14px
             color: #47426A
             outline: none
+            transition: border-color 0.3s
 
             &::placeholder
                 color: #C4C8DF
+
+            &:focus
+                border-color: $blue
 
         &--prefix
             margin-bottom: 40px
@@ -190,8 +306,49 @@
             color: #47426A
 
     .mt40
-        margin-bottom: 40px
+        margin-top: 20px
+        margin-bottom: 20px
+        border-bottom: 1px solid #727BB0
+        width: 300px
 
+    &__block
+        background-color: #fff
+        box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+        border-radius: 10px
+        padding: 20px 20px 20px 60px
+        max-width: 660px
+        width: 100%
+        margin-bottom: 15px
+
+        .reg__text
+            margin-bottom: 0
+            line-height: 1.2
+
+        &:last-child
+            margin-bottom: 40px
+
+    &__textarea
+        position: relative
+        margin-bottom: 15px
+        display: flex
+        align-items: center
+
+        textarea
+            resize: none
+            width: 100%
+            border: none
+            outline: none
+            font-size: 16px
+            margin-right: 10px
+
+    &__bottom
+        display: flex
+        align-items: center
+
+    &__note
+        color: #727BB0
+        font-size: 14px
+        margin-left: 30px
 
 
 
