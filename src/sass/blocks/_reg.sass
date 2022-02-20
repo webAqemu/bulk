@@ -314,6 +314,27 @@
             font-size: 14px
             color: #47426A
 
+        &.error
+            input
+                border-color: $red
+
+            &::after
+                content: "!"
+                font-family: Raleway
+                font-weight: 700
+                font-size: 16px
+                position: absolute
+                top: 50%
+                transform: translate(100%, -50%)
+                right: -15px
+                width: 36px
+                height: 36px
+                border-radius: 100%
+                display: flex
+                align-items: center
+                justify-content: center
+                background-color: #FFE4E3
+                color: $red
     .mt40
         margin-top: 20px
         margin-bottom: 20px

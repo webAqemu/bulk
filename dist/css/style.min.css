@@ -730,6 +730,27 @@ body {
   font-size: 14px;
   color: #47426A;
 }
+.reg__input.error input {
+  border-color: #F71514;
+}
+.reg__input.error::after {
+  content: "!";
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  transform: translate(100%, -50%);
+  right: -15px;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFE4E3;
+  color: #F71514;
+}
 .reg .mt40 {
   margin-top: 20px;
   margin-bottom: 20px;
