@@ -36,10 +36,11 @@
                 | уведомления
 
     .sidebar__profile 
-        .sidebar__image(style="background-image:url(./img/profile-image.jpg);")
-        .sidebar__info 
-            .sidebar__name Галина
-            .sidebar__status Администратор
+        a.sidebar__user(href="#")
+            .sidebar__image(style="background-image:url(./img/profile-image.jpg);")
+            .sidebar__info 
+                .sidebar__name Галина
+                .sidebar__status Администратор
         button.sidebar__settings
             img(src="@img/svg/sidebar-settings.svg", alt="settings icon") 
         button.sidebar__logout 

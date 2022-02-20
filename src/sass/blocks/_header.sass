@@ -63,7 +63,6 @@
             background-repeat: no-repeat
             filter: invert(25%) sepia(10%) saturate(2662%) hue-rotate(208deg) brightness(85%) contrast(80%)
 
-
     &__pay
         background-color: $blue
         border-radius: 3px
@@ -72,6 +71,13 @@
         font-weight: 700
         color: white
         position: relative
+        transition: background-color 0.3s, transform 0.3s
+
+        &:hover
+            background-color: #2B52D6
+
+        &:active
+            transform: scale(0.9)
 
         &::before
             content: ""

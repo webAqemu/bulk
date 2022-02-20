@@ -90,6 +90,7 @@ body {
   flex-direction: column;
   width: 100%;
   background-color: #f5f6fa;
+  position: relative;
 }
 
 .content {
@@ -195,6 +196,13 @@ body {
   font-weight: 700;
   color: white;
   position: relative;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.header__pay:hover {
+  background-color: #2B52D6;
+}
+.header__pay:active {
+  transform: scale(0.9);
 }
 .header__pay::before {
   content: "";
@@ -364,10 +372,18 @@ body {
   left: 70px;
   transform: translateY(-50%);
   filter: invert(91%) sepia(9%) saturate(1126%) hue-rotate(192deg) brightness(88%) contrast(98%);
-  transition: filter 0.2s;
+  transition: filter 0.1s;
 }
 .sidebar__link {
   transition: color 0.2s;
+}
+.sidebar__user {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+.sidebar__user:hover .sidebar__name {
+  color: #4D74F5;
 }
 .sidebar__profile {
   padding: 0 20px 0 70px;
@@ -385,17 +401,17 @@ body {
 }
 .sidebar__info {
   font-size: 12px;
-  margin-right: auto;
 }
 .sidebar__name {
   margin-bottom: 5px;
+  transition: color 0.3s;
 }
 .sidebar__status {
   color: #B0B5D1;
 }
 .sidebar__settings, .sidebar__logout {
   filter: invert(66%) sepia(19%) saturate(4227%) hue-rotate(199deg) brightness(77%) contrast(70%);
-  transition: filter 0.2s;
+  transition: filter 0.1s;
 }
 .sidebar__settings:hover, .sidebar__logout:hover {
   filter: invert(44%) sepia(85%) saturate(4032%) hue-rotate(216deg) brightness(103%) contrast(92%);
@@ -404,6 +420,15 @@ body {
   margin-right: 15px;
 }
 
+.reg {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+.reg__process, .reg__finish {
+  max-width: 660px;
+  width: 100%;
+}
 .reg__steps {
   display: flex;
   align-items: center;
@@ -749,4 +774,128 @@ body {
   color: #727BB0;
   font-size: 14px;
   margin-left: 30px;
+}
+.reg__img {
+  display: flex;
+  margin: 70px auto 0;
+}
+
+.popup {
+  overflow: hidden;
+  background-color: #fff;
+}
+.popup--notification {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 30px;
+  border-bottom-right-radius: 0px;
+  box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15);
+}
+
+.notification {
+  position: relative;
+  padding: 20px 30px;
+  max-width: 320px;
+  width: 100%;
+}
+.notification:not(:last-child) {
+  border-bottom: 1px solid #E8EAF4;
+}
+.notification__title {
+  font-family: Raleway;
+  margin-bottom: 10px;
+}
+.notification__title .blue {
+  text-transform: uppercase;
+  color: #4D74F5;
+}
+.notification__text {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.notification__btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.notification__btn {
+  padding: 12px 25px 9px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  background-color: #4D74F5;
+  color: white;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.notification__btn:active {
+  transform: scale(0.9);
+}
+.notification__btn:hover {
+  background-color: #2B52D6;
+}
+.notification__btn--grey {
+  font-weight: 400;
+  background-color: #E8EAF4;
+  color: #47426A;
+}
+.notification__btn--grey:hover {
+  background-color: #c1c4cf;
+}
+.notification__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(244, 244, 248, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.notification__close:hover {
+  background-color: #f4f4f8;
+}
+.notification__close::before, .notification__close::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 2px;
+  height: 10px;
+  background-color: #727bb0;
+}
+.notification__close::before {
+  transform: rotate(45deg);
+}
+.notification__close::after {
+  transform: rotate(-45deg);
+}
+.notification__close-all {
+  position: relative;
+  width: 100%;
+  font-size: 14px;
+  color: #727bb0;
+  padding: 16px 20px 10px;
+  text-align: center;
+  background-color: rgba(245, 246, 250, 0.5);
+  transition: background-color 0.3s;
+}
+.notification__close-all:hover {
+  background-color: #f4f4f8;
+}
+.notification__close-all::before, .notification__close-all::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 50px;
+  width: 2px;
+  height: 10px;
+  background-color: #727bb0;
+}
+.notification__close-all::before {
+  transform: rotate(45deg);
+}
+.notification__close-all::after {
+  transform: rotate(-45deg);
 }

@@ -26,12 +26,12 @@
           <li class="sidebar__item"><a class="sidebar__link" href="#"> <img class="sidebar__icon" src="img/svg/sidebar-icon-6.svg" alt="icon">тех. поддержка</a></li>
           <li class="sidebar__item"><a class="sidebar__link" href="#"> <img class="sidebar__icon" src="img/svg/sidebar-icon-7.svg" alt="icon">уведомления</a></li>
         </ul>
-        <div class="sidebar__profile"> 
-          <div class="sidebar__image" style="background-image:url(./img/profile-image.jpg);"></div>
-          <div class="sidebar__info"> 
-            <div class="sidebar__name">Галина</div>
-            <div class="sidebar__status">Администратор</div>
-          </div>
+        <div class="sidebar__profile"> <a class="sidebar__user" href="#">
+            <div class="sidebar__image" style="background-image:url(./img/profile-image.jpg);"></div>
+            <div class="sidebar__info"> 
+              <div class="sidebar__name">Галина</div>
+              <div class="sidebar__status">Администратор</div>
+            </div></a>
           <button class="sidebar__settings"><img src="img/svg/sidebar-settings.svg" alt="settings icon"></button>
           <button class="sidebar__logout"> <img src="img/svg/sidebar-logout.svg" alt="logout icon"></button>
         </div>
@@ -46,113 +46,137 @@
         </header>
         <div class="content"> 
           <div class="reg">
-            <div class="reg__process">
-              <div class="reg__steps">
-                <div class="reg__step done">1 </div>
-                <div class="reg__step active">2</div>
-                <div class="reg__step">3</div>
+            <div class="reg__inner">
+              <div class="reg__process">
+                <div class="reg__steps">
+                  <div class="reg__step done">1 </div>
+                  <div class="reg__step active">2</div>
+                  <div class="reg__step">3</div>
+                </div>
+                <div class="reg__content"> 
+                  <div class="reg__wrapper active" data-step="1">
+                    <div class="reg__title">Добро пожаловать в BULK!</div>
+                    <p class="reg__text">Создайте свой первый виджет, <br> а мы поможем его настроить и разместить.</p>
+                    <div class="reg__subtitle">Какой виджет нужен?</div>
+                    <div class="reg__types"> 
+                      <div class="reg__type">
+                        <input type="radio" name="type" checked>
+                        <div class="marker"></div><img src="img/svg/reg-type-1.svg" alt="chat icon">
+                        <p>Чат</p>
+                      </div>
+                      <div class="reg__type"> 
+                        <input type="radio" name="type">
+                        <div class="marker"></div><img src="img/svg/reg-type-2.svg" alt="comment icon">
+                        <p>Комментарии</p>
+                      </div>
+                      <div class="reg__type"> 
+                        <input type="radio" name="type">
+                        <div class="marker"></div><img src="img/svg/reg-type-3.svg" alt="review icon">
+                        <p>Отзывы</p>
+                      </div>
+                      <div class="reg__type"> 
+                        <input type="radio" name="type">
+                        <div class="marker"></div><img src="img/svg/reg-type-3.svg" alt="review icon">
+                        <p>Отзывы</p>
+                      </div>
+                    </div>
+                    <button class="reg__btn reg__btn--next">Создать виджет</button>
+                  </div>
+                  <div class="mt40"></div>
+                  <div class="reg__wrapper active" data-step="2">
+                    <div class="reg__title">Отлично, куда размещаем?</div>
+                    <p class="reg__text">Одна страница — один виджет. <br> Каждый виджет привязан к своей странице, имеет свой уникальный ID и код вставки.</p>
+                    <div class="reg__subtitle">Адрес страницы, где будет размещаться</div>
+                    <div class="reg__input reg__input--prefix"> 
+                      <div class="prefix">http://</div>
+                      <input type="text" placeholder="example.com">
+                    </div>
+                    <p class="reg__text">Если на сайте будет несколько виджетов, то различать их вам поможет название. <br> Оно будет видно только в личном кабинете администратора.</p>
+                    <div class="reg__subtitle">Назовите ваш виджет</div>
+                    <div class="reg__input">
+                      <input type="text" placeholder="Например, Отзывы_товары_шоколад">
+                    </div>
+                    <div class="reg__btns"> 
+                      <button class="reg__btn reg__btn--prev">Назад</button>
+                      <button class="reg__btn reg__btn--next">Далее</button>
+                    </div>
+                  </div>
+                  <div class="mt40"></div>
+                  <div class="reg__wrapper active" data-step="3">
+                    <div class="reg__title">Теперь настраиваем</div>
+                    <p class="reg__text">Наполнение будет меняться от виджета</p>
+                    <div class="reg__btns"> 
+                      <button class="reg__btn reg__btn--prev">Назад</button>
+                      <button class="reg__btn reg__btn--next">Готово!</button>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="reg__content"> 
-                <div class="reg__wrapper active" data-step="1">
-                  <div class="reg__title">Добро пожаловать в BULK!</div>
-                  <p class="reg__text">Создайте свой первый виджет, <br> а мы поможем его настроить и разместить.</p>
-                  <div class="reg__subtitle">Какой виджет нужен?</div>
-                  <div class="reg__types"> 
-                    <div class="reg__type">
-                      <input type="radio" name="type" checked>
-                      <div class="marker"></div><img src="img/svg/reg-type-1.svg" alt="chat icon">
-                      <p>Чат</p>
+              <div class="mt40"></div>
+              <div class="reg__finish">
+                <div class="reg__title reg__title--finish">Готово! <br> Осталось вставить код на сайт</div>
+                <div class="reg__text">Вставьте код на сайт в то место, где хотите разместить виджет и сохраните изменения. <br> Виджет сразу подключится.</div>
+                <div class="reg__blocks">
+                  <div class="reg__block"> 
+                    <div class="reg__subtitle">PHP</div>
+                    <div class="reg__textarea">
+                      <textarea name="code">script src="https://bulkfeedback.com/laod.php?format=json-34324dsbdyui37fd-39kd9-39ikdknsnkjss"></script </textarea>
                     </div>
-                    <div class="reg__type"> 
-                      <input type="radio" name="type">
-                      <div class="marker"></div><img src="img/svg/reg-type-2.svg" alt="comment icon">
-                      <p>Комментарии</p>
-                    </div>
-                    <div class="reg__type"> 
-                      <input type="radio" name="type">
-                      <div class="marker"></div><img src="img/svg/reg-type-3.svg" alt="review icon">
-                      <p>Отзывы</p>
-                    </div>
-                    <div class="reg__type"> 
-                      <input type="radio" name="type">
-                      <div class="marker"></div><img src="img/svg/reg-type-3.svg" alt="review icon">
-                      <p>Отзывы</p>
+                    <div class="reg__bottom">
+                      <button class="reg__btn reg__btn--copy">Скопировать код</button>
                     </div>
                   </div>
-                  <button class="reg__btn reg__btn--next">Создать виджет</button>
-                </div>
-                <div class="mt40"></div>
-                <div class="reg__wrapper active" data-step="2">
-                  <div class="reg__title">Отлично, куда размещаем?</div>
-                  <p class="reg__text">Одна страница — один виджет. <br> Каждый виджет привязан к своей странице, имеет свой уникальный ID и код вставки.</p>
-                  <div class="reg__subtitle">Адрес страницы, где будет размещаться</div>
-                  <div class="reg__input reg__input--prefix"> 
-                    <div class="prefix">http://</div>
-                    <input type="text" placeholder="example.com">
+                  <div class="reg__block"> 
+                    <div class="reg__subtitle">JavaScript</div>
+                    <div class="reg__textarea">
+                      <textarea name="code">script src="https://bulkfeedback.com/laod.php?format=json-34324dsbdyui37fd-39kd9-39ikdknsnkjss"></script </textarea>
+                    </div>
+                    <div class="reg__bottom">
+                      <button class="reg__btn reg__btn--copy">Скопировать код</button>
+                      <div class="reg__note">Примечание: заголовок Refer обязателен</div>
+                    </div>
                   </div>
-                  <p class="reg__text">Если на сайте будет несколько виджетов, то различать их вам поможет название. <br> Оно будет видно только в личном кабинете администратора.</p>
-                  <div class="reg__subtitle">Назовите ваш виджет</div>
-                  <div class="reg__input">
-                    <input type="text" placeholder="Например, Отзывы_товары_шоколад">
-                  </div>
-                  <div class="reg__btns"> 
-                    <button class="reg__btn reg__btn--prev">Назад</button>
-                    <button class="reg__btn reg__btn--next">Далее</button>
+                  <div class="reg__block"> 
+                    <div class="reg__subtitle">HTML</div>
+                    <p class="reg__text">Кнопка раскрытия чата без стилей</p>
+                    <div class="reg__textarea">
+                      <textarea name="code">script src="https://bulkfeedback.com/laod.php?format=json-34324dsbdyui37fd-39kd9-39ikdknsnkjss"></script </textarea>
+                      <button class="reg__btn reg__btn--copy reg__btn--sm"></button>
+                    </div>
+                    <p class="reg__text">Кнопка раскрытия чата со стилями</p>
+                    <div class="reg__textarea">
+                      <textarea name="code">script src="https://bulkfeedback.com/laod.php?format=json-34324dsbdyui37fd-39kd9-39ikdknsnkjss"></script </textarea>
+                      <button class="reg__btn reg__btn--copy reg__btn--sm"></button>
+                    </div>
+                    <div class="reg__text">Примечание: для отображения чата необходимо <br> установить хотя бы одну из кнопок</div>
                   </div>
                 </div>
-                <div class="mt40"></div>
-                <div class="reg__wrapper active" data-step="3">
-                  <div class="reg__title">Теперь настраиваем</div>
-                  <p class="reg__text">Наполнение будет меняться от виджета</p>
-                  <div class="reg__btns"> 
-                    <button class="reg__btn reg__btn--prev">Назад</button>
-                    <button class="reg__btn reg__btn--next">Готово!</button>
-                  </div>
-                </div>
+                <div class="reg__subtitle">Что дальше?</div>
+                <p class="reg__text">После вставки кода на сайт виджет автоматически активируется. </p>
+                <p class="reg__text">Теперь виджет можно найти во вкладке <a href="#">Мои виджеты. </a> Там можно изменить настройки, назначить модератора, скопировать код для вставки или приостановить работу виджета.</p>
               </div>
             </div>
-            <div class="mt40"></div>
-            <div class="reg__finish">
-              <div class="reg__title reg__title--finish">Готово! <br> Осталось вставить код на сайт</div>
-              <div class="reg__text">Вставьте код на сайт в то место, где хотите разместить виджет и сохраните изменения. <br> Виджет сразу подключится.</div>
-              <div class="reg__blocks">
-                <div class="reg__block"> 
-                  <div class="reg__subtitle">PHP</div>
-                  <div class="reg__textarea">
-                    <textarea name="code">script src="https://bulkfeedback.com/laod.php?format=json-34324dsbdyui37fd-39kd9-39ikdknsnkjss"></script </textarea>
-                  </div>
-                  <div class="reg__bottom">
-                    <button class="reg__btn reg__btn--copy">Скопировать код</button>
-                  </div>
-                </div>
-                <div class="reg__block"> 
-                  <div class="reg__subtitle">JavaScript</div>
-                  <div class="reg__textarea">
-                    <textarea name="code">script src="https://bulkfeedback.com/laod.php?format=json-34324dsbdyui37fd-39kd9-39ikdknsnkjss"></script </textarea>
-                  </div>
-                  <div class="reg__bottom">
-                    <button class="reg__btn reg__btn--copy">Скопировать код</button>
-                    <div class="reg__note">Примечание: заголовок Refer обязателен</div>
-                  </div>
-                </div>
-                <div class="reg__block"> 
-                  <div class="reg__subtitle">HTML</div>
-                  <p class="reg__text">Кнопка раскрытия чата без стилей</p>
-                  <div class="reg__textarea">
-                    <textarea name="code">script src="https://bulkfeedback.com/laod.php?format=json-34324dsbdyui37fd-39kd9-39ikdknsnkjss"></script </textarea>
-                    <button class="reg__btn reg__btn--copy reg__btn--sm"></button>
-                  </div>
-                  <p class="reg__text">Кнопка раскрытия чата со стилями</p>
-                  <div class="reg__textarea">
-                    <textarea name="code">script src="https://bulkfeedback.com/laod.php?format=json-34324dsbdyui37fd-39kd9-39ikdknsnkjss"></script </textarea>
-                    <button class="reg__btn reg__btn--copy reg__btn--sm"></button>
-                  </div>
-                  <div class="reg__text">Примечание: для отображения чата необходимо <br> установить хотя бы одну из кнопок</div>
-                </div>
+            <div class="reg__img"><img src="img/review.png" alt="review image"></div>
+          </div>
+          <div class="popup popup--notification">
+            <button class="notification__close-all">Скрыть все уведомления</button>
+            <div class="notification">
+              <div class="notification__title">Промокод <span class="blue">ALL_INCLUSIVE</span></div>
+              <p class="notification__text">Вы сможете пользоваться всеми возможностями нашего сервиса без ограничений в течение 14 дней!</p>
+              <div class="notification__btns"> 
+                <button class="notification__btn">Активировать</button>
+                <button class="notification__btn notification__btn--grey">Позже</button>
               </div>
-              <div class="reg__subtitle">Что дальше?</div>
-              <p class="reg__text">После вставки кода на сайт виджет автоматически активируется. </p>
-              <p class="reg__text">Теперь виджет можно найти во вкладке <a href="#">Мои виджеты. </a> Там можно изменить настройки, назначить модератора, скопировать код для вставки или приостановить работу виджета.</p>
+              <div class="notification__close"></div>
+            </div>
+            <div class="notification">
+              <div class="notification__title">Промокод <span class="blue">ALL_INCLUSIVE</span></div>
+              <p class="notification__text">Вы сможете пользоваться всеми возможностями нашего сервиса без ограничений в течение 14 дней!</p>
+              <div class="notification__btns"> 
+                <button class="notification__btn">Активировать</button>
+                <button class="notification__btn notification__btn--grey">Позже</button>
+              </div>
+              <div class="notification__close"></div>
             </div>
           </div>
         </div>

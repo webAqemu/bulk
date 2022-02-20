@@ -119,10 +119,18 @@
         left: 70px
         transform: translateY(-50%)
         filter: invert(91%) sepia(9%) saturate(1126%) hue-rotate(192deg) brightness(88%) contrast(98%)
-        transition: filter 0.2s
+        transition: filter 0.1s
 
     &__link
         transition: color 0.2s
+
+    &__user
+        display: flex
+        align-items: center
+        margin-right: auto
+
+        &:hover .sidebar__name
+            color: $blue
 
     &__profile
         padding: 0 20px 0 70px
@@ -140,10 +148,10 @@
 
     &__info
         font-size: 12px
-        margin-right: auto
 
     &__name
         margin-bottom: 5px
+        transition: color 0.3s
 
     &__status
         color:#B0B5D1
@@ -151,7 +159,7 @@
     &__settings,
     &__logout
         filter: invert(66%) sepia(19%) saturate(4227%) hue-rotate(199deg) brightness(77%) contrast(70%)
-        transition: filter 0.2s
+        transition: filter 0.1s
 
         &:hover
             filter: invert(44%) sepia(85%) saturate(4032%) hue-rotate(216deg) brightness(103%) contrast(92%)
