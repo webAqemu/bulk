@@ -1,0 +1,82 @@
+.stats 
+    .stats__top 
+        .stats__title Статистика
+        button.stats__settings 
+        button.stats__load-out Выгрузить
+    ul.stats__websites
+        li
+            button Сайт №1
+        li.active
+            button Сайт №2
+        li
+            button Сайт №3
+    .stats__subtitle мои виджеты
+    ul.stats__widgets
+        li.active 
+            button
+                img(src="@img/svg/reg-type-3.svg", alt="")
+                p отзывы
+                div Виджет публички в отзывах
+        li 
+            button
+                img(src="@img/svg/reg-type-2.svg", alt="")
+                p комментарии
+                div Виджет публички в отзывах
+        li 
+            button
+                img(src="@img/svg/reg-type-1.svg", alt="")
+                p Чат
+                div О доставке
+
+    ul.stats__cards
+        li 
+            img(src="@img/svg/stats-views.svg", alt="stats icon")
+            p просмотры
+            .num 1564
+            .percents.plus 107%
+        li 
+            img(src="@img/svg/stats-comments.svg", alt="comments icon")
+            p комментарии
+            .num 54
+            .percents.minus 107%
+        li 
+            img(src="@img/svg/stats-likes.svg", alt="likes icon")
+            p оценки
+            .num 15
+            .percents.minus 107%
+        li 
+            img(src="@img/svg/stats-complaintes.svg", alt="complaintes icon")
+            p жалобы
+            .num 0
+            .percents 0%
+    .stats__inner
+        .stats__wrapper 
+            .stats__subtitle посещения
+            button.stats__btn.active С компьютера
+            button.stats__btn Мобильные
+
+        .stats__wrapper
+            .stats__subtitle детализация
+            .stats__select
+                .choosed По дням
+
+    .stats__inner 
+        .stats__graphic 
+        .stats__categories
+            button.stats__category 
+                input(type="checkbox", name="category" checked)
+                .line
+                p.name просмотры
+            button.stats__category 
+                input(type="checkbox", name="category" checked)
+                .line(style="background-color: #00C2F6")
+                p.name комментарии
+            button.stats__category 
+                input(type="checkbox", name="category")
+                .line(style="background-color: #44B759")
+                p.name оценки
+            button.stats__category 
+                input(type="checkbox", name="category" checked)
+                .line(style="background-color: #FF4D45")
+                p.name жалобы
+

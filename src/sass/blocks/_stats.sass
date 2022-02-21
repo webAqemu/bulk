@@ -1,0 +1,407 @@
+.stats
+    &__top
+        display: flex
+        align-items: center
+        margin-bottom: 30px
+
+    &__title
+        font-family: Raleway
+        font-size: 30px
+        margin-right: 20px
+
+    &__settings
+        position: relative
+        width: 35px
+        height: 35px
+        border-radius: 100%
+        background-color: #e8eaf4
+        margin-right: auto
+        transition: transform 0.3s
+
+        &:hover::after
+            opacity: 1
+
+        &:active
+            transform: scale(0.9)
+
+        &::before
+            content: ""
+            position: absolute
+            left: 0
+            top: 0
+            width: 35px
+            height: 35px
+            border-radius: 100%
+            background-image: url(../img/svg/settings.svg)
+            background-size: 45%
+            background-position: center
+            background-repeat: no-repeat
+            filter: invert(66%) sepia(19%) saturate(4227%) hue-rotate(199deg) brightness(77%) contrast(70%)
+
+        &::after
+            content: ""
+            position: absolute
+            left: 0
+            top: 0
+            width: 35px
+            height: 35px
+            border-radius: 100%
+            background-image: url(../img/svg/settings-hover.svg)
+            background-size: 45%
+            background-position: center
+            background-repeat: no-repeat
+            opacity: 0
+            transition: opacity 0.3s
+            
+
+    &__load-out
+        font-size: 14px
+        padding: 15px 20px 12px
+        background-color: #fff
+        box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+        border-radius: 3px
+        border: 1px solid white
+        transition: border-color 0.3s, color 0.3s, transform 0.3s
+
+        &:hover
+            color: $blue
+            border-color: $blue
+
+        &:active
+            transform: scale(0.9)
+
+    &__websites
+        display: flex
+        align-items: center
+        margin-bottom: 40px
+
+        li
+            &:not(:last-child)
+                margin-right: 10px
+
+            &.active button
+                background-color: $blue
+                border-color: $blue
+                color: white
+
+
+        button
+            font-size: 14px
+            line-height: 1
+            color: #798196
+            padding: 9px 15px 7px
+            background-color: rgba(255, 255, 255, 0)
+            border-radius: 15px
+            border: 1px solid #C4C8DF
+            transition: color 0.3s, border-color 0.3s, background-color 0.3s, transform 0.3s
+
+            &:hover
+                border-color: $blue
+                color: $blue
+
+            &:active
+                transform: scale(0.9)
+
+    &__subtitle
+        font-family: Raleway
+        font-size: 12px
+        text-transform: uppercase
+        color: #727bb0
+        margin-bottom: 20px
+
+    &__widgets
+        display: flex
+        align-items: center
+        padding-bottom: 30px
+        margin-bottom: 20px
+        border-bottom: 1px solid #D9DCEE
+
+        li
+            &:not(:last-child)
+                margin-right: 15px
+
+            &.active button,
+            &:hover button
+                box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+                background-color: #fff
+
+            &:active button
+                transform: scale(0.9)
+                
+
+        button
+            line-height: 1
+            color: #47426A
+            padding: 15px
+            width: 265px
+            background-color: #E8EAF4
+            border-radius: 10px
+            position: relative
+            text-align: left
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s
+
+        p
+            font-size: 10px
+            text-transform: uppercase
+            padding-left: 20px
+            margin-bottom: 10px
+
+        div
+            font-family: Raleway
+            white-space: nowrap
+
+        img
+            position: absolute
+            left: 15px
+            top: 12px
+            width: 13px
+            height: 13px
+            object-fit: contain
+
+    &__cards
+        display: flex
+        align-items: center
+        padding-bottom: 30px
+        margin-bottom: 30px
+        border-bottom: 1px solid #D9DCEE
+
+        li
+            position: relative
+            width: 160px
+            padding: 15px 20px 30px
+            line-height: 1
+            border-radius: 10px
+            background-color: #fff
+            box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+
+            &:not(:last-child)
+                margin-right: 15px
+
+        img
+            position: absolute
+            top: 5px
+            left: 8px
+            width: 24px
+            height: 24px
+            object-fit: contain
+            object-position: center
+
+        p
+            padding-left: 25px
+            font-size: 10px
+            text-transform: uppercase
+            margin-bottom: 10px
+
+        .num
+            font-size: 42px
+            text-align: center
+
+        .percents
+            position: absolute
+            left: 50%
+            bottom: 0
+            transform: translate(-50%, 50%)
+            min-width: 60px
+            border-radius: 15px
+            font-size: 14px
+            color: white
+            background-color: #C4C8DF
+            padding: 5px
+            display: flex
+            align-items: center
+            justify-content: center
+
+            &.plus
+                background-color: $green
+
+                &::before
+                    content: "↓"
+                    display: block
+                    font-weight: 700
+                    transform: rotate(180deg) translateY(-2px)
+                    margin-right: 2px
+
+            &.minus
+                background-color: #FF4D45
+
+                &::before
+                    content: "↓"
+                    display: block
+                    font-weight: 700
+                    transform: translateY(-2px)
+                    margin-right: 2px
+
+    &__inner
+        display: flex
+        align-items: center
+
+
+    &__wrapper
+        display: flex
+        align-items: center
+        border-radius: 10px
+        background-color: #E8EAF4
+        padding: 10px 15px
+        margin-right: 15px
+        margin-bottom: 20px
+        width: fit-content
+
+        .stats__subtitle
+            margin-right: 10px
+            margin-bottom: 0
+
+    &__btn
+        color: #798196
+        font-size: 14px
+        padding: 9px 15px 7px
+        border-radius: 15px
+        border: 1px solid #C4C8DF
+        transition: background-color 0.3s, border-color 0.3s, color 0.3s, transform 0.3s
+
+        &:not(:last-child)
+            margin-right: 5px
+
+        &:hover
+            color: $blue
+            border-color: $blue
+
+        &:active
+            transform: scale(0.9)
+
+        &.active
+            color: white
+            background-color: $blue
+            border-color: $blue
+
+    &__select
+        position: relative
+        border-radius: 3px
+        padding: 9px 45px 7px 15px
+        font-size: 14px
+        background-color: #fff
+        cursor: pointer
+
+        .choosed
+            pointer-events: none
+
+        &::after
+            content: ""
+            position: absolute
+            top: 14px
+            right: 18px
+            border: 4px solid transparent
+            border-top: 6px solid $blue
+
+    &__subtitle + &__select
+        margin-left: 20px
+
+    &__graphic
+        width: 600px
+        height: 375px
+        background-color: #fff
+        margin-right: 10px
+
+    &__categories
+        margin-bottom: auto
+
+    &__category
+        position: relative
+        border-radius: 10px
+        background-color: #fff
+        display: flex
+        align-items: center
+        padding: 6px 10px
+        height: 42px
+        min-width: 190px
+
+        &:not(:last-child)
+            margin-bottom: 10px
+
+        input
+            position: absolute
+            left: 0
+            top: 0
+            z-index: 5
+            width: 100%
+            height: 100%
+            opacity: 0
+            cursor: pointer
+
+        input:checked + .line
+            height: 30px
+
+            &::after
+                opacity: 1
+
+            &::before
+               background-color: #e8eaf4
+
+        input:checked + .line + .name::after
+            opacity: 0
+
+        input:hover + .line + .name
+            color: $blue
+
+        .line
+            z-index: 4
+            min-width: 3px
+            width: 3px
+            height: 15px
+            border-radius: 10px
+            background-color: $violent
+            margin-left: 23px
+            margin-right: 10px
+            transition: height 0.3s
+
+            &::before
+                content: ""
+                position: absolute
+                left: 10px
+                top: 50%
+                transform: translateY(-50%)
+                width: 15px
+                height: 15px
+                border-radius: 3px
+                background-color: #fff
+                transition: background-color 0.3s
+
+            &::after
+                content: ""
+                position: absolute
+                left: 10px
+                top: 50%
+                transform: translateY(-50%)
+                width: 15px
+                height: 15px
+                border-radius: 3px
+                background-image: url(../img/svg/done.svg)
+                background-size: 70%
+                background-position: center
+                background-repeat: no-repeat
+                filter: invert(36%) sepia(93%) saturate(1166%) hue-rotate(210deg) brightness(97%) contrast(99%)
+                opacity: 0
+                transition: opacity 0.3s
+
+        .name
+            font-family: Raleway
+            font-size: 12px
+            text-transform: uppercase
+            color: #727bb0
+            z-index: 3
+            transition: color 0.3s
+
+            &::after
+                content: ""
+                position: absolute
+                left: 0
+                top: 0
+                z-index: -1
+                width: 100%
+                height: 100%
+                background-color: #E8EAF4
+                border-radius: 10px
+                opacity: 1
+                transition: opacity 0.3s
+
+
+

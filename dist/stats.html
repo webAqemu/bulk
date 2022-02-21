@@ -45,22 +45,104 @@
           </div><a class="header__pay" href="#">Пополнить</a>
         </header>
         <div class="content"> 
-          <div class="notification"> 
-            <div class="notification__title">Уведомления</div>
-            <ul class="notification__list">
-              <li class="notification__item"> <a class="notification__link" href="#"> 
-                  <div class="notification__name">Заканчивается срок промокода</div>
-                  <p class="notification__desc">Создайте свой первый виджет, <br> а мы поможем его настроить и разместить.</p>
-                  <div class="notification__date">12 января 2021 </div></a></li>
-              <li class="notification__item"> <a class="notification__link" href="#"> 
-                  <div class="notification__name">Заканчивается срок промокода</div>
-                  <p class="notification__desc">Создайте свой первый виджет, <br> а мы поможем его настроить и разместить.</p>
-                  <div class="notification__date">12 января 2021 </div></a></li>
-              <li class="notification__item viewed"><a class="notification__link" href="#"> 
-                  <div class="notification__name">Заканчивается срок промокода</div>
-                  <p class="notification__desc">Создайте свой первый виджет, <br> а мы поможем его настроить и разместить.</p>
-                  <div class="notification__date">12 января 2021 </div></a></li>
+          <div class="stats"> 
+            <div class="stats__top"> 
+              <div class="stats__title">Статистика</div>
+              <button class="stats__settings"> </button>
+              <button class="stats__load-out">Выгрузить</button>
+            </div>
+            <ul class="stats__websites">
+              <li>
+                <button>Сайт №1</button>
+              </li>
+              <li class="active">
+                <button>Сайт №2</button>
+              </li>
+              <li>
+                <button>Сайт №3</button>
+              </li>
             </ul>
+            <div class="stats__subtitle">мои виджеты</div>
+            <ul class="stats__widgets">
+              <li class="active"> 
+                <button><img src="img/svg/reg-type-3.svg" alt="">
+                  <p>отзывы</p>
+                  <div>Виджет публички в отзывах</div>
+                </button>
+              </li>
+              <li> 
+                <button><img src="img/svg/reg-type-2.svg" alt="">
+                  <p>комментарии</p>
+                  <div>Виджет публички в отзывах</div>
+                </button>
+              </li>
+              <li> 
+                <button><img src="img/svg/reg-type-1.svg" alt="">
+                  <p>Чат</p>
+                  <div>О доставке</div>
+                </button>
+              </li>
+            </ul>
+            <ul class="stats__cards">
+              <li> <img src="img/svg/stats-views.svg" alt="stats icon">
+                <p>просмотры</p>
+                <div class="num">1564</div>
+                <div class="percents plus">107%</div>
+              </li>
+              <li> <img src="img/svg/stats-comments.svg" alt="comments icon">
+                <p>комментарии</p>
+                <div class="num">54</div>
+                <div class="percents minus">107%</div>
+              </li>
+              <li> <img src="img/svg/stats-likes.svg" alt="likes icon">
+                <p>оценки</p>
+                <div class="num">15</div>
+                <div class="percents minus">107%</div>
+              </li>
+              <li> <img src="img/svg/stats-complaintes.svg" alt="complaintes icon">
+                <p>жалобы</p>
+                <div class="num">0</div>
+                <div class="percents">0%</div>
+              </li>
+            </ul>
+            <div class="stats__inner">
+              <div class="stats__wrapper"> 
+                <div class="stats__subtitle">посещения</div>
+                <button class="stats__btn active">С компьютера</button>
+                <button class="stats__btn">Мобильные</button>
+              </div>
+              <div class="stats__wrapper">
+                <div class="stats__subtitle">детализация</div>
+                <div class="stats__select">
+                  <div class="choosed">По дням</div>
+                </div>
+              </div>
+            </div>
+            <div class="stats__inner"> 
+              <div class="stats__graphic"> </div>
+              <div class="stats__categories">
+                <button class="stats__category"> 
+                  <input type="checkbox" name="category" checked>
+                  <div class="line"></div>
+                  <p class="name">просмотры</p>
+                </button>
+                <button class="stats__category"> 
+                  <input type="checkbox" name="category" checked>
+                  <div class="line" style="background-color: #00C2F6"></div>
+                  <p class="name">комментарии</p>
+                </button>
+                <button class="stats__category"> 
+                  <input type="checkbox" name="category">
+                  <div class="line" style="background-color: #44B759"></div>
+                  <p class="name">оценки</p>
+                </button>
+                <button class="stats__category"> 
+                  <input type="checkbox" name="category" checked>
+                  <div class="line" style="background-color: #FF4D45"></div>
+                  <p class="name">жалобы</p>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </main>
