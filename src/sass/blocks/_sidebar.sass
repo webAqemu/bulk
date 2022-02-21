@@ -17,6 +17,7 @@
         width: 100%
         margin: 0 auto 10px
         background-color: #fff
+        transition: transform 0.3s
 
         &:hover
             .circle
@@ -26,6 +27,9 @@
                 &::before,
                 &::after
                     background-color: $blue
+
+        &:active
+            transform: scale(0.9)
 
         p
             font-family: Raleway
@@ -97,8 +101,8 @@
             color: $blue
             background-color: #DADEF0
 
-            .sidebar__icon
-                filter: invert(44%) sepia(85%) saturate(4032%) hue-rotate(216deg) brightness(103%) contrast(92%)
+            .sidebar__icon--hover
+                opacity: 1
 
         &.active
             color: $blue 
@@ -115,14 +119,18 @@
         left: 70px
         transform: translateY(-50%)
         filter: invert(91%) sepia(9%) saturate(1126%) hue-rotate(192deg) brightness(88%) contrast(98%)
-        transition: filter 0.1s
+        transition: opacity 0.3s
+
+        &--hover
+            opacity: 0
+            filter: none
 
     &__link
         display: block
         width: 100%
         padding: 15px 0 15px 110px
         background-color: rgba(0, 0, 0, 0)
-        transition: background-color 0.2s, color 0.2s
+        transition: background-color 0.3s, color 0.3s
 
     &__user
         display: flex
