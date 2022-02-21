@@ -1,0 +1,107 @@
+.popup-notification
+    position: relative
+    padding: 20px 30px
+    max-width: 320px
+    width: 100%
+
+    &:not(:last-child)
+        border-bottom: 1px solid #E8EAF4
+
+    &__title
+        font-family: Raleway
+        margin-bottom: 10px
+
+        .blue
+            text-transform: uppercase
+            color: $blue
+
+    &__text
+        font-size: 14px
+        margin-bottom: 15px
+
+    &__btns
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+
+    &__btn
+        padding: 12px 25px 9px
+        border-radius: 5px
+        font-weight: 700
+        font-size: 14px
+        background-color: $blue
+        color: white
+        transition: background-color 0.3s, transform 0.3s
+
+        &:active
+            transform: scale(0.9)
+
+        &:hover
+            background-color: #2B52D6
+
+        &--grey
+            font-weight: 400
+            background-color: #E8EAF4
+            color: #47426A
+
+            &:hover
+                background-color: #c1c4cf
+
+    &__close
+        position: absolute
+        top: 0
+        right: 0
+        width: 45px
+        height: 45px
+        background-color: rgba(#f4f4f8, 0.5)
+        cursor: pointer
+        transition: background-color 0.3s
+
+        &:hover
+            background-color: rgba(#f4f4f8, 1)
+
+        &::before,
+        &::after
+            content: ""
+            position: absolute
+            left: 20px
+            top: 20px
+            width: 2px
+            height: 10px
+            background-color: #727bb0
+
+        &::before
+            transform: rotate(45deg)
+        
+        &::after
+            transform: rotate(-45deg)
+            
+    &__close-all
+        position: relative
+        width: 100%
+        font-size: 14px
+        color: #727bb0
+        padding: 16px 20px 10px
+        text-align: center
+        background-color: rgba(#f5f6fa, 0.5)
+        transition: background-color 0.3s
+
+        &:hover
+            background-color: rgba(#f4f4f8, 1)
+
+        &::before,
+        &::after
+            content: ""
+            position: absolute
+            top: 18px
+            left: 50px
+            width: 2px
+            height: 10px
+            background-color: #727bb0
+            
+        &::before
+            transform: rotate(45deg)
+        
+        &::after
+            transform: rotate(-45deg)

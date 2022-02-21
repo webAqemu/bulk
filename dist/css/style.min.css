@@ -94,8 +94,7 @@ body {
 }
 
 .content {
-  padding: 20px 40px;
-  margin: 10px;
+  padding: 30px 50px;
   overflow-y: auto;
   overflow-x: hidden;
   /* This will work on Firefox */
@@ -826,34 +825,34 @@ body {
   box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15);
 }
 
-.notification {
+.popup-notification {
   position: relative;
   padding: 20px 30px;
   max-width: 320px;
   width: 100%;
 }
-.notification:not(:last-child) {
+.popup-notification:not(:last-child) {
   border-bottom: 1px solid #E8EAF4;
 }
-.notification__title {
+.popup-notification__title {
   font-family: Raleway;
   margin-bottom: 10px;
 }
-.notification__title .blue {
+.popup-notification__title .blue {
   text-transform: uppercase;
   color: #4D74F5;
 }
-.notification__text {
+.popup-notification__text {
   font-size: 14px;
   margin-bottom: 15px;
 }
-.notification__btns {
+.popup-notification__btns {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
-.notification__btn {
+.popup-notification__btn {
   padding: 12px 25px 9px;
   border-radius: 5px;
   font-weight: 700;
@@ -862,21 +861,21 @@ body {
   color: white;
   transition: background-color 0.3s, transform 0.3s;
 }
-.notification__btn:active {
+.popup-notification__btn:active {
   transform: scale(0.9);
 }
-.notification__btn:hover {
+.popup-notification__btn:hover {
   background-color: #2B52D6;
 }
-.notification__btn--grey {
+.popup-notification__btn--grey {
   font-weight: 400;
   background-color: #E8EAF4;
   color: #47426A;
 }
-.notification__btn--grey:hover {
+.popup-notification__btn--grey:hover {
   background-color: #c1c4cf;
 }
-.notification__close {
+.popup-notification__close {
   position: absolute;
   top: 0;
   right: 0;
@@ -886,10 +885,10 @@ body {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-.notification__close:hover {
+.popup-notification__close:hover {
   background-color: #f4f4f8;
 }
-.notification__close::before, .notification__close::after {
+.popup-notification__close::before, .popup-notification__close::after {
   content: "";
   position: absolute;
   left: 20px;
@@ -898,13 +897,13 @@ body {
   height: 10px;
   background-color: #727bb0;
 }
-.notification__close::before {
+.popup-notification__close::before {
   transform: rotate(45deg);
 }
-.notification__close::after {
+.popup-notification__close::after {
   transform: rotate(-45deg);
 }
-.notification__close-all {
+.popup-notification__close-all {
   position: relative;
   width: 100%;
   font-size: 14px;
@@ -914,10 +913,10 @@ body {
   background-color: rgba(245, 246, 250, 0.5);
   transition: background-color 0.3s;
 }
-.notification__close-all:hover {
+.popup-notification__close-all:hover {
   background-color: #f4f4f8;
 }
-.notification__close-all::before, .notification__close-all::after {
+.popup-notification__close-all::before, .popup-notification__close-all::after {
   content: "";
   position: absolute;
   top: 18px;
@@ -926,9 +925,73 @@ body {
   height: 10px;
   background-color: #727bb0;
 }
-.notification__close-all::before {
+.popup-notification__close-all::before {
   transform: rotate(45deg);
 }
-.notification__close-all::after {
+.popup-notification__close-all::after {
   transform: rotate(-45deg);
+}
+
+.notification__title {
+  position: relative;
+  font-family: Raleway;
+  font-size: 30px;
+  line-height: 1;
+  padding: 0 0 25px;
+}
+.notification__title::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  bottom: 0;
+  width: calc(100% + 100px);
+  height: 1px;
+  background-color: #d9dcee;
+}
+.notification__item:hover .notification__name {
+  color: #4D74F5;
+}
+.notification__item.viewed .notification__link::before {
+  opacity: 0;
+}
+.notification__link {
+  display: block;
+  position: relative;
+  padding: 20px 0 25px 20px;
+}
+.notification__link::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  bottom: 0;
+  width: calc(100% + 60px);
+  height: 1px;
+  background-color: #d9dcee;
+}
+.notification__link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 25px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #4D74F5;
+  transition: opacity 0.3s;
+}
+.notification__name {
+  font-family: Raleway;
+  font-size: 18px;
+  margin-bottom: 5px;
+  transition: color 0.3s;
+}
+.notification__desc {
+  max-width: 600px;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #727bb0;
+}
+.notification__date {
+  font-size: 14px;
+  color: #727bb0;
 }
