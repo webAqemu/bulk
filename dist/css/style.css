@@ -843,6 +843,24 @@ body {
   border-radius: 30px;
   border-bottom-right-radius: 0px;
   box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15);
+  height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* This will work on Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #4D74F5;
+  /* Targtes on Chrome, Edge, and Safari */
+}
+.popup--notification::-webkit-scrollbar {
+  width: 10px;
+}
+.popup--notification::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0);
+}
+.popup--notification::-webkit-scrollbar-thumb {
+  background-color: #4D74F5;
+  border-radius: 20px;
+  border: none;
 }
 
 .popup-notification {
@@ -1089,7 +1107,11 @@ body {
 .stats__websites {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 40px;
+}
+.stats__websites li {
+  margin-bottom: 10px;
 }
 .stats__websites li:not(:last-child) {
   margin-right: 10px;
@@ -1126,9 +1148,13 @@ body {
 .stats__widgets {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   padding-bottom: 30px;
   margin-bottom: 20px;
   border-bottom: 1px solid #D9DCEE;
+}
+.stats__widgets li {
+  margin-bottom: 25px;
 }
 .stats__widgets li:not(:last-child) {
   margin-right: 15px;
@@ -1172,6 +1198,7 @@ body {
 .stats__cards {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   padding-bottom: 30px;
   margin-bottom: 30px;
   border-bottom: 1px solid #D9DCEE;
@@ -1184,6 +1211,7 @@ body {
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15);
+  margin-bottom: 25px;
 }
 .stats__cards li:not(:last-child) {
   margin-right: 15px;

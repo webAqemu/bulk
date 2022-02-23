@@ -73,9 +73,12 @@
     &__websites
         display: flex
         align-items: center
+        flex-wrap: wrap
         margin-bottom: 40px
 
         li
+            margin-bottom: 10px
+            
             &:not(:last-child)
                 margin-right: 10px
 
@@ -112,11 +115,14 @@
     &__widgets
         display: flex
         align-items: center
+        flex-wrap: wrap
         padding-bottom: 30px
         margin-bottom: 20px
         border-bottom: 1px solid #D9DCEE
 
         li
+            margin-bottom: 25px
+
             &:not(:last-child)
                 margin-right: 15px
 
@@ -161,6 +167,7 @@
     &__cards
         display: flex
         align-items: center
+        flex-wrap: wrap
         padding-bottom: 30px
         margin-bottom: 30px
         border-bottom: 1px solid #D9DCEE
@@ -173,6 +180,7 @@
             border-radius: 10px
             background-color: #fff
             box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+            margin-bottom: 25px
 
             &:not(:last-child)
                 margin-right: 15px
@@ -234,7 +242,6 @@
     &__inner
         display: flex
         align-items: center
-
 
     &__wrapper
         display: flex
