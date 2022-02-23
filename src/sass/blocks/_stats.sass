@@ -9,6 +9,25 @@
         font-size: 30px
         margin-right: 20px
 
+    &__text
+        color: #727bb0
+        margin-bottom: 30px
+
+    &__create
+        padding: 20px 25px 18px
+        border-radius: 3px
+        background-color: $blue
+        color: white
+        box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+        font-weight: 700
+        transition: background-color 0.3s, transform 0.3s
+
+        &:hover
+            background-color: $dblue
+
+        &:active
+            transform: scale(0.9)
+
     &__settings
         position: relative
         width: 35px
@@ -78,7 +97,7 @@
 
         li
             margin-bottom: 10px
-            
+
             &:not(:last-child)
                 margin-right: 10px
 
@@ -116,9 +135,6 @@
         display: flex
         align-items: center
         flex-wrap: wrap
-        padding-bottom: 30px
-        margin-bottom: 20px
-        border-bottom: 1px solid #D9DCEE
 
         li
             margin-bottom: 25px
@@ -165,12 +181,15 @@
             object-fit: contain
 
     &__cards
-        display: flex
-        align-items: center
-        flex-wrap: wrap
-        padding-bottom: 30px
-        margin-bottom: 30px
+        padding: 20px 0 5px
+        margin: 20px 0
         border-bottom: 1px solid #D9DCEE
+        border-top: 1px solid #D9DCEE
+
+        ul
+            display: flex
+            align-items: center
+            flex-wrap: wrap
 
         li
             position: relative

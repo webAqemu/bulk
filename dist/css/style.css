@@ -831,19 +831,10 @@ body {
   margin: 70px auto 0;
 }
 
-.popup {
-  overflow: hidden;
+.popup__inner {
   background-color: #fff;
-}
-.popup--notification {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 10;
-  border-radius: 30px;
-  border-bottom-right-radius: 0px;
-  box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15);
-  height: 400px;
+  max-height: 400px;
+  height: fit-content;
   overflow-y: auto;
   overflow-x: hidden;
   /* This will work on Firefox */
@@ -851,16 +842,43 @@ body {
   scrollbar-color: #4D74F5;
   /* Targtes on Chrome, Edge, and Safari */
 }
-.popup--notification::-webkit-scrollbar {
-  width: 10px;
+.popup__inner::-webkit-scrollbar {
+  width: 5px;
 }
-.popup--notification::-webkit-scrollbar-track {
+.popup__inner::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0);
 }
-.popup--notification::-webkit-scrollbar-thumb {
+.popup__inner::-webkit-scrollbar-thumb {
   background-color: #4D74F5;
   border-radius: 20px;
   border: none;
+}
+.popup--stats {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px rgba(70, 94, 172, 0.3);
+  border: 1px solid #DADEF0;
+  background-color: #fff;
+}
+.popup--stats .popup__inner {
+  padding: 10px;
+  width: 290px;
+}
+.popup--notification {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  border-radius: 30px;
+  overflow: hidden;
+  border-bottom-right-radius: 0px;
+  box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15);
+  background-color: #fff;
+  padding-right: 10px;
 }
 
 .popup-notification {
@@ -868,6 +886,7 @@ body {
   padding: 20px 30px;
   max-width: 320px;
   width: 100%;
+  margin-right: 10px;
 }
 .popup-notification:not(:last-child) {
   border-bottom: 1px solid #E8EAF4;
@@ -1034,6 +1053,199 @@ body {
   color: #727bb0;
 }
 
+.popup-stats__open {
+  position: absolute;
+  right: 7.5px;
+  top: -70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup-stats__open::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ACBBED;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  z-index: -1;
+}
+.popup-stats__open::after {
+  content: "";
+  position: absolute;
+  left: -7.5px;
+  top: 50%;
+  width: 70px;
+  height: 60px;
+  background-color: #9CA6C5;
+  z-index: -2;
+  opacity: 0.3;
+}
+.popup-stats__open span {
+  position: relative;
+  display: block;
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  background-color: #4D74F5;
+}
+.popup-stats__open span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  background-image: url(../img/svg/stats-popup-open.svg);
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: invert(100%);
+}
+.popup-stats__inner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #fff;
+  z-index: -1;
+}
+.popup-stats__title {
+  font-family: Raleway;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.popup-stats__checkbox, .popup-stats__radio {
+  position: relative;
+  margin-bottom: 10px;
+}
+.popup-stats__checkbox input, .popup-stats__radio input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.popup-stats__checkbox input:checked + label::after, .popup-stats__radio input:checked + label::after {
+  opacity: 1;
+}
+.popup-stats__checkbox input:hover + label, .popup-stats__radio input:hover + label {
+  color: #4D74F5;
+}
+.popup-stats__checkbox label, .popup-stats__radio label {
+  position: relative;
+  font-size: 14px;
+  padding-left: 25px;
+  transition: color 0.3s;
+}
+.popup-stats__checkbox label::before, .popup-stats__radio label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  background-color: #E8EAF4;
+}
+.popup-stats__checkbox label::after, .popup-stats__radio label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  background-image: url(../img/svg/done.svg);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: invert(38%) sepia(89%) saturate(993%) hue-rotate(206deg) brightness(95%) contrast(103%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.popup-stats__radio label::before {
+  border-radius: 100%;
+}
+.popup-stats__radio label::after {
+  background-image: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  background-color: #4D74F5;
+  left: 4px;
+}
+.popup-stats__wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.popup-stats__btn {
+  font-size: 14px;
+  color: #798196;
+  padding: 9px 15px 7px;
+  border-radius: 15px;
+  border: 1px solid #c4c8df;
+  margin: 0 5px 5px 0;
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s, transform 0.3s;
+}
+.popup-stats__btn:hover {
+  background-color: rgba(233, 236, 250, 0.5);
+  border-color: #C4C8DF;
+  color: #47426A;
+}
+.popup-stats__btn:active {
+  transform: scale(0.9);
+}
+.popup-stats__btn.active {
+  background-color: #4D74F5;
+  color: white;
+  border-color: #4D74F5;
+}
+.popup-stats__btn.disable {
+  pointer-events: none;
+  background-color: #f4f4f8;
+  color: #B0B5D1;
+}
+.popup-stats__btn.close {
+  color: #47426A;
+  padding-right: 30px;
+  position: relative;
+  background-color: #D9DCEE;
+  border-color: #D9DCEE;
+}
+.popup-stats__btn.close::before, .popup-stats__btn.close::after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  width: 2px;
+  height: 10px;
+  background-color: #727bb0;
+  transition: background-color 0.3s;
+}
+.popup-stats__btn.close::before {
+  transform: rotate(45deg);
+}
+.popup-stats__btn.close::after {
+  transform: rotate(-45deg);
+}
+.popup-stats__btn.close:hover::before, .popup-stats__btn.close:hover::after {
+  background-color: #4D74F5;
+}
+
 .stats__top {
   display: flex;
   align-items: center;
@@ -1043,6 +1255,25 @@ body {
   font-family: Raleway;
   font-size: 30px;
   margin-right: 20px;
+}
+.stats__text {
+  color: #727bb0;
+  margin-bottom: 30px;
+}
+.stats__create {
+  padding: 20px 25px 18px;
+  border-radius: 3px;
+  background-color: #4D74F5;
+  color: white;
+  box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15);
+  font-weight: 700;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.stats__create:hover {
+  background-color: #2B52D6;
+}
+.stats__create:active {
+  transform: scale(0.9);
 }
 .stats__settings {
   position: relative;
@@ -1149,9 +1380,6 @@ body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  padding-bottom: 30px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #D9DCEE;
 }
 .stats__widgets li {
   margin-bottom: 25px;
@@ -1196,12 +1424,15 @@ body {
   object-fit: contain;
 }
 .stats__cards {
+  padding: 20px 0 5px;
+  margin: 20px 0;
+  border-bottom: 1px solid #D9DCEE;
+  border-top: 1px solid #D9DCEE;
+}
+.stats__cards ul {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-  border-bottom: 1px solid #D9DCEE;
 }
 .stats__cards li {
   position: relative;
