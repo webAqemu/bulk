@@ -1,0 +1,113 @@
+.daterangepicker
+    margin-top: 0
+    box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+    border-radius: 20px
+    border: none
+
+    &::before,
+    &::after
+        display: none
+
+    .ranges
+        margin-top: 10px !important
+
+        li
+            padding: 10px 15px
+            color: #47426A
+            font-size: 14px
+            background-color: #fff
+            transition: color 0.3s, background-color 0.3s
+
+            &:hover
+                color: $blue
+                background-color: #f4f4f8
+
+            &.active
+                background-color: #f4f4f8
+                color: #47426A
+
+            &:nth-child(1)
+                margin-bottom: 15px
+
+    .drp
+        &-buttons
+            padding: 15px 30px
+
+            .btn
+                font-size: 14px
+                font-weight: 400
+                border-radius: 3px
+
+            .cancelBtn
+                padding: 11px 15px 10px
+                background-color: #E8EAF4
+
+            .applyBtn
+                background-color: $blue
+                color: white
+                font-weight: 700
+                padding: 11px 30px 10px
+
+        &-selected
+            display: none
+
+    .calendar-table
+        .month
+            color: #47426A
+            font-size: 14px
+            font-weight: 400
+            
+        th
+            color: #A7ACCA
+            font-size: 10px
+        td
+            font-size: 14px
+            height: 32px
+            border: none
+
+            &.in-range
+                background-color: #EFF0F8
+
+            &.end-date,
+            &.start-date
+                background-color: $blue
+                border-radius: 10px
+                position: relative
+                color: white
+                z-index: 2
+
+                &::before
+                    content: ""
+                    position: absolute
+                    top: 0
+                    height: 100%
+                    width: 50%
+                    background-color: #EFF0F8
+                    z-index: -2
+
+                &::after
+                    content: ""
+                    position: absolute
+                    top: 0
+                    left: 0
+                    height: 100%
+                    width: 100%
+                    background-color: $blue
+                    border-radius: 10px
+                    z-index: -1
+
+            &.end-date::before
+                right: 50%
+
+            &.start-date::before
+                left: 50%
+
+
+
+
+
+
+
+
+
+

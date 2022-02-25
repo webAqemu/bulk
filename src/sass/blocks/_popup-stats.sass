@@ -202,3 +202,117 @@
                 &::after
                     background-color: $blue
 
+    &__input
+        margin-bottom: 15px
+
+        input
+            border-radius: 3px
+            border: 1px solid #d9dcee
+            background-color: #f4f4f8
+            font-size: 14px
+            color: #47426A
+            padding: 12px 15px 10px
+            box-shadow: none
+            outline: none
+            transition: border-color 0.3s
+            
+            &::placeholder
+                color: #C4C8DF
+
+            &:focus
+                border-color: $blue
+
+    &__accordeon
+        position: relative
+        max-width: 190px
+        margin-bottom: 15px
+
+        &::after
+            content: ""
+            position: absolute
+            right: 10px
+            top: 4px
+            border: 4px solid transparent
+            border-top: 6px solid $blue
+            transition: transform 0.3s
+        p
+            padding: 0 0 10px
+            font-size: 14px
+            border-bottom: 1px solid #C4C8DF
+
+        &-content
+            display: flex
+            flex-direction: column
+            height: 0
+            overflow: hidden
+
+            button
+                font-size: 14px
+                line-height: 1
+                padding: 10px 20px
+                background-color: #f2f3f9
+                border-bottom: 1px solid #C4C8DF
+                text-align: left
+
+        &.active
+            .popup-stats__accordeon-content
+                height: fit-content
+
+            p
+                border-color: $blue
+            
+            &::after
+                transform: rotate(180deg)
+
+    &__dropdown
+        position: relative
+        max-width: 190px
+        margin-bottom: 15px
+
+        &::after
+            content: ""
+            position: absolute
+            right: 10px
+            top: 15px
+            border: 4px solid transparent
+            border-top: 6px solid $blue
+            transition: transform 0.3s
+        p
+            padding: 9px 12px 9px
+            font-size: 14px
+            background-color: #F2F3F9
+            border-radius: 3px
+
+        &-content
+            display: flex
+            flex-direction: column
+            height: 0
+            overflow: hidden
+
+            button
+                font-size: 14px
+                line-height: 1
+                padding: 7px 12px
+                background-color: rgba(#f2f3f9, 0.5)
+                text-align: left
+                transition: background-color 0.3s
+
+                &:hover
+                    background-color: #ecf0fb
+
+        &.active
+            .popup-stats__dropdown-content
+                height: fit-content
+
+            p
+                border-color: $blue
+            
+            &::after
+                transform: rotate(180deg)
+
+
+
+
+
+
+

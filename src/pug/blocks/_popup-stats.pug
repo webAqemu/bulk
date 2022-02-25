@@ -18,6 +18,9 @@
                 .popup-stats__radio
                     input(type="radio" name="radio")
                     label(for="radio") Позиция 2
+                .popup-stats__title Инпуты
+                .popup-stats__input 
+                    input(type="text" placeholder="Ваш текст")
                 .popup-stats__title Табы
                 .popup-stats__wrapper 
                     button.popup-stats__btn Обычный
@@ -25,13 +28,27 @@
                     button.popup-stats__btn.disable Недоступный
                     button.popup-stats__btn.close Удаляемый
                     button.popup-stats__btn Наведи на меня :)
-                    button.popup-stats__btn Обычный
-                    button.popup-stats__btn.active Активный
-                    button.popup-stats__btn.disable Недоступный
-                    button.popup-stats__btn.close Удаляемый
-                    button.popup-stats__btn Наведи на меня :)
-                    button.popup-stats__btn Обычный
-                    button.popup-stats__btn.active Активный
-                    button.popup-stats__btn.disable Недоступный
-                    button.popup-stats__btn.close Удаляемый
-                    button.popup-stats__btn Наведи на меня :)
+                .popup-stats__title Аккордеон
+                .popup-stats__accordeon.active
+                    p Раздел 1
+                    .popup-stats__accordeon-content 
+                        button Подраздел 1
+                        button Подраздел 2
+                .popup-stats__accordeon
+                    p Раздел 1
+                    .popup-stats__accordeon-content 
+                        button Подраздел 1
+                        button Подраздел 2
+                .popup-stats__title Выпадающий список
+                .popup-stats__dropdown 
+                    p По дням
+                    .popup-stats__dropdown-content 
+                        button По дням
+                        button По ночам
+                        button В любое время
+                .popup-stats__dropdown.active
+                    p По дням
+                    .popup-stats__dropdown-content 
+                        button По дням
+                        button По ночам
+                        button В любое время

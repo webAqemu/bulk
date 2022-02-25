@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Document</title>
   </head>
@@ -135,9 +136,11 @@
               </li>
             </ul>
             <div class="stats__cards">
-              <div class="stats__wrapper"> 
+              <div class="stats__wrapper stats__wrapper--no-bg"> 
                 <div class="stats__subtitle">отчёт за период</div>
-                <div class="stats__date"></div>
+                <div class="stats__date">
+                  <input type="text" id="demo">
+                </div>
               </div>
               <ul>
                 <li> <img src="img/svg/stats-views.svg" alt="stats icon">
@@ -255,6 +258,10 @@
                   <input type="radio" name="radio">
                   <label for="radio">Позиция 2</label>
                 </div>
+                <div class="popup-stats__title">Инпуты</div>
+                <div class="popup-stats__input"> 
+                  <input type="text" placeholder="Ваш текст">
+                </div>
                 <div class="popup-stats__title">Табы</div>
                 <div class="popup-stats__wrapper"> 
                   <button class="popup-stats__btn">Обычный</button>
@@ -262,16 +269,38 @@
                   <button class="popup-stats__btn disable">Недоступный</button>
                   <button class="popup-stats__btn close">Удаляемый</button>
                   <button class="popup-stats__btn">Наведи на меня :)</button>
-                  <button class="popup-stats__btn">Обычный</button>
-                  <button class="popup-stats__btn active">Активный</button>
-                  <button class="popup-stats__btn disable">Недоступный</button>
-                  <button class="popup-stats__btn close">Удаляемый</button>
-                  <button class="popup-stats__btn">Наведи на меня :)</button>
-                  <button class="popup-stats__btn">Обычный</button>
-                  <button class="popup-stats__btn active">Активный</button>
-                  <button class="popup-stats__btn disable">Недоступный</button>
-                  <button class="popup-stats__btn close">Удаляемый</button>
-                  <button class="popup-stats__btn">Наведи на меня :)</button>
+                </div>
+                <div class="popup-stats__title">Аккордеон</div>
+                <div class="popup-stats__accordeon active">
+                  <p>Раздел 1</p>
+                  <div class="popup-stats__accordeon-content"> 
+                    <button>Подраздел 1</button>
+                    <button>Подраздел 2</button>
+                  </div>
+                </div>
+                <div class="popup-stats__accordeon">
+                  <p>Раздел 1</p>
+                  <div class="popup-stats__accordeon-content"> 
+                    <button>Подраздел 1</button>
+                    <button>Подраздел 2</button>
+                  </div>
+                </div>
+                <div class="popup-stats__title">Выпадающий список</div>
+                <div class="popup-stats__dropdown"> 
+                  <p>По дням</p>
+                  <div class="popup-stats__dropdown-content"> 
+                    <button>По дням</button>
+                    <button>По ночам</button>
+                    <button>В любое время</button>
+                  </div>
+                </div>
+                <div class="popup-stats__dropdown active">
+                  <p>По дням</p>
+                  <div class="popup-stats__dropdown-content"> 
+                    <button>По дням</button>
+                    <button>По ночам</button>
+                    <button>В любое время</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -286,6 +315,9 @@
         <li><a href="#">Пользовательское соглашение</a></li>
       </ul>
     </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <script src="js/app.min.js"> </script>
   </body>
 </html>
