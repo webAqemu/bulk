@@ -1,0 +1,43 @@
+
+.popup.popup--moderators.active 
+    .popup-moderators 
+        .popup-moderators__title.popup__title Модераторы
+        button.popup__close 
+        .popup__inner
+            .popup-moderators__moderator 
+                .name Александра р.
+                .email alexandra_redisson@yandex.ru
+                button.close
+            .popup-moderators__moderator 
+                .name галина ц.
+                .email tsarkova@hiseo.team
+                button.close 
+            .popup-moderators__moderator 
+                .name Александра р.
+                .email alexandra_redisson@yandex.ru
+                button.close 
+
+.popup.popup--moderator.active 
+    .popup-moderator
+        .popup-moderator__title.popup__title Уровень полномочий
+        button.popup__close  
+        .popup-moderator__info 
+            .img(style="background-image:url(./img/profile-image.jpg)")
+            .name Галина Царькова
+            .email Email@gmail.com
+
+        .popup-moderator__radio 
+            input(type="radio" name="access" checked)
+            span 
+            p.title Модератор
+            p.text Может удалять добавленные пользователями сообщения и управлять черным списком сообщества
+        .popup-moderator__radio 
+            input(type="radio" name="access")
+            span 
+            p.title Администратор
+            p.text Может удалять добавленные пользователями сообщения и управлять черным списком сообщества
+        button.popup-moderator__btn Применить
+
+.popup.popup--copied.active 
+    .popup-copied 
+        p ID виджета скопирован

@@ -1,4 +1,13 @@
 .popup
+    opacity: 0
+    pointer-events: none
+    overflow: hidden
+    transition: opacity 0.3s
+
+    &.active
+        opacity: 1
+        pointer-events: inherit
+
     &__inner
         background-color: #fff
         max-height: 400px
@@ -40,7 +49,6 @@
             padding: 10px
             width: 290px
 
-
     &--notification
         position: absolute
         bottom: 0
@@ -52,3 +60,51 @@
         box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
         background-color: #fff
         padding-right: 10px
+
+    &--copied,
+    &--moderators,
+    &--moderator
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        border-radius: 10px
+        box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+
+
+    &--moderators,
+    &--moderator
+        max-width: 460px
+        width: 100%
+
+    &__title
+        font-family: Raleway
+        text-align: center
+
+    &__close
+        position: absolute
+        top: 0px
+        right: 0px
+        width: 45px
+        height: 45px
+        cursor: pointer
+        transition: background-color 0.3s
+
+        &:hover
+            background-color: rgba(#f4f4f8, 1)
+
+        &::before,
+        &::after
+            content: ""
+            position: absolute
+            left: 20px
+            top: 20px
+            width: 2px
+            height: 10px
+            background-color: #727bb0
+
+        &::before
+            transform: rotate(45deg)
+        
+        &::after
+            transform: rotate(-45deg)
