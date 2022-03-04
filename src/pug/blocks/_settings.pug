@@ -1,0 +1,120 @@
+.settings 
+    .settings__top 
+        .settings__title Виджет публички в отзывах
+        button.settings__edit
+        button.settings__save Сохранить
+
+    .settings__wrapper
+        .reviews отзывы
+        .id id виджета 
+            span 43
+        .status статус: Активен
+            button 
+        .status.inactive статус: неактивен
+            button 
+        .tarrif тариф  4,5 ₽/день
+            button
+
+    .settings__tabs 
+        button Настройки виджета
+        button Внешний вид
+        button.active Общие настройки
+
+    .settings__content.settings__content--sm
+        .settings__inner
+            .settings__subtitle Тариф
+            .settings__tarrif   
+                .settings__checkboxes
+                    .settings__checkbox.disabled
+                        input(type="checkbox", name="search" checked)
+                        label(for="search") Поисковая индексация рейтинга
+                    .settings__checkbox.disabled
+                        input(type="checkbox", name="spam" checked)
+                        label(for="spam") Спам защита
+                    .settings__checkbox 
+                        input(type="checkbox", name="links" checked)
+                        label(for="links") Без ссылки и копирайта - 0.45₽
+                    .settings__checkbox 
+                        input(type="checkbox", name="support")
+                        label(for="support") Поддержка SSL - 0.10₽
+
+            .settings__price 
+                .daily 
+                    span 4,5
+                    | ₽/день
+                .monthly 60 ₽/месяц
+                button.settings__btn Изменить тариф
+
+            p.settings__text Вы можете изменить тариф в любой день. Изменения начинают действовать со следующего дня. Списание средств происходит ежедневно
+
+        .settings__inner
+            .settings__subtitle Размещение
+            .settings__location 
+                .settings__domen
+                    .text Домен
+                    .url https://publichnaya-kadastrovaya-karta.com/review
+                .settings__code 
+                    .text Код вставки
+                    textarea.code hsbdvsdjvnlsdjvnlsdvlsdjvnsldjvsfkjbsdjvbljsdvnsdljvnlsdjvnsdмлрмолыримлоыирмдоы
+                    button.settings__copy Скопировать код
+
+                .settings__desc 
+                    span.bold Чтобы привязать виджет к определенной странице сайта добавьте в конце ссылки
+                    span.selected #[span.blue &id=]товар_id
+                    | , тогда содержимое виджета не будет повторяться на других страницах.
+
+            .settings__messages 
+                .settings__subtitle Новые сообщения
+                    .notify 2
+                .settings__send 
+                    input(type="checkbox", name="accept" checked)
+                    label(for="accept") Отправлять уведомления  о новых сообщениях на
+                    input(type="text" placeholder="example@domain.com")
+                    button.reload              
+                    button.reload.wait              
+                    button.reload.confirm         
+
+            .settings__moderators
+                .settings__subtitle Модераторы
+                button.add 
+
+                ul 
+                    li 
+                        .name.owner 
+                            .bold вы
+                            | alexandra_redisson@yandex.ru
+
+                            button.delete
+
+                        .change.green 
+                            | владелец
+                            button  
+                    li 
+                        .name 
+                            .bold Александра р.
+                            | alexandra_redisson@yandex.ru
+
+                            button.delete
+
+                        .change.green 
+                            | модератор
+                            button  
+                    li 
+                        .name
+                            .bold галина ц.
+                            | tsarkova@hiseo.team
+
+                            button.delete
+
+                        .change.red 
+                            | модератор
+                            button  
+
+                            
+
+
+
+
+
+
+
