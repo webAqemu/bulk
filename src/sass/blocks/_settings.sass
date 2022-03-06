@@ -271,12 +271,15 @@
                 color: #47426A
 
     &__content
-        max-width: 1000px
         width: 100%
         margin-left: -50px
 
+        &--sm
+            max-width: 1000px
+
     &__inner
-        background-color: #fff
+        max-width: 1000px
+        background-color: rgba(#fff, 0.5)
         padding: 25px 25px 35px 50px 
         display: flex
         flex-wrap: wrap
@@ -293,6 +296,11 @@
         margin-left: 25px
         width: calc(100% - 25px)
 
+        &--50
+            margin-left: 50px
+
+        &--left
+            margin-left: 0
 
         .notify
             font-family: Arial
@@ -351,6 +359,7 @@
 
         label
             position: relative
+            display: block
             font-size: 16px
             padding-left: 30px
 
@@ -378,6 +387,74 @@
                 filter: invert(41%) sepia(27%) saturate(2772%) hue-rotate(204deg) brightness(99%) contrast(94%)
                 opacity: 0
                 transition: opacity 0.3s
+
+        &--circle
+            margin-bottom: 15px
+
+            &:not(:last-child)
+                margin-bottom: 15px
+
+            input
+                width: 50%
+                height: 100%
+
+            input:checked + label
+                &::before
+                    background-color: $blue
+
+                &::after
+                    left: 15px
+            label
+                position: relative
+                padding-left: 50px
+                margin-right: 20px
+
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 0
+                    top: -1px
+                    width: 35px
+                    height: 22px
+                    border-radius: 15px
+                    background-color: #E8EAF4
+                    transition: background-color 0.3s
+
+                &::after
+                    content: ""
+                    position: absolute
+                    left: 2px
+                    top: 1px
+                    width: 18px
+                    height: 18px
+                    border-radius: 100%
+                    background-color: #fff
+                    background-image: none
+                    filter: none
+                    opacity: 1
+                    transition: left 0.3s
+
+            button.show
+                right: 0
+                top: -5px
+
+        &--centered
+            label
+                padding-left: 50px
+
+                &::before
+                    left: 10px
+                    
+                &::after
+                    left: 12px
+
+        p
+            color: #B0B5D1
+            margin-left: 50px
+            font-size: 14px
+
+        &.ml50
+            margin-left: 50px
 
     &__price
         width: 190px
@@ -412,6 +489,46 @@
 
         &:active
             transform: scale(0.9)
+
+        &--add
+            position: relative
+            padding: 12px 25px 12px 35px
+            width: fit-content
+
+            &::before,
+            &::after
+                content: ""
+                position: absolute
+                left: 15px
+                top: 50%
+                transform: translateX(-50%)
+                width: 10px
+                height: 2px
+                background-color: #47426A
+
+            &::after
+                transform: translateX(-50%) rotate(90deg)
+
+        &--save
+            position: relative
+            width: fit-content
+            padding-left: 40px
+            margin-left: 50px
+            margin-top: 30px
+
+            &::before
+                content: ""
+                position: absolute
+                left: 10px
+                top: 50%
+                transform: translateY(-50%)
+                width: 10px
+                height: 8px
+                background-image: url(../img/svg/done.svg)
+                background-size: cover
+                background-repeat: no-repeat
+                background-position: center
+                filter: invert(100%)
 
     &__text
         font-size: 14px
@@ -479,6 +596,7 @@
             width: 420px
             margin-right: 25px
             outline: none
+            font-family: inherit
 
     &__copy
         position: relative
@@ -844,11 +962,440 @@
                     
                     &:active::after
                         transform: scale(0.9)
+
+    .m40
+        margin: 40px 0 40px -50px
+        height: 1px
+        width: 100%
+        background-color: #000
+              
+    &__criteria
+        width: 100%
+        
+        .headers
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: space-between
+            padding-right: 80px
+            padding-bottom: 15px
+            border-bottom: 1px solid #d9dcee
+
+            li
+                font-family: Raleway
+                font-size: 16px
+
+        .name
+            width: 190px
+
+        .rating
+            width: 130px
+
+        .amount
+            width: 165px
+
+        .close
+            position: absolute
+            right: 5px
+            top: 50%
+            transform: translateY(-50%)
+            width: 24px
+            height: 24px
+            border-radius: 100%
+            background-color: #E8EAF4
+            outline: none
+
+            &::before,
+            &::after
+                content: ""
+                position: absolute
+                left: 50%
+                top: 50%
+                width: 10px
+                height: 2px
+                background-color: #727bb0
+                transition: transform 0.3s
+
+            &::before
+                transform: translate(-50%, -50%) rotate(45deg)
+            
+            &::after
+                transform: translate(-50%, -50%) rotate(-45deg)
+
+            &:hover
+                &::before   
+                    transform: translate(-50%, -50%) rotate(45deg) scale(1.2)
+                
+                &::after   
+                    transform: translate(-50%, -50%) rotate(-45deg) scale(1.2)
+
+            &:active
+                &::before   
+                    transform: translate(-50%, -50%) rotate(45deg) scale(0.9)
+                
+                &::after   
+                    transform: translate(-50%, -50%) rotate(-45deg) scale(0.9)
+
+        .items
+            padding-bottom: 0
+            margin-bottom: 20px
+
+            & > li
+                position: relative
+                display: flex
+                width: 100%
+                align-items: center
+                justify-content: space-between
+                padding: 15px 80px 15px 0
+                border-bottom: 1px solid #d9dcee
+
+                
+
+            .name
+                position: relative
+                padding-left: 50px
+
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 10px
+                    top: 50%
+                    transform: translateY(-50%)
+                    width: 10px
+                    height: 8px
+                    background-image: url(../img/svg/done.svg)
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center
+                    filter: invert(80%) sepia(14%) saturate(3796%) hue-rotate(70deg) brightness(85%) contrast(62%)
+
+            .rating
+                display: flex
+                align-items: center
+
+                ul
+                    display: flex
+                    margin-left: 10px
+
+                li
+                    width: 14px
+                    height: 14px
+                    background-image: url(../img/svg/star-black.svg)
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center
+                    filter: invert(87%) sepia(11%) saturate(483%) hue-rotate(199deg) brightness(109%) contrast(91%)
+
+                    &:not(:last-child)
+                        margin-right: 2px
+
+                    &.active
+                        filter: invert(36%) sepia(67%) saturate(4512%) hue-rotate(222deg) brightness(114%) contrast(92%)
+
+            .amount
+                text-align: center
+
+    &__cols
+        display: flex
+        align-items: flex-start
+        flex-wrap: wrap
+        margin-left: 25px
+        margin-top: 30px
+
+        &--50
+            margin-left: 50px
+
+    &__col
+        width: calc((100% - 40px) / 3)
+
+        &:not(:last-child)
+            margin-right: 20px
+
+        input[type="text"]
+            background-color: #f4f4f8
+            border: 1px solid #d9dcee
+            border-radius: 3px
+            font-size: 14px
+            color: inherit
+            padding: 12px 15px
+            outline: none
+
+        .input
+            position: relative
+            margin-left: 50px
+
+            label
+                display: block
+                line-height: 2
+
+            input
+                width: calc(100% - 50px)
+
+            &--full input
+                width: 100%
+
+
+            .status
+                position: absolute
+                right: 0
+                bottom: 5px
+                width: 36px
+                height: 36px
+                border-radius: 100%
+
+                &.wait
+                    background-color: #FFE4E3
+
+                    &::after
+                        content: "!"
+                        background-image: none
+                        font-family: Raleway
+                        font-size: 16px
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        color: $red
+
+                &.confirm
+                    background-color: #E3F4EE
+
+                    &::after
+                        background-image: url(../img/svg/done.svg)
+                        background-size: 35%
+                        filter: invert(61%) sepia(31%) saturate(860%) hue-rotate(79deg) brightness(93%) contrast(86%)
+
+
+                &:hover
+                    transform: scale(1.05)
+
+                &:active
+                    transform: scale(0.95)
+
+                &::after
+                    content: ""
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 100%
+                    border-radius: 100%
+                    background-size: 50%
+                    background-repeat: no-repeat
+                    background-position: center
                     
+            &.done
+                input
+                    border-color: #44B759
+                    background-color: #E3F4EE
 
+            &.wrong
+                input
+                    border-color: #F71514
 
+    &__item
+        position: relative
+        width: 100%  
+        background-color: rgba(255, 255, 255, 0.5)
+        padding: 15px 40px 15px 25px 
 
+        &:not(:last-child)
+            margin-bottom: 20px
 
+        ul
+            list-style: disc
+            color: #B0B5D1
+            margin-left: 70px
+            font-size: 14px
 
+        p
+            color: #B0B5D1
+            margin-left: 50px
+            font-size: 14px
+
+        .show
+            position: absolute
+            top: 13px
+            right: 18px
+            z-index: 2
+            width: 25px
+            height: 25px
+            border-radius: 100%
+            background-color: #E8EAF4
+            background-image: url(../img/svg/eye.svg)
+            background-size: 70%
+            background-repeat: no-repeat
+            background-position: center
+            cursor: pointer
+
+        .text
+            font-size: 16px
+            color: inherit
+            margin-bottom: 15px
+            margin-left: 0
+
+        .title
+            font-family: Raleway
+            margin-bottom: 10px
+
+        .desc
+            font-size: 14px
+            color: #b0b5d1
+            margin-bottom: 15px
+            margin-left: 0
+
+        .socials
+            margin: 0
+            display: flex
+            align-items: center
+            justify-content: space-between
+            flex-wrap: wrap
+            max-width: 230px
+            width: 100%
+            list-style: none
+
+            li
+                position: relative
+                width: calc((100% - 30px) / 4)
+                margin-bottom: 25px
+                display: flex
+                align-items: center
+                justify-content: center
+                flex-direction: column-reverse
+
+            input
+                position: absolute
+                left: 0
+                top: 0
+                z-index: 2
+                width: 100%
+                height: 100%
+                opacity: 0
+                cursor: pointer
+
+            input:checked + label::after
+                opacity: 1
+
+            input:checked + label + .hover
+                opacity: 1
+
+            img:not(.hover)
+                margin-bottom: 15px
+
+            .hover
+                position: absolute
+                left: 0
+                top: 0
+                opacity: 0
+                transition: opacity 0.3s
+
+            label
+                position: relative
+                width: 15px
+                height: 15px
+
+                &::before
+                    content: ""
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 15px
+                    height: 15px
+                    border-radius: 3px
+                    background-color: #e8eaf4
+
+                &::after
+                    content: ""
+                    position: absolute
+                    left: 2px
+                    top: 3.5px
+                    width: 10px
+                    height: 8px
+                    background-image: url(../img/svg/done.svg)
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center
+                    filter: invert(41%) sepia(27%) saturate(2772%) hue-rotate(204deg) brightness(99%) contrast(94%)
+                    opacity: 0
+                    transition: opacity 0.3s
+
+        .line
+            padding-top: 30px
+            margin-bottom: 15px
+            border-bottom: 1px solid #d9dcee
+
+    .line
+        padding-top: 25px
+        margin-bottom: 40px
+        border-bottom: 1px solid #d9dcee
+        margin-left: 50px
+
+    &__amount
+        display: flex
+        align-items: flex-start
+        margin-left: 50px
+        margin-bottom: 15px
+
+        input
+            background-color: #f4f4f8
+            border-radius: 3px
+            border: 1px solid #d9dcee
+            padding: 13px 15px
+            width: 70px
+            margin-right: 30px
+            font-size: 14px
+
+            &::placeholder
+                color: #d9dcee
+
+        .name
+            margin-bottom: 4px
+        
+        .desc
+            font-size: 14px
+            color: #d9dcee
+
+    &__colors
+        display: flex
+
+        li
+            position: relative
+
+            &:not(:last-child)
+                margin-right: 10px
+
+        input
+            position: absolute
+            left: 0
+            top: 0
+            z-index: 2
+            width: 100%
+            height: 100%
+            opacity: 0
+            cursor: pointer
+
+        input:checked + .color::after
+            opacity: 1
+
+        .color
+            position: relative
+            width: 55px
+            height: 55px
+            border-radius: 10px
+
+            &::after
+                content: ""
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background-image: url(../img/svg/done.svg)
+                background-size: 50%
+                background-repeat: no-repeat
+                background-position: center
+                filter: invert(100%)
+                opacity: 0
+                transition: opacity 0.3s
+        
 
 

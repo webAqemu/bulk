@@ -109,12 +109,213 @@
                         .change.red 
                             | модератор
                             button  
+    
+    .m40
+    
+    .settings__content 
+        .settings__inner
+            .settings__criteria 
+                ul.headers
+                    li.name Критерий оценки
+                    li.rating Средний балл
+                    li.amount Количество голосов
 
-                            
+                ul.items 
+                    li 
+                        .name Качество
+                        .rating 4,7
+                            ul 
+                                li.active 
+                                li.active 
+                                li.active 
+                                li.active 
+                                li 
+                        .amount 157
+                        button.close 
 
+                button.settings__btn.settings__btn--add Добавить критерий
 
+        .settings__subtitle.settings__subtitle--50 Отображение
+        .settings__cols
+            .settings__col 
+                .settings__item 
+                    button.show
+                    .settings__checkbox.settings__checkbox--circle
+                        input(type="checkbox")
+                        label(for="#") Показывать блок с рейтингом
+                        ul
+                            li Общая оценка, 
+                            li Общее количество отзывов, 
+                            li Количество оценок каждого типа,
+                            li % пользователей, которые рекомендуют товар
 
+                .settings__item 
+                    button.show 
+                    p.text Текст в кнопке отправления отзыва
+                    input(type="text" value="Отправить") 
 
+                .settings__item 
+                    .title Социальные сети
+                    p.desc Список социальных сетей, доступных дляфункций “Авторизоваться” и “Поделиться”
+                    ul.socials
+                        li 
+                            input(type="checkbox", name="yandex")
+                            label(for="yandex") 
+                            img.hover(src="./img/svg/social-1-hover.svg", alt="")
+                            img(src="./img/svg/social-1.svg", alt="")
+                        li 
+                            input(type="checkbox", name="yandex")
+                            label(for="yandex") 
+                            img.hover(src="./img/svg/social-2-hover.svg", alt="")
+                            img(src="./img/svg/social-2.svg", alt="")
+                        li 
+                            input(type="checkbox", name="yandex")
+                            label(for="yandex") 
+                            img.hover(src="./img/svg/social-3-hover.svg", alt="")
+                            img(src="./img/svg/social-3.svg", alt="")
+                        li 
+                            input(type="checkbox", name="yandex")
+                            label(for="yandex") 
+                            img.hover(src="./img/svg/social-4-hover.svg", alt="")
+                            img(src="./img/svg/social-4.svg", alt="")
+                        li 
+                            input(type="checkbox", name="yandex")
+                            label(for="yandex") 
+                            img.hover(src="./img/svg/social-5-hover.svg", alt="")
+                            img(src="./img/svg/social-5.svg", alt="")
+                        li 
+                            input(type="checkbox", name="yandex")
+                            label(for="yandex") 
+                            img.hover(src="./img/svg/social-6-hover.svg", alt="")
+                            img(src="./img/svg/social-6.svg", alt="")
+                        li 
+                            input(type="checkbox", name="yandex")
+                            label(for="yandex") 
+                            img.hover(src="./img/svg/social-7-hover.svg", alt="")
+                            img(src="./img/svg/social-7.svg", alt="")
+                        li 
+                            input(type="checkbox", name="yandex")
+                            label(for="yandex") 
+                            img.hover(src="./img/svg/social-8-hover.svg", alt="")
+                            img(src="./img/svg/social-8.svg", alt="")
 
+            .settings__col 
+                .settings__item 
+                    button.show
+                    .settings__checkbox.settings__checkbox--circle
+                        input(type="checkbox")
+                        label(for="#") Отображать 3 поля при написании отзыва
+                        p В форме отзыва будут отображаться три поля для заполнения:
+                        ul
+                            li Достоинства 
+                            li Недостатки
+                            li Комментарий
 
+                .settings__item 
+                    .title Комментарии
+                    .line 
+                    .settings__checkbox.settings__checkbox--circle
+                        input(type="checkbox" checked)
+                        label(for="#") Древовидный тип комментариев 
+                        p Ответы к комментарию будут сдвигаться влево
+                        button.show 
+                    .line 
+                    .settings__checkbox.settings__checkbox--circle
+                        input(type="checkbox")
+                        label(for="#") Запретить комментировать отзывы
+                        button.show 
 
+            .settings__col
+                .settings__item 
+                    button.show 
+                    p.text Текст основной кнопки
+                    input(type="text" value="Написать отзыв") 
+                .settings__item 
+                    .title Документы
+                    .line 
+                    .settings__checkbox.settings__checkbox--circle
+                        input(type="checkbox")
+                        label(for="#") Отображать свои документы 
+                        p Ссылка на политику конфиденциальности и пользовательское соглашение будут добавляться рядом с кнопкой отправки
+                        button.show 
+                    p Разместите ссылки на документы
+                
+                    .input.done
+                        label(for="") Политика конфиденциальности 
+                        input(type="text" value='https://example.com/politica' placeholder="https://")
+                        .status.confirm
+                    .input.wrong
+                        label(for="") Пользовательское соглашение 
+                        input(type="text" value="https://" placeholder="https://")
+                        .status.wait
+
+        .line 
+        .settings__subtitle.settings__subtitle--50 Приватность
+        .settings__cols.settings__cols--50 
+            .settings__col 
+                .settings__checkbox.settings__checkbox--circle
+                    input(type="checkbox" checked)
+                    label(for="#") Анонимное добавление комментариев
+                .settings__checkbox.settings__checkbox--circle
+                    input(type="checkbox" checked)
+                    label(for="#") Отображать поле e-mail
+                .settings__checkbox.settings__checkbox--centered
+                    input(type="checkbox" checked)
+                    label(for="#") Обязательное заполнение поля e-mail
+            .settings__col 
+                .settings__checkbox.settings__checkbox--circle
+                    input(type="checkbox" checked)
+                    label(for="#") Стандатрная подпись для админимстратора
+                    p.text Пользователь НЕ видит имя, под которым авторизован администратор, а только подпись
+                .input.input--full
+                    input(type="text" value="Администратор")
+        .line 
+        .settings__subtitle.settings__subtitle--50 Основные
+        .settings__amount 
+            input(type="text" placeholder="10")
+            .info 
+                .name Количество комментариев на странице
+                .desc Сколько сообщений видит пользователь при загрузке виджета
+        .settings__amount 
+            input(type="text" placeholder="10")
+            .info 
+                .name Количество комментариев подгружаемое
+                .desc Сколько сообщений подгружается при нажатии на кнопку “Показать еще”
+        .settings__amount 
+            input(type="text" placeholder="10")
+            .info 
+                .name Минимальное количество символов в отзыве
+                .desc При меньшем количестве символов, пользователь не сможет отправить отзыв и увидит уведомление
+        .line 
+        .settings__subtitle.settings__subtitle--50 Дополнительные
+        .settings__checkbox.settings__checkbox--circle.ml50
+            input(type="checkbox" checked)
+            label(for="#") Публиковать только после модерации
+        .settings__checkbox.settings__checkbox--circle.ml50
+            input(type="checkbox" checked)
+            label(for="#") Спам-фильтр
+        button.settings__btn.settings__btn--save Сохранить
+
+    .m40
+    
+    .settings__content.settings__content--sm 
+        .settings__inner 
+            .settings__subtitle.settings__subtitle--left Выберите тему
+            ul.settings__colors 
+                li 
+                    input(type="radio", name="color" checked)
+                    .color(style="background-color:#0097FF")
+                li 
+                    input(type="radio", name="color")
+                    .color(style="background-color:#798196")
+                li 
+                    input(type="radio", name="color")
+                    .color(style="background-color:#FF4D45")
+                li 
+                    input(type="radio", name="color")
+                    .color(style="background-color:#FFD200")
+                li 
+                    input(type="radio", name="color")
+                    .color(style="background-color:#16D7E3")
+
+        img(src="./img/review-img.png", alt="review example")
