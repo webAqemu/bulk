@@ -41,12 +41,28 @@
             .cancelBtn
                 padding: 11px 15px 10px
                 background-color: #E8EAF4
+                transition: background-color 0.3s, transform 0.3s
+
+                &:hover
+                    background-color: #d6d8e0
+                
+                &:active
+                    transform: scale(0.9)
 
             .applyBtn
                 background-color: $blue
                 color: white
                 font-weight: 700
                 padding: 11px 30px 10px
+                transition: background-color 0.3s, transform 0.3s
+
+                &:hover
+                    background-color: $dblue
+                
+                &:active
+                    transform: scale(0.9)
+
+
 
         &-selected
             display: none

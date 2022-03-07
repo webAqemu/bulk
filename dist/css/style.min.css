@@ -1669,6 +1669,9 @@ body {
   display: flex;
   align-items: center;
 }
+.stats__inner--wrap {
+  flex-wrap: wrap;
+}
 .stats__wrapper {
   display: flex;
   align-items: center;
@@ -1895,12 +1898,26 @@ body {
 .daterangepicker .drp-buttons .cancelBtn {
   padding: 11px 15px 10px;
   background-color: #E8EAF4;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.daterangepicker .drp-buttons .cancelBtn:hover {
+  background-color: #d6d8e0;
+}
+.daterangepicker .drp-buttons .cancelBtn:active {
+  transform: scale(0.9);
 }
 .daterangepicker .drp-buttons .applyBtn {
   background-color: #4D74F5;
   color: white;
   font-weight: 700;
   padding: 11px 30px 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.daterangepicker .drp-buttons .applyBtn:hover {
+  background-color: #2B52D6;
+}
+.daterangepicker .drp-buttons .applyBtn:active {
+  transform: scale(0.9);
 }
 .daterangepicker .drp-selected {
   display: none;
@@ -1982,10 +1999,12 @@ body {
   font-size: 30px;
   margin-right: 20px;
   margin-right: 30px;
+  white-space: nowrap;
 }
 .widgets__categories {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   flex-wrap: wrap;
 }
 .widgets__category {
