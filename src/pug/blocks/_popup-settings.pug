@@ -35,19 +35,50 @@
                 input(type="text" placeholder="example@domain.com")
                 button.button(type="submit") Передать виджет
 
-.popup.popup--add
+.popup.popup--add.active
     button.popup__close 
     .popup-add
-        .popup-add__title.popup__title Добавить участника
-        .popup-add__input 
-            input(type="text" placeholder="example@domain.com")
-        .popup-add__input.done
-            input(type="text" placeholder="example@domain.com")
-        .popup-add__input.wrong
-            input(type="text" value="example@domain.com")
-        .popup-add__input
-            input(type="text" placeholder="example@domain.com")
+        .popup__inner
+            .popup-add__title.popup__title Добавить участника
+            .popup-add__input 
+                input(type="text" placeholder="example@domain.com")
+            .popup-add__title.popup__title Добавить участника
+            .popup-add__input.done
+                input(type="text" placeholder="example@domain.com")
+            .popup-add__title.popup__title Добавить участника
+            .popup-add__input.wrong
+                input(type="text" value="example@domain.com")
+                .error Пользователь не найден!
+            .popup-add__title.popup__title Добавить участника
+            .popup-add__input
+                input(type="text" placeholder="example@domain.com")
+                ul.options
+                    li.option 
+                        .name Евгений Никерин
+                        .email Email@gmail.com
+                    li.option 
+                        .name Евгений Никерин
+                        .email Email@gmail.com
 
+            .popup-add__title.popup__title Добавить участника
+            .popup-add__member
+                .popup-add__item 
+                    .name Александра р.
+                    .email alexandra_redisson@yandex.ru
+                    button.close 
+                .popup-add__checkbox 
+                    input(type="checkbox", name="delete")
+                    label(for="delete") Удаление
+                .popup-add__checkbox 
+                    input(type="checkbox", name="change")
+                    label(for="change") Редактирование
 
+            button.popup-add__btn Найти
+            button.popup-add__btn Пригласить
+            button.popup-add__btn.popup-add__btn--full Отправить приглашение
+
+.popup.popup--confirmSent.popup--timing.active 
+    .popup-confirmSent 
+        p Приглашение отправлено на example@domain.com
 
 

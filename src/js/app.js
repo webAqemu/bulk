@@ -32,7 +32,7 @@ document.addEventListener("click", function(e) {
   }
 })
 
-const popupCopied = document.querySelector(".popup--copied")
+const popupCopied = document.querySelector(".popup--timing")
 if(popupCopied) {
   setTimeout(() => {
     popupCopied.classList.remove("active")
