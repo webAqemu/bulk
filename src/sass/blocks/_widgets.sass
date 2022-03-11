@@ -375,6 +375,7 @@
 
         &__stats
             display: flex
+            flex-wrap: wrap
             margin-bottom: 10px
 
             li
@@ -385,6 +386,7 @@
                 display: flex
                 align-items: center
                 line-height: 1
+                margin-bottom: 10px
 
                 &:not(:last-child)
                     margin-right: 10px
@@ -411,6 +413,7 @@
             color: #B0B5D1
             font-size: 14px
             width: fit-content
+            max-width: calc(100% - 240px)
 
             &::before
                 content: ""
@@ -427,7 +430,7 @@
 
         &__settings
             position: absolute
-            right: 15px
+            right: 20px
             bottom: 20px
             border-radius: 3px
             background-color: $blue

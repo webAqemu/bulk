@@ -405,6 +405,66 @@
             </div>
           </div>
         </div>
+        <div class="popup popup--moderator"> 
+          <div class="popup-moderator">
+            <div class="popup-moderator__title popup__title">Уровень полномочий</div>
+            <button class="popup__close"> </button>
+            <div class="popup-moderator__info"> 
+              <div class="img" style="background-image:url(./img/profile-image.jpg)"></div>
+              <div class="name">Галина Царькова</div>
+              <div class="email">Email@gmail.com</div>
+            </div>
+            <div class="popup__inner">
+              <div class="popup-moderator__radio"> 
+                <input type="radio" name="access" checked><span> </span>
+                <p class="title">Модератор</p>
+                <p class="text">Может удалять добавленные пользователями сообщения и управлять черным списком сообщества</p>
+              </div>
+              <div class="popup-moderator__radio"> 
+                <input type="radio" name="access"><span> </span>
+                <p class="title">Администратор</p>
+                <p class="text">Может удалять добавленные пользователями сообщения и управлять черным списком сообщества</p>
+              </div>
+              <button class="popup-moderator__btn">Применить</button>
+            </div>
+          </div>
+        </div>
+        <div class="popup popup--owner">
+          <div class="popup-owner"> 
+            <div class="popup-owner__title popup__title">Владелец</div>
+            <button class="popup__close"> </button>
+            <div class="owner"> 
+              <div class="bold">Александра р.</div>alexandra_redisson@yandex.ru
+            </div>
+            <div class="yellow"> 
+              <div class="title">Вы можете передать права владельца другому пользователю.</div>
+              <div class="text">Введите email пользователя в поле и он получит уведомление. </div>
+              <div class="text">После подтверждения виджет и все его данные  пропадут из вашего личного кабинета.</div>
+              <form action="#"> 
+                <input type="text" placeholder="example@domain.com">
+                <button class="button" type="submit">Передать виджет</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="popup popup--add">
+          <button class="popup__close"> </button>
+          <div class="popup-add">
+            <div class="popup-add__title popup__title">Добавить участника</div>
+            <div class="popup-add__input"> 
+              <input type="text" placeholder="example@domain.com">
+            </div>
+            <div class="popup-add__input done">
+              <input type="text" placeholder="example@domain.com">
+            </div>
+            <div class="popup-add__input wrong">
+              <input type="text" value="example@domain.com">
+            </div>
+            <div class="popup-add__input">
+              <input type="text" placeholder="example@domain.com">
+            </div>
+          </div>
+        </div>
       </main>
     </div>
     <footer class="footer"> <a class="footer__logo logo" href="#"><img src="img/logo.svg" alt="logo"></a>

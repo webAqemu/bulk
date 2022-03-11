@@ -1,0 +1,53 @@
+.popup.popup--moderator 
+    .popup-moderator
+        .popup-moderator__title.popup__title Уровень полномочий
+        button.popup__close  
+        .popup-moderator__info 
+            .img(style="background-image:url(./img/profile-image.jpg)")
+            .name Галина Царькова
+            .email Email@gmail.com
+        .popup__inner
+            .popup-moderator__radio 
+                input(type="radio" name="access" checked)
+                span 
+                p.title Модератор
+                p.text Может удалять добавленные пользователями сообщения и управлять черным списком сообщества
+            .popup-moderator__radio 
+                input(type="radio" name="access")
+                span 
+                p.title Администратор
+                p.text Может удалять добавленные пользователями сообщения и управлять черным списком сообщества
+            button.popup-moderator__btn Применить
+
+.popup.popup--owner
+    .popup-owner 
+        .popup-owner__title.popup__title Владелец
+        button.popup__close  
+        .owner 
+            .bold Александра р.
+            | alexandra_redisson@yandex.ru
+
+        .yellow 
+            .title Вы можете передать права владельца другому пользователю.
+            .text Введите email пользователя в поле и он получит уведомление. 
+            .text После подтверждения виджет и все его данные  пропадут из вашего личного кабинета.
+            form(action="#") 
+                input(type="text" placeholder="example@domain.com")
+                button.button(type="submit") Передать виджет
+
+.popup.popup--add
+    button.popup__close 
+    .popup-add
+        .popup-add__title.popup__title Добавить участника
+        .popup-add__input 
+            input(type="text" placeholder="example@domain.com")
+        .popup-add__input.done
+            input(type="text" placeholder="example@domain.com")
+        .popup-add__input.wrong
+            input(type="text" value="example@domain.com")
+        .popup-add__input
+            input(type="text" placeholder="example@domain.com")
+
+
+
+

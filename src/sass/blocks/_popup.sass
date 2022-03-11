@@ -1,7 +1,14 @@
 .popup
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    z-index: 10
     opacity: 0
     pointer-events: none
     overflow: hidden
+    border-radius: 10px
+    box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
     transition: opacity 0.3s
 
     &.active
@@ -35,10 +42,9 @@
             border: none
 
     &--stats
-        position: absolute
         bottom: 0
         right: 0
-        z-index: 10
+        transform: none
         padding: 10px
         border-radius: 20px
         box-shadow: 0px 0px 30px rgba(70, 94, 172, 0.3)
@@ -53,31 +59,30 @@
             width: 290px
 
     &--notification
-        position: absolute
         bottom: 0
         right: 0
-        z-index: 10
+        transform: none
         border-radius: 30px
         overflow: hidden
         border-bottom-right-radius: 0px
-        box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
         background-color: #fff
         padding-right: 10px
-
-    &--copied,
-    &--moderators,
-    &--moderator
-        position: absolute
-        left: 50%
-        top: 50%
-        transform: translate(-50%, -50%)
-        border-radius: 10px
-        box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
-
 
     &--moderators,
     &--moderator
         max-width: 460px
+        width: 100%
+
+    &--owner
+        max-width: 750px
+        width: 100%
+        background-color: #fff
+        padding: 20px 30px
+        box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+
+    &--add
+        background-color: #fff
+        max-width: 320px
         width: 100%
 
     &__title
