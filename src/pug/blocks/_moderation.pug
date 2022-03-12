@@ -12,11 +12,97 @@
                 .moderation__icon(style="background-image:url(./img/svg/star-black.svg)")
                 | Отзывы
             
+    .moderation__inner
+        .review
+            .review__header
+                .name отзывы
+                .url К какой странице / товару прикреплён данный отзыв
+                button.accept
+                button.delete
+                button.edit 
+            .review__inner 
+                .review__info 
+                    .img(style="background-image:url(../img/profile-image.jpg)")
+                    .name Галина Царькова
+                    .icons 
+                        img(src="./img/svg/basket-green.svg", alt="")
+                        img(src="./img/svg/like-green.svg", alt="")
+                    ul.rating 
+                        li.active 
+                        li.active 
+                        li.active 
+                        li.half
+                        li 
+                    .info Товар приобретен менее месяца
+                    .stats 
+                        .time 2ч
+                        .top 42
+                        .down 17
+                .review__message 
+                    p #[span Достоинства] Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    p #[span Недостатки] Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    p #[span Комментарий] Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                .review__bottom 
+                    .answers 3 ответа
+                    button.answer ответить
+                    button.complaint Жалобы
+                    .tags 
+                        .red 
+                            span мат
+                            button.delete
+                        button.add тег
+
+        .chat
+            .chat__header
+                .name Чаты
+                .url К какой странице / товару прикреплён данный отзыв
+                button.options
+            .chat__inner 
+                .chat__info 
+                    .img(style="background-image:url(../img/profile-image.jpg)")
+                    .name Галина Царькова
+                    ul.users 
+                        li(style="background-color:#F5F8FA") 
+                        li(style="background-color:#FFD200") 
+                        li(style="background-color:#FF4D45") 
+                    button.show Показать чат
+                    button.delete
+                .chat__message 
+                    p Все хорошо
+
+        .comment
+            .comment__header
+                .name комментарии
+                .url К какой странице / товару прикреплён данный отзыв
+                button.filter Опубликованное
+            .comment__inner 
+                .comment__info 
+                    .img(style="background-image:url(../img/profile-image.jpg)")
+                    .name Галина Царькова
+                    button.history История сообщений
+                    .stats 
+                        .time 2ч
+                        .top 42
+                        .down 17
+                .comment__message 
+                    p #[span Достоинства] Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                   
+                .comment__bottom 
+                    .answers 3 ответа
+                    button.answer ответить
+                    form.form
+                        .photo 
+                        .input
+                            input(type="text" value="Гость, я  к вам пишу чего же боле...")
+                            button.cancel
+                        button.send(type="submit") Отправить
+                    .wrapper 
+                        .red 
+                            span мат
+                            button.delete
+                        button.edit
+                        button.delete
+
+        button.moderation__more Показать еще
 
 
-
-
-
-
-
-            

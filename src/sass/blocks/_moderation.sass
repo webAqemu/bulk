@@ -70,14 +70,1003 @@
         margin-right: 5px
         filter: invert(81%) sepia(9%) saturate(378%) hue-rotate(193deg) brightness(92%) contrast(99%)
 
+    &__inner
+        max-width: 900px
 
-
-
-
-
-
-
-
-
-
+        & > *:not(:last-child)
+            margin-bottom: 10px
     
+    .review
+        border-radius: 10px
+        overflow: hidden
+        background-color: #fff
+
+        button
+            transition: transform 0.3s
+
+            &:hover
+                transform: scale(1.1)
+            
+            &:active
+                transform: scale(0.9)
+
+        &__header
+            position: relative
+            display: flex
+            align-items: center
+            padding: 5px 15px 5px 25px
+            border-bottom: 1px solid #D9DCEE
+            margin-bottom: 15px
+
+            &::before
+                content: ""
+                position: absolute
+                left: 0
+                top: 0
+                width: 10px
+                height: calc(100% + 1px)
+                background-color: $yellow
+
+
+            .name
+                position: relative
+                font-size: 10px
+                text-transform: uppercase
+                padding-left: 18px
+                margin-right: 10px
+
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 0
+                    top: -1px
+                    width: 12px
+                    height: 12px
+                    background-image: url(../img/svg/reg-type-3.svg)
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center
+            
+            .url
+                overflow: hidden
+                width: 370px
+                padding: 8px 15px
+                border-radius: 5px
+                background-color: #f5f6fa
+                font-size: 14px
+                color: $blue
+                text-decoration: underline
+                white-space: nowrap
+                text-overflow: ellipsis
+                margin-right: auto
+
+            .accept
+                position: relative
+                width: 36px
+                height: 36px
+                border-radius: 100%
+                border: none
+                margin-right: 10px
+                background-color: #E3F4EE
+
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%, -50%)
+                    width: 10px
+                    height: 8px
+                    background-image: url(../img/svg/done.svg)
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center
+                    filter: invert(61%) sepia(14%) saturate(1776%) hue-rotate(79deg) brightness(95%) contrast(91%)
+
+            .delete
+                position: relative
+                width: 36px
+                height: 36px
+                border-radius: 100%
+                border: none
+                margin-right: 10px
+                background-color: #FFE4E3
+
+                &::before
+                   content: ""
+                   position: absolute
+                   left: 50%
+                   top: 50%
+                   transform: translate(-50%, -50%)
+                   width: 17px
+                   height: 16px
+                   background-image: url(../img/svg/trash.svg)
+                   background-size: cover
+                   background-repeat: no-repeat
+                   background-position: center
+                   filter: invert(43%) sepia(16%) saturate(3707%) hue-rotate(324deg) brightness(99%) contrast(103%) 
+                    
+            .edit
+                position: relative
+                width: 36px
+                height: 36px
+                border-radius: 100%
+                border: none
+                background-color: #E8EAF4
+
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%, -50%)
+                    width: 14px
+                    height: 14px
+                    background-image: url(../img/svg/pencil.svg)
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center
+                    filter: invert(52%) sepia(52%) saturate(296%) hue-rotate(194deg) brightness(85%) contrast(95%)
+
+        &__inner
+            position: relative
+            padding: 0 20px 10px 70px
+
+        &__info
+            display: flex
+            align-items: center
+            margin-bottom: 15px
+
+            .img
+                position: absolute
+                top: 0
+                left: 15px
+                width: 30px
+                height: 30px
+                border-radius: 100%
+                background-size: cover
+                background-repeat: no-repeat
+                background-position: center
+
+            .name
+                font-size: 14px
+                font-weight: 700
+                margin-right: 30px
+
+            .icons
+                display: flex
+                border-radius: 5px
+                background-color: #f2f2f2
+                margin-right: 10px
+                padding: 5px
+
+                img:not(:last-child)
+                    margin-right: 5px
+
+            .rating
+                display: flex
+                margin-right: 15px
+
+                li
+                    width: 14px
+                    height: 14px
+                    background-image: url(../img/svg/star-grey.svg)
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center
+
+                    &:not(:last-child)
+                        margin-right: 1px
+
+                    &.active
+                        background-image: url(../img/svg/star-yellow.svg)
+                    
+                    &.half
+                        background-image: url(../img/svg/star-half.svg)
+
+            .info
+                font-size: 15px
+                color: #969696
+                margin-right: auto
+
+            .stats
+                display: flex
+                align-items: baseline
+
+            .time
+                font-size: 14px
+                color: #969696
+                margin-right: 15px
+
+            .top
+                position: relative
+                font-size: 16px
+                color: #70BB55
+                padding-left: 15px
+                line-height: 1
+                margin-right: 15px
+
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 12px
+                    height: 12px
+                    background-image: url(../img/svg/arrow-right.svg)
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center
+                    transform: rotate(-90deg)
+                    filter: invert(61%) sepia(14%) saturate(1776%) hue-rotate(79deg) brightness(95%) contrast(91%)
+            .down
+                position: relative
+                font-size: 16px
+                color: #FF7050
+                padding-left: 15px
+                line-height: 1
+
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 12px
+                    height: 12px
+                    background-image: url(../img/svg/arrow-right.svg)
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center
+                    transform: rotate(90deg)
+                    filter: invert(43%) sepia(16%) saturate(3707%) hue-rotate(324deg) brightness(99%) contrast(103%) 
+
+        &__message
+            font-size: 16px
+            color: #798196
+            margin-bottom: 10px
+
+            span
+                color: #47426A
+
+            p:not(:last-child)
+                margin-bottom: 10px
+
+        &__bottom
+            display: flex
+            align-items: center
+
+            .answers
+                position: relative
+                font-size: 14px
+                color: #4581EC
+                padding-right: 23px
+                margin-right: 20px
+
+                &::before
+                    content: ""
+                    position: absolute
+                    right: 0
+                    top: 50%
+                    transform: translateY(-50%)
+                    width: 14px
+                    height: 14px
+                    border-radius: 100%
+                    background-color: #70BB55
+
+                &::after
+                    content: ""
+                    position: absolute
+                    right: 0
+                    top: 50%
+                    transform: translateY(-50%)
+                    width: 14px
+                    height: 14px
+                    background-image: url(../img/svg/done.svg)
+                    background-size: 55%
+                    background-repeat: no-repeat
+                    background-position: center
+                    filter: invert(100%)
+
+            .answer
+                position: relative
+                padding: 10px 10px 10px 25px
+                color: #4581EC
+                font-size: 10px
+                text-transform: uppercase
+                border-radius: 5px
+                background-color: rgba(#D3DCFC , 0.3 )
+                margin-right: 5px
+
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 10px
+                    top: 50%
+                    transform: translateY(-50%)
+                    width: 10px
+                    height: 8px
+                    background-image: url(../img/svg/answer.svg)
+                    background-size: cover
+                    background-position: center
+                    background-repeat: no-repeat
+
+            .complaint
+                position: relative
+                padding: 10px 10px 10px 25px
+                color: $red
+                font-size: 10px
+                text-transform: uppercase
+                border-radius: 5px
+                background-color: #FFE4E3
+                margin-right: auto
+
+                &::before
+                    content: "!"
+                    position: absolute
+                    left: 10px
+                    top: 50%
+                    transform: translateY(-50%)
+                    font-size: 12px
+                    color: $red
+
+            .tags
+                display: flex
+                align-items: center
+                font-size: 10px
+                line-height: 1
+                text-transform: uppercase
+
+                *:not(:last-child)
+                    margin-right: 5px
+
+                .red
+                    position: relative
+                    background-color: #FFE4E3
+                    padding: 11px 30px 9px
+                    border-radius: 30px
+                    color: $red
+
+                    &::before
+                        content: "!"
+                        position: absolute
+                        left: 12px
+                        top: 50%
+                        transform: translateY(-50%)
+                        font-family: Raleway
+                        font-size: 16px
+                        color: $red
+
+                    .delete
+                        position: absolute
+                        right: 6px
+                        top: 50%
+                        transform: translateY(-50%)
+                        width: 16px
+                        height: 16px
+                        cursor: pointer
+                        opacity: 0.5
+
+                        &::before,
+                        &::after
+                            content: ""
+                            position: absolute
+                            left: 2px
+                            top: 8px
+                            width: 10px
+                            height: 2px
+                            background-color: #798196
+
+                        &::before
+                            transform: rotate(-45deg)
+                        
+                        &::after
+                            transform: rotate(45deg)
+
+                .add
+                    position: relative
+                    padding: 11px 10px 9px 30px
+                    border-radius: 30px
+                    background-color: #F5F6FA
+                    text-transform: uppercase
+                    color: #8792B7
+
+                    &::before
+                        content: "+"
+                        position: absolute
+                        left: 12px
+                        top: 50%
+                        transform: translateY(-50%)
+                        font-size: 14px
+                        color: inherit
+
+    .chat
+        border-radius: 10px
+        overflow: hidden
+        background-color: #fff
+
+        &__header
+            position: relative
+            display: flex
+            align-items: center
+            padding: 5px 15px 5px 25px
+            border-bottom: 1px solid #D9DCEE
+            margin-bottom: 15px
+
+            &::before
+                content: ""
+                position: absolute
+                left: 0
+                top: 0
+                width: 10px
+                height: calc(100% + 1px)
+                background-color: $violent
+
+
+            .name
+                position: relative
+                font-size: 10px
+                text-transform: uppercase
+                padding-left: 18px
+                margin-right: 10px
+
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 0
+                    top: -1px
+                    width: 12px
+                    height: 12px
+                    background-image: url(../img/svg/reg-type-1.svg)
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center
+            
+            .url
+                overflow: hidden
+                width: 370px
+                padding: 8px 15px
+                border-radius: 5px
+                background-color: #f5f6fa
+                font-size: 14px
+                color: $blue
+                text-decoration: underline
+                white-space: nowrap
+                text-overflow: ellipsis
+                margin-right: auto
+        
+            .options
+                position: relative
+                display: flex
+                align-items: center
+                justify-content: center
+                width: 22px
+                height: 22px
+                border-radius: 100%
+                background-color: rgba(0, 0, 0, 0.05)
+
+                &::after
+                    content: ""
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%, -50%)
+                    width: 3px
+                    height: 13px
+                    background-image: url(../img/svg/vertical-dots.svg)
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center
+
+        &__inner
+            position: relative
+            padding: 0 20px 20px 70px
+
+        &__info
+            display: flex
+            align-items: center
+            margin-bottom: 10px
+            padding-right: 70px
+
+            .img
+                position: absolute
+                top: 0
+                left: 15px
+                width: 30px
+                height: 30px
+                border-radius: 100%
+                background-size: cover
+                background-repeat: no-repeat
+                background-position: center
+
+            .name
+                font-size: 14px
+                font-weight: 700
+                margin-right: 30px
+                margin-right: auto
+
+            .users
+                display: flex
+                margin-right: 35px
+
+                li
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center
+                    width: 20px
+                    height: 20px
+                    border-radius: 100%
+                    border: 2px solid white
+
+                    &:not(:first-child)
+                        margin-left: -7px
+
+            .show
+                font-size: 14px
+                color: $blue
+                text-decoration: underline
+
+            .delete
+                position: absolute
+                top: 0
+                right: 20px
+                width: 36px
+                height: 36px
+                border-radius: 100%
+                border: none
+                background-color: #FFE4E3
+
+                &::before
+                   content: ""
+                   position: absolute
+                   left: 50%
+                   top: 50%
+                   transform: translate(-50%, -50%)
+                   width: 17px
+                   height: 16px
+                   background-image: url(../img/svg/trash.svg)
+                   background-size: cover
+                   background-repeat: no-repeat
+                   background-position: center
+                   filter: invert(43%) sepia(16%) saturate(3707%) hue-rotate(324deg) brightness(99%) contrast(103%) 
+
+        &__message
+            font-size: 16px
+
+    .comment
+        border-radius: 10px
+        overflow: hidden
+        background-color: #fff
+
+        button
+            transition: transform 0.3s
+
+            &:hover
+                transform: scale(1.1)
+            
+            &:active
+                transform: scale(0.9)
+
+        &__header
+            position: relative
+            display: flex
+            align-items: center
+            padding: 5px 15px 5px 25px
+            border-bottom: 1px solid #D9DCEE
+            margin-bottom: 15px
+
+            &::before
+                content: ""
+                position: absolute
+                left: 0
+                top: 0
+                width: 10px
+                height: calc(100% + 1px)
+                background-color: #16D7E3
+
+
+            .name
+                position: relative
+                font-size: 10px
+                text-transform: uppercase
+                padding-left: 18px
+                margin-right: 10px
+
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 13px
+                    height: 11px
+                    background-image: url(../img/svg/reg-type-2.svg)
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center
+            
+            .url
+                overflow: hidden
+                width: 370px
+                padding: 8px 15px
+                border-radius: 5px
+                background-color: #f5f6fa
+                font-size: 14px
+                color: $blue
+                text-decoration: underline
+                white-space: nowrap
+                text-overflow: ellipsis
+                margin-right: auto
+
+        &__inner
+            position: relative
+            padding: 0 20px 20px 100px
+
+        &__info
+            display: flex
+            align-items: center
+            margin-bottom: 15px
+
+            &::before
+                content: ""
+                position: absolute
+                left: 20px
+                top: 5px
+                width: 10px
+                height: 8px
+                background-image: url(../img/svg/answer.svg)
+                background-size: cover
+                background-repeat: no-repeat
+                background-position: center
+
+
+            .img
+                position: absolute
+                top: 0
+                left: 50px
+                width: 30px
+                height: 30px
+                border-radius: 100%
+                background-size: cover
+                background-repeat: no-repeat
+                background-position: center
+
+            .name
+                font-size: 14px
+                font-weight: 700
+                margin-right: auto
+
+            .history
+                color: $blue
+                font-size: 14px
+                text-decoration: underline
+                margin-right: 25px
+
+            .stats
+                display: flex
+                align-items: baseline
+
+            .time
+                font-size: 14px
+                color: #969696
+                margin-right: 15px
+
+            .top
+                position: relative
+                font-size: 16px
+                color: #70BB55
+                padding-left: 15px
+                line-height: 1
+                margin-right: 15px
+
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 12px
+                    height: 12px
+                    background-image: url(../img/svg/arrow-right.svg)
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center
+                    transform: rotate(-90deg)
+                    filter: invert(61%) sepia(14%) saturate(1776%) hue-rotate(79deg) brightness(95%) contrast(91%)
+            .down
+                position: relative
+                font-size: 16px
+                color: #FF7050
+                padding-left: 15px
+                line-height: 1
+
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 12px
+                    height: 12px
+                    background-image: url(../img/svg/arrow-right.svg)
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center
+                    transform: rotate(90deg)
+                    filter: invert(43%) sepia(16%) saturate(3707%) hue-rotate(324deg) brightness(99%) contrast(103%) 
+
+        &__message
+            font-size: 16px
+            color: #798196
+            margin-bottom: 10px
+
+            span
+                color: #47426A
+
+            p:not(:last-child)
+                margin-bottom: 10px
+
+        &__bottom
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+
+            .answers
+                position: relative
+                font-size: 14px
+                color: #4581EC
+                padding-right: 23px
+                margin-right: 20px
+
+                &::before
+                    content: ""
+                    position: absolute
+                    right: 0
+                    top: 50%
+                    transform: translateY(-50%)
+                    width: 14px
+                    height: 14px
+                    border-radius: 100%
+                    background-color: #70BB55
+
+                &::after
+                    content: ""
+                    position: absolute
+                    right: 0
+                    top: 50%
+                    transform: translateY(-50%)
+                    width: 14px
+                    height: 14px
+                    background-image: url(../img/svg/done.svg)
+                    background-size: 55%
+                    background-repeat: no-repeat
+                    background-position: center
+                    filter: invert(100%)
+
+            .answer
+                position: relative
+                padding: 10px 10px 10px 25px
+                color: #4581EC
+                font-size: 10px
+                text-transform: uppercase
+                border-radius: 5px
+                background-color: rgba(#D3DCFC , 0.3 )
+                margin-right: 5px
+
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 10px
+                    top: 50%
+                    transform: translateY(-50%)
+                    width: 10px
+                    height: 8px
+                    background-image: url(../img/svg/answer.svg)
+                    background-size: cover
+                    background-position: center
+                    background-repeat: no-repeat
+
+            .form
+                position: relative
+                width: 100%
+                display: flex
+                align-items: center
+                margin: 20px 0 25px
+
+                .photo
+                    border-radius: 3px
+                    width: 22px
+                    height: 22px
+                    background-color: #f2f5fe
+                    margin-right: 10px
+
+                .input
+                    position: relative
+                    max-width: 515px
+                    width: 100%
+                    margin-right: 15px
+
+                    input
+                        padding: 10px
+                        font-size: 16px
+                        border: 1px solid #C4C8DF
+                        border-radius: 5px
+                        width: 100%
+                        outline: none
+
+                .send
+                    color: white
+                    border-radius: 5px
+                    background-color: $blue
+                    font-weight: 700
+                    text-align: center
+                    padding: 12px 15px
+                    font-size: 12px
+
+                .cancel
+                    position: absolute
+                    right: 10px
+                    top: 50%
+                    z-index: 2
+                    transform: translateY(-50%)
+                    width: 16px
+                    height: 16px
+                    cursor: pointer
+                    opacity: 0.5
+
+                    &::before,
+                    &::after
+                        content: ""
+                        position: absolute
+                        left: 2px
+                        top: 8px
+                        width: 10px
+                        height: 2px
+                        background-color: #798196
+
+                    &::before
+                        transform: rotate(-45deg)
+                    
+                    &::after
+                        transform: rotate(45deg)
+
+
+
+            .wrapper
+                display: flex
+                align-items: center
+                font-size: 10px
+                line-height: 1
+                text-transform: uppercase
+                width: 100%
+
+                *:not(:last-child)
+                    margin-right: 5px
+
+                .red
+                    position: relative
+                    background-color: #FFE4E3
+                    padding: 11px 30px 9px
+                    border-radius: 30px
+                    color: $red
+
+                    &::before
+                        content: "!"
+                        position: absolute
+                        left: 12px
+                        top: 50%
+                        transform: translateY(-50%)
+                        font-family: Raleway
+                        font-size: 16px
+                        color: $red
+
+                    .delete
+                        position: absolute
+                        right: 6px
+                        top: 50%
+                        transform: translateY(-50%)
+                        width: 16px
+                        height: 16px
+                        cursor: pointer
+                        opacity: 0.5
+
+                        &::before,
+                        &::after
+                            content: ""
+                            position: absolute
+                            left: 2px
+                            top: 8px
+                            width: 10px
+                            height: 2px
+                            background-color: #798196
+
+                        &::before
+                            transform: rotate(-45deg)
+                        
+                        &::after
+                            transform: rotate(45deg)
+
+                & > .delete
+                    position: relative
+                    width: 36px
+                    height: 36px
+                    border-radius: 100%
+                    border: none
+                    margin-right: 10px
+                    background-color: #FFE4E3
+
+                    &::before
+                        content: ""
+                        position: absolute
+                        left: 50%
+                        top: 50%
+                        transform: translate(-50%, -50%)
+                        width: 17px
+                        height: 16px
+                        background-image: url(../img/svg/trash.svg)
+                        background-size: cover
+                        background-repeat: no-repeat
+                        background-position: center
+                        filter: invert(43%) sepia(16%) saturate(3707%) hue-rotate(324deg) brightness(99%) contrast(103%) 
+                        
+                .edit
+                    position: relative
+                    width: 36px
+                    height: 36px
+                    border-radius: 100%
+                    border: none
+                    background-color: #E8EAF4
+                    margin-left: auto
+
+                    &::before
+                        content: ""
+                        position: absolute
+                        left: 50%
+                        top: 50%
+                        transform: translate(-50%, -50%)
+                        width: 14px
+                        height: 14px
+                        background-image: url(../img/svg/pencil.svg)
+                        background-size: cover
+                        background-repeat: no-repeat
+                        background-position: center
+                        filter: invert(52%) sepia(52%) saturate(296%) hue-rotate(194deg) brightness(85%) contrast(95%)
+
+    &__more
+        font-size: 16px
+        color: $blue
+        text-align: center
+        padding: 9px 20px
+        background-color: #ECEEF9
+        width: 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
