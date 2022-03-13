@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+  </head>
+  <body> 
+    <div class="layout">
+      <div class="sidebar"> <a class="sidebar__create" href="#">
+          <p>Создать новый виджет</p>
+          <div class="circle"> </div></a>
+        <ul class="sidebar__menu"> 
+          <li class="sidebar__item active"><a class="sidebar__link" href="./stats.html"> <img class="sidebar__icon" src="img/svg/sidebar-icon-1.svg" alt="icon"><img class="sidebar__icon sidebar__icon--hover" src="img/svg/sidebar-icon-1-hover.svg" alt="icon">Статистика</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="./widgets.html"> <img class="sidebar__icon" src="img/svg/sidebar-icon-2.svg" alt="icon"><img class="sidebar__icon sidebar__icon--hover" src="img/svg/sidebar-icon-2-hover.svg" alt="icon">мои виджеты</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="./moderation.html"> <img class="sidebar__icon" src="img/svg/sidebar-icon-3.svg" alt="icon"><img class="sidebar__icon sidebar__icon--hover" src="img/svg/sidebar-icon-3-hover.svg" alt="icon">модерация</a></li>
+        </ul>
+        <ul class="sidebar__menu"> 
+          <li class="sidebar__item"><a class="sidebar__link" href="#"> <img class="sidebar__icon" src="img/svg/sidebar-icon-4.svg" alt="icon"><img class="sidebar__icon sidebar__icon--hover" src="img/svg/sidebar-icon-4-hover.svg" alt="icon">оплата</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="#"> <img class="sidebar__icon" src="img/svg/sidebar-icon-5.svg" alt="icon"><img class="sidebar__icon sidebar__icon--hover" src="img/svg/sidebar-icon-5-hover.svg" alt="icon">FAQ</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="#"> <img class="sidebar__icon" src="img/svg/sidebar-icon-6.svg" alt="icon"><img class="sidebar__icon sidebar__icon--hover" src="img/svg/sidebar-icon-6-hover.svg" alt="icon">тех. поддержка</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="./notification.html"> <img class="sidebar__icon" src="img/svg/sidebar-icon-7.svg" alt="icon"><img class="sidebar__icon sidebar__icon--hover" src="img/svg/sidebar-icon-7-hover.svg" alt="icon">уведомления</a></li>
+        </ul>
+        <div class="sidebar__profile"> <a class="sidebar__user" href="./person.html">
+            <div class="sidebar__image" style="background-image:url(./img/profile-image.jpg);"></div>
+            <div class="sidebar__info"> 
+              <div class="sidebar__name">Галина</div>
+              <div class="sidebar__status">Администратор</div>
+            </div></a><a class="sidebar__settings" href="./settings.html"><img src="img/svg/settings.svg" alt="settings icon"><img class="hover" src="img/svg/settings-hover.svg" alt="settings icon"></a>
+          <button class="sidebar__logout"> <img src="img/svg/sidebar-logout.svg" alt="logout icon"><img class="hover" src="img/svg/sidebar-logout-hover.svg" alt="logout icon"></button>
+        </div>
+      </div>
+      <main class="main">
+        <header class="header"><a class="header__logo logo" href="#"><img src="img/logo.svg" alt="logo"></a>
+          <div class="header__status">пробный период</div>
+          <div class="header__info"> 
+            <div class="header__balance">0</div>
+            <div class="header__duration">14 дней</div>
+          </div><a class="header__pay" href="#">Пополнить</a>
+        </header>
+        <div class="content"> 
+          <div class="person"> 
+            <div class="person__title">Личный кабинет</div>
+            <div class="person__inner"> 
+              <div class="person__info"> 
+                <div class="person__img" style="background-image:url(./img/profile-image.jpg)"><a class="person__settings" href="#"></a></div>
+                <div class="person__card"> 
+                  <div class="name">Галина Царькова</div>
+                  <div class="status">Владелец</div>
+                  <div class="line"></div>
+                  <div class="contact"> <img src="./img/svg/vk.svg" alt="vk logo">
+                    <p>vk.com/galya_design</p>
+                  </div>
+                  <div class="line"></div>
+                  <div class="contact"> <img src="./img/svg/phone-blue.svg" alt="phone icon">
+                    <p>8 (902) 184-56-18</p>
+                    <div class="confirmed"> </div>
+                  </div>
+                  <div class="line"></div>
+                  <p class="text">Добавьте контакты, чтобы входить по e-mail или через соцсети</p>
+                  <div class="email"> 
+                    <input type="text" placeholder="E-mail">
+                    <button class="reload"> </button>
+                    <div class="email-status">E-mail подтверждён</div>
+                  </div>
+                  <div class="line"></div>
+                  <p class="text">Выберите соцсеть, чтобы объединить несколько аккаунтов в один</p>
+                  <ul class="socials"> 
+                    <li> <img src="./img/svg/social-4.svg" alt="social media icon">
+                      <input type="checkbox" name="social"><img class="hover" src="./img/svg/social-4-hover.svg" alt="social media icon">
+                    </li>
+                    <li> <img src="./img/svg/social-5.svg" alt="social media icon">
+                      <input type="checkbox" name="social"><img class="hover" src="./img/svg/social-5-hover.svg" alt="social media icon">
+                    </li>
+                    <li> <img src="./img/svg/social-2.svg" alt="social media icon">
+                      <input type="checkbox" name="social"><img class="hover" src="./img/svg/social-2-hover.svg" alt="social media icon">
+                    </li>
+                    <li> <img src="./img/svg/social-6.svg" alt="social media icon">
+                      <input type="checkbox" name="social"><img class="hover" src="./img/svg/social-6-hover.svg" alt="social media icon">
+                    </li>
+                    <li> <img src="./img/svg/social-7.svg" alt="social media icon">
+                      <input type="checkbox" name="social"><img class="hover" src="./img/svg/social-7-hover.svg" alt="social media icon">
+                    </li>
+                    <li> <img src="./img/svg/social-8.svg" alt="social media icon">
+                      <input type="checkbox" name="social"><img class="hover" src="./img/svg/social-8-hover.svg" alt="social media icon">
+                    </li>
+                  </ul>
+                  <div class="line"></div>
+                  <button class="change">Сменить пароль</button>
+                </div>
+                <div class="person__history"> 
+                  <div class="title">История входов</div>
+                  <button class="end">Завершить все сеансы</button>
+                  <ul> 
+                    <li> 
+                      <div class="date">12.12.12</div>
+                      <div class="place">Google Chrome 10.1</div>
+                    </li>
+                    <li> 
+                      <div class="date">12.12.12</div>
+                      <div class="place">Opera mobile</div>
+                    </li>
+                    <li> 
+                      <div class="date">12.12.12</div>
+                      <div class="place">Виджет “ИВК”</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="person__users"> 
+                <div class="title">Приглашенные пользователи</div>
+                <button class="add">Добавить участника</button>
+                <div class="input"> 
+                  <input type="text" placeholder="Поиск">
+                  <button class="filter"> </button>
+                </div>
+                <div class="wrapper"> 
+                  <div class="name">Название сайта</div><a class="url" href="https://publichnaya-kadastrovaya-karta.com">https://publichnaya-kadastrovaya-karta.com</a>
+                </div>
+                <ul>
+                  <li class="person__user"> 
+                    <div class="widget"><img src="./img/svg/reg-type-1.svg" alt=""><img src="./img/svg/reg-type-2.svg" alt=""></div>
+                    <div class="name"> 
+                      <div class="bold">Александра р.</div>alexandra_redisson@yandex.ru
+                      <button class="delete"></button>
+                    </div>
+                    <div class="change green">
+                       модератор
+                      <button> </button>
+                    </div>
+                    <button class="options"></button>
+                  </li>
+                  <li class="person__user"> 
+                    <div class="widget"><img src="./img/svg/reg-type-3.svg" alt=""></div>
+                    <div class="name"> 
+                      <div class="bold">галина ц.</div>tsarkova@hiseo.team
+                      <button class="delete"></button>
+                    </div>
+                    <div class="change red">
+                       модератор
+                      <button> </button>
+                    </div>
+                    <button class="options"></button>
+                  </li>
+                  <li class="person__user"> 
+                    <div class="widget"><img src="./img/svg/reg-type-1.svg" alt=""><img src="./img/svg/reg-type-2.svg" alt=""></div>
+                    <div class="name"> 
+                      <div class="bold">Александра р.</div>alexandra_redisson@yandex.ru
+                      <button class="delete"></button>
+                    </div>
+                    <div class="change green">
+                       модератор
+                      <button> </button>
+                    </div>
+                    <button class="options"></button>
+                  </li>
+                  <li class="person__user"> 
+                    <div class="widget"><img src="./img/svg/reg-type-1.svg" alt=""><img src="./img/svg/reg-type-2.svg" alt=""></div>
+                    <div class="name"> 
+                      <div class="bold">Александра р.</div>alexandra_redisson@yandex.ru
+                      <button class="delete"></button>
+                    </div>
+                    <div class="change green">
+                       модератор
+                      <button> </button>
+                    </div>
+                    <button class="options"></button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup popup--confirmEmail popup--timing active"> 
+          <div class="popup-confirmEmail"> 
+            <p>Подтвердите ваш e-mail</p>
+            <div class="text">На почту <span class="bold">midzu-oto@yandex.ru</span> отправлено уведомление. Перейдите в почтовый ящик и подтвердите e-mail</div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="footer"> <a class="footer__logo logo" href="#"><img src="img/logo.svg" alt="logo"></a>
+      <div class="footer__copy">Все права принадлежат bulkfeedback.com, 2020-2021</div>
+      <ul class="footer__links">
+        <li><a href="#">Политика конфиденциальности</a></li>
+        <li><a href="#">Пользовательское соглашение</a></li>
+      </ul>
+    </footer>
+    <script src="js/app.min.js"> </script>
+  </body>
+</html>
