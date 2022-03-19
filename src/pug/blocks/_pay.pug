@@ -1,0 +1,70 @@
+.pay 
+    .pay__title Оплата
+
+    .pay__inner 
+        .pay__wrapper 
+            .pay__top
+                .pay__balance 
+                    p Текущий баланс:
+                    .balance 1275
+                    .days 10 дней
+                    a.btn(href="#") Пополнить
+                ul.pay__cards
+                    li 
+                        .text Активных виджетов
+                        .stat 12
+                    li 
+                        .text Ежедневное списание
+                        .stat.stat--ruble 24
+                
+            .pay__history
+                .subtitle История баланса
+                ul 
+                    li 
+                        .date 12.12.12
+                        .desc Пополнение Visa 5800
+                        .price.price--green +500 ₽
+                    li 
+                        .date 12.12.12
+                        .desc Виджет “Виджет публички в отзывах...
+                        .price.price--red -2 ₽
+                    li 
+                        .date 12.12.12
+                        .desc Виджет “ИВК”
+                        .price.price--red -2 ₽
+
+        .pay__coupons 
+            .pay__top 
+                .subtitle Доступные купоны
+                form(action="#") 
+                    input(type="text" placeholder="Ввести код купона")
+                    button.add Активировать
+
+            ul.coupons
+                li.coupon.coupon--active 
+                    .activated
+                    .coupon__info
+                        img(src="@img/money-yellow.svg", alt="") 
+                        p.name Пробный период 
+                        p.date 14 дней бесплатно
+                    button.coupon__activate Действует до 17.12.22
+                li.coupon 
+                    .activated
+                    .coupon__info
+                        img(src="@img/money-blue.svg", alt="") 
+                        p.name Заголовок в более чем одну строку
+                        p.date до 17.12.22
+                    button.coupon__activate Активировать
+                li.coupon
+                    .activated
+                    .coupon__info
+                        img(src="@img/money-yellow.svg", alt="") 
+                        p.name Пробный период 
+                        p.date 14 дней бесплатно
+                    button.coupon__activate Активировать
+
+
+
+
+
+

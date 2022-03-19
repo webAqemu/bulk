@@ -1,0 +1,343 @@
+.pay
+    height: 100%
+
+    &__title
+        font-family: Raleway
+        font-size: 30px
+        margin:0 -50px
+        padding: 0 0 25px 50px
+        border-bottom: 1px solid #D9DCEE
+
+    &__inner
+        display: flex
+        height: 100%
+
+    &__wrapper
+        width: 50%
+        height: 100%
+        padding: 15px 50px 15px 0px
+        border-right: 1px solid #d9dcee
+
+    &__top
+        display: flex
+        align-items: center
+
+    &__balance
+        display: inline-block
+        padding: 25px 15px 15px
+        background-color: #fff
+        box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+        border-radius: 10px
+        margin-right: 20px
+        max-width: 205px
+        width: 100%
+
+        p
+            font-family: Raleway
+            font-size: 18px
+            margin-bottom: 15px
+
+        .balance
+            display: inline-block
+            position: relative
+            font-weight: 700
+            font-size: 36px
+            line-height: 1
+            padding-right: 25px
+            margin-bottom: 20px
+
+            &::after
+                content: ""
+                position: absolute
+                right: 0
+                bottom: 7px
+                width: 15px
+                height: 17px
+                background-image: url(../img/svg/ruble.svg)
+                background-size: cover
+                background-position: center
+                background-repeat: no-repeat
+                filter: invert(25%) sepia(42%) saturate(489%) hue-rotate(208deg) brightness(97%) contrast(94%)
+
+        .days
+            color: #b0b5d1
+            font-size: 16px
+            margin-bottom: 20px
+
+        .btn
+            background-color: $blue
+            border-radius: 3px
+            box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+            padding: 19px 25px 18px 50px
+            font-weight: 700
+            color: white
+            position: relative
+            transition: background-color 0.3s, transform 0.3s
+
+            &:hover
+                background-color: #2B52D6
+
+            &:active
+                transform: scale(0.9)
+
+            &::before
+                content: ""
+                position: absolute
+                left: 16px
+                top: 50%
+                transform: translateY(-50%)
+                width: 17px
+                height: 19px
+                background-image: url(../img/svg/ruble.svg)
+                background-size: cover
+                background-position: center
+                background-repeat: no-repeat
+                filter: invert(14%) sepia(78%) saturate(3237%) hue-rotate(225deg) brightness(93%) contrast(101%)
+
+    &__cards
+        display: flex
+        margin-bottom: auto
+
+        li
+            max-width: 150px
+            width: 100%
+            border: 1px solid #d3d6e5
+            border-radius: 3px
+            padding: 15px
+
+            &:not(:last-child)
+                margin-right: 10px
+
+        .text
+            font-size: 14px
+            max-width: 100px
+            margin-bottom: 15px
+
+        .stat
+            display: inline-block
+            font-weight: 700
+            font-size: 30px
+
+            &--ruble
+                position: relative
+                padding-right: 23px
+
+                &::after
+                    content: ""
+                    position: absolute
+                    right: 0
+                    bottom: 7px
+                    width: 15px
+                    height: 17px
+                    background-image: url(../img/svg/ruble.svg)
+                    background-size: cover
+                    background-position: center
+                    background-repeat: no-repeat
+                    filter: invert(25%) sepia(42%) saturate(489%) hue-rotate(208deg) brightness(97%) contrast(94%)
+
+    &__history
+        width: 100%
+        margin: 50px 0 auto
+
+        .subtitle
+            font-family: Raleway
+            font-size: 18px
+            margin-bottom: 15px
+
+        li
+            display: flex
+            padding: 10px
+            border-bottom: 1px solid #d9dcee
+
+            &:first-child
+                border-top: 1px solid #d9dcee
+
+        .date
+            font-size: 14px
+            color: #b0b5d1
+            margin-right: 40px
+
+        .desc
+            font-size: 14px
+            margin-right: auto
+            width: 240px
+            overflow: hidden
+            white-space: nowrap
+            text-overflow: ellipsis
+        
+        .price
+            font-size: 14px
+
+            &--green
+                color: #44b759
+
+            &--red
+                color: $red
+
+    &__coupons
+        padding: 15px 0 15px 40px
+        width: 50%
+
+        .subtitle
+            font-size: 18px
+            font-weight: 700
+            margin-right: auto
+
+        form
+            display: flex
+            align-items: center
+
+        input
+            border-radius: 10px
+            border: 1px solid #d9dcee
+            background-color: #fff
+            padding: 12px 22px
+            margin-right: 10px
+            font-size: 14px
+            outline: none
+
+            &::placeholder
+                color: #c4c8df
+
+        .add
+            background-color: $blue
+            font-size: 16px
+            font-weight: 700
+            color: white
+            padding: 12px 25px
+            box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+            border-radius: 3px
+            transition: transform 0.3s, background-color 0.3s
+
+            &:hover
+                background-color: $dblue
+
+            &:active
+                transform: scale(0.9)  
+
+    .coupons
+        display: flex
+        align-items: stretch
+        margin-top: 45px
+
+    .coupon
+        max-width: 215px
+        width: 100%
+
+        &:not(:last-child)
+            margin-right: 15px
+
+        &--active
+            position: relative
+
+            .activated
+                opacity: 1
+
+            .coupon__activate
+                pointer-events: none
+                color: #44B759
+
+
+
+        &__info
+            position: relative
+            padding: 40px 30px
+            background-color: #fff
+            box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+            border-radius: 10px
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: flex-start
+            text-align: center
+            margin-bottom: 2px
+            height: calc( 100% - 60px )
+
+            &::after
+                content: ""
+                position: absolute
+                z-index: 3
+                left: 10%
+                bottom: 0
+                transform: translateY(4px)
+                width: 80%
+                height: 6px
+                background-image: url(../img/dotted-line.svg)
+
+            img
+                margin-bottom: 30px
+
+            .name
+                font-weight: 700
+                margin-bottom: 10px
+
+            .date
+                font-size: 14px
+
+        &__activate
+            position: relative
+            z-index: 2
+            width: 100%
+            background-color: #fff
+            box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+            border-radius: 10px
+            padding: 19px 20px
+            font-weight: 700
+            font-size: 16px
+            color: $blue
+            cursor: pointer
+            transition: color 0.3s, background-color 0.3s
+
+            &:hover
+                color: white
+                background-color: $blue
+                
+
+    .activated
+        position: absolute
+        top: 70px
+        left: 50%
+        transform: translateX(-50%)
+        z-index: 3
+        width: 60px
+        height: 60px
+        border-radius: 100%
+        background-color: #fff
+        pointer-events: none
+        opacity: 0
+
+        &::before
+            content: ""
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            width: calc(100% - 14px)
+            height: calc(100% - 14px)
+            border-radius: 100%
+            z-index: 4
+            background-color: #70BB55
+
+        &::after
+            content: ""
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            z-index: 5
+            width: 18px
+            height: 13px
+            background-image: url(../img/svg/done.svg)
+            background-size: contain
+            background-repeat: no-repeat
+            background-position: center
+            filter: invert(100%)
+
+
+
+
+
+
+
+
+

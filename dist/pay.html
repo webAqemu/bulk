@@ -45,36 +45,83 @@
           </div><a class="header__pay" href="#">Пополнить</a>
         </header>
         <div class="content"> 
-          <div class="stats"> 
-            <div class="stats__top"> 
-              <div class="stats__title">Статистика</div>
-            </div>
-            <p class="stats__text">Здесь пока ничего нет!</p>
-            <p class="stats__text">Создайте и установите виджет на сайт, чтобы видеть статистику <br> посещаемости и вовлеченности</p>
-            <button class="stats__create">Создать виджет</button>
-            <div class="stats__cards">
-              <ul>
-                <li> <img src="img/svg/stats-views.svg" alt="stats icon">
-                  <p>просмотры</p>
-                  <div class="num">0</div>
-                  <div class="percents">0%</div>
-                </li>
-                <li> <img src="img/svg/stats-comments.svg" alt="comments icon">
-                  <p>комментарии</p>
-                  <div class="num">0</div>
-                  <div class="percents">0%</div>
-                </li>
-                <li> <img src="img/svg/stats-likes.svg" alt="likes icon">
-                  <p>оценки</p>
-                  <div class="num">0</div>
-                  <div class="percents">0%</div>
-                </li>
-                <li> <img src="img/svg/stats-complaintes.svg" alt="complaintes icon">
-                  <p>жалобы</p>
-                  <div class="num">0</div>
-                  <div class="percents">0%</div>
-                </li>
-              </ul>
+          <div class="pay"> 
+            <div class="pay__title">Оплата</div>
+            <div class="pay__inner"> 
+              <div class="pay__wrapper"> 
+                <div class="pay__top">
+                  <div class="pay__balance"> 
+                    <p>Текущий баланс:</p>
+                    <div class="balance">1275</div>
+                    <div class="days">10 дней</div><a class="btn" href="#">Пополнить</a>
+                  </div>
+                  <ul class="pay__cards">
+                    <li> 
+                      <div class="text">Активных виджетов</div>
+                      <div class="stat">12</div>
+                    </li>
+                    <li> 
+                      <div class="text">Ежедневное списание</div>
+                      <div class="stat stat--ruble">24</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="pay__history">
+                  <div class="subtitle">История баланса</div>
+                  <ul> 
+                    <li> 
+                      <div class="date">12.12.12</div>
+                      <div class="desc">Пополнение Visa 5800</div>
+                      <div class="price price--green">+500 ₽</div>
+                    </li>
+                    <li> 
+                      <div class="date">12.12.12</div>
+                      <div class="desc">Виджет “Виджет публички в отзывах...</div>
+                      <div class="price price--red">-2 ₽</div>
+                    </li>
+                    <li> 
+                      <div class="date">12.12.12</div>
+                      <div class="desc">Виджет “ИВК”</div>
+                      <div class="price price--red">-2 ₽</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="pay__coupons"> 
+                <div class="pay__top"> 
+                  <div class="subtitle">Доступные купоны</div>
+                  <form action="#"> 
+                    <input type="text" placeholder="Ввести код купона">
+                    <button class="add">Активировать</button>
+                  </form>
+                </div>
+                <ul class="coupons">
+                  <li class="coupon coupon--active"> 
+                    <div class="activated"></div>
+                    <div class="coupon__info"><img src="img/money-yellow.svg" alt="">
+                      <p class="name">Пробный период </p>
+                      <p class="date">14 дней бесплатно</p>
+                    </div>
+                    <button class="coupon__activate">Действует до 17.12.22</button>
+                  </li>
+                  <li class="coupon"> 
+                    <div class="activated"></div>
+                    <div class="coupon__info"><img src="img/money-blue.svg" alt="">
+                      <p class="name">Заголовок в более чем одну строку</p>
+                      <p class="date">до 17.12.22</p>
+                    </div>
+                    <button class="coupon__activate">Активировать</button>
+                  </li>
+                  <li class="coupon">
+                    <div class="activated"></div>
+                    <div class="coupon__info"><img src="img/money-yellow.svg" alt="">
+                      <p class="name">Пробный период </p>
+                      <p class="date">14 дней бесплатно</p>
+                    </div>
+                    <button class="coupon__activate">Активировать</button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

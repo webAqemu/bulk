@@ -6027,3 +6027,336 @@ body {
 .popup-confirmEmail .bold {
   font-weight: 700;
 }
+
+.pay {
+  height: 100%;
+}
+.pay__title {
+  font-family: Raleway;
+  font-size: 30px;
+  margin: 0 -50px;
+  padding: 0 0 25px 50px;
+  border-bottom: 1px solid #D9DCEE;
+}
+.pay__inner {
+  display: flex;
+  height: 100%;
+}
+.pay__wrapper {
+  width: 50%;
+  height: 100%;
+  padding: 15px 50px 15px 0px;
+  border-right: 1px solid #d9dcee;
+}
+.pay__top {
+  display: flex;
+  align-items: center;
+}
+.pay__balance {
+  display: inline-block;
+  padding: 25px 15px 15px;
+  background-color: #fff;
+  box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15);
+  border-radius: 10px;
+  margin-right: 20px;
+  max-width: 205px;
+  width: 100%;
+}
+.pay__balance p {
+  font-family: Raleway;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.pay__balance .balance {
+  display: inline-block;
+  position: relative;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1;
+  padding-right: 25px;
+  margin-bottom: 20px;
+}
+.pay__balance .balance::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 7px;
+  width: 15px;
+  height: 17px;
+  background-image: url(../img/svg/ruble.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: invert(25%) sepia(42%) saturate(489%) hue-rotate(208deg) brightness(97%) contrast(94%);
+}
+.pay__balance .days {
+  color: #b0b5d1;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.pay__balance .btn {
+  background-color: #4D74F5;
+  border-radius: 3px;
+  box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15);
+  padding: 19px 25px 18px 50px;
+  font-weight: 700;
+  color: white;
+  position: relative;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.pay__balance .btn:hover {
+  background-color: #2B52D6;
+}
+.pay__balance .btn:active {
+  transform: scale(0.9);
+}
+.pay__balance .btn::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 17px;
+  height: 19px;
+  background-image: url(../img/svg/ruble.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: invert(14%) sepia(78%) saturate(3237%) hue-rotate(225deg) brightness(93%) contrast(101%);
+}
+.pay__cards {
+  display: flex;
+  margin-bottom: auto;
+}
+.pay__cards li {
+  max-width: 150px;
+  width: 100%;
+  border: 1px solid #d3d6e5;
+  border-radius: 3px;
+  padding: 15px;
+}
+.pay__cards li:not(:last-child) {
+  margin-right: 10px;
+}
+.pay__cards .text {
+  font-size: 14px;
+  max-width: 100px;
+  margin-bottom: 15px;
+}
+.pay__cards .stat {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 30px;
+}
+.pay__cards .stat--ruble {
+  position: relative;
+  padding-right: 23px;
+}
+.pay__cards .stat--ruble::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 7px;
+  width: 15px;
+  height: 17px;
+  background-image: url(../img/svg/ruble.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: invert(25%) sepia(42%) saturate(489%) hue-rotate(208deg) brightness(97%) contrast(94%);
+}
+.pay__history {
+  width: 100%;
+  margin: 50px 0 auto;
+}
+.pay__history .subtitle {
+  font-family: Raleway;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.pay__history li {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #d9dcee;
+}
+.pay__history li:first-child {
+  border-top: 1px solid #d9dcee;
+}
+.pay__history .date {
+  font-size: 14px;
+  color: #b0b5d1;
+  margin-right: 40px;
+}
+.pay__history .desc {
+  font-size: 14px;
+  margin-right: auto;
+  width: 240px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.pay__history .price {
+  font-size: 14px;
+}
+.pay__history .price--green {
+  color: #44b759;
+}
+.pay__history .price--red {
+  color: #F71514;
+}
+.pay__coupons {
+  padding: 15px 0 15px 40px;
+  width: 50%;
+}
+.pay__coupons .subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: auto;
+}
+.pay__coupons form {
+  display: flex;
+  align-items: center;
+}
+.pay__coupons input {
+  border-radius: 10px;
+  border: 1px solid #d9dcee;
+  background-color: #fff;
+  padding: 12px 22px;
+  margin-right: 10px;
+  font-size: 14px;
+  outline: none;
+}
+.pay__coupons input::placeholder {
+  color: #c4c8df;
+}
+.pay__coupons .add {
+  background-color: #4D74F5;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  padding: 12px 25px;
+  box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15);
+  border-radius: 3px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+.pay__coupons .add:hover {
+  background-color: #2B52D6;
+}
+.pay__coupons .add:active {
+  transform: scale(0.9);
+}
+.pay .coupons {
+  display: flex;
+  align-items: stretch;
+  margin-top: 45px;
+}
+.pay .coupon {
+  max-width: 215px;
+  width: 100%;
+}
+.pay .coupon:not(:last-child) {
+  margin-right: 15px;
+}
+.pay .coupon--active {
+  position: relative;
+}
+.pay .coupon--active .activated {
+  opacity: 1;
+}
+.pay .coupon--active .coupon__activate {
+  pointer-events: none;
+  color: #44B759;
+}
+.pay .coupon__info {
+  position: relative;
+  padding: 40px 30px;
+  background-color: #fff;
+  box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  margin-bottom: 2px;
+  height: calc(100% - 60px);
+}
+.pay .coupon__info::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  left: 10%;
+  bottom: 0;
+  transform: translateY(4px);
+  width: 80%;
+  height: 6px;
+  background-image: url(../img/dotted-line.svg);
+}
+.pay .coupon__info img {
+  margin-bottom: 30px;
+}
+.pay .coupon__info .name {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.pay .coupon__info .date {
+  font-size: 14px;
+}
+.pay .coupon__activate {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15);
+  border-radius: 10px;
+  padding: 19px 20px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #4D74F5;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+}
+.pay .coupon__activate:hover {
+  color: white;
+  background-color: #4D74F5;
+}
+.pay .activated {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background-color: #fff;
+  pointer-events: none;
+  opacity: 0;
+}
+.pay .activated::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 14px);
+  height: calc(100% - 14px);
+  border-radius: 100%;
+  z-index: 4;
+  background-color: #70BB55;
+}
+.pay .activated::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  width: 18px;
+  height: 13px;
+  background-image: url(../img/svg/done.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: invert(100%);
+}
