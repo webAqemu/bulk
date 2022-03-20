@@ -71,7 +71,11 @@
         filter: invert(81%) sepia(9%) saturate(378%) hue-rotate(193deg) brightness(92%) contrast(99%)
 
     &__inner
+        display: flex
+    
+    &__widgets
         max-width: 900px
+        margin-right: 50px
 
         & > *:not(:last-child)
             margin-bottom: 10px
@@ -1036,11 +1040,348 @@
         background-color: #ECEEF9
         width: 100%
 
+    &__filters
+        display: flex
+        margin-bottom: 15px
 
+        ul
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+            max-width: calc(100% - 150px)
+            width: 100%
+            margin-right: auto
 
+        li
+            margin-bottom: 6px
 
+            &:not(:last-child)
+                margin-right: 6px
 
+            &.opened
+                color: #798196
+                font-size: 14px
+                padding: 6px 12px
+                border: 1px solid #C4C8DF
+                border-radius: 15px
+                background-color: rgba(0, 0, 0, 0)
+                display: flex
+                align-items: center
+                justify-content: center
+                cursor: default
 
+            &.filter button
+                position: relative
+                font-size: 14px
+                padding: 6px 19px 6px 12px
+                border: 1px solid #FFE4E3
+                border-radius: 15px
+                background-color: #FFE4E3
+                color: $red
+                transition: background-color 0.3s, border-color 0.3s
+                &:hover
+                    background-color: rgba(0, 0, 0, 0)
+                    border-color: $red
+
+                &::before,
+                &::after
+                    content: ""
+                    position: absolute
+                    right: 10px
+                    top: 50%
+                    width: 2px
+                    height: 10px
+                    background-color: #798196
+                    opacity: 0.5
+
+                &::before
+                    transform: translateY(-50%) rotate(-45deg)
+                
+                &::after
+                    transform: translateY(-50%) rotate(45deg)
+
+            &.has-msg
+                position: relative
+
+                .msg
+                    position: absolute
+                    bottom: calc(100% + 15px)
+                    left: 50%
+                    z-index: 2
+                    transform: translateX(-50%)
+                    width: 240px
+                    padding: 15px
+                    box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+                    border-radius: 10px
+                    font-size: 12px
+                    line-height: 1.4
+                    background-color: #fff
+                    opacity: 0
+                    pointer-events: none
+                    transition: opacity 0.3s
+
+                    &::after
+                        content: ""
+                        position: absolute
+                        left: 50%
+                        bottom: 0
+                        transform: translate(-50%, 50%)
+                        width: 57px
+                        height: 27px
+                        background-image: url(../img/svg/triangle-white.svg)
+                        background-size: contain
+                        background-repeat: no-repeat
+                        background-position: center
+
+            button:hover + .msg
+                opacity: 1
+
+        .open-filters
+            position: relative
+            background-color: rgba(#d9dcee , 0.5 )
+            border-radius: 10px
+            padding: 8px 30px 8px 15px
+            font-family: Raleway
+            font-size: 18px
+            color: #47426A
+            transition: color 0.3s, background-color 0.3s, transform 0.3s
+
+            &:hover
+                background-color: $blue
+                color: white
+
+                &::after
+                    border-color: white
+
+            &:active
+                transform: scale(0.9)
+
+            &::after
+                content: ""
+                position: absolute
+                top: 50%
+                right: 15px
+                transform: translateY(-50%) rotate(-45deg)
+                width: 8px
+                height: 8px
+                border-right: 3px solid #798196
+                border-bottom: 3px solid #798196
+                transition: border-color 0.3s
+
+    &__search
+        max-width: 540px
+        width: 100%
+
+        .search
+            position: relative
+            max-width: 425px
+            padding-right: 45px
+            width: 100%
+            margin-bottom: 20px
+
+            &::before
+                content: ""
+                position: absolute
+                left: 20px
+                top: 50%
+                transform: translateY(-50%)
+                width: 15px
+                height: 15px
+                background-image: url(../img/svg/search-grey.svg)
+                background-size: contain
+                background-repeat: no-repeat
+                background-position: center
+
+            input
+                padding: 13px 20px 11px 50px
+                background-color: #fff
+                border: 1px solid #d9dcee
+                border-radius: 10px
+                outline: none
+                width: 100%
+                font-size: 14px
+                transition: border-color 0.3s
+
+                &:focus
+                    border-color: $blue
+
+                &::placeholder
+                    color: #C4C8DF
+
+            .filters
+                position: absolute
+                right: 0
+                top: 50%
+                transform: translateY(-50%)
+                width: 40px
+                height: 40px
+                background-image: url(../img/svg/stats-popup-open.svg)
+                background-size: 60%
+                background-repeat: no-repeat
+                background-position: center
+                filter: invert(36%) sepia(100%) saturate(1640%) hue-rotate(214deg) brightness(98%) contrast(95%)
+            
+    &__result
+        position: relative
+        padding: 25px 30px
+        border-radius: 10px
+        border-bottom-left-radius: 0
+        border-bottom-right-radius: 0
+        background-color: #fff
+        height: calc(100% - 30px)
+        overflow-y: auto
+
+        .close
+            position: absolute
+            right: 0
+            top: 0
+            padding: 12px 40px 12px 30px
+            font-size: 14px
+            color: #727BB0
+            background-color: rgba(#F5F6FA , 0.5)
+
+            &::before,
+            &::after
+                content: ""
+                position: absolute
+                right: 18px
+                top: 50%
+                width: 10px
+                height: 2px
+                background-color: #727bb0
+
+            &::before
+                transform: translateY(-50%) rotate(-45deg)
+            
+            &::after
+                transform: translateY(-50%) rotate(45deg)
+
+        .name
+            font-size: 16px
+            font-family: Raleway
+            margin-bottom: 5px
+
+        .black
+            color: black
+
+        .message
+            margin-bottom: 5px
+
+        p
+            font-size: 14px
+            color: #696969
+            padding-right: 50px
+
+            &:not(:last-child)
+                margin-bottom: 15px
+
+        .answers
+            font-size: 16px
+            color: $blue
+            margin-bottom: 20px
+            cursor: pointer
+            border: none
+
+            &:hover
+                text-decoration: underline
+
+            &--opened
+                margin-bottom: 0
+                text-decoration: underline
+
+        .answer
+            position: relative
+            padding: 15px 40px 20px
+            margin: 0 -10px
+            width: calc(100% + 20px)
+
+            &::before 
+                content: ""
+                position: absolute
+                top: 15px
+                left: 15px
+                width: 12px
+                height: 10px
+                background-image: url(../img/svg/answer.svg)
+                background-size: contain
+                background-position: center
+                background-repeat: no-repeat
+
+            p
+                padding: 0
+
+            .edit
+                position: absolute
+                top: 5px
+                right: 15px
+                width: 36px
+                height: 36px
+                border-radius: 100%
+                background-color: #e8eaf4
+                border: 1px solid #e8eaf4
+                transition: transform 0.3s, border-color 0.3s
+
+                &:hover
+                    border-color: $blue
+
+                &:active
+                    transform: scale(0.9)
+                        
+
+                &::after
+                    content: ""
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 100%
+                    background-image: url(../img/svg/pencil.svg)
+                    background-size: 50%
+                    background-position: center
+                    background-repeat: no-repeat
+                    filter: invert(53%) sepia(21%) saturate(780%) hue-rotate(194deg) brightness(89%) contrast(88%)
+
+        .line
+            width: calc(100% + 60px)
+            margin: 15px -30px
+            height: 1px
+            background-color: #d9dcee
+
+        .email
+            font-size: 14px
+            color: $blue
+            text-decoration: underline
+            margin-bottom: 5px
+
+        .btn
+            font-family: inherit
+            color: white
+            font-size: 16px
+            font-weight: 700
+            padding: 18px 22px
+            border-radius: 3px
+            background-color: $blue
+            margin-bottom: 15px
+            transition: background-color 0.3s, transform 0.3s
+
+            &:hover
+                background-color: $dblue
+
+            &:active
+                transform: scale(0.9)
+
+        .warning
+            margin: 0 -10px
+            width: calc(100% + 20px)
+            padding: 8px 15px
+            background-color: #FFFDF0
+            font-size: 14px
+            margin-bottom: 15px
+
+            span
+                font-weight: 700
+
+        
 
 
 

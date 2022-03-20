@@ -11,6 +11,7 @@
                 .popup-stats__checkbox 
                     input(type="checkbox" name="checkbox2")
                     label(for="checkbox2") Позиция 2
+                .popup-stats__line
                 .popup-stats__title Радиобатн
                 .popup-stats__radio
                     input(type="radio" name="radio")
@@ -18,9 +19,11 @@
                 .popup-stats__radio
                     input(type="radio" name="radio")
                     label(for="radio") Позиция 2
+                .popup-stats__line
                 .popup-stats__title Инпуты
                 .popup-stats__input 
                     input(type="text" placeholder="Ваш текст")
+                .popup-stats__line
                 .popup-stats__title Табы
                 .popup-stats__wrapper 
                     button.popup-stats__btn Обычный
@@ -28,6 +31,7 @@
                     button.popup-stats__btn.disable Недоступный
                     button.popup-stats__btn.close Удаляемый
                     button.popup-stats__btn Наведи на меня :)
+                .popup-stats__line
                 .popup-stats__title Аккордеон
                 .popup-stats__accordeon.active
                     p Раздел 1
@@ -39,6 +43,7 @@
                     .popup-stats__accordeon-content 
                         button Подраздел 1
                         button Подраздел 2
+                .popup-stats__line
                 .popup-stats__title Выпадающий список
                 .popup-stats__dropdown 
                     p По дням
@@ -52,3 +57,30 @@
                         button По дням
                         button По ночам
                         button В любое время
+                .popup-stats__title Рейтинг
+                .popup-stats__rating-inputs 
+                    input.from(type="text")
+                    input.to(type="text")
+                .popup-stats__rating(id="rating")
+                .popup-stats__line
+                .popup-stats__title Статус
+                .popup-stats__checkbox.popup-stats__checkbox--status.check
+                    input(type="checkbox" name="checkbox1")
+                    label(for="checkbox1") на проверке
+                    .amount 1542
+                .popup-stats__checkbox.popup-stats__checkbox--status.done
+                    input(type="checkbox" name="checkbox2")
+                    label(for="checkbox2") опубликованное
+                    .amount 1542
+                .popup-stats__checkbox.popup-stats__checkbox--status.failed
+                    input(type="checkbox" name="checkbox2")
+                    label(for="checkbox2") удаленные
+                    .amount 1542
+                .popup-stats__line
+                .popup-stats__title Теги
+                .popup-stats__checkbox.popup-stats__checkbox--tag.red
+                    input(type="checkbox" name="checkbox1")
+                    label(for="checkbox1") #[span !] мат
+                .popup-stats__checkbox.popup-stats__checkbox--tag
+                    input(type="checkbox" name="checkbox2")
+                    label(for="checkbox2") другой тег

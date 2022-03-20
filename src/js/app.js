@@ -1,9 +1,30 @@
 import * as myFunctions from "./modules/functions.js"
 myFunctions.isWebp();
+// NoUiSlider
+import * as noUiSlider from 'nouislider';
 
-import Swiper, { Navigation, Pagination } from "swiper";
+if(document.querySelector(".popup-stats")) {
+  const rating = document.getElementById("rating");
+  const ratingInputs = document.querySelector(".popup-stats__rating-inputs")
+  const inputFrom = ratingInputs.querySelector(".from")
+  const inputTo = ratingInputs.querySelector(".to")
+  noUiSlider.create(rating, {
+    start: [2, 4],
+    connect: true,
+    step: 1,
+    range: {
+      "min": 0,
+      "max": 5
+    }
+  })
 
-const swiper = new Swiper();
+  rating.noUiSlider.on("update", function(data) {
+    const [from, to] = data
+    inputFrom.value = +from
+    inputTo.value = +to
+  })
+}
+
 
 if(document.getElementById("demo")) {
   $('#demo').daterangepicker({
@@ -38,4 +59,7 @@ if(popupCopied) {
     popupCopied.classList.remove("active")
   }, 3000)
 }
+
+
+
 

@@ -140,6 +140,71 @@
             background-color: $blue
             left: 4px
 
+    &__checkbox--status
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        label
+            display: inline-block
+            padding: 8px 12px
+            border-radius: 5px
+            text-transform: uppercase
+            font-size: 10px
+            margin-left: 25px
+
+            &::before,
+            &::after
+                left: -25px 
+
+        &.check label
+            color: #8792B7
+            background-color: #F5F6FA
+
+        &.done label
+            background-color: rgba(227, 244, 238, 0.5)
+            color: #44B759
+
+        &.failed label
+            background-color: #FFE4E3
+            color: $red
+
+        .amount
+            font-size: 14px
+
+    &__checkbox--tag
+        label
+            display: inline-block
+            padding: 8px 12px
+            color: #8792B7
+            font-size: 10px
+            text-transform: uppercase
+            border-radius: 30px
+            margin-left: 25px
+            background-color: #f5f6fa
+
+            &::before,
+            &::after
+                left: -25px
+
+        &.red label
+            background-color: #FFE4E3
+            color: $red
+            padding-left: 20px
+
+            span
+                position: absolute
+                top: 50%
+                left: 12px
+                transform: translateY(-50%)
+                font-family: Raleway
+                font-size: 16px
+                color: $red
+
+
+        
+
+
     &__wrapper
         display: flex
         align-items: center
@@ -310,7 +375,51 @@
             &::after
                 transform: rotate(180deg)
 
+    &__line
+        margin: 10px -30px
+        width: calc(100% + 60px)
+        height: 1px
+        background-color: #d9dcee
 
+    &__rating-inputs
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 10px
+
+        input
+            height: 40px
+            width: 80px
+            border-radius: 3px
+            border: 1px solid #d9dcee
+            background-color: #fff
+            outline: none
+            text-align: center
+            font-size: 14px
+
+    .noUi-target
+        background-color: #E8EAF4
+        height: 4px
+        border: none
+        border-radius: 3px
+        margin-bottom: 15px
+
+    .noUi-handle
+        box-shadow: none
+        width: 20px
+        height: 20px
+        border-radius: 100%
+        background-color: #fff
+        border: 3px solid $blue
+        top: -8px !important
+        cursor: pointer
+
+        &::before,
+        &::after
+            display: none
+
+    .noUi-connect
+        background-color: $blue
 
 
 
