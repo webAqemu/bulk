@@ -6,6 +6,15 @@
         line-height: 1
         padding: 0 0 25px
 
+        @include r(1200px)
+            font-size: 24px
+
+        @include r(900px)
+            font-size: 22px
+
+        @include r(767px)
+            font-size: 16px
+
         &::before
             content: ""
             position: absolute
@@ -14,8 +23,6 @@
             width: calc(100% + 100px)
             height: 1px
             background-color: #d9dcee
-
-        
 
     &__item
         &:hover .notification__name
@@ -28,6 +35,9 @@
         display: block
         position: relative
         padding: 20px 0 25px 20px
+
+        @include r(767px)
+            padding: 10px 0 15px 20px
 
         &::after
             content: ""
@@ -49,11 +59,17 @@
             background-color: $blue
             transition: opacity 0.3s
 
+            @include r(767px)
+                top: 12px
+
     &__name
         font-family: Raleway
         font-size: 18px
         margin-bottom: 5px
         transition: color 0.3s
+
+        @include r(767px)
+            font-size: 14px
 
     &__desc
         max-width: 600px
@@ -61,6 +77,12 @@
         margin-bottom: 10px
         color: #727bb0
 
+        @include r(767px)
+            font-size: 12px
+
     &__date
         font-size: 14px
         color: #727bb0
+        
+        @include r(767px)
+            font-size: 12px

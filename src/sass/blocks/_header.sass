@@ -8,16 +8,13 @@
     @include r(1200px)
         padding: 20px 50px
 
-    @include r(767px)
-        padding: 20px
-
-    @include r (600px)
+    @include r (767px)
         padding: 15px
 
     &__logo
         margin-right: auto
 
-        @include r(600px)
+        @include r(767px)
             height: 40px
 
     &__status
@@ -59,15 +56,12 @@
         font-size: 14px
 
         @include r(767px)
-            font-size: 12px
             background-color: #E8EAF4
-            padding: 6px 45px 6px 15px
+            padding: 6px 30px 6px 15px
             border-radius: 20px
             border-top-right-radius: 0
             border-bottom-right-radius: 0
             margin-right: 0
-
-        @include r(600px)
             font-size: 10px
             height: 40px
             padding-right: 30px
@@ -80,10 +74,6 @@
         width: fit-content
 
         @include r(767px)
-            font-size: 18px
-            padding-right: 15px
-
-        @include r(600px)
             font-size: 14px
             padding-right: 10px
 
@@ -101,11 +91,6 @@
             filter: invert(25%) sepia(10%) saturate(2662%) hue-rotate(208deg) brightness(85%) contrast(80%)
 
             @include r(767px)
-                top: 3px
-                width: 10px
-                height: 13px
-            
-            @include r(600px)
                 top: 3px
                 width: 8px
                 height: 11px
@@ -125,11 +110,6 @@
             border-radius: 100%
             box-shadow: none
             padding: 0
-            width: 48px
-            height: 48px
-            margin-left: -24px
-
-        @include r(600px)
             width: 40px
             height: 40px
             margin-left: -20px

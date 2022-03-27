@@ -1,63 +1,64 @@
 .sidebar
-    a.sidebar__create(href="#")
-        p Создать новый виджет
-        .circle 
+    .sidebar__inner
+        a.sidebar__create(href="#")
+            p Создать новый виджет
+            .circle 
 
-    button.sidebar__burger
+        button.sidebar__burger
 
-    ul.sidebar__menu 
-        li.sidebar__item.active
-            a.sidebar__link(href="./stats.html") 
-                img.sidebar__icon(src="@img/svg/sidebar-icon-1.svg" alt="icon")
-                img.sidebar__icon.sidebar__icon--hover(src="@img/svg/sidebar-icon-1-hover.svg" alt="icon")
-                | Статистика
-        li.sidebar__item
-            a.sidebar__link(href="./widgets.html") 
-                img.sidebar__icon(src="@img/svg/sidebar-icon-2.svg" alt="icon")
-                img.sidebar__icon.sidebar__icon--hover(src="@img/svg/sidebar-icon-2-hover.svg" alt="icon")
-                | мои виджеты
-        li.sidebar__item
-            a.sidebar__link(href="./moderation.html") 
-                img.sidebar__icon(src="@img/svg/sidebar-icon-3.svg" alt="icon")
-                img.sidebar__icon.sidebar__icon--hover(src="@img/svg/sidebar-icon-3-hover.svg" alt="icon")
-                | модерация
+        ul.sidebar__menu 
+            li.sidebar__item.active
+                a.sidebar__link(href="./stats.html") 
+                    img.sidebar__icon(src="@img/svg/sidebar-icon-1.svg" alt="icon")
+                    img.sidebar__icon.sidebar__icon--hover(src="@img/svg/sidebar-icon-1-hover.svg" alt="icon")
+                    | Статистика
+            li.sidebar__item
+                a.sidebar__link(href="./widgets.html") 
+                    img.sidebar__icon(src="@img/svg/sidebar-icon-2.svg" alt="icon")
+                    img.sidebar__icon.sidebar__icon--hover(src="@img/svg/sidebar-icon-2-hover.svg" alt="icon")
+                    | мои виджеты
+            li.sidebar__item
+                a.sidebar__link(href="./moderation.html") 
+                    img.sidebar__icon(src="@img/svg/sidebar-icon-3.svg" alt="icon")
+                    img.sidebar__icon.sidebar__icon--hover(src="@img/svg/sidebar-icon-3-hover.svg" alt="icon")
+                    | модерация
 
-    ul.sidebar__menu 
-        li.sidebar__item
-            a.sidebar__link(href="./pay.html") 
-                img.sidebar__icon(src="@img/svg/sidebar-icon-4.svg" alt="icon")
-                img.sidebar__icon.sidebar__icon--hover(src="@img/svg/sidebar-icon-4-hover.svg" alt="icon")
-                | оплата
-        li.sidebar__item
-            a.sidebar__link(href="#") 
-                img.sidebar__icon(src="@img/svg/sidebar-icon-5.svg" alt="icon")
-                img.sidebar__icon.sidebar__icon--hover(src="@img/svg/sidebar-icon-5-hover.svg" alt="icon")
-                | FAQ
-        li.sidebar__item
-            a.sidebar__link(href="#") 
-                img.sidebar__icon(src="@img/svg/sidebar-icon-6.svg" alt="icon")
-                img.sidebar__icon.sidebar__icon--hover(src="@img/svg/sidebar-icon-6-hover.svg" alt="icon")
-                | тех. поддержка
-        li.sidebar__item
-            a.sidebar__link(href="./notification.html") 
-                img.sidebar__icon(src="@img/svg/sidebar-icon-7.svg" alt="icon")
-                img.sidebar__icon.sidebar__icon--hover(src="@img/svg/sidebar-icon-7-hover.svg" alt="icon")
-                | уведомления
-                .sidebar__notifications
-                    .circle(style="background-color: #F71514")
-                    .number 1924
+        ul.sidebar__menu 
+            li.sidebar__item
+                a.sidebar__link(href="./pay.html") 
+                    img.sidebar__icon(src="@img/svg/sidebar-icon-4.svg" alt="icon")
+                    img.sidebar__icon.sidebar__icon--hover(src="@img/svg/sidebar-icon-4-hover.svg" alt="icon")
+                    | оплата
+            li.sidebar__item
+                a.sidebar__link(href="#") 
+                    img.sidebar__icon(src="@img/svg/sidebar-icon-5.svg" alt="icon")
+                    img.sidebar__icon.sidebar__icon--hover(src="@img/svg/sidebar-icon-5-hover.svg" alt="icon")
+                    | FAQ
+            li.sidebar__item
+                a.sidebar__link(href="#") 
+                    img.sidebar__icon(src="@img/svg/sidebar-icon-6.svg" alt="icon")
+                    img.sidebar__icon.sidebar__icon--hover(src="@img/svg/sidebar-icon-6-hover.svg" alt="icon")
+                    | тех. поддержка
+            li.sidebar__item
+                a.sidebar__link(href="./notification.html") 
+                    img.sidebar__icon(src="@img/svg/sidebar-icon-7.svg" alt="icon")
+                    img.sidebar__icon.sidebar__icon--hover(src="@img/svg/sidebar-icon-7-hover.svg" alt="icon")
+                    | уведомления
+                    .sidebar__notifications
+                        .circle(style="background-color: #F71514")
+                        .number 1924
 
-    .sidebar__profile 
-        a.sidebar__user(href="./person.html")
-            .sidebar__image(style="background-image:url(./img/profile-image.jpg);")
-            .sidebar__info 
-                .sidebar__name Галина
-                .sidebar__status Администратор
-        a.sidebar__settings(href="./settings.html")
-            img(src="@img/svg/settings.svg", alt="settings icon") 
-            img.hover(src="@img/svg/settings-hover.svg", alt="settings icon") 
-        button.sidebar__logout 
-            img(src="@img/svg/sidebar-logout.svg", alt="logout icon") 
-            img.hover(src="@img/svg/sidebar-logout-hover.svg", alt="logout icon") 
+        .sidebar__profile 
+            a.sidebar__user(href="./person.html")
+                .sidebar__image(style="background-image:url(./img/profile-image.jpg);")
+                .sidebar__info 
+                    .sidebar__name Галина
+                    .sidebar__status Администратор
+            a.sidebar__settings(href="./settings.html")
+                img(src="@img/svg/settings.svg", alt="settings icon") 
+                img.hover(src="@img/svg/settings-hover.svg", alt="settings icon") 
+            button.sidebar__logout 
+                img(src="@img/svg/sidebar-logout.svg", alt="logout icon") 
+                img.hover(src="@img/svg/sidebar-logout-hover.svg", alt="logout icon") 
 
-    button.sidebar__activate активировать купон
+        button.sidebar__activate активировать купон

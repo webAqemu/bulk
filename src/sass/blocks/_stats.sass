@@ -4,14 +4,25 @@
         align-items: center
         margin-bottom: 30px
 
+        @include r(767px)
+            margin-bottom: 10px
+
     &__title
         font-family: Raleway
         font-size: 30px
         margin-right: 20px
 
+        @include r(767px)
+            font-size: 20px
+            margin-right: auto
+
     &__text
         color: #727bb0
         margin-bottom: 30px
+
+        @include r(767px)
+            margin-bottom: 15px
+            font-size: 12px
 
     &__create
         padding: 20px 25px 18px
@@ -28,6 +39,10 @@
         &:active
             transform: scale(0.9)
 
+        @include r(767px)
+            font-size: 14px
+            padding: 12px 20px 10px
+
     &__settings
         position: relative
         width: 35px
@@ -36,6 +51,9 @@
         background-color: #e8eaf4
         margin-right: auto
         transition: transform 0.3s
+
+        @include r(767px)
+            margin-right: 5px
 
         &:hover::after
             opacity: 1
@@ -81,6 +99,39 @@
         border: 1px solid white
         transition: border-color 0.3s, color 0.3s, transform 0.3s
 
+        @include r(767px)
+            position: relative
+            width: 35px
+            height: 35px
+            border-radius: 100%
+            font-size: 0
+            padding: 0
+
+            &::after
+                content: ''
+                position: absolute
+                left: 0
+                top: 0
+                width: 100%
+                height: 100%
+                background-image: url(../img/svg/arrow-right.svg)
+                background-repeat: no-repeat
+                background-size: 40%
+                background-position: center
+                filter: invert(56%) sepia(6%) saturate(2440%) hue-rotate(194deg) brightness(87%) contrast(93%)
+                transform: rotate(90deg) translateX(-3px)
+
+            &::before
+                content: ""
+                position: absolute
+                bottom: 9px
+                left: 50%
+                transform: translateX(-50%)
+                width: 12px
+                height: 2px
+                background-color: #727bb0
+                border-radius: 2px
+
         &:hover
             color: $blue
             border-color: $blue
@@ -93,6 +144,9 @@
         align-items: center
         flex-wrap: wrap
         margin-bottom: 40px
+
+        @include r(767px)
+            margin-bottom: 20px
 
         li
             margin-bottom: 10px
@@ -116,6 +170,9 @@
             border: 1px solid #C4C8DF
             transition: color 0.3s, border-color 0.3s, background-color 0.3s, transform 0.3s
 
+            @include r(767px)
+                font-size: 12px
+
             &:hover
                 border-color: $blue
                 color: $blue
@@ -135,16 +192,48 @@
         align-items: center
         flex-wrap: wrap
 
+        @include r(1000px)
+            flex-wrap: nowrap
+            overflow-x: auto
+
+            /* This will work on Firefox */
+            scrollbar-width: thin
+            scrollbar-color: $blue
+
+
+            /* Targtes on Chrome, Edge, and Safari */
+            &::-webkit-scrollbar 
+                height: 5px
+
+
+            &::-webkit-scrollbar-track 
+                background: rgba(255, 255, 255, 1)
+
+
+            &::-webkit-scrollbar-thumb 
+                background-color: $blue
+                border-radius: 20px
+                border: none
+
         li
             margin-bottom: 25px
 
+            @include r(767px)
+                margin-bottom: 20px
+
             &:not(:last-child)
                 margin-right: 15px
+
+                @include r(767px)
+                    margin-right: 10px
 
             &.active button,
             &:hover button
                 box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
                 background-color: #fff
+
+                @include r(1000px)
+                    box-shadow: none
 
             &:active button
                 transform: scale(0.9)
@@ -171,6 +260,9 @@
             font-family: Raleway
             white-space: nowrap
 
+            @include r(767px)
+                font-size: 12px
+
         img
             position: absolute
             left: 15px
@@ -185,10 +277,44 @@
         border-bottom: 1px solid #D9DCEE
         border-top: 1px solid #D9DCEE
 
+        @include r(767px)
+            padding-top: 10px
+
+            .stats__wrapper
+                flex-direction: column
+                padding: 0
+
+                .stats__subtitle
+                    margin-right: 0
+                    margin-bottom: 10px
+
         ul
             display: flex
             align-items: center
             flex-wrap: wrap
+
+            @include r(1000px)
+                flex-wrap: nowrap
+                overflow-x: auto
+
+                /* This will work on Firefox */
+                scrollbar-width: thin
+                scrollbar-color: $blue
+
+
+                /* Targtes on Chrome, Edge, and Safari */
+                &::-webkit-scrollbar 
+                    height: 5px
+
+
+                &::-webkit-scrollbar-track 
+                    background: rgba(255, 255, 255, 1)
+
+
+                &::-webkit-scrollbar-thumb 
+                    background-color: $blue
+                    border-radius: 20px
+                    border: none
 
         li
             position: relative
@@ -202,6 +328,15 @@
 
             &:not(:last-child)
                 margin-right: 15px
+
+            @include r(1000px)
+                min-width: 160px
+                box-shadow: none
+
+            @include r(767px)
+                padding: 12px 20px 20px
+                min-width: 120px
+                width: 120px
 
         img
             position: absolute
@@ -218,9 +353,15 @@
             text-transform: uppercase
             margin-bottom: 10px
 
+            @include r(767px)
+                padding-left: 15px
+
         .num
             font-size: 42px
             text-align: center
+
+            @include r(767px)
+                font-size: 30px
 
         .percents
             position: absolute
@@ -261,6 +402,9 @@
         display: flex
         align-items: center
 
+        @include r(767px)
+            flex-direction: column
+
         &--wrap
             flex-wrap: wrap
 
@@ -274,12 +418,23 @@
         margin-bottom: 20px
         width: fit-content
 
+        @include r(767px)
+            width: 100%
+            justify-content: center
+
         .stats__subtitle
             margin-right: 10px
             margin-bottom: 0
 
         &--no-bg
             background-color: rgba(0, 0, 0, 0)
+
+        &--no-mobile-subtitle
+            @include r(767px)
+                background-color: transparent
+
+                .stats__subtitle
+                    display: none
 
     &__btn
         color: #798196
@@ -332,8 +487,18 @@
         background-color: #fff
         margin-right: 10px
 
+        @include r(767px)
+            width: 100%
+            margin-right: 0
+            margin-bottom: 10px
+
     &__categories
         margin-bottom: auto
+
+        @include r(767px)
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
 
     &__category
         position: relative
@@ -344,6 +509,9 @@
         padding: 6px 10px
         height: 42px
         min-width: 190px
+
+        @include r(767px)
+            width: calc(50% - 5px)
 
         &:not(:last-child)
             margin-bottom: 10px

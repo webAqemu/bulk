@@ -68,4 +68,28 @@ document.addEventListener("click", function(e) {
   }
 })
 
+// изменение разметки виджетов на мобилке
+const widgets = document.querySelectorAll(".widgets-card")
+
+if(widgets.length !== 0 && window.innerWidth < 1000) {
+  widgets.forEach(widget => {
+    const review = widget.querySelector(".reviews")
+    const status = widget.querySelector(".status")
+    const code = widget.querySelector(".code")
+    const id = widget.querySelector(".id")
+    const widgetBottom = document.createElement('div')
+    widgetBottom.classList.add("widgets-card__bottom")
+
+    const widgetTop = widget.querySelector(".widgets-card__top")
+    const widgetBtn = widget.querySelector(".widgets-card__settings")
+    widgetTop.insertAdjacentElement("afterend",  status)
+    widgetTop.insertAdjacentElement("afterend",  review)
+
+    widgetBottom.insertAdjacentElement("afterbegin", id)
+    widgetBottom.insertAdjacentElement("afterbegin", code)
+
+    widgetBtn.insertAdjacentElement("afterend",  widgetBottom)
+  })
+}
+
 

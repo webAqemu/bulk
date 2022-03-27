@@ -12,6 +12,13 @@
         padding-bottom: 30px
         position: relative
 
+        @include r(1000px)
+            flex-direction: column
+            justify-content: flex-start
+            align-items: flex-start
+            margin-bottom: 10px
+            padding-bottom: 20px
+
         &::before
             content: ""
             position: absolute
@@ -25,14 +32,48 @@
         font-family: Raleway
         font-size: 30px
         margin-right: 20px
-        margin-right: 30px
         white-space: nowrap
+
+        @include r(1000px)
+            font-size: 22px
+            margin-right: 0
+            margin-bottom: 10px
+
+        @include r(767px)
+            font-size: 18px
 
     &__categories
         display: flex
         align-items: center
         justify-content: flex-end
         flex-wrap: wrap
+
+        @include r(1000px)
+            justify-content: flex-start
+
+        @include r(767px)
+            flex-wrap: nowrap
+            width: 100%
+            overflow-x: auto
+
+            /* This will work on Firefox */
+            scrollbar-width: thin
+            scrollbar-color: $blue
+
+
+            /* Targtes on Chrome, Edge, and Safari */
+            &::-webkit-scrollbar 
+                height: 0px
+
+
+            &::-webkit-scrollbar-track 
+                background: rgba(255, 255, 255, 0)
+
+
+            &::-webkit-scrollbar-thumb 
+                background-color: $blue
+                border-radius: 20px
+                border: none
 
     &__category
         color: #798196
@@ -48,14 +89,27 @@
         margin-bottom: 10px
         transition: box-shadow 0.3s, color 0.3s, background-color 0.3s, border-color 0.3s, transform 0.3s
         
+        @include r(767px)
+            font-size: 12px
+            white-space: nowrap
+            border-radius: 5px
+            margin-bottom: 0
+
+
+        
         &:hover
             border-color: $blue
+
 
         &.active
             background-color: #fff
             color: $blue
             box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
             border-color: white
+
+            @include r(767px)
+                box-shadow: none
+    
             
             .widgets__icon
                 filter: invert(42%) sepia(80%) saturate(3252%) hue-rotate(214deg) brightness(99%) contrast(94%)
@@ -78,6 +132,9 @@
     &__wrapper
         display: flex
         align-items: center
+
+        @include r(767px)
+            flex-wrap: wrap
     
     &__websites
         display: flex
@@ -113,6 +170,9 @@
         display: flex
         align-items: center
         margin-top: -10px
+
+        @include r(767px)
+            margin: 5px 0 15px
 
         input
             position: absolute
@@ -155,6 +215,10 @@
             font-size: 14px
             width: 80px
 
+            @include r(767px)
+                width: auto
+                font-size: 12px
+
     &-card
         background-color: #fff
         padding: 15px 20px 20px
@@ -163,220 +227,269 @@
         position: relative
         margin-bottom: 10px
 
+        @include r(1000px)
+            padding-top: 5px
+
+        @include r(767px)
+            padding-bottom: 15px
+
+        &__bottom
+            display: flex
+
+
+        .reviews
+            position: relative
+            border-radius: 5px
+            font-size: 10px
+            text-transform: uppercase
+            padding: 11px 8px 9px 25px
+            background-color: #F5F6FA
+            margin-right: 10px
+
+            @include r(1000px)
+                display: inline-block
+                margin-bottom: 10px
+            
+            &::before
+                content: ""
+                position: absolute
+                top: 10px
+                left: 6px
+                width: 12px
+                height: 12px
+                background-image: url(../img/svg/reg-type-3.svg)
+                background-size: cover
+                background-repeat: no-repeat
+                background-position: center
+
+        .status
+            position: relative
+            border-radius: 5px
+            font-size: 10px
+            text-transform: uppercase
+            padding: 11px 8px 9px 25px
+            margin-right: 10px
+            color: #44B759
+            background-color: #E7F6F0
+
+            @include r(1000px)
+                display: inline-block
+                margin-bottom: 10px
+            
+            &::before
+                content: ""
+                position: absolute
+                top: 12px
+                left: 10px
+                width: 10px
+                height: 8px
+                background-image: url(../img/svg/done.svg)
+                background-size: cover
+                background-repeat: no-repeat
+                background-position: center
+                filter: invert(56%) sepia(83%) saturate(359%) hue-rotate(79deg) brightness(92%) contrast(86%)
+                    
+        .moderators
+            position: relative
+            display: flex
+            align-items: center
+            border-radius: 5px
+            overflow: hidden
+            font-size: 10px
+            text-transform: uppercase
+            padding: 11px 5px 9px 35px
+            margin-right: 10px
+            background-color: #F5F6FA
+
+            @include r(1000px)
+                background-color: #fff
+                padding: 0 0 0 35px
+                margin-right: auto
+
+            &::before
+                content: ""
+                position: absolute
+                top: 11px
+                left: 10px
+                width: 13px
+                height: 11px
+                background-image: url(../img/svg/user.svg)
+                background-size: contain
+                background-position: center
+                background-repeat: no-repeat
+                filter: invert(90%) sepia(3%) saturate(2093%) hue-rotate(195deg) brightness(92%) contrast(82%)
+            
+                @include r(1000px)
+                    top: 8px
+
+            button
+                position: relative
+                display: block
+                width: 35px
+                height: 30px
+                background-color: #EBEDF9
+                margin-top: -11px
+                margin-bottom: -9px
+                margin-right: -5px
+                margin-left: 8px
+
+                @include r(1000px)
+                    background-color: #fff
+                    margin: 0 0 0 8px
+
+                &:hover::after
+                    filter: invert(39%) sepia(81%) saturate(764%) hue-rotate(197deg) brightness(97%) contrast(99%)
+                
+                &::after
+                    content: ""
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%, -50%)
+                    width: 15px
+                    height: 15px
+                    background-image: url(../img/svg/pencil.svg)
+                    background-size: cover
+                    background-position: center
+                    background-repeat: no-repeat
+                    filter: invert(48%) sepia(22%) saturate(709%) hue-rotate(194deg) brightness(97%) contrast(90%)
+
+        .error
+            position: relative
+            font-size: 12px
+            line-height: 1
+            color: $red
+            padding: 11px 8px 9px 30px
+            border-radius: 3px
+            background-color: #FFE4E3
+            margin-right: 10px
+
+            @include r(1000px)
+                background-color: #fff
+
+            &::before
+                content: ""
+                position: absolute
+                left: 11px
+                top: 12px
+                width: 9px
+                height: 9px
+                border-radius: 100%
+                background-color: $red
+
+            span
+                display: none
+
+        .code
+            position: relative
+            padding: 11px 45px 9px 15px
+            font-size: 10px
+            text-transform: uppercase
+            color: #727BB0
+            display: flex
+            align-items: center
+            overflow: hidden
+            margin-right: 10px
+            border-radius: 3px
+            background-color: #F5F6FA
+            margin-left: auto
+
+            @include r(1000px)
+                width: fit-content
+                margin: 0 10px 0 0
+
+            button
+                position: absolute
+                right: 0
+                top: 0
+                display: block
+                width: 35px
+                height: 100%
+                background-color: #EBEDF9
+
+                &:hover::after
+                    filter: invert(39%) sepia(81%) saturate(764%) hue-rotate(197deg) brightness(97%) contrast(99%)
+                
+                &::after
+                    content: ""
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%, -50%)
+                    width: 13px
+                    height: 14px
+                    background-image: url(../img/svg/share.svg)
+                    background-size: cover
+                    background-position: center
+                    background-repeat: no-repeat
+                    filter: invert(48%) sepia(22%) saturate(709%) hue-rotate(194deg) brightness(97%) contrast(90%)
+        
+        .id
+            position: relative
+            padding: 11px 45px 9px 15px
+            font-size: 10px
+            text-transform: uppercase
+            color: #727BB0
+            display: flex
+            align-items: center
+            overflow: hidden
+            border-radius: 3px
+            background-color: #F5F6FA
+
+            @include r(1000px)
+                display: inline-block
+
+            button
+                position: absolute
+                right: 0
+                top: 0
+                display: block
+                width: 35px
+                height: 100%
+                background-color: #EBEDF9
+
+                &:hover::after
+                    filter: invert(39%) sepia(81%) saturate(764%) hue-rotate(197deg) brightness(97%) contrast(99%)
+               
+                &::after
+                    content: ""
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%, -50%)
+                    width: 13px
+                    height: 15px
+                    background-image: url(../img/svg/copy.svg)
+                    background-size: cover
+                    background-position: center
+                    background-repeat: no-repeat
+                    filter: invert(48%) sepia(22%) saturate(709%) hue-rotate(194deg) brightness(97%) contrast(90%)
+
         &__top
             display: flex
             align-items: center
             margin-bottom: 20px
 
-            .reviews
-                position: relative
-                border-radius: 5px
-                font-size: 10px
-                text-transform: uppercase
-                padding: 11px 8px 9px 25px
-                background-color: #F5F6FA
-                margin-right: 10px
-
-                &::before
-                    content: ""
-                    position: absolute
-                    top: 10px
-                    left: 6px
-                    width: 12px
-                    height: 12px
-                    background-image: url(../img/svg/reg-type-3.svg)
-                    background-size: cover
-                    background-repeat: no-repeat
-                    background-position: center
-
-            .status
-                position: relative
-                border-radius: 5px
-                font-size: 10px
-                text-transform: uppercase
-                padding: 11px 8px 9px 25px
-                margin-right: 10px
-                color: #44B759
-                background-color: #E7F6F0
-                
-                &::before
-                    content: ""
-                    position: absolute
-                    top: 12px
-                    left: 10px
-                    width: 10px
-                    height: 8px
-                    background-image: url(../img/svg/done.svg)
-                    background-size: cover
-                    background-repeat: no-repeat
-                    background-position: center
-                    filter: invert(56%) sepia(83%) saturate(359%) hue-rotate(79deg) brightness(92%) contrast(86%)
-                        
-            .moderators
-                position: relative
-                display: flex
-                align-items: center
-                border-radius: 5px
-                overflow: hidden
-                font-size: 10px
-                text-transform: uppercase
-                padding: 11px 5px 9px 35px
-                margin-right: 10px
-                background-color: #F5F6FA
-
-                &::before
-                    content: ""
-                    position: absolute
-                    top: 11px
-                    left: 10px
-                    width: 13px
-                    height: 11px
-                    background-image: url(../img/svg/user.svg)
-                    background-size: contain
-                    background-position: center
-                    background-repeat: no-repeat
-                    filter: invert(90%) sepia(3%) saturate(2093%) hue-rotate(195deg) brightness(92%) contrast(82%)
-                
-                button
-                    position: relative
-                    display: block
-                    width: 35px
-                    height: 30px
-                    background-color: #EBEDF9
-                    margin-top: -11px
-                    margin-bottom: -9px
-                    margin-right: -5px
-                    margin-left: 8px
-
-                    &:hover::after
-                        filter: invert(39%) sepia(81%) saturate(764%) hue-rotate(197deg) brightness(97%) contrast(99%)
-
-                    &::after
-                        content: ""
-                        position: absolute
-                        left: 50%
-                        top: 50%
-                        transform: translate(-50%, -50%)
-                        width: 15px
-                        height: 15px
-                        background-image: url(../img/svg/pencil.svg)
-                        background-size: cover
-                        background-position: center
-                        background-repeat: no-repeat
-                        filter: invert(48%) sepia(22%) saturate(709%) hue-rotate(194deg) brightness(97%) contrast(90%)
-
-            .error
-                position: relative
-                font-size: 12px
-                line-height: 1
-                color: $red
-                padding: 11px 8px 9px 30px
-                border-radius: 3px
-                background-color: #FFE4E3
-                margin-right: 10px
-
-                &::before
-                    content: ""
-                    position: absolute
-                    left: 11px
-                    top: 12px
-                    width: 9px
-                    height: 9px
-                    border-radius: 100%
-                    background-color: $red
-
-                span
-                    display: none
-
-            .code
-                padding: 11px 5px 9px 15px
-                font-size: 10px
-                text-transform: uppercase
-                color: #727BB0
-                display: flex
-                align-items: center
-                overflow: hidden
-                margin-right: 10px
-                border-radius: 3px
-                background-color: #F5F6FA
-                margin-left: auto
-
-                button
-                    position: relative
-                    display: block
-                    width: 35px
-                    height: 30px
-                    background-color: #EBEDF9
-                    margin-top: -11px
-                    margin-bottom: -9px
-                    margin-right: -5px
-                    margin-left: 8px
-
-                    &:hover::after
-                        filter: invert(39%) sepia(81%) saturate(764%) hue-rotate(197deg) brightness(97%) contrast(99%)
-
-                    &::after
-                        content: ""
-                        position: absolute
-                        left: 50%
-                        top: 50%
-                        transform: translate(-50%, -50%)
-                        width: 13px
-                        height: 14px
-                        background-image: url(../img/svg/share.svg)
-                        background-size: cover
-                        background-position: center
-                        background-repeat: no-repeat
-                        filter: invert(48%) sepia(22%) saturate(709%) hue-rotate(194deg) brightness(97%) contrast(90%)
-            
-            .id
-                padding: 11px 5px 9px 15px
-                font-size: 10px
-                text-transform: uppercase
-                color: #727BB0
-                display: flex
-                align-items: center
-                overflow: hidden
-                border-radius: 3px
-                background-color: #F5F6FA
-
-                button
-                    position: relative
-                    display: block
-                    width: 35px
-                    height: 30px
-                    background-color: #EBEDF9
-                    margin-top: -11px
-                    margin-bottom: -9px
-                    margin-right: -5px
-                    margin-left: 8px
-
-                    &:hover::after
-                        filter: invert(39%) sepia(81%) saturate(764%) hue-rotate(197deg) brightness(97%) contrast(99%)
-
-                    &::after
-                        content: ""
-                        position: absolute
-                        left: 50%
-                        top: 50%
-                        transform: translate(-50%, -50%)
-                        width: 13px
-                        height: 15px
-                        background-image: url(../img/svg/copy.svg)
-                        background-size: cover
-                        background-position: center
-                        background-repeat: no-repeat
-                        filter: invert(48%) sepia(22%) saturate(709%) hue-rotate(194deg) brightness(97%) contrast(90%)
+            @include r(1000px)
+                margin: 0 -20px 10px
+                padding: 0 20px
+                border-bottom: 1px solid #d9dcee
 
         &__title
             font-family: Raleway
             font-size: 20px
             margin-bottom: 10px
 
+            @include r(767px)
+                font-size: 18px
+
         &__stats
             display: flex
             flex-wrap: wrap
             margin-bottom: 10px
+
+            @include r(767px)
+                margin-bottom: 5px
 
             li
                 padding: 7px 8px
@@ -391,6 +504,11 @@
                 &:not(:last-child)
                     margin-right: 10px
 
+                @include r(767px)
+                    border: none
+                    padding: 0
+                    margin-bottom: 5px
+
             img
                 width: 24px
                 height: 24px
@@ -401,9 +519,15 @@
                 text-transform: uppercase
                 margin-right: 9px
 
+                @include r(767px)
+                    display: none
+
             .stat
                 font-size: 12px
                 font-weight: 700
+
+                @include r(767px)
+                    margin-bottom: 3px
 
         &__url
             position: relative
@@ -414,6 +538,9 @@
             font-size: 14px
             width: fit-content
             max-width: calc(100% - 240px)
+
+            @include r(1000px)
+                max-width: 100%
 
             &::before
                 content: ""
@@ -439,6 +566,13 @@
             font-weight: 700
             transition: background-color 0.3s, transform 0.3s
 
+            @include r(1000px)
+                position: relative
+                right: auto
+                bottom: auto
+                padding: 13px 20px 13px 45px
+                margin: 10px 0 15px
+
             &:hover
                 background-color: $dblue
 
@@ -458,10 +592,45 @@
                 background-repeat: no-repeat
                 filter: invert(100%)
 
+                @include r(1000px)
+                    top: 15px
 
+        &__more-mobile
+            display: none
 
+            @include r(767px)
+                position: relative
+                display: block
+                width: calc(100% + 40px)
+                padding: 15px 20px 0 55px
+                margin: 15px -20px 0
+                border-top: 1px solid #d9dcee
+                text-align: left
+                font-size: 12px
+                color: $blue
 
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 20px
+                    bottom: -3px
+                    width: 24px
+                    height: 24px
+                    border-radius: 100%
+                    background-color: #E8EAF4
 
-
+                &::after
+                    content: ""
+                    position: absolute
+                    left: 20px
+                    bottom: -3px
+                    width: 24px
+                    height: 24px
+                    border-radius: 100%
+                    background-image: url(../img/svg/eye.svg)
+                    background-size: 60%
+                    background-repeat: no-repeat
+                    background-position: center
+                    filter: invert(38%) sepia(47%) saturate(1135%) hue-rotate(194deg) brightness(106%) contrast(98%)
 
 
