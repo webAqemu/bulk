@@ -17,20 +17,27 @@
         background-color: #fff
         flex-wrap: wrap
         height: auto
+        align-items: flex-start
 
     &__logo
         margin-right: 30px
+
+        @include r(600px)
+            margin-right: 15px
 
     &__copy
         max-width: 220px
         width: 100%
         margin-right: 30px
 
+        @include r(600px)
+            margin-right: 0
+
     &__links
         @include r(600px)
             width: 100%
             padding: 10px 0
-            margin-left: 75px
+            margin-left: 60px
         a
             position: relative
             transition: opacity 0.3s

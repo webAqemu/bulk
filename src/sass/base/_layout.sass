@@ -24,6 +24,9 @@ body
     display: flex
     height: calc(100vh - 105px)
 
+    @include r(767px)
+        height: auto
+
 .main
     display: flex
     flex-direction: column
@@ -34,6 +37,9 @@ body
     @include r(1400px)
         width: 100%
         padding-left: 85px
+
+    @include r(767px)
+        padding-left: 48px
 
 .content
     padding: 30px 50px

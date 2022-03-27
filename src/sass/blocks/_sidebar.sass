@@ -20,6 +20,13 @@
         &.opened
             width: 240px
 
+    @include r(767px)
+        height: 100%
+        width: 48px
+
+        &.opened
+            width: 190px
+
     &__create
         padding: 10px 15px
         box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
@@ -42,6 +49,10 @@
             background-color: rgba(0, 0, 0, 0)
             margin: 0 18px 22px
 
+        @include r(767px)
+            margin: 0 5px 10px
+            max-width: 100%
+
         &:hover
             .circle
                 background-color: #fff
@@ -60,6 +71,9 @@
             width: 100%
             color: $blue
 
+            @include r(767px)
+                display: none
+
         .circle
             min-width: 48px
             width: 48px
@@ -69,6 +83,11 @@
             background-color: $blue
             border: 1px solid $blue
             transition: background-color 0.3s, border-color 0.3s
+
+            @include r(767px)
+                min-width: 38px
+                width: 38px
+                height: 38px
 
             &::before,
             &::after
@@ -80,6 +99,10 @@
                 height: 2px
                 background-color: #fff
                 transition: background-color 0.3s
+
+                @include r(767px)
+                    left: 14px
+                    top: 17px
 
             &::after
                 transform: rotate(90deg)
@@ -107,6 +130,9 @@
                 background-size: contain
                 background-repeat: no-repeat
                 background-position: center
+
+                @include r(767px)
+                    left: 13px
 
     &__menu
         padding: 30px 0
@@ -188,6 +214,9 @@
         @include r(1400px)
             left: 32px
 
+        @include r(767px)
+            left: 15px
+
         &--hover
             opacity: 0
             filter: none
@@ -205,6 +234,9 @@
             white-space: nowrap
             border-bottom: 1px solid #D9DCEE
 
+        @include r(767px)
+            padding-left: 55px
+
     &__notifications
         position: absolute
         top: 50%    
@@ -221,6 +253,9 @@
             right: auto
             left: 43px
             bottom: 11px
+
+        @include r(767px)
+            left: 25px
 
         .circle
             width: 9px
@@ -253,6 +288,9 @@
             border-bottom: 1px solid #d9dcee
             margin-bottom: 45px
 
+        @include r(767px)
+            padding: 15px 12px
+
     &__image
         width: 48px
         height: 48px
@@ -266,6 +304,9 @@
             width: 26px
             height: 26px
             margin-right: 36px
+
+        @include r(767px)
+            margin-right: 16px
 
     &__info
         font-size: 12px
@@ -324,6 +365,9 @@
             &:hover
                 img
                     opacity: 1
+
+        @include r(767px)
+            padding: 15px 
 
     &__activate
         padding: 28px 40px 25px
