@@ -8,12 +8,18 @@
         max-width: 660px
         width: 100%
 
+        @include r(1000px)
+            max-width: 100%
+
     &__steps
         display: flex
         align-items: center
         margin-bottom: 30px
         overflow: hidden
         width: fit-content
+
+        @include r (600px)
+            margin-bottom: 20px
     
     &__step
         position: relative
@@ -86,9 +92,22 @@
         color: #47426A
         margin-bottom: 20px
 
+        @include r(1200px)
+            font-size: 24px
+            margin-bottom: 10px
+
+        @include r(767px)
+            font-size: 22px
+
+        @include r (600px)
+            font-size: 16px
+
         &--finish
             position: relative
             padding-left: 90px
+
+            @include r(600px)
+                padding-left: 60px
 
             &::before
                 content: ""
@@ -100,6 +119,10 @@
                 height: 60px
                 border-radius: 100% 
                 background-color: #16D7E3
+
+                @include r(600px)
+                    width: 40px
+                    height: 40px
 
             &::after
                 content: ""
@@ -116,10 +139,22 @@
                 background-repeat: no-repeat
                 filter: invert(100%)
 
+                @include r(600px)
+                    width: 40px
+                    height: 40px
+
     &__text
         color: #727BB0
         line-height: 1.5
         margin-bottom: 20px
+
+        @include r(1200px)
+            font-size: 14px
+
+        @include r(600px)
+            font-size: 12px
+            margin-bottom: 15px
+
         
         a
             font-size: 12px
@@ -135,6 +170,10 @@
         color: #47426A
         margin-bottom: 15px
 
+        @include r(600px)
+            font-size: 14px
+            margin-bottom: 10px
+
     &__types
         display: flex
         justify-content: center
@@ -145,6 +184,20 @@
         padding: 20px 0 0
         margin-bottom: 40px
         width: fit-content
+
+        @include r(1200px)
+            margin-bottom: 25px
+
+        @include r(767px)
+            flex-direction: column
+            width: 100%
+            max-width: 330px
+            align-items: flex-start
+            padding: 20px
+            margin-bottom: 15px
+
+        @include r(600px)
+            padding: 15px 20px
 
     &__type
         width: calc((100% - 30px - 40px) / 3)
@@ -161,6 +214,19 @@
         margin-bottom: 20px
         transition: border-color 0.3s
 
+        @include r(1200px) 
+            padding: 20px 20px 10px
+
+        @include r(767px)
+            width: 100%
+            flex-direction: row
+            justify-content: flex-start
+            padding: 20px 20px 20px 25px
+
+        @include r(600px)
+            padding: 15px 20px 15px 25px
+
+
         &:hover img
             transform: scale(1.2)
             
@@ -174,9 +240,18 @@
             pointer-events: none
             transition: transform 0.3s
 
+            @include r(767px)
+                width: 22px
+                height: auto
+                margin-right: 17px
+                margin-bottom: 5px
+
         p
             font-weight: 700
             color: #47426A
+
+            @include r(1200px)
+                font-size: 12px
 
         .marker
             position: absolute
@@ -190,6 +265,10 @@
             background-color: #fff
             pointer-events: none
             transition: background-color 0.3s, border-color 0.3s
+
+            @include r(767px)
+                left: 0
+                top: 50%
 
             &::after
                 content: ""
@@ -205,6 +284,24 @@
                 background-repeat: no-repeat
                 filter: invert(100%)
 
+        .eye
+            display: none
+
+            @include r(767px)
+                display: block
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                right: 10px
+                width: 24px
+                height: 24px
+                border-radius: 100%
+                background-color: #E8EAF4
+                background-image: url(../img/svg/eye.svg)
+                background-size: 60%
+                background-repeat: no-repeat
+                background-position: center
+                z-index: 2
 
         input
             position: absolute
@@ -227,6 +324,11 @@
         font-weight: 700
         border-radius: 3px
         transition: background-color 0.3s, transform 0.3s
+
+        @include r(767px)
+            padding: 13px 25px 11px
+            font-size: 14px
+            white-space: nowrap
 
         &:not(:last-child)
             margin-right: 10px
@@ -268,6 +370,14 @@
                 background-position: center
                 filter: invert(26%) sepia(11%) saturate(2013%) hue-rotate(208deg) brightness(92%) contrast(89%)
 
+                @include r (767px)
+                    top: 14px
+
+            @include r(600px)
+                width: 100%
+                margin-right: 0 !important
+                margin-bottom: 5px
+
             &:hover
                 background-color: #2B52D6
 
@@ -282,11 +392,18 @@
             &::before
                 filter: invert(100%)
 
+                @include r (767px)
+                    top: 50%
+                    transform: translateY(-50%)
+
     &__input
         position: relative
         max-width: 440px
         width: 100%
         margin-bottom: 30px
+
+        @include r(767px)
+            max-width: calc(100% - 45px)
 
         input
             width: 100%
@@ -322,6 +439,10 @@
             input
                 border-color: $red
 
+            @include r(767px)
+                max-width: 100% 
+                padding-right: 45px
+
             &::after
                 content: "!"
                 font-family: Raleway
@@ -339,6 +460,11 @@
                 justify-content: center
                 background-color: #FFE4E3
                 color: $red
+
+                @include r(767px)
+                    right: 0
+                    transform: translate(0, -50%)
+
     .mt40
         margin-top: 20px
         margin-bottom: 20px
@@ -354,6 +480,9 @@
         width: 100%
         margin-bottom: 15px
 
+        @include r(600px)
+            padding: 20px
+
         .reg__text
             font-size: 14px
             margin-bottom: 0
@@ -361,6 +490,21 @@
 
         &:last-child
             margin-bottom: 40px
+
+        .reg__bottom.mobile
+            display: none
+
+            @include r(600px)
+                display: block
+                margin-bottom: 10px
+
+        @include r(600px)
+            .reg__btn--copy.reg__btn--sm
+                display: none
+            
+            .reg__text
+                margin-bottom: 10px
+
 
     &__textarea
         position: relative
@@ -380,14 +524,27 @@
         display: flex
         align-items: center
 
+        @include r(600px)
+            flex-wrap: wrap
+
     &__note
         color: #727BB0
         font-size: 14px
         margin-left: 30px
 
+        @include r(600px)
+            margin-left: 0
+            font-size: 12px
+
     &__img
         display: flex
         margin: 70px auto 0
+
+        @include r(1400px)
+            margin: 70px 0 0 auto
+        
+        @include r(1000px)
+            display: none
 
 
 

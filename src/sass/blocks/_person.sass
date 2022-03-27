@@ -42,6 +42,13 @@
         height: 35px
         border-radius: 100%
         background-color: #E8EAF4
+        transition: transform 0.3s
+
+        &:hover
+            transform: translate(-50%, -50%) scale(1.1)
+        
+        &:active
+            transform: translate(-50%, -50%) scale(0.9)
         
         &::before
             content: ""
@@ -143,11 +150,19 @@
             
             .reload
                 position: relative
+                min-width: 36px
                 width: 36px
                 height: 36px
                 border-radius: 100%
                 background-color: #e8eaf4
                 margin-right: 20px
+                transition: background-color 0.3s, transform 0.3s
+
+                &:hover
+                    background-color: #d0d3e0
+                    
+                &:active
+                    transform: scale(0.9)
 
                 &::before
                     content: ""
@@ -266,6 +281,13 @@
             padding: 11px 17px
             border-radius: 5px
             background-color: #EBEDF9
+            transition: transform 0.3s
+
+            &:hover
+                transform: scale(1.1)
+
+            &:active
+                transform: scale(0.9)
 
         li
             display: flex
@@ -280,7 +302,6 @@
                 color: #b0b5d1
                 margin-right: 40px
                 
-
     &__users
         position: relative
         max-width: 835px
@@ -302,6 +323,13 @@
             padding: 12px 25px
             background-color: $blue
             box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+            transition: background-color 0.3s, transform 0.3s
+
+            &:hover
+                background-color: $dblue
+
+            &:active
+                transform: scale(0.9)
 
         .input
             position: relative
@@ -342,6 +370,14 @@
                 background-repeat: no-repeat
                 background-position: center
                 filter: invert(36%) sepia(100%) saturate(1640%) hue-rotate(214deg) brightness(98%) contrast(95%)
+                transition: transform 0.3s
+
+                &:hover
+                    transform: scale(1.1)
+                
+                &:active
+                    transform: scale(0.9)
+
 
         .wrapper
             display: flex
@@ -350,6 +386,7 @@
             margin-bottom: 15px
 
             .name
+                font-family: Raleway
 
             .url
                 position: relative
@@ -399,7 +436,7 @@
             position: relative
             display: flex
             align-items: center
-            padding: 17px 15px 13px 35px
+            padding: 17px 45px 13px 35px
             border-radius: 5px
             background-color: #fff
             font-size: 10px
@@ -434,10 +471,11 @@
            margin-right: 13px
 
         .delete
-            position: relative
+            position: absolute
+            top: 0
+            right: 0
             width: 35px
-            height: 45px
-            margin: -18px -15px -14px
+            height: 100%
             background-color: #EBEDF9
             margin-left: 11px
             transition: background-color 0.3s
@@ -470,10 +508,12 @@
             font-size: 10px
             text-transform: uppercase
             margin-right: 20px
+            
 
             &.green
                 background-color: #E3F4EE
                 color: #44B759
+
                 &::before
                     content: ""
                     position: absolute
@@ -486,13 +526,19 @@
                     background-position: center
                     background-image: url(../img/svg/done.svg)
                     filter: invert(56%) sepia(29%) saturate(896%) hue-rotate(79deg) brightness(102%) contrast(88%)
+                
                 button
                     background-color: #CFE9E0
+
+                    &:hover
+                        background-color: #c9d4d0
+
                     &::after
                         filter: invert(56%) sepia(29%) saturate(896%) hue-rotate(79deg) brightness(102%) contrast(88%)
             &.red
                 color: $red
                 background-color: #FFE4E3
+
                 &::before
                     content: "!"
                     position: absolute
@@ -501,8 +547,14 @@
                     font-family: Raleway
                     font-size: 16px
                     color: $red
+
                 button
                     background-color: #F5D7D6
+
+                    &:hover
+                        background-color: #d8b7b6
+                        
+
                     &::after
                         filter: invert(17%) sepia(97%) saturate(4979%) hue-rotate(4deg) brightness(108%) contrast(112%)
             
@@ -511,6 +563,8 @@
                 width: 35px
                 height: 30px
                 margin: -11px -15px -9px 11px
+                transition: background-color 0.3s
+
                 &::after
                     content: ""
                     position: absolute
@@ -522,12 +576,6 @@
                     background-size: cover
                     background-repeat: no-repeat
                     background-position: center
-                    transition: transform 0.3s
-                &:hover::after
-                    transform: scale(1.1)
-                
-                &:active::after
-                    transform: scale(0.9)
 
         .options
             width: 22px
@@ -538,6 +586,10 @@
             background-repeat: no-repeat
             background-position: center
             background-color: rgba(0, 0, 0, 0.05)
+            transition: background-color 0.3s
+
+            &:hover
+                background-color: rgba(0, 0, 0, 0.1)
 
 
 

@@ -60,6 +60,12 @@ if(popupCopied) {
   }, 3000)
 }
 
-
+// burger menu
+const sidebar = document.querySelector(".sidebar")
+document.addEventListener("click", function(e) {
+  if(e.target.classList.contains("sidebar__burger")) {
+    sidebar.classList.toggle("opened")
+  }
+})
 
 

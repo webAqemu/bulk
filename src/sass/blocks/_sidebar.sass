@@ -6,6 +6,20 @@
     background-color: #E8EAF4
     padding: 20px 0
 
+    @include r(1400px)
+        position: fixed
+        left: 0
+        top: 0
+        height: calc(100% - 105px)
+        z-index: 10
+        min-width: auto
+        width: 85px
+        overflow: hidden
+        transition: width 0.3s 
+
+        &.opened
+            width: 240px
+
     &__create
         padding: 10px 15px
         box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
@@ -18,6 +32,15 @@
         margin: 0 auto 10px
         background-color: #fff
         transition: transform 0.3s
+
+        @include r(1400px)
+            box-shadow: none
+            border-radius: 0
+            padding: 0
+            max-width: 48px
+            font-size: 0
+            background-color: rgba(0, 0, 0, 0)
+            margin: 0 18px 22px
 
         &:hover
             .circle
@@ -61,6 +84,30 @@
             &::after
                 transform: rotate(90deg)
 
+    &__burger
+        display: none
+        outline: none
+
+        @include r(1400px)
+            position: relative
+            display: block
+            height: 50px
+            width: 100%
+            background-color: $blue
+            
+            &::after
+                content: ""
+                position: absolute
+                left: 30px
+                top: 50%
+                transform: translateY(-50%)
+                width: 23px
+                height: 14px
+                background-image: url(../img/svg/mobile-burger.svg)
+                background-size: contain
+                background-repeat: no-repeat
+                background-position: center
+
     &__menu
         padding: 30px 0
         position: relative
@@ -68,6 +115,9 @@
         font-size: 12px
         text-transform: uppercase
         color: #727BB0
+        
+        @include r(1400px)
+            padding: 0
 
         &::after
             content: ""
@@ -78,8 +128,14 @@
             height: 1px
             background-color: #D9DCEE
 
+            @include r(1400px)
+                display: none
+
         &:last-of-type
             margin-bottom: 15px
+
+            @include r(1400px)
+                margin-bottom: 0
 
     &__item
         position: relative
@@ -96,6 +152,9 @@
             background-color: $blue
             opacity: 0
             transition: opacity 0.3s
+
+            @include r(1400px)
+                display: none
 
         &:hover
             color: $blue
@@ -126,29 +185,73 @@
         transform: translateY(-50%)
         transition: opacity 0.3s
 
+        @include r(1400px)
+            left: 32px
+
         &--hover
             opacity: 0
             filter: none
 
     &__link
+        position: relative
         display: block
         width: 100%
         padding: 15px 0 15px 110px
         background-color: rgba(0, 0, 0, 0)
         transition: background-color 0.3s, color 0.3s
 
+        @include r(1400px)
+            padding-left: 90px
+            white-space: nowrap
+            border-bottom: 1px solid #D9DCEE
+
+    &__notifications
+        position: absolute
+        top: 50%    
+        transform: translateY(-50%)
+        right: 20px
+        display: flex
+        align-items: baseline
+        font-family: Arial
+
+        @include r(1400px)
+            font-size: 0
+            top: auto
+            transform: none
+            right: auto
+            left: 43px
+            bottom: 11px
+
+        .circle
+            width: 9px
+            height: 9px
+            border-radius: 100%
+            margin-right: 6px
+
+            @include r(1400px)
+                margin-right: 0
+
     &__user
         display: flex
         align-items: center
         margin-right: auto
 
-        &:hover .sidebar__name
-            color: $blue
+        &:hover 
+            .sidebar__name,
+            .sidebar__status
+                color: $blue
 
     &__profile
         padding: 0 20px 0 70px
         display: flex
         align-items: center
+        margin-bottom: 30px
+
+        @include r(1400px)
+            position: relative
+            padding: 15px 27px
+            border-bottom: 1px solid #d9dcee
+            margin-bottom: 45px
 
     &__image
         width: 48px
@@ -159,6 +262,11 @@
         background-position: center
         background-repeat: no-repeat
 
+        @include r(1400px)
+            width: 26px
+            height: 26px
+            margin-right: 36px
+
     &__info
         font-size: 12px
 
@@ -168,6 +276,7 @@
 
     &__status
         color:#B0B5D1
+        transition: color 0.3s 
 
     &__settings,
     &__logout
@@ -195,7 +304,45 @@
     &__settings
         margin-right: 15px
 
+        @include r(1400px)
+            display: none
 
+    &__logout
+        @include r(1400px)
+            position: absolute
+            top: 100%
+            left: 0
+            width: 100%
+            padding: 15px 32px
+            border-bottom: 1px solid #d9dcee
+            display: flex
+            align-items: flex-start
 
+            .hover
+                display: none
+
+            &:hover
+                img
+                    opacity: 1
+
+    &__activate
+        padding: 28px 40px 25px
+        border-radius: 3px
+        background-color: #C4C8DF
+        font-family: Raleway
+        font-size: 12px
+        text-transform: uppercase
+        color: white
+        margin: 0 auto
+        transition: background-color 0.3s,  transform 0.3s
+
+        &:hover
+            background-color: $blue
+
+        &:active
+            transform: scale(0.9)
+
+        @include r(1400px)
+            display: none
 
 

@@ -276,6 +276,7 @@
             .stats
                 display: flex
                 align-items: baseline
+                margin-left: 15px
 
             .time
                 font-size: 14px
@@ -337,7 +338,7 @@
 
         &__bottom
             display: flex
-            align-items: center
+            align-items: flex-start
 
             .answers
                 position: relative
@@ -345,6 +346,8 @@
                 color: #4581EC
                 padding-right: 23px
                 margin-right: 20px
+                white-space: nowrap
+                padding: 8px 23px 8px 0
 
                 &::before
                     content: ""
@@ -416,12 +419,18 @@
             .tags
                 display: flex
                 align-items: center
+                flex-wrap: wrap
                 font-size: 10px
                 line-height: 1
                 text-transform: uppercase
+                margin-left: 20px
 
-                *:not(:last-child)
-                    margin-right: 5px
+
+                *
+                    margin-bottom: 5px
+
+                    &:not(:last-child)
+                        margin-right: 5px
 
                 .red
                     position: relative
@@ -608,6 +617,15 @@
                 font-size: 14px
                 color: $blue
                 text-decoration: underline
+                padding: 3px 5px
+                background-color: #fff
+                border-radius: 3px
+                transition: background-color 0.3s,  transform 0.3s
+
+                &:hover
+                    background-color: #f5f6fa
+                &:active    
+                    transform: scale(0.9)
 
             .delete
                 position: absolute
@@ -699,6 +717,27 @@
                 white-space: nowrap
                 text-overflow: ellipsis
                 margin-right: auto
+
+            .filter
+                position: relative
+                font-size: 10px
+                text-transform: uppercase
+                color: #44B759
+                padding: 12px 35px 10px 15px
+                border-radius: 5px
+                background-color: #E3F4EE
+
+                &::after
+                    content: ""
+                    position: absolute
+                    right: 15px
+                    top: 11px
+                    transform: rotate(45deg)
+                    width: 8px
+                    height: 8px
+                    border-right: 2px solid #44B759
+                    border-bottom: 2px solid #44B759
+
 
         &__inner
             position: relative
@@ -875,6 +914,7 @@
 
                 .photo
                     border-radius: 3px
+                    min-width: 22px
                     width: 22px
                     height: 22px
                     background-color: #f2f5fe
@@ -929,8 +969,6 @@
                     
                     &::after
                         transform: rotate(45deg)
-
-
 
             .wrapper
                 display: flex
@@ -1039,6 +1077,14 @@
         padding: 9px 20px
         background-color: #ECEEF9
         width: 100%
+        border-radius: 10px
+        transition: background-color 0.3s, transform 0.3s
+
+        &:hover
+            background-color: #d6d9e7
+
+        &:active
+            transform: scale(0.9)
 
     &__filters
         display: flex
@@ -1220,6 +1266,13 @@
                 background-repeat: no-repeat
                 background-position: center
                 filter: invert(36%) sepia(100%) saturate(1640%) hue-rotate(214deg) brightness(98%) contrast(95%)
+                transition: transform 0.3s
+
+                &:hover
+                    transform: translateY(-50%) scale(1.1)
+
+                &:active
+                    transform: translateY(-50%) scale(0.9)
             
     &__result
         position: relative
@@ -1274,6 +1327,9 @@
 
             &:not(:last-child)
                 margin-bottom: 15px
+
+        .yellow
+            background-color: #fef9e0
 
         .answers
             font-size: 16px

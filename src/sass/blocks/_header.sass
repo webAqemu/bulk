@@ -5,6 +5,15 @@
     align-items: center
     border-bottom: 1px solid #D9DCEE
 
+    @include r(1200px)
+        padding: 20px 50px
+
+    @include r(767px)
+        padding: 20px
+
+    @include r (600px)
+        padding: 15px
+
     &__logo
         margin-right: auto
 
@@ -35,6 +44,9 @@
             background-repeat: no-repeat
             filter: invert(58%) sepia(87%) saturate(1809%) hue-rotate(129deg) brightness(95%) contrast(98%)
 
+        @include r(767px)
+            display: none
+
     &__info
         margin-right: 30px
         display: flex
@@ -43,12 +55,25 @@
         color: #47426A
         font-size: 14px
 
+        @include r(767px)
+            font-size: 12px
+            background-color: #E8EAF4
+            padding: 6px 45px 6px 15px
+            border-radius: 20px
+            border-top-right-radius: 0
+            border-bottom-right-radius: 0
+            margin-right: 0
+
     &__balance
         font-weight: 700
         padding-right: 20px
         position: relative
         font-size: 24px
         width: fit-content
+
+        @include r(767px)
+            font-size: 18px
+            padding-right: 15px
 
         &::after
             content: ""
@@ -63,6 +88,11 @@
             background-repeat: no-repeat
             filter: invert(25%) sepia(10%) saturate(2662%) hue-rotate(208deg) brightness(85%) contrast(80%)
 
+            @include r(767px)
+                top: 3px
+                width: 10px
+                height: 13px
+
     &__pay
         background-color: $blue
         border-radius: 3px
@@ -72,6 +102,17 @@
         color: white
         position: relative
         transition: background-color 0.3s, transform 0.3s
+
+        @include r(767px)
+            font-size: 0
+            border-radius: 100%
+            box-shadow: none
+            padding: 0
+            width: 48px
+            height: 48px
+            margin-left: -24px
+            
+            
 
         &:hover
             background-color: #2B52D6
@@ -93,7 +134,16 @@
             background-repeat: no-repeat
             filter: invert(14%) sepia(78%) saturate(3237%) hue-rotate(225deg) brightness(93%) contrast(101%)
 
-
+            @include r(767px)
+                background-image: url(../img/svg/arrow-right.svg)
+                filter: invert(100%)
+                width: 100%
+                height: 100%
+                transform: none
+                left: 0
+                top: 0
+                background-size: 40%
+                
 
 
 

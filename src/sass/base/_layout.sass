@@ -31,6 +31,10 @@ body
     background-color: #f5f6fa
     position: relative
 
+    @include r(1400px)
+        width: 100%
+        padding-left: 85px
+
 .content
     padding: 30px 50px
     overflow-y: auto
@@ -55,6 +59,12 @@ body
         background-color: $blue
         border-radius: 20px
         border: none
+
+    @include r(767px)
+        padding: 30px 20px
+
+    @include r (600px)
+        padding: 20px 15px
 
 .logo
     display: flex
