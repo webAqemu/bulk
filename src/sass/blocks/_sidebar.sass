@@ -3,6 +3,26 @@
     width: 330px
     background-color: #E8EAF4
     padding: 20px 0
+    overflow-y: auto
+
+    scrollbar-width: thin
+    scrollbar-color: $blue
+
+
+    /* Targtes on Chrome, Edge, and Safari */
+    &::-webkit-scrollbar 
+        width: 10px
+
+
+    &::-webkit-scrollbar-track 
+        background: rgba(255, 255, 255, 0)
+
+
+    &::-webkit-scrollbar-thumb 
+        background-color: $blue
+        border-radius: 20px
+        border: none
+
 
     @include r(1400px)
         position: fixed
@@ -12,7 +32,7 @@
         z-index: 10
         min-width: auto
         width: 85px
-        overflow: hidden
+        overflow-x: hidden
         transition: width 0.3s 
 
         &.opened
@@ -70,6 +90,7 @@
 
         p
             font-family: Raleway
+            font-weight: 700
             max-width: 120px
             width: 100%
             color: $blue
@@ -141,6 +162,7 @@
         padding: 30px 0
         position: relative
         font-family: Raleway
+        font-weight: 700
         font-size: 12px
         text-transform: uppercase
         color: #727BB0
@@ -378,6 +400,7 @@
         border-radius: 3px
         background-color: #C4C8DF
         font-family: Raleway
+        font-weight: 700
         font-size: 12px
         text-transform: uppercase
         color: white

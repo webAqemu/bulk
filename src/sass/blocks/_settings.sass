@@ -17,16 +17,32 @@
 
     &__title
         font-family: Raleway
+        font-weight: 700
         font-size: 30px
         margin-right: 15px
 
+        @include r(1000px)
+            font-size: 24px
+
+        @include r(767px)
+            font-size: 22px
+
+        @include r(640px)
+            font-size: 16px
+
     &__edit
         position: relative
+        min-width: 36px
         width: 36px
         height: 36px
         border-radius: 100%
         background-color: #E8EAF4
         margin-right: auto
+
+        @include r(640px)
+            margin-right: 0
+            margin-left: auto
+
 
         &::before
             content: ""
@@ -52,6 +68,19 @@
         box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
         transition: background-color 0.3s, transform 0.3s
 
+        @include r(767px)
+            padding: 0
+            min-width: 48px
+            width: 48px
+            height: 48px
+            border-radius: 100%
+            font-size: 0
+            box-shadow: none
+            margin-left: 20px
+
+        @include r(640px)
+            display: none
+
         &::before
             content: ""
             position: absolute
@@ -66,6 +95,10 @@
             background-repeat: no-repeat
             filter: invert(100%)
 
+            @include r(767px)
+                left: 50%
+                transform: translate(-50%, -50%)
+
         &:hover
             background-color: $dblue
 
@@ -75,6 +108,12 @@
     &__wrapper
         display: flex
         align-items: center
+
+        @include r(1000px)
+            flex-wrap: wrap
+
+            & > * 
+                margin-bottom: 10px
 
         .reviews
             position: relative
@@ -243,6 +282,13 @@
         display: flex
         margin-top: 25px
 
+        @include r(1000px)
+            margin-top: 15px
+
+        @include r(767px)
+            margin: 15px -15px 0
+            width: calc(100% + 30px)
+
         &::before
             content: ""
             position: absolute
@@ -260,10 +306,22 @@
             border-top-left-radius: 10px
             border: 1px solid #d9dcee
             border-bottom: none
+            background-color: #f5f6fa
             transition: background-color 0.3s, color 0.3s
+
+            @include r(767px)
+                width: calc(33.3333% + 6.6666px)
+                text-align: left
+                padding-right: 25px
+
+                &:not(:first-child)
+                    margin-left: -10px
 
             &:not(:last-child)
                 margin-right: 5px
+
+                @include r(767px)
+                    margin-right: 0
 
             &:hover,
             &.active
@@ -271,11 +329,15 @@
                 color: #47426A
 
     &__content
-        width: 100%
+        width: calc(100% + 50px)
         margin-left: -50px
 
         &--sm
             max-width: 1000px
+
+        @include r(767px)
+            width: calc(100% + 40px)
+            margin: 0 -20px
 
     &__inner
         max-width: 1000px
@@ -289,15 +351,31 @@
         &:not(:last-child)
             margin-bottom: 20px
 
+            @include r(640px)
+                margin-bottom: 10px
+
+        @include r(1000px)
+            padding: 20px 20px 30px 50px
+
+        @include r(767px)
+            padding-left: 20px
+
     &__subtitle
         font-family: Raleway
+        font-weight: 700
         font-size: 16px
         margin-bottom: 15px
         margin-left: 25px
         width: calc(100% - 25px)
 
+        @include r(1000px)
+            margin-left: 0
+
         &--50
             margin-left: 50px
+
+            @include r(767px)
+                margin-left: 20px
 
         &--left
             margin-left: 0
@@ -326,6 +404,10 @@
     &__checkboxes
         margin-left: 25px
 
+        @include r(1000px)
+            margin-left: 0
+            margin-bottom: 15px
+
     &__checkbox
         position: relative
 
@@ -343,6 +425,9 @@
 
         &:not(:last-child)
             margin-bottom: 8px
+
+            @include r(640px)
+                margin-bottom: 12px
 
         input
             position: absolute
@@ -363,6 +448,9 @@
             font-size: 16px
             padding-left: 30px
 
+            @include r(640px)
+                font-size: 12px
+
             &::before
                 content: ""
                 position: absolute
@@ -372,6 +460,9 @@
                 height: 15px
                 border-radius: 3px
                 background-color: #e8eaf4
+
+                @include r(640px)
+                    top: -1px
 
             &::after
                 content: ""
@@ -388,8 +479,12 @@
                 opacity: 0
                 transition: opacity 0.3s
 
+                @include r(640px)
+                    top: 1.5px
+
         &--circle
             margin-bottom: 15px
+            padding-right: 30px
 
             &:not(:last-child)
                 margin-bottom: 15px
@@ -408,6 +503,11 @@
                 position: relative
                 padding-left: 50px
                 margin-right: 20px
+
+                @include r(640px) 
+                    padding-left: 0
+                    padding-top: 35px
+                    margin-right: 0
 
                 &::before
                     content: ""
@@ -438,7 +538,34 @@
                 right: 0
                 top: -5px
 
+            @include r(640px)
+                &.settings__checkbox > ul
+                    margin-left: 15px
+                    font-size: 12px
+
+                &.settings__checkbox > p
+                    margin: 5px 0
+                    font-size: 12px
+
+                &.settings__checkbox + p,
+                & + p + .input, 
+                & + p + .input + .input 
+                    margin-left: 0
+
+        &--sm
+            label
+                @include r(640px)
+                    padding-left: 50px
+                    padding-top: 5px
+
+            @include r(640px)
+                &.settings__checkbox > p
+                    margin: 0 5px 0 50px
+                    font-size: 12px
+
         &--centered
+            @include r(767px)
+                margin-bottom: 10px
             label
                 padding-left: 50px
 
@@ -456,23 +583,44 @@
         &.ml50
             margin-left: 50px
 
+            @include r(767px)
+                margin-left: 20px
+
     &__price
         width: 190px
         margin: -20px 20px 0
+
+        @include r(1000px)
+            margin-bottom: 15px
+
+        @include r(640px)
+            width: 100%
+            margin: 5px 0 15px
 
         .daily
             font-size: 24px
             margin-left: 5px
 
+            @include r(640px)
+                margin-left: 0
+                margin-bottom: 3px
+
             span
                 font-size: 36px
                 font-weight: 700
+
+                @include r(640px)
+                    font-size: 30px
 
         .monthly
             font-size: 18px
             color: #B0B5D1
             margin-bottom: 15px
             margin-left: 5px
+
+            @include r(640px)
+                font-size: 16px
+                margin-left: 0
 
     &__btn
         color: white
@@ -483,6 +631,11 @@
         width: 100%
         box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
         transition: background-color 0.3s, transform 0.3s
+
+        @include r(640px)
+            font-size: 12px
+            width: fit-content
+            padding: 14px 25px 12px
 
         &:hover
             background-color: $dblue
@@ -499,7 +652,7 @@
             &::after
                 content: ""
                 position: absolute
-                left: 15px
+                left: 18px
                 top: 50%
                 transform: translateX(-50%)
                 width: 10px
@@ -515,6 +668,9 @@
             padding-left: 40px
             margin-left: 50px
             margin-top: 30px
+
+            @include r(767px)
+                margin-left: 20px
 
             &::before
                 content: ""
@@ -535,6 +691,11 @@
         color: #B0B5D1
         max-width: 227px
 
+        @include r(1000px)
+            max-width: 100%
+            width: 100%
+            font-size: 12px
+
     &__location
         width: 100%
         margin-bottom: 20px
@@ -545,11 +706,24 @@
         margin-left: 25px
         margin-bottom: 15px
 
+        @include r(1000px)
+            margin-left: 0
+
+        @include r(640px)
+            flex-direction: column
+            align-items: flex-start
+
         .text
+            min-width: 100px
             width: 100px
             margin-right: 15px
             color: #838AB9
             font-size: 14px
+
+            @include r(640px)
+                font-size: 12px
+                width: 100%
+                margin-bottom: 5px
 
         .url
             position: relative
@@ -557,6 +731,13 @@
             padding: 12px 20px 12px 40px
             background-color: #F5F6FA
             border-radius: 5px
+
+            @include r(1000px)
+                width: calc(100% - 115px)
+
+            @include r(640px)
+                width: 100%
+                font-size: 12px
 
             &::before
                 content: ""
@@ -573,18 +754,25 @@
                 filter: invert(88%) sepia(10%) saturate(472%) hue-rotate(195deg) brightness(91%) contrast(92%)
 
     &__code
+        position: relative
         display: flex
         align-items: flex-start
         margin-left: 25px
         margin-bottom: 15px
 
-
         .text
+            min-width: 100px
             width: 100px
             margin-right: 15px
             color: #838AB9
             font-size: 14px
             margin-top: 5px
+
+            @include r(640px)
+                width: 100%
+                font-size: 12px
+                margin-bottom: 5px
+                margin-top: 0
 
         .code
             padding: 13px 25px
@@ -598,6 +786,34 @@
             outline: none
             font-family: inherit
 
+            @include r(1000px)
+                width: calc(100% - 115px)
+                margin-right: 0
+
+            @include r(640px)
+                width: 100%
+                font-size: 12px
+                padding: 13px 15px
+                margin-bottom: 15px
+
+        @include r(1000px)
+            padding-bottom: 55px
+            margin-left: 0
+
+            .settings__copy
+                position: absolute
+                left: 115px
+                bottom: 0
+
+        @include r(640px)
+            flex-direction: column
+            padding-bottom: 0
+
+            .settings__copy
+                position: relative
+                left: auto
+                bottom: auto
+
     &__copy
         position: relative
         background-color: $blue
@@ -608,6 +824,9 @@
         padding: 12px 20px 12px 50px
         border-radius: 3px
         transition: background-color 0.3s, transform 0.3s
+
+        @include r(640px)
+            font-size: 12px
 
         &:hover
             background-color: $dblue
@@ -637,8 +856,16 @@
         font-size: 14px
         width: fit-content
 
+        @include r(1000px)
+            margin-left: 115px
+
+        @include r(640px)
+            margin-left: 0
+            font-size: 12px
+
         .bold
             font-family: Raleway
+            font-weight: 700
             display: block
 
         .selected
@@ -657,11 +884,19 @@
         border-bottom: 1px solid #d9dcee
         margin-bottom: 25px
 
+        .wrapper
+            display: flex
+
     &__send
         position: relative
         display: flex
         align-items: center
         margin-left: 25px
+
+        @include r(1000px)
+            flex-direction: column
+            margin-left: 0
+            align-items: flex-start
 
         input[type="checkbox"]
             position: absolute
@@ -672,6 +907,9 @@
             width: 50%
             opacity: 0
             cursor: pointer
+
+            @include r(1000px)
+                height: 20px
 
         input:checked + label
             &::before
@@ -684,6 +922,12 @@
             position: relative
             padding-left: 50px
             margin-right: 20px
+
+            @include r(1000px)
+                margin-bottom: 15px
+
+            @include r(640px)
+                font-size: 12px
 
             &::before
                 content: ""
@@ -713,6 +957,7 @@
             border-radius: 5px
             border: 1px solid #C4C8DF
             margin-right: 15px
+            outline: none
 
             &::placeholder
                 color: #B0B5D1
@@ -721,6 +966,7 @@
             position: relative
             padding: 0
             margin: 0
+            min-width: 36px
             width: 36px
             height: 36px
             border-radius: 100%
@@ -735,6 +981,7 @@
                     filter: none
                     background-image: none
                     font-family: Raleway
+                    font-weight: 700
                     font-size: 16px
                     display: flex
                     align-items: center
@@ -807,6 +1054,13 @@
 
         ul
             margin: 0 0 50px 25px
+            
+            @include r(1000px)
+                margin-left: 0
+                margin-bottom: 30px
+
+            @include r(640px)
+                margin-bottom: 0
 
         li
             display: flex
@@ -817,18 +1071,30 @@
 
             &:first-child
                 border-top: 1px solid #d9dcee
-                
+
+            @include r(640px)
+                position: relative    
 
             .name
                 position: relative
                 display: flex
                 align-items: center
-                padding: 17px 15px 13px 35px
+                padding: 17px 45px 13px 35px
                 border-radius: 5px
                 background-color: #F5F6FA
                 font-size: 10px
                 text-transform: uppercase
                 overflow: hidden
+
+                @include r(767px)
+                    flex-direction: column
+                    align-items: flex-start
+
+                @include r(640px)
+                    padding-top: 10px
+                    padding-left: 35px
+                    padding-bottom: 45px
+                    width: 100%
 
                 &::before
                     content: ""
@@ -844,6 +1110,11 @@
                     background-position: center
                     filter: invert(90%) sepia(4%) saturate(1131%) hue-rotate(195deg) brightness(89%) contrast(87%)
 
+                    @include r(767px)
+                        top: 10px
+                        transform: none
+
+
                 &.owner
                     &::before
                         border-radius: 100% 
@@ -858,13 +1129,15 @@
                margin-right: 13px
 
             .delete
-                position: relative
+                position: absolute
                 width: 35px
-                height: 42px
-                margin: -17px -15px -13px
+                height: 100%
+                right: 0
+                top: 0
                 background-color: #EBEDF9
                 margin-left: 11px
                 transition: background-color 0.3s
+
 
                 &:hover
                     background-color: #dee0eb
@@ -895,6 +1168,11 @@
                 overflow: hidden
                 font-size: 10px
                 text-transform: uppercase
+
+                @include r(640px)
+                    position: absolute
+                    bottom: 18px
+                    left: 35px
 
                 &.green
                     background-color: #E3F4EE
@@ -929,6 +1207,7 @@
                         top: 6px
                         left: 13px
                         font-family: Raleway
+                        font-weight: 700
                         font-size: 16px
                         color: $red
 
@@ -971,6 +1250,10 @@
               
     &__criteria
         width: 100%
+
+        &-wrapper
+            @include r(640px)
+                overflow-x: auto
         
         .headers
             position: relative
@@ -983,7 +1266,11 @@
 
             li
                 font-family: Raleway
+                font-weight: 700
                 font-size: 16px
+
+            @include r(640px)
+                min-width: 600px
 
         .name
             width: 190px
@@ -1049,7 +1336,8 @@
                 padding: 15px 80px 15px 0
                 border-bottom: 1px solid #d9dcee
 
-                
+            @include r(640px)
+                min-width: 600px
 
             .name
                 position: relative
@@ -1095,6 +1383,43 @@
             .amount
                 text-align: center
 
+        li.add
+            padding-left: 35px
+            padding-right: 0
+
+            @include r(640px)
+                padding-left: 0
+                justify-content: flex-start
+
+            input
+                border-radius: 5px
+                background-color: #fff
+                border: 1px solid #c4c8df
+                padding: 12px 15px 10px 15px
+                font-size: 16px
+                font-family: Arial
+                color: #47426A
+
+                @include r(640px)
+                    margin-right: 5px
+
+            button
+                font-family: Raleway
+                font-weight: 700
+                font-size: 14px
+                text-transform: uppercase
+                color: white
+                padding: 13px 21px 11px
+                background-color: $blue
+                border-radius: 5px
+                transition: background-color 0.3s, transform 0.3s
+
+                &:hover
+                    background-color: $dblue
+
+                &:active
+                    transform: scale(0.9)
+
     &__cols
         display: flex
         align-items: flex-start
@@ -1102,14 +1427,39 @@
         margin-left: 25px
         margin-top: 30px
 
+        @include r(1000px)
+            justify-content: space-between
+
+        @include r(767px)
+            margin-left: 0
+
+        @include r(640px)
+            margin-top: 0
+
         &--50
             margin-left: 50px
+
+            @include r(767px)
+                margin-left: 20px
 
     &__col
         width: calc((100% - 40px) / 3)
 
         &:not(:last-child)
             margin-right: 20px
+            margin-bottom: 20px
+
+        @include r(1400px)
+            width: calc(50% - 10px)
+
+            &:nth-child(even)
+                margin-right: 0
+
+        @include r(767px)
+            width: 100%
+            margin-right: 0 !important
+
+
 
         input[type="text"]
             background-color: #f4f4f8
@@ -1134,6 +1484,9 @@
             &--full input
                 width: 100%
 
+                @include r(767px)
+                    width: calc( 100% - 50px )
+
 
             .status
                 position: absolute
@@ -1150,6 +1503,7 @@
                         content: "!"
                         background-image: none
                         font-family: Raleway
+                        font-weight: 700
                         font-size: 16px
                         display: flex
                         align-items: center
@@ -1198,6 +1552,9 @@
         background-color: rgba(255, 255, 255, 0.5)
         padding: 15px 40px 15px 25px 
 
+        @include r(767px)
+            padding-right: 20px
+
         &:not(:last-child)
             margin-bottom: 20px
 
@@ -1211,6 +1568,12 @@
             color: #B0B5D1
             margin-left: 50px
             font-size: 14px
+
+        .line
+            margin-left: 0 !important
+            
+            @include r(640px)
+                display: none
 
         .show
             position: absolute
@@ -1235,6 +1598,7 @@
 
         .title
             font-family: Raleway
+            font-weight: 700
             margin-bottom: 10px
 
         .desc
@@ -1323,17 +1687,29 @@
             margin-bottom: 15px
             border-bottom: 1px solid #d9dcee
 
+            @include r(767px)
+                padding-top: 0
+                border: none
+
     .line
         padding-top: 25px
         margin-bottom: 40px
         border-bottom: 1px solid #d9dcee
         margin-left: 50px
 
+        @include r(767px)
+            padding-top: 0
+            border: none
+
     &__amount
         display: flex
         align-items: flex-start
         margin-left: 50px
         margin-bottom: 15px
+
+        @include r(767px)
+            margin-left: 20px
+            margin-right: 20px
 
         input
             background-color: #f4f4f8
@@ -1343,6 +1719,10 @@
             width: 70px
             margin-right: 30px
             font-size: 14px
+
+            @include r(767px)
+                width: 50px
+                margin-right: 15px
 
             &::placeholder
                 color: #d9dcee
@@ -1382,6 +1762,10 @@
             height: 55px
             border-radius: 10px
 
+            @include r(767px)
+                width: 35px
+                height: 35px
+
             &::after
                 content: ""
                 position: absolute
@@ -1396,6 +1780,11 @@
                 filter: invert(100%)
                 opacity: 0
                 transition: opacity 0.3s
-        
 
+                @include r(767px)
+                    background-size: 40%
+        
+    &__example
+        @include r(900px)
+            width: 100%
 

@@ -128,10 +128,12 @@
                   <div class="settings__send"> 
                     <input type="checkbox" name="accept" checked>
                     <label for="accept">Отправлять уведомления  о новых сообщениях на</label>
-                    <input type="text" placeholder="example@domain.com">
-                    <button class="reload">             </button>
-                    <button class="reload wait">             </button>
-                    <button class="reload confirm">        </button>
+                    <div class="wrapper">
+                      <input type="text" placeholder="example@domain.com">
+                      <button class="reload">             </button>
+                      <button class="reload wait">             </button>
+                      <button class="reload confirm">        </button>
+                    </div>
                   </div>
                 </div>
                 <div class="settings__moderators">
@@ -176,27 +178,33 @@
             <div class="settings__content"> 
               <div class="settings__inner">
                 <div class="settings__criteria"> 
-                  <ul class="headers">
-                    <li class="name">Критерий оценки</li>
-                    <li class="rating">Средний балл</li>
-                    <li class="amount">Количество голосов</li>
-                  </ul>
-                  <ul class="items"> 
-                    <li> 
-                      <div class="name">Качество</div>
-                      <div class="rating">4,7
-                        <ul> 
-                          <li class="active"> </li>
-                          <li class="active"> </li>
-                          <li class="active"> </li>
-                          <li class="active"> </li>
-                          <li> </li>
-                        </ul>
-                      </div>
-                      <div class="amount">157</div>
-                      <button class="close"> </button>
-                    </li>
-                  </ul>
+                  <div class="settings__criteria-wrapper">
+                    <ul class="headers">
+                      <li class="name">Критерий оценки</li>
+                      <li class="rating">Средний балл</li>
+                      <li class="amount">Количество голосов</li>
+                    </ul>
+                    <ul class="items"> 
+                      <li> 
+                        <div class="name">Качество</div>
+                        <div class="rating">4,7
+                          <ul> 
+                            <li class="active"> </li>
+                            <li class="active"> </li>
+                            <li class="active"> </li>
+                            <li class="active"> </li>
+                            <li> </li>
+                          </ul>
+                        </div>
+                        <div class="amount">157</div>
+                        <button class="close"> </button>
+                      </li>
+                      <li class="add"> 
+                        <input type="text" value="Крите....">
+                        <button>ОК</button>
+                      </li>
+                    </ul>
+                  </div>
                   <button class="settings__btn settings__btn--add">Добавить критерий</button>
                 </div>
               </div>
@@ -324,11 +332,11 @@
               <div class="settings__subtitle settings__subtitle--50">Приватность</div>
               <div class="settings__cols settings__cols--50"> 
                 <div class="settings__col"> 
-                  <div class="settings__checkbox settings__checkbox--circle">
+                  <div class="settings__checkbox settings__checkbox--circle settings__checkbox--sm">
                     <input type="checkbox" checked>
                     <label for="#">Анонимное добавление комментариев</label>
                   </div>
-                  <div class="settings__checkbox settings__checkbox--circle">
+                  <div class="settings__checkbox settings__checkbox--circle settings__checkbox--sm">
                     <input type="checkbox" checked>
                     <label for="#">Отображать поле e-mail</label>
                   </div>
@@ -338,7 +346,7 @@
                   </div>
                 </div>
                 <div class="settings__col"> 
-                  <div class="settings__checkbox settings__checkbox--circle">
+                  <div class="settings__checkbox settings__checkbox--circle settings__checkbox--sm">
                     <input type="checkbox" checked>
                     <label for="#">Стандатрная подпись для админимстратора</label>
                     <p class="text">Пользователь НЕ видит имя, под которым авторизован администратор, а только подпись</p>
@@ -373,11 +381,11 @@
               </div>
               <div class="line"> </div>
               <div class="settings__subtitle settings__subtitle--50">Дополнительные</div>
-              <div class="settings__checkbox settings__checkbox--circle ml50">
+              <div class="settings__checkbox settings__checkbox--circle ml50 settings__checkbox--sm">
                 <input type="checkbox" checked>
                 <label for="#">Публиковать только после модерации</label>
               </div>
-              <div class="settings__checkbox settings__checkbox--circle ml50">
+              <div class="settings__checkbox settings__checkbox--circle ml50 settings__checkbox--sm">
                 <input type="checkbox" checked>
                 <label for="#">Спам-фильтр</label>
               </div>
@@ -409,7 +417,7 @@
                     <div class="color" style="background-color:#16D7E3"></div>
                   </li>
                 </ul>
-              </div><img src="./img/review-img.png" alt="review example">
+              </div><img class="settings__example" src="./img/review-img.png" alt="review example">
             </div>
           </div>
         </div>

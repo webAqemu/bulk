@@ -40,6 +40,7 @@
             height: 55px
             border-radius: 100%
             background-color: $blue
+            font-size: 0
 
             &::before
                 content: ""
@@ -54,6 +55,33 @@
                 background-position: center
                 background-repeat: no-repeat
                 filter: invert(100%)
+
+        &--text
+            right: 16px
+            top: -58px
+
+            &::before,
+            &::after 
+                display: none
+
+            span
+                width: fit-content
+                height: fit-content
+                border-radius: 20px 20px 0 0
+                padding: 19px 15px 17px 60px
+                font-family: Raleway
+                font-weight: 600
+                font-size: 18px
+                color: white
+                transition: background-color 0.3s
+
+                &:hover
+                    background-color: $dblue
+
+                &::before
+                    top: 2px
+                    left: 4px
+                    background-size: 40%
 
     &__inner
 
@@ -70,6 +98,7 @@
 
     &__title
         font-family: Raleway
+        font-weight: 700
         font-size: 18px
         margin-bottom: 15px
 
@@ -198,6 +227,7 @@
                 left: 12px
                 transform: translateY(-50%)
                 font-family: Raleway
+                font-weight: 700
                 font-size: 16px
                 color: $red
 

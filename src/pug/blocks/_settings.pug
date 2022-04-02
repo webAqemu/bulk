@@ -69,10 +69,11 @@
                 .settings__send 
                     input(type="checkbox", name="accept" checked)
                     label(for="accept") Отправлять уведомления  о новых сообщениях на
-                    input(type="text" placeholder="example@domain.com")
-                    button.reload              
-                    button.reload.wait              
-                    button.reload.confirm         
+                    .wrapper
+                        input(type="text" placeholder="example@domain.com")
+                        button.reload              
+                        button.reload.wait              
+                        button.reload.confirm         
 
             .settings__moderators
                 .settings__subtitle Модераторы
@@ -115,23 +116,28 @@
     .settings__content 
         .settings__inner
             .settings__criteria 
-                ul.headers
-                    li.name Критерий оценки
-                    li.rating Средний балл
-                    li.amount Количество голосов
+                .settings__criteria-wrapper
+                    ul.headers
+                        li.name Критерий оценки
+                        li.rating Средний балл
+                        li.amount Количество голосов
 
-                ul.items 
-                    li 
-                        .name Качество
-                        .rating 4,7
-                            ul 
-                                li.active 
-                                li.active 
-                                li.active 
-                                li.active 
-                                li 
-                        .amount 157
-                        button.close 
+                    ul.items 
+                        li 
+                            .name Качество
+                            .rating 4,7
+                                ul 
+                                    li.active 
+                                    li.active 
+                                    li.active 
+                                    li.active 
+                                    li 
+                            .amount 157
+                            button.close 
+                        li.add 
+                            input(type="text" value="Крите....")
+                            button ОК
+
 
                 button.settings__btn.settings__btn--add Добавить критерий
 
@@ -253,17 +259,17 @@
         .settings__subtitle.settings__subtitle--50 Приватность
         .settings__cols.settings__cols--50 
             .settings__col 
-                .settings__checkbox.settings__checkbox--circle
+                .settings__checkbox.settings__checkbox--circle.settings__checkbox--sm
                     input(type="checkbox" checked)
                     label(for="#") Анонимное добавление комментариев
-                .settings__checkbox.settings__checkbox--circle
+                .settings__checkbox.settings__checkbox--circle.settings__checkbox--sm
                     input(type="checkbox" checked)
                     label(for="#") Отображать поле e-mail
                 .settings__checkbox.settings__checkbox--centered
                     input(type="checkbox" checked)
                     label(for="#") Обязательное заполнение поля e-mail
             .settings__col 
-                .settings__checkbox.settings__checkbox--circle
+                .settings__checkbox.settings__checkbox--circle.settings__checkbox--sm
                     input(type="checkbox" checked)
                     label(for="#") Стандатрная подпись для админимстратора
                     p.text Пользователь НЕ видит имя, под которым авторизован администратор, а только подпись
@@ -288,10 +294,10 @@
                 .desc При меньшем количестве символов, пользователь не сможет отправить отзыв и увидит уведомление
         .line 
         .settings__subtitle.settings__subtitle--50 Дополнительные
-        .settings__checkbox.settings__checkbox--circle.ml50
+        .settings__checkbox.settings__checkbox--circle.ml50.settings__checkbox--sm
             input(type="checkbox" checked)
             label(for="#") Публиковать только после модерации
-        .settings__checkbox.settings__checkbox--circle.ml50
+        .settings__checkbox.settings__checkbox--circle.ml50.settings__checkbox--sm
             input(type="checkbox" checked)
             label(for="#") Спам-фильтр
         button.settings__btn.settings__btn--save Сохранить
@@ -318,4 +324,4 @@
                     input(type="radio", name="color")
                     .color(style="background-color:#16D7E3")
 
-        img(src="./img/review-img.png", alt="review example")
+        img.settings__example(src="./img/review-img.png", alt="review example")

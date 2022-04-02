@@ -1,8 +1,12 @@
 .pay
     height: 100%
 
+    @include r(767px)
+        height: fit-content
+
     &__title
         font-family: Raleway
+        font-weight: 700
         font-size: 30px
         margin:0 -50px
         padding: 0 0 25px 50px
@@ -12,15 +16,35 @@
         display: flex
         height: 100%
 
+        @include r(1600px)
+            flex-direction: column
+
     &__wrapper
         width: 50%
         height: 100%
         padding: 15px 50px 15px 0px
         border-right: 1px solid #d9dcee
 
+        @include r(1600px)
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            justify-content: flex-start
+            min-height: fit-content
+            width: 100%
+            height: auto
+            padding: 15px 0 45px
+            border: none
+            border-bottom: 1px solid #d9dcee
+
     &__top
         display: flex
         align-items: center
+
+        @include r(640px)
+            flex-direction: column
+            align-items: flex-start
+            width: 100%
 
     &__balance
         display: inline-block
@@ -32,8 +56,14 @@
         max-width: 205px
         width: 100%
 
+        @include r(640px)
+            max-width: 100% 
+            margin: 0 0 10px
+            box-shadow: none
+
         p
             font-family: Raleway
+            font-weight: 700
             font-size: 18px
             margin-bottom: 15px
 
@@ -98,12 +128,19 @@
         display: flex
         margin-bottom: auto
 
+        @include r(640px)
+            width: 100%
+
         li
             max-width: 150px
             width: 100%
             border: 1px solid #d3d6e5
             border-radius: 3px
             padding: 15px
+
+            @include r(640px)
+                max-width: 100%
+                width: calc(50% - 5px)
 
             &:not(:last-child)
                 margin-right: 10px
@@ -139,8 +176,12 @@
         width: 100%
         margin: 50px 0 auto
 
+        @include r(640px)
+            margin-top: 20px
+
         .subtitle
             font-family: Raleway
+            font-weight: 700
             font-size: 18px
             margin-bottom: 15px
 
@@ -148,6 +189,10 @@
             display: flex
             padding: 10px
             border-bottom: 1px solid #d9dcee
+
+            @include r(640px)
+                position: relative
+                flex-direction: column
 
             &:first-child
                 border-top: 1px solid #d9dcee
@@ -157,6 +202,9 @@
             color: #b0b5d1
             margin-right: 40px
 
+            @include r(640px)
+                margin: 0 0 5px
+
         .desc
             font-size: 14px
             margin-right: auto
@@ -164,9 +212,18 @@
             overflow: hidden
             white-space: nowrap
             text-overflow: ellipsis
+
+            @include r(640px)
+                width: 100%
+                margin: 0
         
         .price
             font-size: 14px
+
+            @include r(640px)
+                position: absolute
+                right: 0
+                top: 10px
 
             &--green
                 color: #44b759
@@ -174,14 +231,40 @@
             &--red
                 color: $red
 
+        .open-all
+            display: none
+
+            @include r(1600px)
+                display: block
+                font-size: 14px
+                color: $blue
+                text-decoration: underline
+                margin-top: 20px
+
     &__coupons
         padding: 15px 0 15px 40px
         width: 50%
+
+        @include r(1600px)
+            width: 100%
+            padding-left: 0
+            display: flex
+            flex-direction: column
+            height: fit-content
+
+        .pay__top
+            @include r(767px)
+                flex-direction: column
+                align-items: flex-start
+
 
         .subtitle
             font-size: 18px
             font-weight: 700
             margin-right: auto
+
+            @include r(767px)
+                margin-bottom: 10px
 
         form
             display: flex
@@ -195,6 +278,9 @@
             margin-right: 10px
             font-size: 14px
             outline: none
+
+            @include r(640px)
+                width: 100%
 
             &::placeholder
                 color: #c4c8df
@@ -215,17 +301,33 @@
             &:active
                 transform: scale(0.9)  
 
+            @include r(640px)
+                font-size: 12px
+
     .coupons
         display: flex
         align-items: stretch
         margin-top: 45px
 
+        @include r(767px)
+            margin-top: 20px
+
+        @include r(640px)
+            flex-direction: column
+
     .coupon
         max-width: 215px
         width: 100%
 
+        @include r(640px)
+            max-width: 100%
+
         &:not(:last-child)
             margin-right: 15px
+
+            @include r(640px)
+                margin-right: 0
+                margin-bottom: 15px
 
         &--active
             position: relative
@@ -236,8 +338,6 @@
             .coupon__activate
                 pointer-events: none
                 color: #44B759
-
-
 
         &__info
             position: relative
@@ -253,6 +353,9 @@
             margin-bottom: 2px
             height: calc( 100% - 60px )
 
+            @include r(767px)
+                padding: 20px
+
             &::after
                 content: ""
                 position: absolute
@@ -266,6 +369,10 @@
 
             img
                 margin-bottom: 30px
+                width: 100%
+
+                @include r(640px)
+                    max-width: 200px
 
             .name
                 font-weight: 700
@@ -288,11 +395,14 @@
             cursor: pointer
             transition: color 0.3s, background-color 0.3s
 
+            @include r(767px)
+                padding: 12px 10px
+                font-size: 12px
+
             &:hover
                 color: white
                 background-color: $blue
                 
-
     .activated
         position: absolute
         top: 70px
