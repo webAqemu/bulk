@@ -57,15 +57,23 @@
             <div class="moderation__top"> 
               <div class="moderation__title">Модерация </div>
               <div class="moderation__categories"> 
-                <button class="moderation__category active">
-                  <div class="moderation__icon" style="background-image:url(./img/svg/all-black.svg)"></div>Все виджеты
-                </button>
-                <button class="moderation__category"> 
-                  <div class="moderation__icon" style="background-image:url(./img/svg/comment-black.svg)"></div>Чаты
-                </button>
-                <button class="moderation__category"> 
-                  <div class="moderation__icon" style="background-image:url(./img/svg/star-black.svg)"></div>Отзывы
-                </button>
+                <div class="wrapper">
+                  <button class="moderation__category active">
+                    <div class="moderation__icon" style="background-image:url(./img/svg/all-black.svg)"></div>Все виджеты
+                  </button>
+                  <button class="moderation__category"> 
+                    <div class="moderation__icon" style="background-image:url(./img/svg/comment-black.svg)"></div>Чаты
+                  </button>
+                  <button class="moderation__category"> 
+                    <div class="moderation__icon" style="background-image:url(./img/svg/star-black.svg)"></div>Отзывы
+                  </button>
+                  <button class="moderation__category"> 
+                    <div class="moderation__icon" style="background-image:url(./img/svg/comment-black.svg)"></div>Чаты
+                  </button>
+                  <button class="moderation__category"> 
+                    <div class="moderation__icon" style="background-image:url(./img/svg/star-black.svg)"></div>Отзывы
+                  </button>
+                </div>
               </div>
             </div>
             <div class="moderation__inner">
@@ -79,12 +87,17 @@
                       <div class="msg">У вас автоматически включился фильтр “Жалобы”, т.к. есть новые жалобы </div>
                     </li>
                   </ul>
+                  <button class="mobile-search"></button>
+                  <div class="search">
+                    <input type="text" placeholder="Поиск">
+                  </div>
                   <button class="open-filters">Фильтры</button>
                 </div>
                 <div class="review">
                   <div class="review__header">
                     <div class="name">отзывы</div>
                     <div class="url">К какой странице / товару прикреплён данный отзыв</div>
+                    <button class="mobile-options"></button>
                     <button class="accept"></button>
                     <button class="delete"></button>
                     <button class="edit"> </button>
@@ -121,30 +134,6 @@
                         <div class="red"> <span>мат</span>
                           <button class="delete"></button>
                         </div>
-                        <div class="red"> <span>мат</span>
-                          <button class="delete"></button>
-                        </div>
-                        <div class="red"> <span>мат</span>
-                          <button class="delete"></button>
-                        </div>
-                        <div class="red"> <span>мат</span>
-                          <button class="delete"></button>
-                        </div>
-                        <div class="red"> <span>мат</span>
-                          <button class="delete"></button>
-                        </div>
-                        <div class="red"> <span>мат</span>
-                          <button class="delete"></button>
-                        </div>
-                        <div class="red"> <span>мат</span>
-                          <button class="delete"></button>
-                        </div>
-                        <div class="red"> <span>мат</span>
-                          <button class="delete"></button>
-                        </div>
-                        <div class="red"> <span>мат</span>
-                          <button class="delete"></button>
-                        </div>
                         <button class="add">тег</button>
                       </div>
                     </div>
@@ -178,6 +167,7 @@
                     <div class="name">комментарии</div>
                     <div class="url">К какой странице / товару прикреплён данный отзыв</div>
                     <button class="filter">Опубликованное</button>
+                    <button class="mobile-options"></button>
                   </div>
                   <div class="comment__inner"> 
                     <div class="comment__info"> 
@@ -197,13 +187,17 @@
                       <button class="answers">3 ответа</button>
                       <button class="answer">ответить</button>
                       <form class="form">
-                        <div class="photo"> </div>
+                        <div class="photo"> <img src="img/profile-image.jpg" alt="">
+                          <div class="name">Администратор</div>
+                        </div>
                         <div class="input">
                           <input type="text" value="Гость, я  к вам пишу чего же боле...">
                           <button class="cancel"></button>
                         </div>
+                        <button class="mobile-cancel">Удалить</button>
                         <button class="send" type="submit">Отправить</button>
                       </form>
+                      <button class="mobile-history">История сообщений</button>
                       <div class="wrapper"> 
                         <div class="red"> <span>мат</span>
                           <button class="delete"></button>
@@ -222,145 +216,38 @@
                   <button class="filters"> </button>
                 </div>
                 <div class="moderation__result"> 
-                  <button class="close">Закрыть</button>
-                  <div class="name">Илья Александров</div>
-                  <div class="message">
-                    <p><span class="black">Достоинства</span> Lorem ipsum dolor sit amet, consectetur <span class="yellow">adipisi</span>cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
-                    <p><span class="black">Недостатки</span> Lorem ipsum dolor sit amet, consectetur <span class="yellow">adipisi</span>cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
-                    <p><span class="black">Комментарий</span> Lorem ipsum dolor sit amet, consectetur <span class="yellow">adipisi</span>cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
+                  <div class="wrapper">
+                    <button class="close">Закрыть</button>
+                    <div class="name">Илья Александров</div>
+                    <div class="message">
+                      <p><span class="black">Достоинства</span> Lorem ipsum dolor sit amet, consectetur <span class="yellow">adipisi</span>cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
+                      <p><span class="black">Недостатки</span> Lorem ipsum dolor sit amet, consectetur <span class="yellow">adipisi</span>cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
+                      <p><span class="black">Комментарий</span> Lorem ipsum dolor sit amet, consectetur <span class="yellow">adipisi</span>cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
+                    </div>
+                    <button class="answers answers--opened">3 ответа</button>
+                    <div class="answer">
+                      <div class="name">Администратор</div>
+                      <p>Lorem ipsum dolor sit amet, consectetur<span class="yellow">adipisi</span>cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
+                    </div>
+                    <div class="answer" style="background-color: #FFFDF0">
+                      <button class="edit"> </button>
+                      <div class="name">Администратор</div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
+                    </div>
+                    <div class="answer" style="background-color: #F0FCFF">
+                      <div class="name">Галина Царькова</div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
+                    </div>
+                    <div class="line"> </div>
+                    <div class="name">Илья Александров</div><a class="email" href="mailto:alexandrov@mail.ru">alexandrov@mail.ru</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
+                    <div class="line"> </div>
+                    <div class="name">Галина Царькова</div><a class="email" href="mailto:alexandrov@mail.ru">alexandrov@mail.ru</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
+                    <div class="line"> </div>
+                    <button class="btn">Закрыть жалобы</button>
+                    <div class="warning"><span>Важно:</span> сообщение должно быть отмодерировано владельцем самостоятельно. При закрытии жалобы отзыв не удаляется</div>
                   </div>
-                  <button class="answers answers--opened">3 ответа</button>
-                  <div class="answer">
-                    <div class="name">Администратор</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur<span class="yellow">adipisi</span>cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
-                  </div>
-                  <div class="answer" style="background-color: #FFFDF0">
-                    <button class="edit"> </button>
-                    <div class="name">Администратор</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
-                  </div>
-                  <div class="answer" style="background-color: #F0FCFF">
-                    <div class="name">Галина Царькова</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
-                  </div>
-                  <div class="line"> </div>
-                  <div class="name">Илья Александров</div><a class="email" href="mailto:alexandrov@mail.ru">alexandrov@mail.ru</a>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
-                  <div class="line"> </div>
-                  <div class="name">Галина Царькова</div><a class="email" href="mailto:alexandrov@mail.ru">alexandrov@mail.ru</a>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
-                  <div class="line"> </div>
-                  <button class="btn">Закрыть жалобы</button>
-                  <div class="warning"><span>Важно:</span> сообщение должно быть отмодерировано владельцем самостоятельно. При закрытии жалобы отзыв не удаляется</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="popup popup--stats popup--stats-bottom" style="bottom:40px;right:10px;width:400px">
-          <div class="popup__inner">
-            <div class="popup-stats">
-              <button class="popup-stats__open popup-stats__open--text"><span>Фильтры</span></button>
-              <div class="popup-stats__inner"> 
-                <div class="popup-stats__title">Чекбоксы</div>
-                <div class="popup-stats__checkbox"> 
-                  <input type="checkbox" name="checkbox1">
-                  <label for="checkbox1">Позиция 1</label>
-                </div>
-                <div class="popup-stats__checkbox"> 
-                  <input type="checkbox" name="checkbox2">
-                  <label for="checkbox2">Позиция 2</label>
-                </div>
-                <div class="popup-stats__line"></div>
-                <div class="popup-stats__title">Радиобатн</div>
-                <div class="popup-stats__radio">
-                  <input type="radio" name="radio">
-                  <label for="radio">Позиция 1</label>
-                </div>
-                <div class="popup-stats__radio">
-                  <input type="radio" name="radio">
-                  <label for="radio">Позиция 2</label>
-                </div>
-                <div class="popup-stats__line"></div>
-                <div class="popup-stats__title">Инпуты</div>
-                <div class="popup-stats__input"> 
-                  <input type="text" placeholder="Ваш текст">
-                </div>
-                <div class="popup-stats__line"></div>
-                <div class="popup-stats__title">Табы</div>
-                <div class="popup-stats__wrapper"> 
-                  <button class="popup-stats__btn">Обычный</button>
-                  <button class="popup-stats__btn active">Активный</button>
-                  <button class="popup-stats__btn disable">Недоступный</button>
-                  <button class="popup-stats__btn close">Удаляемый</button>
-                  <button class="popup-stats__btn">Наведи на меня :)</button>
-                </div>
-                <div class="popup-stats__line"></div>
-                <div class="popup-stats__title">Аккордеон</div>
-                <div class="popup-stats__accordeon active">
-                  <p>Раздел 1</p>
-                  <div class="popup-stats__accordeon-content"> 
-                    <button>Подраздел 1</button>
-                    <button>Подраздел 2</button>
-                  </div>
-                </div>
-                <div class="popup-stats__accordeon">
-                  <p>Раздел 1</p>
-                  <div class="popup-stats__accordeon-content"> 
-                    <button>Подраздел 1</button>
-                    <button>Подраздел 2</button>
-                  </div>
-                </div>
-                <div class="popup-stats__line"></div>
-                <div class="popup-stats__title">Выпадающий список</div>
-                <div class="popup-stats__dropdown"> 
-                  <p>По дням</p>
-                  <div class="popup-stats__dropdown-content"> 
-                    <button>По дням</button>
-                    <button>По ночам</button>
-                    <button>В любое время</button>
-                  </div>
-                </div>
-                <div class="popup-stats__dropdown active">
-                  <p>По дням</p>
-                  <div class="popup-stats__dropdown-content"> 
-                    <button>По дням</button>
-                    <button>По ночам</button>
-                    <button>В любое время</button>
-                  </div>
-                </div>
-                <div class="popup-stats__title">Рейтинг</div>
-                <div class="popup-stats__rating-inputs"> 
-                  <input class="from" type="text">
-                  <input class="to" type="text">
-                </div>
-                <div class="popup-stats__rating" id="rating"></div>
-                <div class="popup-stats__line"></div>
-                <div class="popup-stats__title">Статус</div>
-                <div class="popup-stats__checkbox popup-stats__checkbox--status check">
-                  <input type="checkbox" name="checkbox1">
-                  <label for="checkbox1">на проверке</label>
-                  <div class="amount">1542</div>
-                </div>
-                <div class="popup-stats__checkbox popup-stats__checkbox--status done">
-                  <input type="checkbox" name="checkbox2">
-                  <label for="checkbox2">опубликованное</label>
-                  <div class="amount">1542</div>
-                </div>
-                <div class="popup-stats__checkbox popup-stats__checkbox--status failed">
-                  <input type="checkbox" name="checkbox2">
-                  <label for="checkbox2">удаленные</label>
-                  <div class="amount">1542</div>
-                </div>
-                <div class="popup-stats__line"></div>
-                <div class="popup-stats__title">Теги</div>
-                <div class="popup-stats__checkbox popup-stats__checkbox--tag red">
-                  <input type="checkbox" name="checkbox1">
-                  <label for="checkbox1"><span>!</span> мат</label>
-                </div>
-                <div class="popup-stats__checkbox popup-stats__checkbox--tag">
-                  <input type="checkbox" name="checkbox2">
-                  <label for="checkbox2">другой тег</label>
                 </div>
               </div>
             </div>

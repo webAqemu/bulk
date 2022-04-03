@@ -2,15 +2,22 @@
     .moderation__top 
         .moderation__title Модерация 
         .moderation__categories 
-            button.moderation__category.active
-                .moderation__icon(style="background-image:url(./img/svg/all-black.svg)")
-                | Все виджеты
-            button.moderation__category 
-                .moderation__icon(style="background-image:url(./img/svg/comment-black.svg)")
-                | Чаты
-            button.moderation__category 
-                .moderation__icon(style="background-image:url(./img/svg/star-black.svg)")
-                | Отзывы
+            .wrapper
+                button.moderation__category.active
+                    .moderation__icon(style="background-image:url(./img/svg/all-black.svg)")
+                    | Все виджеты
+                button.moderation__category 
+                    .moderation__icon(style="background-image:url(./img/svg/comment-black.svg)")
+                    | Чаты
+                button.moderation__category 
+                    .moderation__icon(style="background-image:url(./img/svg/star-black.svg)")
+                    | Отзывы
+                button.moderation__category 
+                    .moderation__icon(style="background-image:url(./img/svg/comment-black.svg)")
+                    | Чаты
+                button.moderation__category 
+                    .moderation__icon(style="background-image:url(./img/svg/star-black.svg)")
+                    | Отзывы
             
     .moderation__inner
         .moderation__widgets 
@@ -21,14 +28,17 @@
                     li.filter.has-msg
                         button Жалобы
                         .msg У вас автоматически включился фильтр “Жалобы”, т.к. есть новые жалобы 
+                button.mobile-search
+                .search
+                    input(type="text" placeholder="Поиск")
                 button.open-filters Фильтры
-                        
-                        
-
+                
             .review
                 .review__header
                     .name отзывы
                     .url К какой странице / товару прикреплён данный отзыв
+                    
+                    button.mobile-options
                     button.accept
                     button.delete
                     button.edit 
@@ -62,30 +72,6 @@
                             .red 
                                 span мат
                                 button.delete
-                            .red 
-                                span мат
-                                button.delete
-                            .red 
-                                span мат
-                                button.delete
-                            .red 
-                                span мат
-                                button.delete
-                            .red 
-                                span мат
-                                button.delete
-                            .red 
-                                span мат
-                                button.delete
-                            .red 
-                                span мат
-                                button.delete
-                            .red 
-                                span мат
-                                button.delete
-                            .red 
-                                span мат
-                                button.delete
                             button.add тег
 
             .chat
@@ -111,6 +97,7 @@
                     .name комментарии
                     .url К какой странице / товару прикреплён данный отзыв
                     button.filter Опубликованное
+                    button.mobile-options
                 .comment__inner 
                     .comment__info 
                         .img(style="background-image:url(../img/profile-image.jpg)")
@@ -128,10 +115,15 @@
                         button.answer ответить
                         form.form
                             .photo 
+                                img(src="@img/profile-image.jpg", alt="")
+                                .name Администратор
+
                             .input
                                 input(type="text" value="Гость, я  к вам пишу чего же боле...")
                                 button.cancel
+                            button.mobile-cancel Удалить
                             button.send(type="submit") Отправить
+                        button.mobile-history История сообщений
                         .wrapper 
                             .red 
                                 span мат
@@ -146,34 +138,35 @@
                 input(type="text" placeholder="Поиск")
                 button.filters 
             .moderation__result 
-                button.close Закрыть
-                .name Илья Александров
-                .message
-                    p #[span.black Достоинства] Lorem ipsum dolor sit amet, consectetur #[span.yellow adipisi]cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    p #[span.black Недостатки] Lorem ipsum dolor sit amet, consectetur #[span.yellow adipisi]cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    p #[span.black Комментарий] Lorem ipsum dolor sit amet, consectetur #[span.yellow adipisi]cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                button.answers.answers--opened 3 ответа
-                .answer
-                    .name Администратор
-                    p Lorem ipsum dolor sit amet, consectetur#[span.yellow adipisi]cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
-                .answer(style="background-color: #FFFDF0")
-                    button.edit 
-                    .name Администратор
-                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
-                .answer(style="background-color: #F0FCFF")
-                    .name Галина Царькова
-                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+                .wrapper
+                    button.close Закрыть
+                    .name Илья Александров
+                    .message
+                        p #[span.black Достоинства] Lorem ipsum dolor sit amet, consectetur #[span.yellow adipisi]cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                        p #[span.black Недостатки] Lorem ipsum dolor sit amet, consectetur #[span.yellow adipisi]cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                        p #[span.black Комментарий] Lorem ipsum dolor sit amet, consectetur #[span.yellow adipisi]cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    button.answers.answers--opened 3 ответа
+                    .answer
+                        .name Администратор
+                        p Lorem ipsum dolor sit amet, consectetur#[span.yellow adipisi]cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+                    .answer(style="background-color: #FFFDF0")
+                        button.edit 
+                        .name Администратор
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+                    .answer(style="background-color: #F0FCFF")
+                        .name Галина Царькова
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
 
-                .line 
-                .name Илья Александров
-                a.email(href="mailto:alexandrov@mail.ru") alexandrov@mail.ru
-                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                .line 
-                .name Галина Царькова
-                a.email(href="mailto:alexandrov@mail.ru") alexandrov@mail.ru
-                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                .line 
-                button.btn Закрыть жалобы
-                .warning #[span Важно:] сообщение должно быть отмодерировано владельцем самостоятельно. При закрытии жалобы отзыв не удаляется
+                    .line 
+                    .name Илья Александров
+                    a.email(href="mailto:alexandrov@mail.ru") alexandrov@mail.ru
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    .line 
+                    .name Галина Царькова
+                    a.email(href="mailto:alexandrov@mail.ru") alexandrov@mail.ru
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    .line 
+                    button.btn Закрыть жалобы
+                    .warning #[span Важно:] сообщение должно быть отмодерировано владельцем самостоятельно. При закрытии жалобы отзыв не удаляется
 
 

@@ -7,6 +7,11 @@
         padding-bottom: 30px
         position: relative
 
+        @include r(640px)
+            flex-direction: column
+            align-items: flex-start
+            padding-bottom: 15px
+
         &::before
             content: ""
             position: absolute
@@ -24,11 +29,30 @@
         margin-right: 30px
         white-space: nowrap
 
+        @include r(1200px)
+            font-size: 24px
+
+        @include r(767px)
+            font-size: 24px
+        
+        @include r(640px)
+            font-size: 16px
+            margin-bottom: 15px
+
     &__categories
-        display: flex
-        align-items: center
-        justify-content: flex-end
-        flex-wrap: wrap
+        @include r(640px)
+            overflow-x: auto
+            width: 100%
+        
+        .wrapper
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            flex-wrap: wrap
+
+            @include r(640px)
+                flex-wrap: nowrap
+                min-width: fit-content
 
     &__category
         color: #798196
@@ -52,6 +76,9 @@
             color: $blue
             box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
             border-color: white
+
+            @include r(640px)
+                box-shadow: none
             
             .widgets__icon
                 filter: invert(42%) sepia(80%) saturate(3252%) hue-rotate(214deg) brightness(99%) contrast(94%)
@@ -62,6 +89,13 @@
         &:active
             transform: scale(0.9)
     
+        @include r(640px)
+            min-width: fit-content
+            border-radius: 5px
+
+            &:first-child
+                margin-left: 30px
+
     &__icon
         width: 12px
         height: 12px
@@ -73,6 +107,9 @@
 
     &__inner
         display: flex
+
+        @include r(1200px)
+            position: relative
     
     &__widgets
         max-width: 900px
@@ -80,6 +117,10 @@
 
         & > *:not(:last-child)
             margin-bottom: 10px
+
+        @include r(1200px)
+            max-width: 100%
+            margin-right: 0
     
     .review
         border-radius: 10px
@@ -103,6 +144,10 @@
             border-bottom: 1px solid #D9DCEE
             margin-bottom: 15px
 
+            @include r(640px)
+                flex-direction: column
+                align-items: flex-start
+
             &::before
                 content: ""
                 position: absolute
@@ -119,6 +164,9 @@
                 text-transform: uppercase
                 padding-left: 18px
                 margin-right: 10px
+
+                @include r(640px)
+                    margin: 5px 0 10px
 
                 &::before
                     content: ""
@@ -145,14 +193,28 @@
                 text-overflow: ellipsis
                 margin-right: auto
 
+                @include r(767px)
+                    font-size: 10px
+                    width: 300px
+
+                @include r(640px)
+                    width: 100%
+
             .accept
                 position: relative
+                min-width: 36px
                 width: 36px
                 height: 36px
                 border-radius: 100%
                 border: none
                 margin-right: 10px
                 background-color: #E3F4EE
+
+                @include r(767px)
+                    margin-left: 15px
+
+                @include r(640px)
+                    display: none
 
                 &::before
                     content: ""
@@ -170,12 +232,16 @@
 
             .delete
                 position: relative
+                min-width: 36px
                 width: 36px
                 height: 36px
                 border-radius: 100%
                 border: none
                 margin-right: 10px
                 background-color: #FFE4E3
+
+                @include r(640px)
+                    display: none
 
                 &::before
                    content: ""
@@ -193,11 +259,15 @@
                     
             .edit
                 position: relative
+                min-width: 36px
                 width: 36px
                 height: 36px
                 border-radius: 100%
                 border: none
                 background-color: #E8EAF4
+                
+                @include r(640px)
+                    display: none
 
                 &::before
                     content: ""
@@ -213,14 +283,49 @@
                     background-position: center
                     filter: invert(52%) sepia(52%) saturate(296%) hue-rotate(194deg) brightness(85%) contrast(95%)
 
+            .mobile-options
+                display: none
+
+                @include r(640px)
+                    position: absolute
+                    top: 5px
+                    right: 15px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    width: 22px
+                    height: 22px
+                    border-radius: 100%
+                    background-color: rgba(0, 0, 0, 0.05)
+
+                    &::after
+                        content: ""
+                        position: absolute
+                        left: 50%
+                        top: 50%
+                        transform: translate(-50%, -50%)
+                        width: 3px
+                        height: 13px
+                        background-image: url(../img/svg/vertical-dots.svg)
+                        background-size: cover
+                        background-repeat: no-repeat
+                        background-position: center
+
         &__inner
             position: relative
             padding: 0 20px 10px 70px
+
+            @include r(767px)
+                padding-left: 20px
 
         &__info
             display: flex
             align-items: center
             margin-bottom: 15px
+
+            @include r(767px)
+                position: relative
+                flex-wrap: wrap
 
             .img
                 position: absolute
@@ -233,10 +338,19 @@
                 background-repeat: no-repeat
                 background-position: center
 
+                @include r(767px)
+                    left: 0
+
             .name
                 font-size: 14px
                 font-weight: 700
                 margin-right: 30px
+
+                @include r(767px)
+                    width: 100%
+                    margin-right: 0
+                    padding-left: 45px
+                    margin-bottom: 10px
 
             .icons
                 display: flex
@@ -245,12 +359,21 @@
                 margin-right: 10px
                 padding: 5px
 
+                @include r(767px)
+                    margin-left: 45px
+
+                @include r(640px)
+                    margin-bottom: 10px
+
                 img:not(:last-child)
                     margin-right: 5px
 
             .rating
                 display: flex
                 margin-right: 15px
+
+                @include r(640px)
+                    margin-bottom: 10px
 
                 li
                     width: 14px
@@ -274,10 +397,24 @@
                 color: #969696
                 margin-right: auto
 
+                @include r(640px)
+                    width: 100%
+                    margin-left: 45px
+                    margin-bottom: 10px
+
             .stats
                 display: flex
                 align-items: baseline
                 margin-left: 15px
+
+                @include r(767px)
+                    position: absolute
+                    top: 0
+                    right: 0
+
+                @include r(640px)
+                    position: static
+                    margin-left: 45px
 
             .time
                 font-size: 14px
@@ -300,11 +437,12 @@
                     width: 12px
                     height: 12px
                     background-image: url(../img/svg/arrow-right.svg)
-                    background-size: cover
+                    background-size: contain
                     background-repeat: no-repeat
                     background-position: center
                     transform: rotate(-90deg)
                     filter: invert(61%) sepia(14%) saturate(1776%) hue-rotate(79deg) brightness(95%) contrast(91%)
+            
             .down
                 position: relative
                 font-size: 16px
@@ -320,7 +458,7 @@
                     width: 12px
                     height: 12px
                     background-image: url(../img/svg/arrow-right.svg)
-                    background-size: cover
+                    background-size: contain
                     background-repeat: no-repeat
                     background-position: center
                     transform: rotate(90deg)
@@ -330,6 +468,9 @@
             font-size: 16px
             color: #798196
             margin-bottom: 10px
+
+            @include r(767px)
+                font-size: 14px
 
             span
                 color: #47426A
@@ -341,6 +482,9 @@
             display: flex
             align-items: flex-start
 
+            @include r(640px)
+                flex-wrap: wrap
+
             .answers
                 position: relative
                 font-size: 14px
@@ -349,6 +493,9 @@
                 margin-right: 20px
                 white-space: nowrap
                 padding: 8px 23px 8px 0
+
+                @include r(640px)
+                    margin-bottom: 10px
 
                 &::before
                     content: ""
@@ -385,6 +532,9 @@
                 background-color: rgba(#D3DCFC , 0.3 )
                 margin-right: 5px
 
+                @include r(640px)
+                    margin-bottom: 10px
+
                 &::before
                     content: ""
                     position: absolute
@@ -408,6 +558,9 @@
                 background-color: #FFE4E3
                 margin-right: auto
 
+                @include r(640px)
+                    margin: 0 0 10px
+
                 &::before
                     content: "!"
                     position: absolute
@@ -426,6 +579,9 @@
                 text-transform: uppercase
                 margin-left: 20px
 
+                @include r(640px)
+                    width: 100%
+                    margin-left: 0
 
                 *
                     margin-bottom: 5px
@@ -507,6 +663,10 @@
             border-bottom: 1px solid #D9DCEE
             margin-bottom: 15px
 
+            @include r(640px)
+                flex-direction: column
+                align-items: flex-start
+
             &::before
                 content: ""
                 position: absolute
@@ -523,6 +683,9 @@
                 text-transform: uppercase
                 padding-left: 18px
                 margin-right: 10px
+
+                @include r(640px)
+                    margin: 5px 0 10px
 
                 &::before
                     content: ""
@@ -548,6 +711,13 @@
                 white-space: nowrap
                 text-overflow: ellipsis
                 margin-right: auto
+
+                @include r(767px)
+                    font-size: 10px
+                    width: 300px
+
+                @include r(640px)
+                    width: 100%
         
             .options
                 position: relative
@@ -558,6 +728,11 @@
                 height: 22px
                 border-radius: 100%
                 background-color: rgba(0, 0, 0, 0.05)
+
+                @include r(640px)
+                    position: absolute
+                    top: 5px
+                    right: 15px
 
                 &::after
                     content: ""
@@ -576,11 +751,18 @@
             position: relative
             padding: 0 20px 20px 70px
 
+            @include r(640px)
+                padding: 0 20px 50px
+
         &__info
             display: flex
             align-items: center
             margin-bottom: 10px
             padding-right: 70px
+
+            @include r(640px)
+                padding-right: 0
+                margin-bottom: 25px
 
             .img
                 position: absolute
@@ -593,15 +775,27 @@
                 background-repeat: no-repeat
                 background-position: center
 
+                @include r(640px)
+                    left: 20px
+
             .name
                 font-size: 14px
                 font-weight: 700
                 margin-right: 30px
                 margin-right: auto
 
+                @include r(640px)
+                    font-size: 12px
+                    padding-left: 45px
+
             .users
                 display: flex
                 margin-right: 35px
+
+                @include r(640px)
+                    position: absolute
+                    bottom: 15px
+                    left: 20px
 
                 li
                     background-size: cover
@@ -624,6 +818,12 @@
                 border-radius: 3px
                 transition: background-color 0.3s,  transform 0.3s
 
+                @include r(640px)
+                    position: absolute
+                    bottom: 16px
+                    left: 78px
+                    font-size: 12px
+
                 &:hover
                     background-color: #f5f6fa
                 &:active    
@@ -639,22 +839,35 @@
                 border: none
                 background-color: #FFE4E3
 
+                @include r(640px)
+                    width: 22px
+                    height: 22px
+
                 &::before
-                   content: ""
-                   position: absolute
-                   left: 50%
-                   top: 50%
-                   transform: translate(-50%, -50%)
-                   width: 17px
-                   height: 16px
-                   background-image: url(../img/svg/trash.svg)
-                   background-size: cover
-                   background-repeat: no-repeat
-                   background-position: center
-                   filter: invert(43%) sepia(16%) saturate(3707%) hue-rotate(324deg) brightness(99%) contrast(103%) 
+                    content: ""
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%, -50%)
+                    width: 17px
+                    height: 16px
+                    background-image: url(../img/svg/trash.svg)
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center
+                    filter: invert(43%) sepia(16%) saturate(3707%) hue-rotate(324deg) brightness(99%) contrast(103%) 
+
+                    @include r(640px)
+                        transform: translate(-50%, -50%) scale(0.8)
 
         &__message
             font-size: 16px
+
+            @include r(767px)
+                font-size: 14px
+
+            @include r(640px)
+                font-size: 12px
 
     .comment
         border-radius: 10px
@@ -678,6 +891,10 @@
             border-bottom: 1px solid #D9DCEE
             margin-bottom: 15px
 
+            @include r(640px)
+                flex-direction: column
+                align-items: flex-start
+
             &::before
                 content: ""
                 position: absolute
@@ -687,13 +904,15 @@
                 height: calc(100% + 1px)
                 background-color: #16D7E3
 
-
             .name
                 position: relative
                 font-size: 10px
                 text-transform: uppercase
                 padding-left: 18px
                 margin-right: 10px
+
+                @include r(640px)
+                    margin: 5px 0 10px
 
                 &::before
                     content: ""
@@ -720,6 +939,13 @@
                 text-overflow: ellipsis
                 margin-right: auto
 
+                @include r(767px)
+                    font-size: 10px
+                    width: 300px
+
+                @include r(640px)
+                    width: 100%
+
             .filter
                 position: relative
                 font-size: 10px
@@ -728,6 +954,7 @@
                 padding: 12px 35px 10px 15px
                 border-radius: 5px
                 background-color: #E3F4EE
+
 
                 &::after
                     content: ""
@@ -740,15 +967,78 @@
                     border-right: 2px solid #44B759
                     border-bottom: 2px solid #44B759
 
+                    @include r(767px)
+                        right: 13px
+
+                    @include r(640px)
+                        top: 6px
+                        right: 7px
+
+                @include r(767px)
+                    padding: 0
+                    font-size: 0
+                    break-radius: 5px
+                    min-width: 33px
+                    width: 33px
+                    height: 33px 
+                    margin-left: 15px
+
+                @include r(640px)
+                    position: absolute
+                    top: 5px
+                    right: 45px
+                    min-width: 22px
+                    width: 22px
+                    height: 22px
+
+            .mobile-options
+                display: none
+
+                @include r(640px)
+                    position: absolute
+                    top: 5px
+                    right: 15px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    width: 22px
+                    height: 22px
+                    border-radius: 100%
+                    background-color: rgba(0, 0, 0, 0.05)
+
+                    &::after
+                        content: ""
+                        position: absolute
+                        left: 50%
+                        top: 50%
+                        transform: translate(-50%, -50%)
+                        width: 3px
+                        height: 13px
+                        background-image: url(../img/svg/vertical-dots.svg)
+                        background-size: cover
+                        background-repeat: no-repeat
+                        background-position: center
 
         &__inner
             position: relative
             padding: 0 20px 20px 100px
 
+            @include r(767px)
+                padding-left: 20px
+
         &__info
             display: flex
             align-items: center
             margin-bottom: 15px
+
+            @include r(767px)
+                padding-left: 80px
+                margin-bottom: 25px
+
+            @include r(640px)
+                flex-direction: column
+                align-items: flex-start
+                margin-bottom: 5px
 
             &::before
                 content: ""
@@ -761,7 +1051,6 @@
                 background-size: cover
                 background-repeat: no-repeat
                 background-position: center
-
 
             .img
                 position: absolute
@@ -779,11 +1068,22 @@
                 font-weight: 700
                 margin-right: auto
 
+                @include r(640px)
+                    font-size: 12px
+                    margin-bottom: 5px
+
             .history
                 color: $blue
                 font-size: 14px
                 text-decoration: underline
                 margin-right: 25px
+
+                @include r(767px)
+                    font-size: 12px
+                    margin-right: 15px
+
+                @include r(640px)
+                    display: none
 
             .stats
                 display: flex
@@ -810,11 +1110,12 @@
                     width: 12px
                     height: 12px
                     background-image: url(../img/svg/arrow-right.svg)
-                    background-size: cover
+                    background-size: contain
                     background-repeat: no-repeat
                     background-position: center
                     transform: rotate(-90deg)
                     filter: invert(61%) sepia(14%) saturate(1776%) hue-rotate(79deg) brightness(95%) contrast(91%)
+           
             .down
                 position: relative
                 font-size: 16px
@@ -830,7 +1131,7 @@
                     width: 12px
                     height: 12px
                     background-image: url(../img/svg/arrow-right.svg)
-                    background-size: cover
+                    background-size: contain
                     background-repeat: no-repeat
                     background-position: center
                     transform: rotate(90deg)
@@ -840,6 +1141,12 @@
             font-size: 16px
             color: #798196
             margin-bottom: 10px
+
+            @include r(767px)
+                font-size: 14px
+
+            @include r(640px)
+                font-size: 12px
 
             span
                 color: #47426A
@@ -914,6 +1221,10 @@
                 align-items: center
                 margin: 20px 0 25px
 
+                @include r(640px)
+                    flex-wrap: wrap
+                    margin-bottom: 15px
+
                 .photo
                     border-radius: 3px
                     min-width: 22px
@@ -921,12 +1232,48 @@
                     height: 22px
                     background-color: #f2f5fe
                     margin-right: 10px
+                    font-size: 0
+
+                    img
+                        width: 22px
+                        height: 22px
+
+                        @include r(640px)
+                            margin-right: 5px
+
+                    @include r(640px)
+                        position: relative
+                        display: flex
+                        align-items: center
+                        width: auto
+                        font-size: 12px
+                        background-color: #fff
+                        width: 100%
+                        padding-left: 20px
+                        font-family: Raleway
+                        margin-bottom: 15px
+
+                        &::before
+                            content: ""
+                            position: absolute
+                            left: 0
+                            top: 5px
+                            width: 10px
+                            height: 8px
+                            background-image: url(../img/svg/answer.svg)
+                            background-size: cover
+                            background-repeat: no-repeat
+                            background-position: center
 
                 .input
                     position: relative
                     max-width: 515px
                     width: 100%
                     margin-right: 15px
+
+                    @include r(640px)
+                        max-width: 100%
+                        margin-right: 0
 
                     input
                         padding: 10px
@@ -935,6 +1282,10 @@
                         border-radius: 5px
                         width: 100%
                         outline: none
+
+                        @include r(640px)
+                            font-size: 12px
+                            margin-bottom: 10px
 
                 .send
                     color: white
@@ -956,6 +1307,9 @@
                     cursor: pointer
                     opacity: 0.5
 
+                    @include r(640px)
+                        display: none
+
                     &::before,
                     &::after
                         content: ""
@@ -971,6 +1325,37 @@
                     
                     &::after
                         transform: rotate(45deg)
+
+                .mobile-cancel
+                    display: none
+
+                    @include r(640px)
+                        position: relative 
+                        display: inline-block
+                        color: #b0bdb5
+                        border-radius: 5px
+                        background-color: #f5f6fa
+                        font-weight: 700
+                        text-align: center
+                        padding: 12px 15px 12px 25px
+                        font-size: 12px
+                        margin-right: 15px
+
+                        &::before,
+                        &::after 
+                            content: ''
+                            position: absolute
+                            left: 8px
+                            top: 50%
+                            width: 10px
+                            height: 2px
+                            background-color: #b0bdb5
+
+                        &::before
+                            transform: translateY(-50%) rotate(-45deg)
+                        
+                        &::after
+                            transform: translateY(-50%) rotate(45deg)
 
             .wrapper
                 display: flex
@@ -1036,6 +1421,9 @@
                     margin-right: 10px
                     background-color: #FFE4E3
 
+                    @include r(640px)
+                        display: none
+
                     &::before
                         content: ""
                         position: absolute
@@ -1059,6 +1447,9 @@
                     background-color: #E8EAF4
                     margin-left: auto
 
+                    @include r(640px)
+                        display: none
+
                     &::before
                         content: ""
                         position: absolute
@@ -1072,6 +1463,16 @@
                         background-repeat: no-repeat
                         background-position: center
                         filter: invert(52%) sepia(52%) saturate(296%) hue-rotate(194deg) brightness(85%) contrast(95%)
+
+            .mobile-history
+                display: none
+
+                @include r(640px)
+                    display: inline-block
+                    color: $blue
+                    text-decoration: underline
+                    font-size: 12px
+                    margin-bottom: 20px
 
     &__more
         font-size: 16px
@@ -1091,6 +1492,7 @@
 
     &__filters
         display: flex
+        align-items: flex-start
         margin-bottom: 15px
 
         ul
@@ -1119,6 +1521,9 @@
                 justify-content: center
                 cursor: default
 
+                @include r(640px)
+                    font-size: 12px
+
             &.filter button
                 position: relative
                 font-size: 14px
@@ -1128,6 +1533,10 @@
                 background-color: #FFE4E3
                 color: $red
                 transition: background-color 0.3s, border-color 0.3s
+
+                @include r(640px)
+                    font-size: 12px
+                
                 &:hover
                     background-color: rgba(0, 0, 0, 0)
                     border-color: $red
@@ -1218,9 +1627,109 @@
                 border-bottom: 3px solid #798196
                 transition: border-color 0.3s
 
+                @include r(767px)
+                    display: none
+
+            @include r(767px)
+                min-width: 47px
+                width: 47px
+                height: 37px
+                padding: 0
+                font-size: 0
+
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 100%
+                    background-image: url(../img/svg/stats-popup-open.svg)
+                    background-size: 45%
+                    background-position: center
+                    background-repeat: no-repeat
+                    filter: invert(36%) sepia(100%) saturate(1640%) hue-rotate(214deg) brightness(98%) contrast(95%)
+
+                @include r(640px)
+                    min-width: 30px
+                    width: 30px
+                    height: 30px
+                    border-radius: 100%
+
+        .search
+            display: none
+
+            @include r(1200px)
+                display: block
+                position: relative
+                margin-right: 15px
+
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 10px
+                    top: 13px
+                    width: 12px
+                    height: 12px
+                    background-image: url(../img/svg/search-grey.svg)
+                    background-size: contain
+                    background-repeat: no-repeat
+                    background-position: center
+
+                input
+                    font-size: 14px
+                    padding: 10px 10px 10px 30px
+                    background-color: #fff
+                    border: 1px solid #d9dcee
+                    border-radius: 5px
+                    outline: none
+                    transition: border-color 0.3s
+
+                    &:focus
+                        border-color: $blue
+
+            @include r(640px)
+                display: none
+
+        .mobile-search
+            display: none
+
+            @include r(640px)
+                display: block
+                position: relative
+                width: 30px
+                height: 30px
+                border-radius: 100%
+                background-color: rgba(#d9dcee,  0.5)
+                margin-right: 10px
+                margin-left: 10px
+
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 100%
+                    background-image: url(../img/svg/search-grey.svg)
+                    background-size: 50% 
+                    background-repeat: no-repeat
+                    background-position: center
+                    filter: invert(77%) sepia(100%) saturate(1640%) hue-rotate(214deg) brightness(98%) contrast(95%)
+
     &__search
         max-width: 540px
         width: 100%
+
+        @include r(1200px)
+            position: absolute
+            top: -20px
+            right: -50px
+            background-color: #f5f6fa
+            transform: translateX(100%)
+            transition: transform 0.3s
+
+
 
         .search
             position: relative
@@ -1228,6 +1737,12 @@
             padding-right: 45px
             width: 100%
             margin-bottom: 20px
+
+            @include r(1200px)
+                max-width: 100%
+                padding: 15px 45px 20px 30px
+                margin: 0
+                box-shadow: -10px 0px 30px rgba(105, 131, 216, 0.15)
 
             &::before
                 content: ""
@@ -1241,6 +1756,9 @@
                 background-size: contain
                 background-repeat: no-repeat
                 background-position: center
+
+                @include r(1200px)
+                    left: 50px
 
             input
                 padding: 13px 20px 11px 50px
@@ -1287,6 +1805,14 @@
         background-color: #fff
         height: calc(100% - 30px)
         overflow-y: auto
+
+        @include r(1200px)
+            border-radius: 0
+            height: 600px
+            overflow-x: hidden
+            overflow-y: auto
+
+        .wrapper
 
         .close
             position: absolute
