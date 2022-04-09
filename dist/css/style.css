@@ -4152,6 +4152,11 @@ body {
   border-radius: 5px;
   overflow: hidden;
 }
+@media (max-width: 1000px) {
+  .widgets-card__preloader {
+    height: 30px;
+  }
+}
 .widgets-card__preloader::before {
   content: "";
   position: absolute;
