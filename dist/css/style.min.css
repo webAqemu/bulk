@@ -807,7 +807,7 @@ body {
     overflow-y: auto;
   }
   .sidebar.opened {
-    width: 190px;
+    width: 200px;
   }
 }
 .sidebar__inner {
@@ -1078,7 +1078,10 @@ body {
 }
 @media (max-width: 767px) {
   .sidebar__notifications {
-    left: 25px;
+    left: 160px;
+  }
+  .sidebar__notifications .circle-mobile {
+    right: 163px;
   }
 }
 .sidebar__notifications .circle {

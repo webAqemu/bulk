@@ -44,7 +44,7 @@
         overflow-y: auto
 
         &.opened
-            width: 190px
+            width: 200px
 
     &__inner
         display: flex
@@ -284,7 +284,10 @@
                 border-radius: 100%
 
         @include r(767px)
-            left: 25px
+            left: 160px
+
+            .circle-mobile
+                right: 163px
 
         .circle
             width: 9px
@@ -295,6 +298,7 @@
             @include r(1400px)
                 margin-right: 0
                 border: 1px solid #E8EAF4
+
 
     &__user
         display: flex
