@@ -1043,7 +1043,7 @@ body {
 }
 @media (max-width: 1400px) {
   .sidebar__link {
-    padding-left: 90px;
+    padding-left: 85px;
     white-space: nowrap;
     border-bottom: 1px solid #D9DCEE;
   }
@@ -1064,12 +1064,16 @@ body {
 }
 @media (max-width: 1400px) {
   .sidebar__notifications {
-    font-size: 0;
-    top: auto;
-    transform: none;
     right: auto;
-    left: 43px;
-    bottom: 11px;
+    left: 195px;
+  }
+  .sidebar__notifications .circle-mobile {
+    position: absolute;
+    right: 180px;
+    bottom: -2px;
+    width: 9px;
+    height: 9px;
+    border-radius: 100%;
   }
 }
 @media (max-width: 767px) {
