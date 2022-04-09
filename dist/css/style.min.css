@@ -3956,6 +3956,7 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  min-height: 30px;
 }
 @media (max-width: 1000px) {
   .widgets-card__top {
@@ -4141,11 +4142,9 @@ body {
     filter: invert(38%) sepia(47%) saturate(1135%) hue-rotate(194deg) brightness(106%) contrast(98%);
   }
 }
-.widgets-card__top + .widgets-card__preloader {
-  margin-top: -20px;
-}
 .widgets-card__preloader {
   position: relative;
+  display: inline-block;
   background-color: #f5f6fa;
   height: 38px;
   margin-bottom: 10px;

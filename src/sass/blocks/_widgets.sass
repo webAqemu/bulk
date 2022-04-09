@@ -488,6 +488,7 @@
             display: flex
             align-items: center
             margin-bottom: 20px
+            min-height: 30px
 
             @include r(1000px)
                 margin: 0 -20px 10px
@@ -653,11 +654,9 @@
                     background-position: center
                     filter: invert(38%) sepia(47%) saturate(1135%) hue-rotate(194deg) brightness(106%) contrast(98%)
 
-        &__top + .widgets-card__preloader
-            margin-top: -20px
-
         &__preloader
             position: relative
+            display: inline-block
             background-color: #f5f6fa
             height: 38px
             margin-bottom: 10px
@@ -683,8 +682,6 @@
                     
                 100%
                     left: 110%
-                    
-
 
             &--xs
                 width: 15%
