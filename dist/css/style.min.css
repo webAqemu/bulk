@@ -895,7 +895,7 @@ body {
 }
 @media (max-width: 767px) {
   .sidebar__create .circle::before, .sidebar__create .circle::after {
-    left: 14px;
+    left: 13px;
     top: 17px;
   }
 }
@@ -3842,8 +3842,26 @@ body {
   border-radius: 100%;
   background-color: #F71514;
 }
+.widgets-card .error:hover .error__msg {
+  opacity: 1;
+}
 .widgets-card .error span {
   display: none;
+}
+.widgets-card .error__msg {
+  position: absolute;
+  bottom: 80%;
+  left: 80%;
+  width: 200px;
+  background-color: #FEF9E0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #47426A;
+  padding: 6px 10px;
+  font-size: 12px;
+  line-height: 1.2;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
 }
 .widgets-card .code {
   position: relative;
@@ -4122,6 +4140,53 @@ body {
     background-position: center;
     filter: invert(38%) sepia(47%) saturate(1135%) hue-rotate(194deg) brightness(106%) contrast(98%);
   }
+}
+.widgets-card__top + .widgets-card__preloader {
+  margin-top: -20px;
+}
+.widgets-card__preloader {
+  position: relative;
+  background-color: #f5f6fa;
+  height: 38px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.widgets-card__preloader::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 10px;
+  height: 30px;
+  width: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 25px 20px white;
+  opacity: 0.3;
+  animation: preloader 1.5s infinite;
+}
+@keyframes preloader {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+.widgets-card__preloader--xs {
+  width: 15%;
+}
+.widgets-card__preloader--sm {
+  width: 20%;
+}
+.widgets-card__preloader--md {
+  width: 40%;
+}
+.widgets-card__preloader--lg {
+  width: 60%;
+}
+.widgets-card__preloader--full {
+  width: 100%;
 }
 
 .popup-copied {
@@ -5729,6 +5794,9 @@ body {
 @media (max-width: 640px) {
   .settings__criteria-wrapper {
     overflow-x: auto;
+  }
+  .settings__criteria-wrapper::-webkit-scrollbar {
+    height: 0;
   }
 }
 .settings__criteria .headers {
@@ -9992,8 +10060,11 @@ body {
     padding-left: 0;
     display: flex;
     flex-direction: column;
-    height: fit-content;
+    min-height: fit-content;
   }
+}
+.pay__coupons .pay__top {
+  min-height: fit-content;
 }
 @media (max-width: 767px) {
   .pay__coupons .pay__top {
@@ -10108,7 +10179,6 @@ body {
   justify-content: flex-start;
   text-align: center;
   margin-bottom: 2px;
-  height: calc(100% - 60px);
 }
 @media (max-width: 767px) {
   .pay .coupon__info {

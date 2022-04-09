@@ -250,9 +250,11 @@
             padding-left: 0
             display: flex
             flex-direction: column
-            height: fit-content
+            min-height: fit-content
 
         .pay__top
+            min-height: fit-content
+
             @include r(767px)
                 flex-direction: column
                 align-items: flex-start
@@ -351,7 +353,6 @@
             justify-content: flex-start
             text-align: center
             margin-bottom: 2px
-            height: calc( 100% - 60px )
 
             @include r(767px)
                 padding: 20px
