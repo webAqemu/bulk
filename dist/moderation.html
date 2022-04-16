@@ -85,7 +85,10 @@
                     <li class="opened opened--widget-review"> Отзывы</li>
                     <li class="filter has-msg">
                       <button>Жалобы</button>
-                      <div class="msg">У вас автоматически включился фильтр “Жалобы”, т.к. есть новые жалобы </div>
+                      <div class="msg"> 
+                        <div class="close"></div>
+                        <p>У вас автоматически включился фильтр “Жалобы”, т.к. есть новые жалобы </p>
+                      </div>
                     </li>
                   </ul>
                   <button class="mobile-search"></button>
@@ -144,7 +147,12 @@
                   <div class="chat__header">
                     <div class="name">Чаты</div>
                     <div class="url">К какой странице / товару прикреплён данный отзыв</div>
-                    <button class="options"></button>
+                    <button class="options">
+                      <ul> 
+                        <li class="option">Искать в текущем</li>
+                        <li class="option">Искать везде</li>
+                      </ul>
+                    </button>
                   </div>
                   <div class="chat__inner"> 
                     <div class="chat__info"> 
@@ -218,7 +226,13 @@
                   <div class="comment__header">
                     <div class="name">комментарии</div>
                     <div class="url">К какой странице / товару прикреплён данный отзыв</div>
-                    <button class="filter">Опубликованное</button>
+                    <button class="filter">Опубликованное
+                      <ul> 
+                        <li class="option grey">на проверке</li>
+                        <li class="option green">опубликованное</li>
+                        <li class="option red">удаленные</li>
+                      </ul>
+                    </button>
                     <button class="mobile-options"></button>
                   </div>
                   <div class="comment__inner"> 
@@ -265,7 +279,12 @@
               <div class="moderation__search">
                 <div class="search">
                   <input type="text" placeholder="Поиск">
-                  <button class="filters"> </button>
+                  <button class="filters"> 
+                    <ul> 
+                      <li class="option">Искать в текущем</li>
+                      <li class="option">Искать везде</li>
+                    </ul>
+                  </button>
                 </div>
                 <div class="moderation__result"> 
                   <div class="wrapper">

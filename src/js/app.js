@@ -102,6 +102,15 @@ if(moderation) {
     if(e.target.classList.contains('show')) {
       moderation.querySelector(".moderation-popup").classList.add('active')
     }
+    if(e.target.classList.contains('close') && e.target.parentElement.classList.contains('msg')){
+      e.target.closest('.msg').classList.add('hiden')
+    }
+    if(e.target.classList.contains('filters') || e.target.classList.contains('options') || e.target.classList.contains('filter')) {
+      e.target.querySelector('ul').classList.add('active')
+    }
+    if(e.target.classList.contains('option') && e.target.parentElement.classList.contains('active')) {
+      e.target.parentElement.classList.remove('active')
+    }
   })
 }
 

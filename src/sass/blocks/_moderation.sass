@@ -209,6 +209,13 @@
                 border: none
                 margin-right: 10px
                 background-color: #E3F4EE
+                transition: background-color 0.3s, transform 0.3s
+
+                &:hover
+                    background-color: #CFE9E0
+
+                &:active
+                    background-color: #B1DCCD
 
                 @include r(767px)
                     margin-left: 15px
@@ -239,6 +246,13 @@
                 border: none
                 margin-right: 10px
                 background-color: #FFE4E3
+                transition: background-color 0.3s, transform 0.3s
+
+                &:hover
+                    background-color: #F5D7D6
+
+                &:active
+                    background-color: #EDBDBC
 
                 @include r(640px)
                     display: none
@@ -265,6 +279,14 @@
                 border-radius: 100%
                 border: none
                 background-color: #E8EAF4
+
+                transition: background-color 0.3s, transform 0.3s
+
+                &:hover
+                    background-color: #DEE0EB
+
+                &:active
+                    background-color: #CACEE9
                 
                 @include r(640px)
                     display: none
@@ -531,6 +553,12 @@
                 border-radius: 5px
                 background-color: rgba(#D3DCFC , 0.3 )
                 margin-right: 5px
+                transition: transform 0.3s, background-color 0.3s
+
+                &:hover
+                    background-color: #E9ECF6
+                &:active
+                    background-color: #D7DDF0
 
                 @include r(640px)
                     margin-bottom: 10px
@@ -557,6 +585,12 @@
                 border-radius: 5px
                 background-color: #FFE4E3
                 margin-right: auto
+                transition: transform 0.3s, background-color 0.3s
+
+                &:hover
+                    background-color: #F5D7D6
+                &:active
+                    background-color: #ECBFBE
 
                 @include r(640px)
                     margin: 0 0 10px
@@ -652,12 +686,12 @@
 
     .chat
         border-radius: 10px
-        overflow: hidden
         background-color: #fff
 
         &__header
             position: relative
             display: flex
+            z-index: 2
             align-items: center
             padding: 5px 15px 5px 25px
             border-bottom: 1px solid #D9DCEE
@@ -675,6 +709,7 @@
                 width: 10px
                 height: calc(100% + 1px)
                 background-color: $violent
+                border-top-left-radius: 10px
 
 
             .name
@@ -729,6 +764,15 @@
                 border-radius: 100%
                 background-color: rgba(0, 0, 0, 0.05)
 
+                transition: background-color 0.3s, transform 0.3s
+
+                &:hover
+                    background-color: rgba(0, 0, 0, 0.1)
+
+                &:active
+                    background-color: rgba(0, 0, 0, 0.2)
+
+
                 @include r(640px)
                     position: absolute
                     top: 5px
@@ -740,12 +784,49 @@
                     left: 50%
                     top: 50%
                     transform: translate(-50%, -50%)
-                    width: 3px
+                    width: 4px
                     height: 13px
                     background-image: url(../img/svg/vertical-dots.svg)
-                    background-size: cover
+                    background-size: contain
                     background-repeat: no-repeat
                     background-position: center
+
+                ul
+                    position: absolute
+                    left: 50%
+                    bottom: calc(100% + 5px)
+                    width: 180px
+                    padding: 5px
+                    background-color: #fff
+                    box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+                    border-radius: 15px
+                    transform: translateX(-50%)
+                    opacity: 0
+                    pointer-events: none
+                    transition: opacity 0.3s
+
+                    @include r(767px)
+                        right: 0
+                        transform: none
+                        left: auto
+
+                    &.active
+                        opacity: 1
+                        pointer-events: inherit
+
+                li
+                    padding: 10px 20px
+                    border-radius: 10px
+                    background-color: #f5f6fa
+                    font-size: 14px
+                    text-align: left
+                    transition: color 0.3s
+
+                    &:not(:last-child)
+                        margin-bottom: 5px
+
+                    &:hover
+                        color: $blue
 
         &__inner
             position: relative
@@ -839,6 +920,17 @@
                 border: none
                 background-color: #FFE4E3
 
+                transition: background-color 0.3s, transform 0.3s
+
+                &:hover
+                    transform: scale(1.1)
+                    background-color: #F5D7D6
+
+                &:active
+                    transform: scale(0.9)
+                    background-color: #EDBDBC
+
+
                 @include r(640px)
                     width: 22px
                     height: 22px
@@ -929,7 +1021,6 @@
 
     .comment
         border-radius: 10px
-        overflow: hidden
         background-color: #fff
 
         button
@@ -961,6 +1052,7 @@
                 width: 10px
                 height: calc(100% + 1px)
                 background-color: #16D7E3
+                border-top-left-radius: 10px
 
             .name
                 position: relative
@@ -1012,7 +1104,16 @@
                 padding: 12px 35px 10px 15px
                 border-radius: 5px
                 background-color: #E3F4EE
+                transition: background-color 0.3s
 
+
+                &:hover
+                    transform: none
+                    background-color: #CFE9E0
+                
+                &:active
+                    transform: none
+                    background-color: #B6D8CC
 
                 &::after
                     content: ""
@@ -1048,6 +1149,51 @@
                     min-width: 22px
                     width: 22px
                     height: 22px
+
+                ul
+                    position: absolute
+                    left: 50%
+                    top: calc(100% + 5px)
+                    z-index: 2
+                    width: calc(100% + 10px)
+                    padding: 5px
+                    background-color: #fff
+                    box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+                    border-radius: 15px
+                    transform: translateX(-50%)
+                    opacity: 0
+                    pointer-events: none
+                    transition: opacity 0.3s
+
+                    &.active
+                        opacity: 1
+                        pointer-events: inherit
+
+                li
+                    padding: 10px 20px
+                    border-radius: 10px
+                    font-size: 10px
+                    text-align: left
+                    transition: color 0.3s
+
+                    &:not(:last-child)
+                        margin-bottom: 5px
+
+
+                    &.grey
+                        background-color: #f5f6fa
+                        color: #8792B7
+
+                    &.green
+                        background-color: rgba(227, 244, 238, 0.5)
+                        color: #44B759
+
+                    &.red
+                        background-color: #FFE4E3
+                        color: $red
+
+                    &:hover
+                        color: $blue
 
             .mobile-options
                 display: none
@@ -1258,6 +1404,13 @@
                 border-radius: 5px
                 background-color: rgba(#D3DCFC , 0.3 )
                 margin-right: 5px
+
+                transition: transform 0.3s, background-color 0.3s
+
+                &:hover
+                    background-color: #E9ECF6
+                &:active
+                    background-color: #D7DDF0
 
                 &::before
                     content: ""
@@ -1478,6 +1631,13 @@
                     border: none
                     margin-right: 10px
                     background-color: #FFE4E3
+                    transition: background-color 0.3s, transform 0.3s
+
+                    &:hover
+                        background-color: #F5D7D6
+
+                    &:active
+                        background-color: #EDBDBC
 
                     @include r(640px)
                         display: none
@@ -1504,6 +1664,14 @@
                     border: none
                     background-color: #E8EAF4
                     margin-left: auto
+
+                    transition: background-color 0.3s, transform 0.3s
+
+                    &:hover
+                        background-color: #DEE0EB
+
+                    &:active
+                        background-color: #CACEE9
 
                     @include r(640px)
                         display: none
@@ -1632,9 +1800,16 @@
                     font-size: 12px
                     line-height: 1.4
                     background-color: #fff
-                    opacity: 0
-                    pointer-events: none
                     transition: opacity 0.3s
+
+                    @include r(767px)
+                        left: 0
+                        transform: none
+
+                    &.hiden
+                        opacity: 0
+                        pointer-events: none
+
 
                     &::after
                         content: ""
@@ -1648,6 +1823,40 @@
                         background-size: contain
                         background-repeat: no-repeat
                         background-position: center
+
+                        @include r(767px)
+                            left: 10px
+                            transform: translate(0%, 50%)
+
+                    .close
+                        position: absolute
+                        top: 10px
+                        right: 10px
+                        width: 15px
+                        height: 15px
+                        cursor: pointer
+
+                        &::before,
+                        &::after
+                            content: ""
+                            position: absolute
+                            top: 50%
+                            left: 50%
+                            width: 10px
+                            height: 2px
+                            background-color: #798196
+                            transition: background-color 0.3s
+
+                        &:hover
+                            &::before,
+                            &::after
+                                background-color: $blue
+
+                        &::before
+                            transform: translate(-50%, -50%) rotate(45deg)
+                        
+                        &::after
+                            transform: translate(-50%, -50%) rotate(-45deg)
 
             button:hover + .msg
                 opacity: 1
@@ -1841,18 +2050,57 @@
                 transform: translateY(-50%)
                 width: 40px
                 height: 40px
-                background-image: url(../img/svg/stats-popup-open.svg)
-                background-size: 60%
-                background-repeat: no-repeat
-                background-position: center
-                filter: invert(36%) sepia(100%) saturate(1640%) hue-rotate(214deg) brightness(98%) contrast(95%)
-                transition: transform 0.3s
+                &::after
+                    content: ""
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 100%
+                    background-image: url(../img/svg/stats-popup-open.svg)
+                    background-size: 60%
+                    background-repeat: no-repeat
+                    background-position: center
+                    filter: invert(36%) sepia(100%) saturate(1640%) hue-rotate(214deg) brightness(98%) contrast(95%)
+                    transition: transform 0.3s
+
+                &:hover::after
+                    transform: scale(1.1)
+
+                &:active::after
+                    transform: scale(0.9)
+
+            ul
+                position: absolute
+                left: 50%
+                bottom: 100%
+                width: 180px
+                padding: 5px
+                background-color: #fff
+                box-shadow: 0px 15px 20px rgba(105, 131, 216, 0.15)
+                border-radius: 15px
+                transform: translateX(-50%)
+                opacity: 0
+                pointer-events: none
+                transition: opacity 0.3s
+
+                &.active
+                    opacity: 1
+                    pointer-events: inherit
+
+            li
+                padding: 10px 20px
+                border-radius: 10px
+                background-color: #f5f6fa
+                font-size: 14px
+                text-align: left
+                transition: color 0.3s
+
+                &:not(:last-child)
+                    margin-bottom: 5px
 
                 &:hover
-                    transform: translateY(-50%) scale(1.1)
-
-                &:active
-                    transform: translateY(-50%) scale(0.9)
+                    color: $blue
             
     &__result
         position: relative

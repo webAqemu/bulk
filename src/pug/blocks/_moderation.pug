@@ -27,7 +27,9 @@
                     li.opened.opened--widget-review  Отзывы
                     li.filter.has-msg
                         button Жалобы
-                        .msg У вас автоматически включился фильтр “Жалобы”, т.к. есть новые жалобы 
+                        .msg 
+                            .close
+                            p У вас автоматически включился фильтр “Жалобы”, т.к. есть новые жалобы 
                 button.mobile-search
                 .search
                     input(type="text" placeholder="Поиск")
@@ -79,6 +81,9 @@
                     .name Чаты
                     .url К какой странице / товару прикреплён данный отзыв
                     button.options
+                        ul 
+                            li.option Искать в текущем
+                            li.option Искать везде
                 .chat__inner 
                     .chat__info 
                         .img(style="background-image:url(../img/profile-image.jpg)")
@@ -139,6 +144,10 @@
                     .name комментарии
                     .url К какой странице / товару прикреплён данный отзыв
                     button.filter Опубликованное
+                        ul 
+                            li.option.grey на проверке
+                            li.option.green опубликованное
+                            li.option.red удаленные
                     button.mobile-options
                 .comment__inner 
                     .comment__info 
@@ -179,6 +188,9 @@
             .search
                 input(type="text" placeholder="Поиск")
                 button.filters 
+                    ul 
+                        li.option Искать в текущем
+                        li.option Искать везде
             .moderation__result 
                 .wrapper
                     button.close Закрыть
