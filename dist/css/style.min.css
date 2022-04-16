@@ -2097,6 +2097,61 @@ body {
 .popup__close::after {
   transform: rotate(-45deg);
 }
+.popup-success, .popup-error {
+  position: relative;
+  z-index: -1;
+  background-color: #fff;
+  width: 320px;
+  padding: 20px 20px 20px 80px;
+}
+.popup-success::before, .popup-error::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+}
+.popup-success .title, .popup-error .title {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.popup-success .desc, .popup-error .desc {
+  font-size: 14px;
+}
+.popup-success::before {
+  background-color: #16D7E3;
+}
+.popup-success::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  background-image: url(../img/svg/done.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  filter: invert(100%);
+}
+.popup-error::before {
+  content: "!";
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 24px;
+  color: #F71514;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFE4E3;
+}
 
 .popup-notification {
   position: relative;
@@ -4481,6 +4536,7 @@ body {
   overflow: hidden;
   line-height: 1;
   width: fit-content;
+  cursor: pointer;
 }
 .popup-moderators__moderator:not(:last-child) {
   margin-bottom: 15px;
@@ -6840,6 +6896,7 @@ body {
   line-height: 1;
   width: fit-content;
   max-width: 100%;
+  cursor: pointer;
 }
 .popup-add__item:not(:last-child) {
   margin-bottom: 15px;
@@ -9202,7 +9259,7 @@ body {
 .person {
   height: 100%;
 }
-@media (max-width: 767px) {
+@media (max-width: 1650px) {
   .person {
     height: auto;
   }
@@ -9229,8 +9286,7 @@ body {
 }
 @media (max-width: 1650px) {
   .person__inner {
-    flex-direction: column;
-    min-height: fit-content;
+    display: block;
   }
 }
 .person__info {
@@ -9244,6 +9300,8 @@ body {
 }
 @media (max-width: 1650px) {
   .person__info {
+    display: flex;
+    flex-direction: column;
     max-width: 100%;
     min-height: fit-content;
     padding-right: 0;
@@ -9551,6 +9609,7 @@ body {
   font-weight: 700;
   color: white;
   padding: 11px 15px 9px;
+  min-height: fit-content;
   border-radius: 5px;
   background-color: #4D74F5;
   transition: background-color 0.3s, transform 0.3s;

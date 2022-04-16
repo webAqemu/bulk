@@ -163,3 +163,65 @@
         
         &::after
             transform: rotate(-45deg)
+
+    &-success,
+    &-error
+        position: relative
+        z-index: -1
+        background-color: #fff
+        width: 320px
+        padding: 20px 20px 20px 80px
+
+        &::before
+            content: ""
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: 20px
+            width: 45px
+            height: 45px
+            border-radius: 100%
+
+        .title
+            font-family: Raleway
+            font-weight: 700
+            font-size: 16px
+            margin-bottom: 10px
+        
+        .desc
+            font-size: 14px
+
+    &-success
+        &::before
+            background-color: #16D7E3
+
+        &::after
+            content: ""
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: 20px
+            width: 45px
+            height: 45px
+            border-radius: 100%
+            background-image: url(../img/svg/done.svg)
+            background-repeat: no-repeat
+            background-position: center
+            background-size: 50%
+            filter: invert(100%)
+
+    &-error
+        &::before
+            content: "!"
+            font-family: Raleway
+            font-weight: 700
+            font-size: 24px
+            color: $red
+            display: flex
+            align-items: center
+            justify-content: center
+            background-color: #FFE4E3
+
+
+
+

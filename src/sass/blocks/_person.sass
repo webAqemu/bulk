@@ -1,7 +1,7 @@
 .person
     height: 100%
 
-    @include r(767px)
+    @include r(1650px)
         height: auto
 
     &__title
@@ -23,8 +23,7 @@
         height: 100%
 
         @include r(1650px)
-            flex-direction: column
-            min-height: fit-content 
+            display: block
 
     &__info
         position: relative
@@ -36,6 +35,8 @@
         margin-right: 30px
 
         @include r(1650px)
+            display: flex
+            flex-direction: column
             max-width: 100% 
             min-height: fit-content
             padding-right: 0
@@ -107,6 +108,7 @@
         background-color: #fff
         margin-left: 100px
         margin-bottom: 50px
+
 
         @include r(767px)
             margin-left: 0
@@ -324,6 +326,7 @@
             font-weight: 700
             color: white
             padding: 11px 15px 9px
+            min-height: fit-content
             border-radius: 5px
             background-color: $blue
             transition: background-color 0.3s, transform 0.3s
