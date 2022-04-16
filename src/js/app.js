@@ -92,4 +92,16 @@ if(widgets.length !== 0 && window.innerWidth < 1000) {
   })
 }
 
+const moderation = document.querySelector('.moderation')
+
+if(moderation) {
+  moderation.addEventListener('click',  function(e) {
+    if(e.target.classList.contains('moderation-close')) {
+      e.target.closest('.moderation-popup').classList.remove("active")
+    }
+    if(e.target.classList.contains('show')) {
+      moderation.querySelector(".moderation-popup").classList.add('active')
+    }
+  })
+}
 

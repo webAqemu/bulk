@@ -1,0 +1,56 @@
+include base/_head
+    .layout
+        include blocks/_sidebar
+        main.main
+            include blocks/_header
+            .content.content--table 
+                .table 
+                    ul.table__headers
+                        li 
+                        li Раздел
+                        li Раздел
+                        li Раздел
+                    .table__body
+                        ul.table__row 
+                            li.bold.left Параметр
+                            li Значение
+                            li Значение 2
+                            li Значение 3
+                        ul.table__row 
+                            li.bold.left Параметр
+                            li Значение
+                            li Значение 2
+                            li Значение 3
+                br
+                br
+                br
+
+                .table 
+                    ul.table__headers
+                        li 
+                        li Раздел
+                        li Раздел
+                        li Раздел
+                    .table__body
+                        ul.table__row 
+                            li Параметр
+                            li Значение
+                            li Значение 2
+                            li.red
+                                p красный
+                        ul.table__row 
+                            li Параметр
+                            li Значение
+                            li Значение 2
+                            li.grey
+                                p нейтральный
+                        ul.table__row 
+                            li Параметр
+                            li Значение
+                            li Значение 2
+                            li.green
+                                p зеленый
+
+        
+    include blocks/_footer
+    script(src="js/app.min.js") 

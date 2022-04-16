@@ -92,6 +92,48 @@
                     .chat__message 
                         p Все хорошо
 
+            .moderation-popup 
+                .moderation-container
+                    button.moderation-close Закрыть
+                    .comment
+                        .comment__header
+                            .name комментарии
+                            .url К какой странице / товару прикреплён данный отзыв
+                            button.filter Опубликованное
+                            button.mobile-options
+                        .comment__inner 
+                            .comment__info 
+                                .img(style="background-image:url(../img/profile-image.jpg)")
+                                .name Галина Царькова
+                                button.history История сообщений
+                                .stats 
+                                    .time 2ч
+                                    .top 42
+                                    .down 17
+                            .comment__message 
+                                p #[span Достоинства] Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                            
+                            .comment__bottom 
+                                button.answers 3 ответа
+                                button.answer ответить
+                                form.form
+                                    .photo 
+                                        img(src="@img/profile-image.jpg", alt="")
+                                        .name Администратор
+
+                                    .input
+                                        input(type="text" value="Гость, я  к вам пишу чего же боле...")
+                                        button.cancel
+                                    button.mobile-cancel Удалить
+                                    button.send(type="submit") Отправить
+                                button.mobile-history История сообщений
+                                .wrapper 
+                                    .red 
+                                        span мат
+                                        button.delete
+                                    button.edit
+                                    button.delete
+                    
             .comment
                 .comment__header
                     .name комментарии

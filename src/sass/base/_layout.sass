@@ -73,6 +73,9 @@ body
     @include r (600px)
         padding: 20px 15px
 
+    &--table
+        background-color: #fff
+
 .logo
     display: flex
     width: 45px
@@ -80,3 +83,77 @@ body
     img
         width: 100%
 
+.table
+    width: 100%
+    display: flex
+    flex-direction: column
+    font-size: 14px
+    color: #47426A
+
+    &__headers
+        width: 100%
+        display: flex
+        background-color: #f4f4f8
+        
+        li
+            width: 100%
+            padding: 20px
+            font-weight: 700
+            text-align: center
+
+            &:not(:last-child)
+                border-right: 1px solid #D9DCEE
+
+    &__body
+        display: flex
+        flex-direction: column
+
+    &__row
+        display: flex
+
+        &:nth-child(even)
+            background-color: #f4f4f8
+        
+        li
+            width: 100%
+            padding: 20px
+            text-align: center
+
+            &:not(:last-child)
+                border-right: 1px solid #D9DCEE
+
+            &.bold
+                font-weight: 700
+
+            &.left
+                text-align: left
+
+            &.red,
+            &.grey,
+            &.green
+                display: flex
+                align-items: center
+                justify-content: center
+                padding: 0 20px
+                font-size: 10px
+                text-transform: uppercase
+
+                p
+                    border-radius: 5px
+                    padding: 10px
+                    display: inline-block
+
+            &.red
+                color: $red
+
+                p
+                    background-color: #FFE4E3
+            &.grey
+                p
+                    background-color: #E5E7F3
+
+            &.green
+                color: #44B759
+
+                p
+                    background-color: #E7F6F0
