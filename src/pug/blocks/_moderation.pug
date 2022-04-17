@@ -38,7 +38,7 @@
             .review
                 .review__header
                     .name отзывы
-                    .url К какой странице / товару прикреплён данный отзыв
+                    a.url(href="#") К какой странице / товару прикреплён данный отзыв
                     
                     button.mobile-options
                     button.accept
@@ -75,11 +75,51 @@
                                 span мат
                                 button.delete
                             button.add тег
+            .review
+                .review__header
+                    .name отзывы
+                    a.url(href="#") К какой странице / товару прикреплён данный отзыв
+                    
+                    button.mobile-options
+                    button.accept
+                    button.delete
+                    button.edit 
+                .review__inner 
+                    .review__info 
+                        .img(style="background-image:url(../img/profile-image.jpg)")
+                        .name Галина Царькова
+                        .icons 
+                            img(src="./img/svg/basket-green.svg", alt="")
+                            img(src="./img/svg/like-green.svg", alt="")
+                        ul.rating 
+                            li.active 
+                            li.active 
+                            li.active 
+                            li.half
+                            li 
+                        .info Товар приобретен менее месяца
+                        .stats 
+                            .time 2ч
+                            .top 42
+                            .down 17
+                    .review__message 
+                        textarea Достоинства Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                        textarea Недостатки Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                        textarea Комментарий Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    .review__bottom 
+                        button.answers 3 ответа
+                        button.answer ответить
+                        button.complaint Жалобы
+                        .tags 
+                            .red 
+                                span мат
+                                button.delete
+                            button.add тег
 
             .chat
                 .chat__header
                     .name Чаты
-                    .url К какой странице / товару прикреплён данный отзыв
+                    a.url(href="#") К какой странице / товару прикреплён данный отзыв
                     button.options
                         ul 
                             li.option Искать в текущем
@@ -142,7 +182,7 @@
             .comment
                 .comment__header
                     .name комментарии
-                    .url К какой странице / товару прикреплён данный отзыв
+                    a.url(href="#") К какой странице / товару прикреплён данный отзыв
                     button.filter Опубликованное
                         ul 
                             li.option.grey на проверке
@@ -160,6 +200,47 @@
                             .down 17
                     .comment__message 
                         p #[span Достоинства] Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    
+                    .comment__bottom 
+                        button.answers 3 ответа
+                        button.answer ответить
+                        form.form
+                            .photo 
+                                img(src="@img/profile-image.jpg", alt="")
+                                .name Администратор
+
+                            .input
+                                input(type="text" value="Гость, я  к вам пишу чего же боле...")
+                                button.cancel
+                            button.mobile-cancel Удалить
+                            button.send(type="submit") Отправить
+                        button.mobile-history История сообщений
+                        .wrapper 
+                            .red 
+                                span мат
+                                button.delete
+                            button.edit
+                            button.delete
+            .comment
+                .comment__header
+                    .name комментарии
+                    a.url(href="#") К какой странице / товару прикреплён данный отзыв
+                    button.filter Опубликованное
+                        ul 
+                            li.option.grey на проверке
+                            li.option.green опубликованное
+                            li.option.red удаленные
+                .comment__inner 
+                    .comment__info 
+                        .img(style="background-image:url(../img/profile-image.jpg)")
+                        .name Галина Царькова
+                        button.history История сообщений
+                        .stats 
+                            .time 2ч
+                            .top 42
+                            .down 17
+                    .comment__message 
+                        textarea Достоинства Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
                     
                     .comment__bottom 
                         button.answers 3 ответа

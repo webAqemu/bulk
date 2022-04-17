@@ -192,6 +192,13 @@
                 white-space: nowrap
                 text-overflow: ellipsis
                 margin-right: auto
+                transition: background-color 0.3s
+
+                &:hover
+                    background-color: #EBEDF9
+
+                &:active
+                    background-color: #D8DCEF
 
                 @include r(767px)
                     font-size: 10px
@@ -494,11 +501,24 @@
             @include r(767px)
                 font-size: 14px
 
+            @include r(640px)
+                font-size: 12px
+
             span
                 color: #47426A
 
             p:not(:last-child)
                 margin-bottom: 10px
+
+            textarea
+                width: 100%
+                resize: vertical 
+                font: inherit
+                outline: none
+                min-height: 70px
+                border: 1px solid #C4C8DF
+                border-radius: 5px
+                padding: 8px 9px 12px
 
         &__bottom
             display: flex
@@ -746,6 +766,13 @@
                 white-space: nowrap
                 text-overflow: ellipsis
                 margin-right: auto
+                transition: background-color 0.3s
+
+                &:hover
+                    background-color: #EBEDF9
+
+                &:active
+                    background-color: #D8DCEF
 
                 @include r(767px)
                     font-size: 10px
@@ -1088,6 +1115,13 @@
                 white-space: nowrap
                 text-overflow: ellipsis
                 margin-right: auto
+                transition: background-color 0.3s
+
+                &:hover
+                    background-color: #EBEDF9
+
+                &:active
+                    background-color: #D8DCEF
 
                 @include r(767px)
                     font-size: 10px
@@ -1104,8 +1138,8 @@
                 padding: 12px 35px 10px 15px
                 border-radius: 5px
                 background-color: #E3F4EE
+                margin-left: 5px
                 transition: background-color 0.3s
-
 
                 &:hover
                     transform: none
@@ -1149,6 +1183,9 @@
                     min-width: 22px
                     width: 22px
                     height: 22px
+
+                    &:last-child
+                        right: 15px
 
                 ul
                     position: absolute
@@ -1354,6 +1391,17 @@
 
             span
                 color: #47426A
+
+            textarea
+                width: 100%
+                resize: vertical 
+                font: inherit
+                font-size: inherit
+                outline: none
+                min-height: 70px
+                border: 1px solid #C4C8DF
+                border-radius: 5px
+                padding: 8px 9px 12px
 
             p:not(:last-child)
                 margin-bottom: 10px

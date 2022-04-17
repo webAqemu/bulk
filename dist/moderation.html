@@ -99,8 +99,7 @@
                 </div>
                 <div class="review">
                   <div class="review__header">
-                    <div class="name">отзывы</div>
-                    <div class="url">К какой странице / товару прикреплён данный отзыв</div>
+                    <div class="name">отзывы</div><a class="url" href="#">К какой странице / товару прикреплён данный отзыв</a>
                     <button class="mobile-options"></button>
                     <button class="accept"></button>
                     <button class="delete"></button>
@@ -143,10 +142,54 @@
                     </div>
                   </div>
                 </div>
+                <div class="review">
+                  <div class="review__header">
+                    <div class="name">отзывы</div><a class="url" href="#">К какой странице / товару прикреплён данный отзыв</a>
+                    <button class="mobile-options"></button>
+                    <button class="accept"></button>
+                    <button class="delete"></button>
+                    <button class="edit"> </button>
+                  </div>
+                  <div class="review__inner"> 
+                    <div class="review__info"> 
+                      <div class="img" style="background-image:url(../img/profile-image.jpg)"></div>
+                      <div class="name">Галина Царькова</div>
+                      <div class="icons"> <img src="./img/svg/basket-green.svg" alt=""><img src="./img/svg/like-green.svg" alt=""></div>
+                      <ul class="rating"> 
+                        <li class="active"> </li>
+                        <li class="active"> </li>
+                        <li class="active"> </li>
+                        <li class="half"></li>
+                        <li> </li>
+                      </ul>
+                      <div class="info">Товар приобретен менее месяца</div>
+                      <div class="stats"> 
+                        <div class="time">2ч</div>
+                        <div class="top">42</div>
+                        <div class="down">17</div>
+                      </div>
+                    </div>
+                    <div class="review__message"> 
+                      <textarea>Достоинства Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </textarea>
+                      <textarea>Недостатки Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </textarea>
+                      <textarea>Комментарий Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </textarea>
+                    </div>
+                    <div class="review__bottom"> 
+                      <button class="answers">3 ответа</button>
+                      <button class="answer">ответить</button>
+                      <button class="complaint">Жалобы</button>
+                      <div class="tags"> 
+                        <div class="red"> <span>мат</span>
+                          <button class="delete"></button>
+                        </div>
+                        <button class="add">тег</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="chat">
                   <div class="chat__header">
-                    <div class="name">Чаты</div>
-                    <div class="url">К какой странице / товару прикреплён данный отзыв</div>
+                    <div class="name">Чаты</div><a class="url" href="#">К какой странице / товару прикреплён данный отзыв</a>
                     <button class="options">
                       <ul> 
                         <li class="option">Искать в текущем</li>
@@ -224,8 +267,7 @@
                 </div>
                 <div class="comment">
                   <div class="comment__header">
-                    <div class="name">комментарии</div>
-                    <div class="url">К какой странице / товару прикреплён данный отзыв</div>
+                    <div class="name">комментарии</div><a class="url" href="#">К какой странице / товару прикреплён данный отзыв</a>
                     <button class="filter">Опубликованное
                       <ul> 
                         <li class="option grey">на проверке</li>
@@ -248,6 +290,56 @@
                     </div>
                     <div class="comment__message"> 
                       <p><span>Достоинства</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
+                    </div>
+                    <div class="comment__bottom"> 
+                      <button class="answers">3 ответа</button>
+                      <button class="answer">ответить</button>
+                      <form class="form">
+                        <div class="photo"> <img src="img/profile-image.jpg" alt="">
+                          <div class="name">Администратор</div>
+                        </div>
+                        <div class="input">
+                          <input type="text" value="Гость, я  к вам пишу чего же боле...">
+                          <button class="cancel"></button>
+                        </div>
+                        <button class="mobile-cancel">Удалить</button>
+                        <button class="send" type="submit">Отправить</button>
+                      </form>
+                      <button class="mobile-history">История сообщений</button>
+                      <div class="wrapper"> 
+                        <div class="red"> <span>мат</span>
+                          <button class="delete"></button>
+                        </div>
+                        <button class="edit"></button>
+                        <button class="delete"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment">
+                  <div class="comment__header">
+                    <div class="name">комментарии</div><a class="url" href="#">К какой странице / товару прикреплён данный отзыв</a>
+                    <button class="filter">Опубликованное
+                      <ul> 
+                        <li class="option grey">на проверке</li>
+                        <li class="option green">опубликованное</li>
+                        <li class="option red">удаленные</li>
+                      </ul>
+                    </button>
+                  </div>
+                  <div class="comment__inner"> 
+                    <div class="comment__info"> 
+                      <div class="img" style="background-image:url(../img/profile-image.jpg)"></div>
+                      <div class="name">Галина Царькова</div>
+                      <button class="history">История сообщений</button>
+                      <div class="stats"> 
+                        <div class="time">2ч</div>
+                        <div class="top">42</div>
+                        <div class="down">17</div>
+                      </div>
+                    </div>
+                    <div class="comment__message"> 
+                      <textarea>Достоинства Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </textarea>
                     </div>
                     <div class="comment__bottom"> 
                       <button class="answers">3 ответа</button>

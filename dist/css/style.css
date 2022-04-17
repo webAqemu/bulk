@@ -2710,6 +2710,7 @@ body {
   position: relative;
   max-width: 190px;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 .popup-stats__accordeon::after {
   content: "";
@@ -2738,6 +2739,7 @@ body {
   background-color: #f2f3f9;
   border-bottom: 1px solid #C4C8DF;
   text-align: left;
+  cursor: pointer;
 }
 .popup-stats__accordeon.active .popup-stats__accordeon-content {
   height: fit-content;
@@ -2752,6 +2754,7 @@ body {
   position: relative;
   max-width: 190px;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 .popup-stats__dropdown::after {
   content: "";
@@ -2760,7 +2763,7 @@ body {
   top: 15px;
   border: 4px solid transparent;
   border-top: 6px solid #4D74F5;
-  transition: transform 0.3s;
+  transition: transform 0.3s, top 0.3s;
 }
 .popup-stats__dropdown p {
   padding: 9px 12px 9px;
@@ -2780,6 +2783,7 @@ body {
   padding: 7px 12px;
   background-color: rgba(242, 243, 249, 0.5);
   text-align: left;
+  cursor: pointer;
   transition: background-color 0.3s;
 }
 .popup-stats__dropdown-content button:hover {
@@ -2793,6 +2797,7 @@ body {
 }
 .popup-stats__dropdown.active::after {
   transform: rotate(180deg);
+  top: 10px;
 }
 .popup-stats__line {
   margin: 10px -30px;
@@ -3785,6 +3790,7 @@ body {
     flex-wrap: nowrap;
     width: 100%;
     overflow-x: auto;
+    height: 30px;
     /* This will work on Firefox */
     scrollbar-width: thin;
     scrollbar-color: #4D74F5;
@@ -4036,14 +4042,14 @@ body {
   overflow: hidden;
   font-size: 10px;
   text-transform: uppercase;
-  padding: 11px 5px 9px 35px;
+  padding: 11px 45px 9px 35px;
   margin-right: 10px;
   background-color: #F5F6FA;
 }
 @media (max-width: 1000px) {
   .widgets-card .moderators {
     background-color: #fff;
-    padding: 0 0 0 35px;
+    padding: 10px 40px 10px 35px;
     margin-right: auto;
   }
 }
@@ -4062,19 +4068,21 @@ body {
 }
 @media (max-width: 1000px) {
   .widgets-card .moderators::before {
-    top: 8px;
+    top: 10px;
   }
 }
 .widgets-card .moderators button {
-  position: relative;
+  position: absolute;
+  right: 0;
+  top: 0;
   display: block;
   width: 35px;
-  height: 30px;
+  height: 100%;
   background-color: #EBEDF9;
-  margin-top: -11px;
-  margin-bottom: -9px;
-  margin-right: -5px;
-  margin-left: 8px;
+  transition: background-color 0.3s;
+}
+.widgets-card .moderators button:hover {
+  background-color: #D8DCEF;
 }
 @media (max-width: 1000px) {
   .widgets-card .moderators button {
@@ -4112,6 +4120,7 @@ body {
 @media (max-width: 1000px) {
   .widgets-card .error {
     background-color: #fff;
+    margin-right: 0;
   }
 }
 .widgets-card .error::before {
@@ -4145,6 +4154,13 @@ body {
   pointer-events: none;
   transition: opacity 0.3s;
 }
+@media (max-width: 767px) {
+  .widgets-card .error__msg {
+    bottom: 100%;
+    left: auto;
+    right: 0;
+  }
+}
 .widgets-card .code {
   position: relative;
   padding: 11px 45px 9px 15px;
@@ -4158,6 +4174,17 @@ body {
   border-radius: 3px;
   background-color: #F5F6FA;
   margin-left: auto;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.widgets-card .code:hover {
+  background-color: #EBEDF9;
+}
+.widgets-card .code:hover button {
+  background-color: #D8DCEF;
+}
+.widgets-card .code:active {
+  background-color: #D8DCEF;
 }
 @media (max-width: 1000px) {
   .widgets-card .code {
@@ -4173,6 +4200,7 @@ body {
   width: 35px;
   height: 100%;
   background-color: #EBEDF9;
+  transition: background-color 0.3s;
 }
 .widgets-card .code button:hover::after {
   filter: invert(39%) sepia(81%) saturate(764%) hue-rotate(197deg) brightness(97%) contrast(99%);
@@ -4202,6 +4230,17 @@ body {
   overflow: hidden;
   border-radius: 3px;
   background-color: #F5F6FA;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.widgets-card .id:hover {
+  background-color: #EBEDF9;
+}
+.widgets-card .id:hover button {
+  background-color: #D8DCEF;
+}
+.widgets-card .id:active {
+  background-color: #D8DCEF;
 }
 @media (max-width: 1000px) {
   .widgets-card .id {
@@ -4216,6 +4255,7 @@ body {
   width: 35px;
   height: 100%;
   background-color: #EBEDF9;
+  transition: background-color 0.3s;
 }
 .widgets-card .id button:hover::after {
   filter: invert(39%) sepia(81%) saturate(764%) hue-rotate(197deg) brightness(97%) contrast(99%);
@@ -4540,6 +4580,16 @@ body {
   line-height: 1;
   width: fit-content;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+.popup-moderators__moderator:hover {
+  background-color: #EBEDF9;
+}
+.popup-moderators__moderator:active {
+  background-color: #D8DCEF;
+}
+.popup-moderators__moderator:active .close {
+  background-color: #D8DCEF;
 }
 .popup-moderators__moderator:not(:last-child) {
   margin-bottom: 15px;
@@ -4581,6 +4631,7 @@ body {
   height: 45px;
   background-color: #EBEDF9;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 .popup-moderators__moderator .close:hover::before, .popup-moderators__moderator .close:hover::after {
   background-color: #4D74F5;
@@ -7282,6 +7333,13 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis;
   margin-right: auto;
+  transition: background-color 0.3s;
+}
+.moderation .review__header .url:hover {
+  background-color: #EBEDF9;
+}
+.moderation .review__header .url:active {
+  background-color: #D8DCEF;
 }
 @media (max-width: 767px) {
   .moderation .review__header .url {
@@ -7619,11 +7677,26 @@ body {
     font-size: 14px;
   }
 }
+@media (max-width: 640px) {
+  .moderation .review__message {
+    font-size: 12px;
+  }
+}
 .moderation .review__message span {
   color: #47426A;
 }
 .moderation .review__message p:not(:last-child) {
   margin-bottom: 10px;
+}
+.moderation .review__message textarea {
+  width: 100%;
+  resize: vertical;
+  font: inherit;
+  outline: none;
+  min-height: 70px;
+  border: 1px solid #C4C8DF;
+  border-radius: 5px;
+  padding: 8px 9px 12px;
 }
 .moderation .review__bottom {
   display: flex;
@@ -7885,6 +7958,13 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis;
   margin-right: auto;
+  transition: background-color 0.3s;
+}
+.moderation .chat__header .url:hover {
+  background-color: #EBEDF9;
+}
+.moderation .chat__header .url:active {
+  background-color: #D8DCEF;
 }
 @media (max-width: 767px) {
   .moderation .chat__header .url {
@@ -8255,6 +8335,13 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis;
   margin-right: auto;
+  transition: background-color 0.3s;
+}
+.moderation .comment__header .url:hover {
+  background-color: #EBEDF9;
+}
+.moderation .comment__header .url:active {
+  background-color: #D8DCEF;
 }
 @media (max-width: 767px) {
   .moderation .comment__header .url {
@@ -8275,6 +8362,7 @@ body {
   padding: 12px 35px 10px 15px;
   border-radius: 5px;
   background-color: #E3F4EE;
+  margin-left: 5px;
   transition: background-color 0.3s;
 }
 .moderation .comment__header .filter:hover {
@@ -8326,6 +8414,9 @@ body {
     min-width: 22px;
     width: 22px;
     height: 22px;
+  }
+  .moderation .comment__header .filter:last-child {
+    right: 15px;
   }
 }
 .moderation .comment__header .filter ul {
@@ -8549,6 +8640,17 @@ body {
 }
 .moderation .comment__message span {
   color: #47426A;
+}
+.moderation .comment__message textarea {
+  width: 100%;
+  resize: vertical;
+  font: inherit;
+  font-size: inherit;
+  outline: none;
+  min-height: 70px;
+  border: 1px solid #C4C8DF;
+  border-radius: 5px;
+  padding: 8px 9px 12px;
 }
 .moderation .comment__message p:not(:last-child) {
   margin-bottom: 10px;

@@ -56,6 +56,7 @@
             flex-wrap: nowrap
             width: 100%
             overflow-x: auto
+            height: 30px
 
             /* This will work on Firefox */
             scrollbar-width: thin
@@ -237,7 +238,6 @@
         &__bottom
             display: flex
 
-
         .reviews
             position: relative
             border-radius: 5px
@@ -298,13 +298,13 @@
             overflow: hidden
             font-size: 10px
             text-transform: uppercase
-            padding: 11px 5px 9px 35px
+            padding: 11px 45px 9px 35px
             margin-right: 10px
             background-color: #F5F6FA
 
             @include r(1000px)
                 background-color: #fff
-                padding: 0 0 0 35px
+                padding: 10px 40px 10px 35px
                 margin-right: auto
 
             &::before
@@ -321,18 +321,20 @@
                 filter: invert(90%) sepia(3%) saturate(2093%) hue-rotate(195deg) brightness(92%) contrast(82%)
             
                 @include r(1000px)
-                    top: 8px
+                    top: 10px
 
             button
-                position: relative
+                position: absolute
+                right: 0
+                top: 0
                 display: block
                 width: 35px
-                height: 30px
+                height: 100%
                 background-color: #EBEDF9
-                margin-top: -11px
-                margin-bottom: -9px
-                margin-right: -5px
-                margin-left: 8px
+                transition: background-color 0.3s
+
+                &:hover
+                    background-color: #D8DCEF
 
                 @include r(1000px)
                     background-color: #fff
@@ -367,6 +369,7 @@
 
             @include r(1000px)
                 background-color: #fff
+                margin-right: 0
 
             &::before
                 content: ""
@@ -399,6 +402,11 @@
                 pointer-events: none
                 transition: opacity 0.3s
 
+                @include r(767px)
+                    bottom: 100%
+                    left: auto
+                    right: 0
+
         .code
             position: relative
             padding: 11px 45px 9px 15px
@@ -412,6 +420,17 @@
             border-radius: 3px
             background-color: #F5F6FA
             margin-left: auto
+            cursor: pointer
+            transition: background-color 0.3s
+
+            &:hover
+                background-color: #EBEDF9
+
+                button
+                    background-color: #D8DCEF
+
+            &:active
+                background-color: #D8DCEF
 
             @include r(1000px)
                 width: fit-content
@@ -425,6 +444,7 @@
                 width: 35px
                 height: 100%
                 background-color: #EBEDF9
+                transition: background-color 0.3s
 
                 &:hover::after
                     filter: invert(39%) sepia(81%) saturate(764%) hue-rotate(197deg) brightness(97%) contrast(99%)
@@ -454,6 +474,17 @@
             overflow: hidden
             border-radius: 3px
             background-color: #F5F6FA
+            cursor: pointer
+            transition: background-color 0.3s
+
+            &:hover
+                background-color: #EBEDF9
+
+                button
+                    background-color: #D8DCEF
+
+            &:active
+                background-color: #D8DCEF
 
             @include r(1000px)
                 display: inline-block
@@ -466,6 +497,7 @@
                 width: 35px
                 height: 100%
                 background-color: #EBEDF9
+                transition: background-color 0.3s
 
                 &:hover::after
                     filter: invert(39%) sepia(81%) saturate(764%) hue-rotate(197deg) brightness(97%) contrast(99%)
