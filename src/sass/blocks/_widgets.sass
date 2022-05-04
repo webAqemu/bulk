@@ -238,7 +238,7 @@
         &__bottom
             display: flex
 
-        .reviews
+        .type
             position: relative
             border-radius: 5px
             font-size: 10px
@@ -250,18 +250,17 @@
             @include r(1000px)
                 display: inline-block
                 margin-bottom: 10px
-            
-            &::before
-                content: ""
+
+            img
                 position: absolute
                 top: 10px
                 left: 6px
                 width: 12px
                 height: 12px
-                background-image: url(../img/svg/reg-type-3.svg)
                 background-size: cover
                 background-repeat: no-repeat
                 background-position: center
+                
 
         .status
             position: relative

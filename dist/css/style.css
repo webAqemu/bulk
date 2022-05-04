@@ -1513,7 +1513,8 @@ body {
   border-radius: 20px;
   padding: 20px 0 0;
   margin-bottom: 40px;
-  width: fit-content;
+  width: 100%;
+  max-width: 450px;
 }
 @media (max-width: 1200px) {
   .reg__types {
@@ -1523,7 +1524,6 @@ body {
 @media (max-width: 767px) {
   .reg__types {
     flex-direction: column;
-    width: 100%;
     max-width: 330px;
     align-items: flex-start;
     padding: 20px;
@@ -1748,6 +1748,38 @@ body {
   .reg__btn--sm::before {
     top: 50%;
     transform: translateY(-50%);
+  }
+}
+.reg__btn.disabled {
+  background-color: #E7EAF2;
+  pointer-events: none;
+  box-shadow: none;
+}
+.reg__btn.loading {
+  position: relative;
+  color: rgba(0, 0, 0, 0);
+}
+.reg__btn.loading::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 23px;
+  height: 23px;
+  background-image: url(../img/svg/loading-circle.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100%;
+  animation: rotation 1s infinite linear;
+}
+@keyframes rotation {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(359deg);
   }
 }
 .reg__input {
@@ -3978,7 +4010,7 @@ body {
 .widgets-card__bottom {
   display: flex;
 }
-.widgets-card .reviews {
+.widgets-card .type {
   position: relative;
   border-radius: 5px;
   font-size: 10px;
@@ -3988,19 +4020,17 @@ body {
   margin-right: 10px;
 }
 @media (max-width: 1000px) {
-  .widgets-card .reviews {
+  .widgets-card .type {
     display: inline-block;
     margin-bottom: 10px;
   }
 }
-.widgets-card .reviews::before {
-  content: "";
+.widgets-card .type img {
   position: absolute;
   top: 10px;
   left: 6px;
   width: 12px;
   height: 12px;
-  background-image: url(../img/svg/reg-type-3.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
