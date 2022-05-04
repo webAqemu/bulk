@@ -185,14 +185,14 @@
         border-radius: 20px
         padding: 20px 0 0
         margin-bottom: 40px
-        width: fit-content
+        width: 100%
+        max-width: 450px
 
         @include r(1200px)
             margin-bottom: 25px
 
         @include r(767px)
             flex-direction: column
-            width: 100%
             max-width: 330px
             align-items: flex-start
             padding: 20px
@@ -397,6 +397,39 @@
                 @include r (767px)
                     top: 50%
                     transform: translateY(-50%)
+
+        &.disabled
+            background-color: #E7EAF2
+            pointer-events: none
+            box-shadow: none
+
+        &.loading
+            position: relative
+            color: rgba(0, 0, 0, 0)
+
+            &::before
+                content: ''
+                position: absolute
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%)
+                width: 23px
+                height: 23px
+                background-image: url(../img/svg/loading-circle.svg)
+                background-size: cover
+                background-repeat: no-repeat
+                background-position: center
+                border-radius: 100%
+                animation: rotation 1s infinite linear
+
+            @keyframes rotation 
+                0%
+                    transform: translate(-50%, -50%) rotate(0deg)
+                100%
+                    transform: translate(-50%, -50%) rotate(359deg)
+
+            
+
 
     &__input
         position: relative
