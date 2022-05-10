@@ -20,7 +20,7 @@
 
         @include r (600px)
             margin-bottom: 20px
-    
+
     &__step
         position: relative
         width: 30px
@@ -62,8 +62,6 @@
             filter: invert(100%)
             opacity: 0
 
-
-
         &:first-child
             margin: 0 20px 0 0
 
@@ -82,10 +80,10 @@
 
             &::before
                 background-color: $green
-                
+
             &::after
                 opacity: 1
-                
+
     &__title
         font-family: Raleway
         font-weight: 700
@@ -118,7 +116,7 @@
                 transform: translateY(-50%)
                 width: 60px
                 height: 60px
-                border-radius: 100% 
+                border-radius: 100%
                 background-color: #16D7E3
 
                 @include r(600px)
@@ -133,7 +131,7 @@
                 transform: translateY(-50%)
                 width: 60px
                 height: 60px
-                border-radius: 100% 
+                border-radius: 100%
                 background-image: url(../img/svg/done.svg)
                 background-size: 40%
                 background-position: center
@@ -156,7 +154,6 @@
             font-size: 12px
             margin-bottom: 15px
 
-        
         a
             font-size: 12px
             font-weight: 700
@@ -216,7 +213,7 @@
         margin-bottom: 20px
         transition: border-color 0.3s
 
-        @include r(1200px) 
+        @include r(1200px)
             padding: 20px 20px 10px
 
         @include r(767px)
@@ -228,10 +225,8 @@
         @include r(600px)
             padding: 15px 20px 15px 25px
 
-
         &:hover img
             transform: scale(1.2)
-            
 
         &:not(:last-child),
         &:not(:nth-child(3))
@@ -337,7 +332,6 @@
 
         &:active
             transform: scale(0.9)
-            
 
         &--next
             background-color: $blue
@@ -398,39 +392,6 @@
                     top: 50%
                     transform: translateY(-50%)
 
-        &.disabled
-            background-color: #E7EAF2
-            pointer-events: none
-            box-shadow: none
-
-        &.loading
-            position: relative
-            color: rgba(0, 0, 0, 0)
-
-            &::before
-                content: ''
-                position: absolute
-                left: 50%
-                top: 50%
-                transform: translate(-50%, -50%)
-                width: 23px
-                height: 23px
-                background-image: url(../img/svg/loading-circle.svg)
-                background-size: cover
-                background-repeat: no-repeat
-                background-position: center
-                border-radius: 100%
-                animation: rotation 1s infinite linear
-
-            @keyframes rotation 
-                0%
-                    transform: translate(-50%, -50%) rotate(0deg)
-                100%
-                    transform: translate(-50%, -50%) rotate(359deg)
-
-            
-
-
     &__input
         position: relative
         max-width: 440px
@@ -475,7 +436,7 @@
                 border-color: $red
 
             @include r(767px)
-                max-width: 100% 
+                max-width: 100%
                 padding-right: 45px
 
             &::after
@@ -539,10 +500,9 @@
         @include r(600px)
             .reg__btn--copy.reg__btn--sm
                 display: none
-            
+
             .reg__text
                 margin-bottom: 10px
-
 
     &__textarea
         position: relative
@@ -580,16 +540,6 @@
 
         @include r(1400px)
             margin: 70px 0 0 auto
-        
+
         @include r(1000px)
             display: none
-
-
-
-
-
-
-
-
-
-

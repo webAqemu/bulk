@@ -38,11 +38,17 @@
         border-radius: 100%
         background-color: #E8EAF4
         margin-right: auto
+        transition: background-color 0.3s, transform 0.3s
+
+        &:hover
+            background-color: #DADEF0
+
+        &:active
+            transform: scale(0.9)
 
         @include r(640px)
             margin-right: 0
             margin-left: auto
-
 
         &::before
             content: ""
@@ -112,7 +118,7 @@
         @include r(1000px)
             flex-wrap: wrap
 
-            & > * 
+            & > *
                 margin-bottom: 10px
 
         .reviews
@@ -342,7 +348,7 @@
     &__inner
         max-width: 1000px
         background-color: rgba(#fff, 0.5)
-        padding: 25px 25px 35px 50px 
+        padding: 25px 25px 35px 50px
         display: flex
         flex-wrap: wrap
         align-items: flex-start
@@ -390,7 +396,6 @@
             color: $red
             display: inline-block
 
-
             &::before
                 content: ""
                 position: absolute
@@ -416,7 +421,7 @@
 
             label::after
                 filter: invert(83%) sepia(21%) saturate(392%) hue-rotate(196deg) brightness(87%) contrast(87%)
-            
+
             label::before
                 background-color: #fff
 
@@ -504,7 +509,7 @@
                 padding-left: 50px
                 margin-right: 20px
 
-                @include r(640px) 
+                @include r(640px)
                     padding-left: 0
                     padding-top: 35px
                     margin-right: 0
@@ -548,8 +553,8 @@
                     font-size: 12px
 
                 &.settings__checkbox + p,
-                & + p + .input, 
-                & + p + .input + .input 
+                & + p + .input,
+                & + p + .input + .input
                     margin-left: 0
 
         &--sm
@@ -571,7 +576,7 @@
 
                 &::before
                     left: 10px
-                    
+
                 &::after
                     left: 12px
 
@@ -778,7 +783,7 @@
             padding: 13px 25px
             font-size: 16px
             background-color: #F5F6FA
-            border-radius: 10px 
+            border-radius: 10px
             border: none
             resize: none
             width: 420px
@@ -996,7 +1001,6 @@
                     background-size: 35%
                     filter: invert(61%) sepia(31%) saturate(860%) hue-rotate(79deg) brightness(93%) contrast(86%)
 
-
             &:hover
                 transform: scale(1.05)
 
@@ -1054,7 +1058,7 @@
 
         ul
             margin: 0 0 50px 25px
-            
+
             @include r(1000px)
                 margin-left: 0
                 margin-bottom: 30px
@@ -1073,7 +1077,7 @@
                 border-top: 1px solid #d9dcee
 
             @include r(640px)
-                position: relative    
+                position: relative
 
             .name
                 position: relative
@@ -1114,19 +1118,18 @@
                         top: 10px
                         transform: none
 
-
                 &.owner
                     &::before
-                        border-radius: 100% 
-                    
+                        border-radius: 100%
+
                     .delete
                         display: none
 
             .bold
-               font-weight: 700
-               font-size: 12px 
-               text-transform: uppercase
-               margin-right: 13px
+                font-weight: 700
+                font-size: 12px
+                text-transform: uppercase
+                margin-right: 13px
 
             .delete
                 position: absolute
@@ -1138,10 +1141,8 @@
                 margin-left: 11px
                 transition: background-color 0.3s
 
-
                 &:hover
                     background-color: #dee0eb
-                    
 
                 &::before,
                 &::after
@@ -1216,7 +1217,7 @@
 
                         &::after
                             filter: invert(17%) sepia(97%) saturate(4979%) hue-rotate(4deg) brightness(108%) contrast(112%)
-                
+
                 button
                     position: relative
                     width: 35px
@@ -1238,7 +1239,7 @@
 
                     &:hover::after
                         transform: scale(1.1)
-                    
+
                     &:active::after
                         transform: scale(0.9)
 
@@ -1247,7 +1248,7 @@
         height: 1px
         width: 100%
         background-color: #000
-              
+
     &__criteria
         width: 100%
 
@@ -1255,9 +1256,9 @@
             @include r(640px)
                 overflow-x: auto
 
-                &::-webkit-scrollbar 
+                &::-webkit-scrollbar
                     height: 0
-        
+
         .headers
             position: relative
             display: flex
@@ -1308,22 +1309,22 @@
 
             &::before
                 transform: translate(-50%, -50%) rotate(45deg)
-            
+
             &::after
                 transform: translate(-50%, -50%) rotate(-45deg)
 
             &:hover
-                &::before   
+                &::before
                     transform: translate(-50%, -50%) rotate(45deg) scale(1.2)
-                
-                &::after   
+
+                &::after
                     transform: translate(-50%, -50%) rotate(-45deg) scale(1.2)
 
             &:active
-                &::before   
+                &::before
                     transform: translate(-50%, -50%) rotate(45deg) scale(0.9)
-                
-                &::after   
+
+                &::after
                     transform: translate(-50%, -50%) rotate(-45deg) scale(0.9)
 
         .items
@@ -1462,8 +1463,6 @@
             width: 100%
             margin-right: 0 !important
 
-
-
         input[type="text"]
             background-color: #f4f4f8
             border: 1px solid #d9dcee
@@ -1489,7 +1488,6 @@
 
                 @include r(767px)
                     width: calc( 100% - 50px )
-
 
             .status
                 position: absolute
@@ -1521,7 +1519,6 @@
                         background-size: 35%
                         filter: invert(61%) sepia(31%) saturate(860%) hue-rotate(79deg) brightness(93%) contrast(86%)
 
-
                 &:hover
                     transform: scale(1.05)
 
@@ -1539,7 +1536,7 @@
                     background-size: 50%
                     background-repeat: no-repeat
                     background-position: center
-                    
+
             &.done
                 input
                     border-color: #44B759
@@ -1551,9 +1548,9 @@
 
     &__item
         position: relative
-        width: 100%  
+        width: 100%
         background-color: rgba(255, 255, 255, 0.5)
-        padding: 15px 40px 15px 25px 
+        padding: 15px 40px 15px 25px
 
         @include r(767px)
             padding-right: 20px
@@ -1574,7 +1571,7 @@
 
         .line
             margin-left: 0 !important
-            
+
             @include r(640px)
                 display: none
 
@@ -1732,7 +1729,7 @@
 
         .name
             margin-bottom: 4px
-        
+
         .desc
             font-size: 14px
             color: #d9dcee
@@ -1786,8 +1783,7 @@
 
                 @include r(767px)
                     background-size: 40%
-        
+
     &__example
         @include r(900px)
             width: 100%
-

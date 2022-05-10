@@ -5,6 +5,17 @@ include base/_head
             include blocks/_header
             .content 
                 include ./blocks/_pay
+            .popup.popup--pay.active
+                .popup-pay 
+                    .popup__title Пополнение баланса
+                    button.popup__close
+
+                    form.pay__form(action="#")
+                        .pay__row
+                            label(for="pay") Сумма:
+                            input(type="text" name="pay")
+                            .pay__value 
+                        button(type="submit") Перейти к оплате
     
     include blocks/_footer
     script(src="js/app.min.js") 

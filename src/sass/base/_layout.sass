@@ -5,7 +5,7 @@
 
 @import "../../../node_modules/nouislider/dist/nouislider"
 
-*, 
+*,
 *::before,
 *::after
     padding: 0
@@ -52,17 +52,14 @@ body
     scrollbar-width: thin
     scrollbar-color: $blue
 
-
     /* Targtes on Chrome, Edge, and Safari */
-    &::-webkit-scrollbar 
+    &::-webkit-scrollbar
         width: 10px
 
-
-    &::-webkit-scrollbar-track 
+    &::-webkit-scrollbar-track
         background: rgba(255, 255, 255, 0)
 
-
-    &::-webkit-scrollbar-thumb 
+    &::-webkit-scrollbar-thumb
         background-color: $blue
         border-radius: 20px
         border: none
@@ -94,7 +91,7 @@ body
         width: 100%
         display: flex
         background-color: #f4f4f8
-        
+
         li
             width: 100%
             padding: 20px
@@ -113,7 +110,7 @@ body
 
         &:nth-child(even)
             background-color: #f4f4f8
-        
+
         li
             width: 100%
             padding: 20px
@@ -157,3 +154,37 @@ body
 
                 p
                     background-color: #E7F6F0
+
+.loading
+    position: relative
+    color: rgba(0, 0, 0, 0) !important
+
+    &::before
+        content: ''
+        position: absolute !important
+        left: 50% !important
+        top: 50% !important
+        transform: translate(-50%, -50%) !important
+        width: 23px !important
+        height: 23px !important
+        background-image: url(../img/svg/loading-circle.svg) !important
+        background-size: cover !important
+        background-repeat: no-repeat !important
+        background-position: center !important
+        border-radius: 100% !important
+        animation: rotation 1s infinite linear !important
+        filter: none !important
+
+        @keyframes rotation
+            0%
+                transform: translate(-50%, -50%) rotate(0deg)
+            100%
+                transform: translate(-50%, -50%) rotate(359deg)
+
+.disabled
+    background-color: #E7EAF2 !important
+    pointer-events: none !important
+    box-shadow: none !important
+
+.field-error
+    border-color: $red !important
