@@ -2077,6 +2077,7 @@ body {
 .popup--notification {
   bottom: 0;
   right: 0;
+  left: auto;
   transform: none;
   border-radius: 30px;
   overflow: hidden;
