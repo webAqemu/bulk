@@ -34,7 +34,7 @@
 
         @include r(767px)
             font-size: 24px
-        
+
         @include r(640px)
             font-size: 16px
             margin-bottom: 15px
@@ -43,7 +43,7 @@
         @include r(640px)
             overflow-x: auto
             width: 100%
-        
+
         .wrapper
             display: flex
             align-items: center
@@ -67,7 +67,7 @@
         box-shadow: 0px 15px 20px rgba(105, 131, 216, 0)
         margin-bottom: 10px
         transition: box-shadow 0.3s, color 0.3s, background-color 0.3s, border-color 0.3s, transform 0.3s
-        
+
         &:hover
             border-color: $blue
 
@@ -79,7 +79,7 @@
 
             @include r(640px)
                 box-shadow: none
-            
+
             .widgets__icon
                 filter: invert(42%) sepia(80%) saturate(3252%) hue-rotate(214deg) brightness(99%) contrast(94%)
 
@@ -88,7 +88,7 @@
 
         &:active
             transform: scale(0.9)
-    
+
         @include r(640px)
             min-width: fit-content
             border-radius: 5px
@@ -110,9 +110,10 @@
 
         @include r(1200px)
             position: relative
-    
+
     &__widgets
         max-width: 900px
+        width: 100%
         margin-right: 50px
 
         & > *:not(:last-child)
@@ -121,7 +122,7 @@
         @include r(1200px)
             max-width: 100%
             margin-right: 0
-    
+
     .review
         border-radius: 10px
         overflow: hidden
@@ -132,7 +133,7 @@
 
             &:hover
                 transform: scale(1.1)
-            
+
             &:active
                 transform: scale(0.9)
 
@@ -157,7 +158,6 @@
                 height: calc(100% + 1px)
                 background-color: $yellow
 
-
             .name
                 position: relative
                 font-size: 10px
@@ -179,7 +179,7 @@
                     background-size: cover
                     background-repeat: no-repeat
                     background-position: center
-            
+
             .url
                 overflow: hidden
                 width: 370px
@@ -265,19 +265,19 @@
                     display: none
 
                 &::before
-                   content: ""
-                   position: absolute
-                   left: 50%
-                   top: 50%
-                   transform: translate(-50%, -50%)
-                   width: 17px
-                   height: 16px
-                   background-image: url(../img/svg/trash.svg)
-                   background-size: cover
-                   background-repeat: no-repeat
-                   background-position: center
-                   filter: invert(43%) sepia(16%) saturate(3707%) hue-rotate(324deg) brightness(99%) contrast(103%) 
-                    
+                    content: ""
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%, -50%)
+                    width: 17px
+                    height: 16px
+                    background-image: url(../img/svg/trash.svg)
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center
+                    filter: invert(43%) sepia(16%) saturate(3707%) hue-rotate(324deg) brightness(99%) contrast(103%)
+
             .edit
                 position: relative
                 min-width: 36px
@@ -294,7 +294,7 @@
 
                 &:active
                     background-color: #CACEE9
-                
+
                 @include r(480px)
                     display: none
 
@@ -417,7 +417,7 @@
 
                     &.active
                         background-image: url(../img/svg/star-yellow.svg)
-                    
+
                     &.half
                         background-image: url(../img/svg/star-half.svg)
 
@@ -471,7 +471,7 @@
                     background-position: center
                     transform: rotate(-90deg)
                     filter: invert(61%) sepia(14%) saturate(1776%) hue-rotate(79deg) brightness(95%) contrast(91%)
-            
+
             .down
                 position: relative
                 font-size: 16px
@@ -491,7 +491,7 @@
                     background-repeat: no-repeat
                     background-position: center
                     transform: rotate(90deg)
-                    filter: invert(43%) sepia(16%) saturate(3707%) hue-rotate(324deg) brightness(99%) contrast(103%) 
+                    filter: invert(43%) sepia(16%) saturate(3707%) hue-rotate(324deg) brightness(99%) contrast(103%)
 
         &__message
             font-size: 16px
@@ -512,7 +512,7 @@
 
             textarea
                 width: 100%
-                resize: vertical 
+                resize: vertical
                 font: inherit
                 outline: none
                 min-height: 70px
@@ -683,7 +683,7 @@
 
                         &::before
                             transform: rotate(-45deg)
-                        
+
                         &::after
                             transform: rotate(45deg)
 
@@ -731,7 +731,6 @@
                 background-color: $violent
                 border-top-left-radius: 10px
 
-
             .name
                 position: relative
                 font-size: 10px
@@ -753,7 +752,7 @@
                     background-size: cover
                     background-repeat: no-repeat
                     background-position: center
-            
+
             .url
                 overflow: hidden
                 width: 370px
@@ -780,7 +779,7 @@
 
                 @include r(640px)
                     width: 100%
-        
+
             .options
                 position: relative
                 display: flex
@@ -798,7 +797,6 @@
 
                 &:active
                     background-color: rgba(0, 0, 0, 0.2)
-
 
                 @include r(640px)
                     position: absolute
@@ -924,7 +922,7 @@
                 padding: 3px 5px
                 background-color: #fff
                 border-radius: 3px
-                transition: background-color 0.3s,  transform 0.3s
+                transition: background-color 0.3s, transform 0.3s
 
                 @include r(640px)
                     position: absolute
@@ -934,7 +932,7 @@
 
                 &:hover
                     background-color: #f5f6fa
-                &:active    
+                &:active
                     transform: scale(0.9)
 
             .delete
@@ -957,7 +955,6 @@
                     transform: scale(0.9)
                     background-color: #EDBDBC
 
-
                 @include r(640px)
                     width: 22px
                     height: 22px
@@ -974,7 +971,7 @@
                     background-size: cover
                     background-repeat: no-repeat
                     background-position: center
-                    filter: invert(43%) sepia(16%) saturate(3707%) hue-rotate(324deg) brightness(99%) contrast(103%) 
+                    filter: invert(43%) sepia(16%) saturate(3707%) hue-rotate(324deg) brightness(99%) contrast(103%)
 
                     @include r(640px)
                         transform: translate(-50%, -50%) scale(0.8)
@@ -1055,7 +1052,7 @@
 
             &:hover
                 transform: scale(1.1)
-            
+
             &:active
                 transform: scale(0.9)
 
@@ -1102,7 +1099,7 @@
                     background-size: cover
                     background-repeat: no-repeat
                     background-position: center
-            
+
             .url
                 overflow: hidden
                 width: 370px
@@ -1144,7 +1141,7 @@
                 &:hover
                     transform: none
                     background-color: #CFE9E0
-                
+
                 &:active
                     transform: none
                     background-color: #B6D8CC
@@ -1173,7 +1170,7 @@
                     break-radius: 5px
                     min-width: 33px
                     width: 33px
-                    height: 33px 
+                    height: 33px
                     margin-left: 15px
 
                 @include r(640px)
@@ -1215,7 +1212,6 @@
 
                     &:not(:last-child)
                         margin-bottom: 5px
-
 
                     &.grey
                         background-color: #f5f6fa
@@ -1356,7 +1352,7 @@
                     background-position: center
                     transform: rotate(-90deg)
                     filter: invert(61%) sepia(14%) saturate(1776%) hue-rotate(79deg) brightness(95%) contrast(91%)
-           
+
             .down
                 position: relative
                 font-size: 16px
@@ -1376,7 +1372,7 @@
                     background-repeat: no-repeat
                     background-position: center
                     transform: rotate(90deg)
-                    filter: invert(43%) sepia(16%) saturate(3707%) hue-rotate(324deg) brightness(99%) contrast(103%) 
+                    filter: invert(43%) sepia(16%) saturate(3707%) hue-rotate(324deg) brightness(99%) contrast(103%)
 
         &__message
             font-size: 16px
@@ -1394,7 +1390,7 @@
 
             textarea
                 width: 100%
-                resize: vertical 
+                resize: vertical
                 font: inherit
                 font-size: inherit
                 outline: none
@@ -1581,7 +1577,7 @@
 
                     &::before
                         transform: rotate(-45deg)
-                    
+
                     &::after
                         transform: rotate(45deg)
 
@@ -1589,7 +1585,7 @@
                     display: none
 
                     @include r(640px)
-                        position: relative 
+                        position: relative
                         display: inline-block
                         color: #b0bdb5
                         border-radius: 5px
@@ -1601,7 +1597,7 @@
                         margin-right: 15px
 
                         &::before,
-                        &::after 
+                        &::after
                             content: ''
                             position: absolute
                             left: 8px
@@ -1612,7 +1608,7 @@
 
                         &::before
                             transform: translateY(-50%) rotate(-45deg)
-                        
+
                         &::after
                             transform: translateY(-50%) rotate(45deg)
 
@@ -1667,7 +1663,7 @@
 
                         &::before
                             transform: rotate(-45deg)
-                        
+
                         &::after
                             transform: rotate(45deg)
 
@@ -1702,8 +1698,8 @@
                         background-size: cover
                         background-repeat: no-repeat
                         background-position: center
-                        filter: invert(43%) sepia(16%) saturate(3707%) hue-rotate(324deg) brightness(99%) contrast(103%) 
-                        
+                        filter: invert(43%) sepia(16%) saturate(3707%) hue-rotate(324deg) brightness(99%) contrast(103%)
+
                 .edit
                     position: relative
                     width: 36px
@@ -1810,7 +1806,7 @@
 
                 @include r(640px)
                     font-size: 12px
-                
+
                 &:hover
                     background-color: rgba(0, 0, 0, 0)
                     border-color: $red
@@ -1828,7 +1824,7 @@
 
                 &::before
                     transform: translateY(-50%) rotate(-45deg)
-                
+
                 &::after
                     transform: translateY(-50%) rotate(45deg)
 
@@ -1857,7 +1853,6 @@
                     &.hiden
                         opacity: 0
                         pointer-events: none
-
 
                     &::after
                         content: ""
@@ -1902,7 +1897,7 @@
 
                         &::before
                             transform: translate(-50%, -50%) rotate(45deg)
-                        
+
                         &::after
                             transform: translate(-50%, -50%) rotate(-45deg)
 
@@ -2015,7 +2010,7 @@
                 width: 30px
                 height: 30px
                 border-radius: 100%
-                background-color: rgba(#d9dcee,  0.5)
+                background-color: rgba(#d9dcee, 0.5)
                 margin-right: 10px
                 margin-left: 10px
 
@@ -2027,7 +2022,7 @@
                     width: 100%
                     height: 100%
                     background-image: url(../img/svg/search-grey.svg)
-                    background-size: 50% 
+                    background-size: 50%
                     background-repeat: no-repeat
                     background-position: center
                     filter: invert(77%) sepia(100%) saturate(1640%) hue-rotate(214deg) brightness(98%) contrast(95%)
@@ -2043,8 +2038,6 @@
             background-color: #f5f6fa
             transform: translateX(100%)
             transition: transform 0.3s
-
-
 
         .search
             position: relative
@@ -2149,7 +2142,7 @@
 
                 &:hover
                     color: $blue
-            
+
     &__result
         position: relative
         padding: 25px 30px
@@ -2189,7 +2182,7 @@
 
             &::before
                 transform: translateY(-50%) rotate(-45deg)
-            
+
             &::after
                 transform: translateY(-50%) rotate(45deg)
 
@@ -2236,7 +2229,7 @@
             margin: 0 -10px
             width: calc(100% + 20px)
 
-            &::before 
+            &::before
                 content: ""
                 position: absolute
                 top: 15px
@@ -2267,7 +2260,6 @@
 
                 &:active
                     transform: scale(0.9)
-                        
 
                 &::after
                     content: ""
@@ -2322,34 +2314,3 @@
 
             span
                 font-weight: 700
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -2083,7 +2083,6 @@ body {
   overflow: hidden;
   border-bottom-right-radius: 0px;
   background-color: #fff;
-  padding-right: 10px;
 }
 .popup--moderators, .popup--moderator {
   max-width: 460px;
@@ -7372,6 +7371,7 @@ body {
 }
 .moderation__widgets {
   max-width: 900px;
+  width: 100%;
   margin-right: 50px;
 }
 .moderation__widgets > *:not(:last-child) {
