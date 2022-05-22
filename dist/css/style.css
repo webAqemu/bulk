@@ -4160,6 +4160,7 @@ body {
   padding: 11px 45px 9px 35px;
   margin-right: 10px;
   background-color: #F5F6FA;
+  transition: background-color 0.3s;
 }
 @media (max-width: 1000px) {
   .widgets-card .moderators {
@@ -4186,7 +4187,16 @@ body {
     top: 10px;
   }
 }
-.widgets-card .moderators button {
+.widgets-card .moderators:hover {
+  background-color: #DEE0EB;
+}
+.widgets-card .moderators:hover span {
+  background-color: #CACEE9;
+}
+.widgets-card .moderators:active {
+  background-color: #CACEE9;
+}
+.widgets-card .moderators span {
   position: absolute;
   right: 0;
   top: 0;
@@ -4196,19 +4206,13 @@ body {
   background-color: #EBEDF9;
   transition: background-color 0.3s;
 }
-.widgets-card .moderators button:hover {
-  background-color: #D8DCEF;
-}
 @media (max-width: 1000px) {
-  .widgets-card .moderators button {
+  .widgets-card .moderators span {
     background-color: #fff;
     margin: 0 0 0 8px;
   }
 }
-.widgets-card .moderators button:hover::after {
-  filter: invert(39%) sepia(81%) saturate(764%) hue-rotate(197deg) brightness(97%) contrast(99%);
-}
-.widgets-card .moderators button::after {
+.widgets-card .moderators span::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -5089,6 +5093,16 @@ body {
   background-color: #E3F4EE;
   border-radius: 5px;
   overflow: hidden;
+  transition: background-color 0.3s;
+}
+.settings__wrapper .status:hover {
+  background-color: #CFE9E0;
+}
+.settings__wrapper .status:hover span {
+  background-color: #B1DCCD;
+}
+.settings__wrapper .status:active {
+  background-color: #B1DCCD;
 }
 .settings__wrapper .status.inactive {
   background-color: #FFE4E3;
@@ -5106,11 +5120,20 @@ body {
 .settings__wrapper .status.inactive::after {
   transform: rotate(135deg);
 }
-.settings__wrapper .status.inactive button {
+.settings__wrapper .status.inactive span {
   background-color: #F5D7D6;
 }
-.settings__wrapper .status.inactive button::before {
+.settings__wrapper .status.inactive span::before {
   filter: invert(17%) sepia(97%) saturate(4979%) hue-rotate(4deg) brightness(108%) contrast(112%);
+}
+.settings__wrapper .status.inactive:hover {
+  background-color: #F5D7D6;
+}
+.settings__wrapper .status.inactive:hover span {
+  background-color: #EDBDBC;
+}
+.settings__wrapper .status.inactive:active {
+  background-color: #EDBDBC;
 }
 .settings__wrapper .status::before, .settings__wrapper .status::after {
   content: "";
@@ -5125,15 +5148,16 @@ body {
   background-repeat: no-repeat;
   filter: invert(50%) sepia(90%) saturate(316%) hue-rotate(79deg) brightness(101%) contrast(92%);
 }
-.settings__wrapper .status button {
+.settings__wrapper .status span {
   position: relative;
   display: block;
   width: 35px;
   height: 32px;
   margin: -12px 0 -8px 10px;
   background-color: #CFE9E0;
+  transition: background-color 0.3s;
 }
-.settings__wrapper .status button::before {
+.settings__wrapper .status span::before {
   content: "";
   position: absolute;
   left: 0;
@@ -5147,9 +5171,6 @@ body {
   filter: invert(50%) sepia(90%) saturate(316%) hue-rotate(79deg) brightness(101%) contrast(92%);
   transition: background-size 0.3s;
 }
-.settings__wrapper .status button:hover::before {
-  background-size: 35%;
-}
 .settings__wrapper .tarrif {
   position: relative;
   font-weight: 700;
@@ -5162,8 +5183,12 @@ body {
   border-radius: 5px;
   background-color: #4D74F5;
   overflow: hidden;
+  transition: background-color 0.3s;
 }
-.settings__wrapper .tarrif button {
+.settings__wrapper .tarrif:hover {
+  background-color: #2B52D6;
+}
+.settings__wrapper .tarrif span {
   display: block;
   margin: -12px 0 -8px 10px;
   height: 32px;
@@ -5171,7 +5196,7 @@ body {
   position: relative;
   background-color: #3155CD;
 }
-.settings__wrapper .tarrif button::before {
+.settings__wrapper .tarrif span::before {
   content: "";
   position: absolute;
   left: 0;
@@ -5183,10 +5208,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   filter: invert(100%);
-  transition: background-size 0.3s;
-}
-.settings__wrapper .tarrif button:hover::before {
-  background-size: 40%;
 }
 .settings__tabs {
   position: relative;
@@ -5213,7 +5234,9 @@ body {
   height: 1px;
   background-color: #D9DCEE;
 }
-.settings__tabs button {
+.settings__tabs button,
+.settings__tabs a {
+  display: inline-block;
   font-size: 14px;
   color: #798196;
   padding: 12px 15px 10px;
@@ -5225,24 +5248,30 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 @media (max-width: 767px) {
-  .settings__tabs button {
+  .settings__tabs button,
+.settings__tabs a {
     width: calc(33.3333% + 6.6666px);
     text-align: left;
     padding-right: 25px;
   }
-  .settings__tabs button:not(:first-child) {
+  .settings__tabs button:not(:first-child),
+.settings__tabs a:not(:first-child) {
     margin-left: -10px;
   }
 }
-.settings__tabs button:not(:last-child) {
+.settings__tabs button:not(:last-child),
+.settings__tabs a:not(:last-child) {
   margin-right: 5px;
 }
 @media (max-width: 767px) {
-  .settings__tabs button:not(:last-child) {
+  .settings__tabs button:not(:last-child),
+.settings__tabs a:not(:last-child) {
     margin-right: 0;
   }
 }
-.settings__tabs button:hover, .settings__tabs button.active {
+.settings__tabs button:hover, .settings__tabs button.active,
+.settings__tabs a:hover,
+.settings__tabs a.active {
   background-color: white;
   color: #47426A;
 }
@@ -6166,6 +6195,7 @@ body {
   overflow: hidden;
   font-size: 10px;
   text-transform: uppercase;
+  transition: background-color 0.3s;
 }
 @media (max-width: 640px) {
   .settings__moderators li .change {
@@ -6191,11 +6221,23 @@ body {
   background-image: url(../img/svg/done.svg);
   filter: invert(56%) sepia(29%) saturate(896%) hue-rotate(79deg) brightness(102%) contrast(88%);
 }
-.settings__moderators li .change.green button {
+.settings__moderators li .change.green span {
   background-color: #CFE9E0;
 }
-.settings__moderators li .change.green button::after {
+.settings__moderators li .change.green span::after {
   filter: invert(56%) sepia(29%) saturate(896%) hue-rotate(79deg) brightness(102%) contrast(88%);
+}
+.settings__moderators li .change.green:hover {
+  background-color: #CFE9E0;
+}
+.settings__moderators li .change.green:hover span {
+  background-color: #B1DCCD;
+}
+.settings__moderators li .change.green:active {
+  background-color: #B1DCCD;
+}
+.settings__moderators li .change.green:active span {
+  background-color: #B1DCCD;
 }
 .settings__moderators li .change.red {
   color: #F71514;
@@ -6211,19 +6253,32 @@ body {
   font-size: 16px;
   color: #F71514;
 }
-.settings__moderators li .change.red button {
+.settings__moderators li .change.red span {
   background-color: #F5D7D6;
 }
-.settings__moderators li .change.red button::after {
+.settings__moderators li .change.red span::after {
   filter: invert(17%) sepia(97%) saturate(4979%) hue-rotate(4deg) brightness(108%) contrast(112%);
 }
-.settings__moderators li .change button {
+.settings__moderators li .change.red:hover {
+  background-color: #F5D7D6;
+}
+.settings__moderators li .change.red:hover span {
+  background-color: #EDBDBC;
+}
+.settings__moderators li .change.red:active {
+  background-color: #EDBDBC;
+}
+.settings__moderators li .change.red:active span {
+  background-color: #EDBDBC;
+}
+.settings__moderators li .change span {
   position: relative;
   width: 35px;
   height: 30px;
   margin: -11px -15px -9px 11px;
+  transition: background-color 0.3s;
 }
-.settings__moderators li .change button::after {
+.settings__moderators li .change span::after {
   content: "";
   position: absolute;
   top: 7px;
@@ -6235,12 +6290,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   transition: transform 0.3s;
-}
-.settings__moderators li .change button:hover::after {
-  transform: scale(1.1);
-}
-.settings__moderators li .change button:active::after {
-  transform: scale(0.9);
 }
 .settings .m40 {
   margin: 40px 0 40px -50px;
@@ -8488,6 +8537,20 @@ body {
   margin-left: 5px;
   transition: background-color 0.3s;
 }
+.moderation .comment__header .filter.grey {
+  background-color: #f5f6fa;
+  color: #8792B7;
+}
+.moderation .comment__header .filter.grey::after {
+  border-color: #8792B7;
+}
+.moderation .comment__header .filter.red {
+  background-color: #FFE4E3;
+  color: #F71514;
+}
+.moderation .comment__header .filter.red::after {
+  border-color: #F71514;
+}
 .moderation .comment__header .filter:hover {
   transform: none;
   background-color: #CFE9E0;
@@ -8556,6 +8619,14 @@ body {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s;
+}
+@media (max-width: 767px) {
+  .moderation .comment__header .filter ul {
+    width: fit-content;
+    left: auto;
+    transform: none;
+    right: 0;
+  }
 }
 .moderation .comment__header .filter ul.active {
   opacity: 1;
@@ -8749,7 +8820,6 @@ body {
 .moderation .comment__message {
   font-size: 16px;
   color: #798196;
-  margin-bottom: 10px;
 }
 @media (max-width: 767px) {
   .moderation .comment__message {
@@ -8782,6 +8852,7 @@ body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 10px;
 }
 .moderation .comment__bottom .answers {
   position: relative;

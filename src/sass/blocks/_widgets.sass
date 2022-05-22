@@ -62,17 +62,14 @@
             scrollbar-width: thin
             scrollbar-color: $blue
 
-
             /* Targtes on Chrome, Edge, and Safari */
-            &::-webkit-scrollbar 
+            &::-webkit-scrollbar
                 height: 0px
 
-
-            &::-webkit-scrollbar-track 
+            &::-webkit-scrollbar-track
                 background: rgba(255, 255, 255, 0)
 
-
-            &::-webkit-scrollbar-thumb 
+            &::-webkit-scrollbar-thumb
                 background-color: $blue
                 border-radius: 20px
                 border: none
@@ -90,18 +87,15 @@
         box-shadow: 0px 15px 20px rgba(105, 131, 216, 0)
         margin-bottom: 10px
         transition: box-shadow 0.3s, color 0.3s, background-color 0.3s, border-color 0.3s, transform 0.3s
-        
+
         @include r(767px)
             font-size: 12px
             white-space: nowrap
             border-radius: 5px
             margin-bottom: 0
 
-
-        
         &:hover
             border-color: $blue
-
 
         &.active
             background-color: #fff
@@ -111,8 +105,7 @@
 
             @include r(767px)
                 box-shadow: none
-    
-            
+
             .widgets__icon
                 filter: invert(42%) sepia(80%) saturate(3252%) hue-rotate(214deg) brightness(99%) contrast(94%)
 
@@ -121,7 +114,7 @@
 
         &:active
             transform: scale(0.9)
-    
+
     &__icon
         width: 12px
         height: 12px
@@ -137,7 +130,7 @@
 
         @include r(767px)
             flex-wrap: wrap
-    
+
     &__websites
         display: flex
         align-items: center
@@ -190,7 +183,7 @@
             background-color: $blue
 
             &::after
-                left: 15px 
+                left: 15px
 
         span
             display: block
@@ -260,7 +253,6 @@
                 background-size: cover
                 background-repeat: no-repeat
                 background-position: center
-                
 
         .status
             position: relative
@@ -275,7 +267,7 @@
             @include r(1000px)
                 display: inline-block
                 margin-bottom: 10px
-            
+
             &::before
                 content: ""
                 position: absolute
@@ -288,7 +280,7 @@
                 background-repeat: no-repeat
                 background-position: center
                 filter: invert(56%) sepia(83%) saturate(359%) hue-rotate(79deg) brightness(92%) contrast(86%)
-                    
+
         .moderators
             position: relative
             display: flex
@@ -300,6 +292,7 @@
             padding: 11px 45px 9px 35px
             margin-right: 10px
             background-color: #F5F6FA
+            transition: background-color 0.3s
 
             @include r(1000px)
                 background-color: #fff
@@ -318,11 +311,20 @@
                 background-position: center
                 background-repeat: no-repeat
                 filter: invert(90%) sepia(3%) saturate(2093%) hue-rotate(195deg) brightness(92%) contrast(82%)
-            
+
                 @include r(1000px)
                     top: 10px
 
-            button
+            &:hover
+                background-color: #DEE0EB
+
+                span
+                    background-color: #CACEE9
+
+            &:active
+                background-color: #CACEE9
+
+            span
                 position: absolute
                 right: 0
                 top: 0
@@ -332,16 +334,10 @@
                 background-color: #EBEDF9
                 transition: background-color 0.3s
 
-                &:hover
-                    background-color: #D8DCEF
-
                 @include r(1000px)
                     background-color: #fff
                     margin: 0 0 0 8px
 
-                &:hover::after
-                    filter: invert(39%) sepia(81%) saturate(764%) hue-rotate(197deg) brightness(97%) contrast(99%)
-                
                 &::after
                     content: ""
                     position: absolute
@@ -385,7 +381,7 @@
 
             span
                 display: none
-            
+
             &__msg
                 position: absolute
                 bottom: 80%
@@ -447,7 +443,7 @@
 
                 &:hover::after
                     filter: invert(39%) sepia(81%) saturate(764%) hue-rotate(197deg) brightness(97%) contrast(99%)
-                
+
                 &::after
                     content: ""
                     position: absolute
@@ -461,7 +457,7 @@
                     background-position: center
                     background-repeat: no-repeat
                     filter: invert(48%) sepia(22%) saturate(709%) hue-rotate(194deg) brightness(97%) contrast(90%)
-        
+
         .id
             position: relative
             padding: 11px 45px 9px 15px
@@ -500,7 +496,7 @@
 
                 &:hover::after
                     filter: invert(39%) sepia(81%) saturate(764%) hue-rotate(197deg) brightness(97%) contrast(99%)
-               
+
                 &::after
                     content: ""
                     position: absolute
@@ -713,7 +709,7 @@
             @keyframes preloader
                 0%
                     left: -10%
-                    
+
                 100%
                     left: 110%
 
@@ -731,4 +727,3 @@
 
             &--full
                 width: 100%
-                        

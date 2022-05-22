@@ -8,17 +8,17 @@
         .reviews отзывы
         .id id виджета 
             span 43
-        .status статус: Активен
-            button 
-        .status.inactive статус: неактивен
-            button 
-        .tarrif тариф  4,5 ₽/день
-            button
+        button.status статус: Активен
+            span
+        button.status.inactive статус: неактивен
+            span
+        button.tarrif тариф  4,5 ₽/день
+            span
 
     .settings__tabs 
-        button Настройки виджета
+        a Настройки виджета
         button Внешний вид
-        button.active Общие настройки
+        a.active Общие настройки
 
     .settings__content.settings__content--sm
         .settings__inner
@@ -87,9 +87,9 @@
 
                             button.delete
 
-                        .change.green 
+                        button.change.green 
                             | владелец
-                            button  
+                            span  
                     li 
                         .name 
                             .bold Александра р.
@@ -97,9 +97,9 @@
 
                             button.delete
 
-                        .change.green 
+                        button.change.green 
                             | модератор
-                            button  
+                            span  
                     li 
                         .name
                             .bold галина ц.
@@ -107,9 +107,9 @@
 
                             button.delete
 
-                        .change.red 
+                        button.change.red 
                             | модератор
-                            button  
+                            span  
     
     .m40
     

@@ -182,6 +182,16 @@
             background-color: #E3F4EE
             border-radius: 5px
             overflow: hidden
+            transition: background-color 0.3s
+
+            &:hover
+                background-color: #CFE9E0
+
+                span
+                    background-color: #B1DCCD
+
+            &:active
+                background-color: #B1DCCD
 
             &.inactive
                 background-color: #FFE4E3
@@ -200,11 +210,20 @@
                 &::after
                     transform: rotate(135deg)
 
-                button
+                span
                     background-color: #F5D7D6
 
                     &::before
                         filter: invert(17%) sepia(97%) saturate(4979%) hue-rotate(4deg) brightness(108%) contrast(112%)
+
+                &:hover
+                    background-color: #F5D7D6
+
+                    span
+                        background-color: #EDBDBC
+
+                &:active
+                    background-color: #EDBDBC
 
             &::before,
             &::after
@@ -220,13 +239,14 @@
                 background-repeat: no-repeat
                 filter: invert(50%) sepia(90%) saturate(316%) hue-rotate(79deg) brightness(101%) contrast(92%)
 
-            button
+            span
                 position: relative
                 display: block
                 width: 35px
                 height: 32px
                 margin: -12px 0 -8px 10px
                 background-color: #CFE9E0
+                transition: background-color 0.3s
 
                 &::before
                     content: ""
@@ -242,9 +262,6 @@
                     filter: invert(50%) sepia(90%) saturate(316%) hue-rotate(79deg) brightness(101%) contrast(92%)
                     transition: background-size 0.3s
 
-                &:hover::before
-                    background-size: 35%
-
         .tarrif
             position: relative
             font-weight: 700
@@ -257,8 +274,12 @@
             border-radius: 5px
             background-color: $blue
             overflow: hidden
+            transition: background-color 0.3s
 
-            button
+            &:hover
+                background-color: $dblue
+
+            span
                 display: block
                 margin: -12px 0 -8px 10px
                 height: 32px
@@ -278,10 +299,6 @@
                     background-repeat: no-repeat
                     background-position: center
                     filter: invert(100%)
-                    transition: background-size 0.3s
-
-                &:hover::before
-                    background-size: 40%
 
     &__tabs
         position: relative
@@ -304,7 +321,9 @@
             height: 1px
             background-color: #D9DCEE
 
-        button
+        button,
+        a
+            display: inline-block
             font-size: 14px
             color: #798196
             padding: 12px 15px 10px
@@ -1169,6 +1188,7 @@
                 overflow: hidden
                 font-size: 10px
                 text-transform: uppercase
+                transition: background-color 0.3s
 
                 @include r(640px)
                     position: absolute
@@ -1192,11 +1212,22 @@
                         background-image: url(../img/svg/done.svg)
                         filter: invert(56%) sepia(29%) saturate(896%) hue-rotate(79deg) brightness(102%) contrast(88%)
 
-                    button
+                    span
                         background-color: #CFE9E0
 
                         &::after
                             filter: invert(56%) sepia(29%) saturate(896%) hue-rotate(79deg) brightness(102%) contrast(88%)
+
+                    &:hover
+                        background-color: #CFE9E0
+
+                        span
+                            background-color: #B1DCCD
+
+                    &:active
+                        background-color: #B1DCCD
+                        span
+                            background-color: #B1DCCD
 
                 &.red
                     color: $red
@@ -1212,17 +1243,29 @@
                         font-size: 16px
                         color: $red
 
-                    button
+                    span
                         background-color: #F5D7D6
 
                         &::after
                             filter: invert(17%) sepia(97%) saturate(4979%) hue-rotate(4deg) brightness(108%) contrast(112%)
 
-                button
+                    &:hover
+                        background-color: #F5D7D6
+
+                        span
+                            background-color: #EDBDBC
+
+                    &:active
+                        background-color: #EDBDBC
+                        span
+                            background-color: #EDBDBC
+
+                span
                     position: relative
                     width: 35px
                     height: 30px
                     margin: -11px -15px -9px 11px
+                    transition: background-color 0.3s
 
                     &::after
                         content: ""
@@ -1236,12 +1279,6 @@
                         background-repeat: no-repeat
                         background-position: center
                         transition: transform 0.3s
-
-                    &:hover::after
-                        transform: scale(1.1)
-
-                    &:active::after
-                        transform: scale(0.9)
 
     .m40
         margin: 40px 0 40px -50px
